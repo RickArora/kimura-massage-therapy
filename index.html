@@ -16,6 +16,8 @@
   <meta property="og:description" content="Registered Massage Therapist in Brampton, Ontario. Swedish, deep tissue & sports massage. Insurance receipts. Call 905-226-6336." />
   <meta property="og:url" content="https://kimuramassage.ca/" />
   <meta property="og:locale" content="en_CA" />
+  <meta name="theme-color" content="#1a4d1a" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
   <!-- Google Fonts: Oswald + DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -123,6 +125,10 @@
   </script>
 
   <style>
+    /* Skip link */
+    .skip-link { position:absolute; top:-100%; left:0; background:#1a4d1a; color:#fff; padding:10px 18px; font-size:14px; font-weight:600; z-index:9999; border-radius:0 0 6px 0; text-decoration:none; transition:top .15s; }
+    .skip-link:focus { top:0; }
+
     /* ============================================================
        ROOT
     ============================================================ */
@@ -1194,10 +1200,11 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <!-- ===================== HEADER ===================== -->
   <header>
-    <nav class="container">
+    <nav class="container" aria-label="Main">
       <a href="/" class="nav-logo">
         Kimura Massage
         <span>Therapy &amp; Rehab · Brampton RMT</span>
@@ -1247,7 +1254,7 @@
     </div>
   </div>
 
-  <main>
+  <main id="main-content">
 
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="home">

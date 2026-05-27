@@ -13,6 +13,8 @@
   <meta property="og:locale" content="en_CA" />
   <meta property="article:published_time" content="2025-04-15" />
   <meta name="author" content="Ricky Arora, RMT" />
+  <meta name="theme-color" content="#1a4d1a" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,15 +54,41 @@
           { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://kimuramassage.ca/blog/" },
           { "@type": "ListItem", "position": 3, "name": "Deep Tissue vs. Swedish Massage", "item": "https://kimuramassage.ca/blog/deep-tissue-vs-swedish-massage.html" }
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the difference between deep tissue and Swedish massage?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The core difference is depth and intent. Swedish massage works on the superficial muscle layer and targets the nervous system — relaxation, stress reduction, and circulation. Deep tissue massage works on deeper muscle layers, fascia, and connective tissue to break down adhesions, release chronic tension, and restore movement in restricted tissue." }
+          },
+          {
+            "@type": "Question",
+            "name": "Which is better for chronic pain — deep tissue or Swedish massage?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Deep tissue massage is typically more effective for chronic pain, recurring tension, knots, postural problems, and tension headaches originating from the neck and shoulders. Swedish massage is better suited for stress relief, general muscle fatigue, and relaxation." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does deep tissue massage hurt?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Deep tissue massage uses sustained pressure and can produce a 'good hurt' sensation when working through tight tissue — but it should not be painful. Always communicate with your RMT about pressure. Effective deep tissue work does not require you to hold your breath or tense up in response." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you combine Swedish and deep tissue massage in one session?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes — and in practice, most RMT sessions blend both. A session typically opens with Swedish strokes to warm the tissue and improve circulation, then transitions to targeted deep tissue work on problem areas. This integrative approach is often the most effective for clients dealing with both stress and chronic tension." }
+          }
+        ]
       }
     ]
   }
   </script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header>
-  <nav class="container">
+  <nav class="container" aria-label="Main">
     <a href="/" class="nav-logo">Kimura Massage <span>Therapy &amp; Rehab · Brampton RMT</span></a>
     <ul class="nav-links">
       <li class="nav-dropdown">
@@ -101,8 +129,8 @@
   </div>
 </div>
 
-<main>
-<nav class="breadcrumb-nav">
+<main id="main-content">
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
   <div class="container">
     <ol class="breadcrumb-list">
       <li><a href="/">Home</a></li>

@@ -4,6 +4,23 @@
    Colors: #1a4d1a | #1a2e1a | #f7faf7 | #d4e4d4
 ================================================================ */
 
+/* Skip-to-main accessibility link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--green);
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 9999;
+  border-radius: 0 0 6px 0;
+  text-decoration: none;
+  transition: top .15s;
+}
+.skip-link:focus { top: 0; }
+
 :root {
   --green:       #1a4d1a;
   --green-dark:  #133d13;
