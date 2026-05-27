@@ -104,6 +104,7 @@ nav { display: flex; align-items: center; justify-content: space-between; height
 .nav-links > li > a:hover { color: var(--green); }
 
 .nav-right { display: flex; align-items: center; gap: 16px; }
+.nav-right .btn-primary { white-space: nowrap; }
 .nav-phone { font-size: 14px; font-weight: 600; color: var(--text); }
 
 /* Nav dropdown */
@@ -330,8 +331,23 @@ footer { background: var(--text); color: rgba(255,255,255,.85); padding: 56px 0 
 @media (max-width: 640px) {
   .page-hero { padding: 48px 0; }
   .page-hero-actions { flex-direction: column; }
+  .page-hero-actions .btn-primary,
+  .page-hero-actions .btn-outline { text-align: center; width: 100%; }
   .content-section, .pricing, .faq, .related-services, .booking-section, .blog-listing, .article-layout { padding: 52px 0; }
   .trust-bar-inner { flex-wrap: wrap; }
   .footer-top { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
+  /* Nav book button: compact on small screens */
+  .nav-right .btn-primary {
+    font-size: 12px !important;
+    padding: 8px 12px !important;
+    white-space: nowrap;
+  }
+  /* Breadcrumb: truncate long last item */
+  .breadcrumb-list li:last-child {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }

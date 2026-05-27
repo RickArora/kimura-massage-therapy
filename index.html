@@ -470,11 +470,7 @@
       font-weight: 500;
       color: var(--text-muted);
     }
-    .hero-trust-item::before {
-      content: '✓';
-      color: var(--green);
-      font-weight: 700;
-    }
+    /* emoji icons in the HTML serve as the visual indicator — no extra ::before needed */
 
     /* Rate card */
     .hero-card {
@@ -1205,8 +1201,13 @@
       .footer-bottom { flex-direction: column; text-align: center; }
       .hero-actions { flex-direction: column; }
       .hero-actions .btn-primary,
-      .hero-actions .btn-outline { text-align: center; }
+      .hero-actions .btn-outline { text-align: center; width: 100%; }
       .trust-bar-inner { flex-wrap: wrap; }
+      .nav-right .btn-primary {
+        font-size: 12px !important;
+        padding: 8px 12px !important;
+        white-space: nowrap;
+      }
     }
   </style>
 </head>
