@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 
 const site = 'https://kimuramassage.ca';
 const today = '2026-05-29';
+const linkVersion = '20260529-2';
 const topics = [
   'Tight shoulders',
   'Tight neck',
@@ -968,7 +969,7 @@ ${nav()}
 
         <h2 id="related">Related Guides</h2>
         <ul>
-          ${related.map((item) => `<li><a href="${slugify(item)}.html">Read article: ${escapeHtml(item)}</a></li>`).join('\n          ')}
+          ${related.map((item) => `<li><a href="${slugify(item)}.html?v=${linkVersion}">Read article: ${escapeHtml(item)}</a></li>`).join('\n          ')}
         </ul>
       </article>
 
@@ -1165,7 +1166,7 @@ ${nav()}
 
         <h2 id="related">Related Guides</h2>
         <ul>
-          ${related.map((item) => `<li><a href="${clinicalSlugFor(item)}.html">Read article: ${escapeHtml(item)}</a></li>`).join('\n          ')}
+          ${related.map((item) => `<li><a href="${clinicalSlugFor(item)}.html?v=${linkVersion}">Read article: ${escapeHtml(item)}</a></li>`).join('\n          ')}
         </ul>
       </article>
 
@@ -1356,7 +1357,7 @@ ${nav()}
 
         <h2 id="related">Related Guides</h2>
         <ul>
-          ${related.map((item) => `<li><a href="${postureSlugFor(item)}.html">Read article: ${escapeHtml(item)}</a></li>`).join('\n          ')}
+          ${related.map((item) => `<li><a href="${postureSlugFor(item)}.html?v=${linkVersion}">Read article: ${escapeHtml(item)}</a></li>`).join('\n          ')}
         </ul>
       </article>
 
@@ -1404,15 +1405,15 @@ const indexPage = () => {
       </a>`).join('\n');
   const library = topics.map((topic) => {
     const slug = slugify(topic);
-    return `<li><a href="${slug}.html">Read article: ${escapeHtml(topic)}</a></li>`;
+    return `<li><a href="${slug}.html?v=${linkVersion}">Read article: ${escapeHtml(topic)}</a></li>`;
   }).join('\n              ');
   const clinicalLibrary = clinicalTopics.map((topic) => {
     const slug = clinicalSlugFor(topic);
-    return `<li><a href="${slug}.html">Read article: ${escapeHtml(topic)}</a></li>`;
+    return `<li><a href="${slug}.html?v=${linkVersion}">Read article: ${escapeHtml(topic)}</a></li>`;
   }).join('\n              ');
   const postureLibrary = postureTopics.map((topic) => {
     const slug = postureSlugFor(topic);
-    return `<li><a href="${slug}.html">Read article: ${escapeHtml(topic)}</a></li>`;
+    return `<li><a href="${slug}.html?v=${linkVersion}">Read article: ${escapeHtml(topic)}</a></li>`;
   }).join('\n              ');
 
   return `<!DOCTYPE html>
