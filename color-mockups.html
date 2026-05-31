@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kimura Massage — Colour Mockups</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: #f0f0f0; padding: 40px 24px; }
+  h1 { text-align: center; font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: #333; margin-bottom: 8px; }
+  .subtitle { text-align: center; font-size: 13px; color: #666; margin-bottom: 40px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 1100px; margin: 0 auto; }
+
+  .mockup { border-radius: 16px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,.15); }
+  .label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #555; margin-top: 14px; margin-bottom: 4px; }
+  .label span { font-weight: 400; color: #888; letter-spacing: 0; text-transform: none; margin-left: 6px; }
+
+  /* ── SHARED HERO STYLES ── */
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; background: #fff; }
+  .nav-logo { font-family: 'Oswald', sans-serif; font-size: 17px; font-weight: 700; line-height: 1.2; }
+  .nav-logo small { display: block; font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 400; opacity: .6; }
+  .nav-book { padding: 9px 18px; border-radius: 6px; font-size: 13px; font-weight: 700; color: #fff; border: none; cursor: pointer; }
+
+  .hero-wrap { padding: 36px 28px 40px; }
+  .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; margin-bottom: 18px; }
+  .badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; opacity: .75; flex-shrink: 0; }
+  .hero-h1 { font-family: 'Oswald', sans-serif; font-size: 38px; font-weight: 700; line-height: 1.08; color: #fff; margin-bottom: 14px; }
+  .hero-p { font-size: 14px; line-height: 1.65; margin-bottom: 22px; }
+  .btn-row { display: flex; gap: 10px; }
+  .btn-primary-hero { padding: 12px 20px; border-radius: 6px; font-weight: 700; font-size: 13px; background: #fff; border: 2px solid #fff; cursor: pointer; }
+  .btn-outline-hero { padding: 12px 20px; border-radius: 6px; font-weight: 600; font-size: 13px; background: transparent; border: 2px solid rgba(255,255,255,.4); color: rgba(255,255,255,.9); cursor: pointer; }
+  .trust-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .trust-row span { font-size: 12px; font-weight: 500; }
+  .trust-row span::before { content: '✓ '; font-weight: 700; }
+
+  /* Trust bar */
+  .trust-bar { display: flex; overflow: hidden; }
+  .trust-bar div { flex: 1; text-align: center; padding: 10px 4px; font-size: 10px; font-weight: 600; color: rgba(255,255,255,.85); letter-spacing: .02em; border-right: 1px solid rgba(255,255,255,.12); }
+  .trust-bar div:last-child { border-right: none; }
+
+  /* ── OPTION 1: Forest Green (current) ── */
+  .opt1 .nav-logo { color: #1a4d1a; }
+  .opt1 .nav-book { background: #1a4d1a; }
+  .opt1 .hero-wrap { background: #1a4d1a; }
+  .opt1 .badge { background: rgba(255,255,255,.12); color: rgba(255,255,255,.9); border: 1px solid rgba(255,255,255,.22); }
+  .opt1 .badge::before { background: rgba(255,255,255,.75); }
+  .opt1 .hero-p { color: rgba(255,255,255,.72); }
+  .opt1 .btn-primary-hero { color: #1a4d1a; }
+  .opt1 .trust-row span { color: rgba(255,255,255,.65); }
+  .opt1 .trust-row span::before { color: rgba(255,255,255,.85); }
+  .opt1 .trust-bar { background: #163f16; }
+
+  /* ── OPTION 2: Deep Navy ── */
+  .opt2 .nav-logo { color: #1a3a5c; }
+  .opt2 .nav-book { background: #1a3a5c; }
+  .opt2 .hero-wrap { background: #1a3a5c; }
+  .opt2 .badge { background: rgba(255,255,255,.12); color: rgba(255,255,255,.9); border: 1px solid rgba(255,255,255,.22); }
+  .opt2 .badge::before { background: rgba(255,255,255,.75); }
+  .opt2 .hero-p { color: rgba(255,255,255,.72); }
+  .opt2 .btn-primary-hero { color: #1a3a5c; }
+  .opt2 .trust-row span { color: rgba(255,255,255,.65); }
+  .opt2 .trust-row span::before { color: rgba(255,255,255,.85); }
+  .opt2 .trust-bar { background: #122a45; }
+
+  /* ── OPTION 3: Deep Teal ── */
+  .opt3 .nav-logo { color: #0f4a47; }
+  .opt3 .nav-book { background: #0f4a47; }
+  .opt3 .hero-wrap { background: #0f4a47; }
+  .opt3 .badge { background: rgba(255,255,255,.12); color: rgba(255,255,255,.9); border: 1px solid rgba(255,255,255,.22); }
+  .opt3 .badge::before { background: rgba(255,255,255,.75); }
+  .opt3 .hero-p { color: rgba(255,255,255,.72); }
+  .opt3 .btn-primary-hero { color: #0f4a47; }
+  .opt3 .trust-row span { color: rgba(255,255,255,.65); }
+  .opt3 .trust-row span::before { color: rgba(255,255,255,.85); }
+  .opt3 .trust-bar { background: #0a3835; }
+
+  /* ── OPTION 4: Warm Charcoal / Slate ── */
+  .opt4 .nav-logo { color: #2c3e3c; }
+  .opt4 .nav-book { background: #2c3e3c; }
+  .opt4 .hero-wrap { background: #2c3e3c; }
+  .opt4 .badge { background: rgba(255,255,255,.12); color: rgba(255,255,255,.9); border: 1px solid rgba(255,255,255,.22); }
+  .opt4 .badge::before { background: rgba(255,255,255,.75); }
+  .opt4 .hero-p { color: rgba(255,255,255,.72); }
+  .opt4 .btn-primary-hero { color: #2c3e3c; }
+  .opt4 .trust-row span { color: rgba(255,255,255,.65); }
+  .opt4 .trust-row span::before { color: rgba(255,255,255,.85); }
+  .opt4 .trust-bar { background: #1e2d2b; }
+
+  /* ── OPTION 5: Burgundy / Wine ── */
+  .opt5 .nav-logo { color: #5c1f35; }
+  .opt5 .nav-book { background: #5c1f35; }
+  .opt5 .hero-wrap { background: #5c1f35; }
+  .opt5 .badge { background: rgba(255,255,255,.12); color: rgba(255,255,255,.9); border: 1px solid rgba(255,255,255,.22); }
+  .opt5 .badge::before { background: rgba(255,255,255,.75); }
+  .opt5 .hero-p { color: rgba(255,255,255,.72); }
+  .opt5 .btn-primary-hero { color: #5c1f35; }
+  .opt5 .trust-row span { color: rgba(255,255,255,.65); }
+  .opt5 .trust-row span::before { color: rgba(255,255,255,.85); }
+  .opt5 .trust-bar { background: #451628; }
+
+  /* ── OPTION 6: Deep Olive ── */
+  .opt6 .nav-logo { color: #3d4a1a; }
+  .opt6 .nav-book { background: #3d4a1a; }
+  .opt6 .hero-wrap { background: #3d4a1a; }
+  .opt6 .badge { background: rgba(255,255,255,.12); color: rgba(255,255,255,.9); border: 1px solid rgba(255,255,255,.22); }
+  .opt6 .badge::before { background: rgba(255,255,255,.75); }
+  .opt6 .hero-p { color: rgba(255,255,255,.72); }
+  .opt6 .btn-primary-hero { color: #3d4a1a; }
+  .opt6 .trust-row span { color: rgba(255,255,255,.65); }
+  .opt6 .trust-row span::before { color: rgba(255,255,255,.85); }
+  .opt6 .trust-bar { background: #2e3812; }
+
+  @media (max-width: 680px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Kimura Massage — Colour Options</h1>
+<p class="subtitle">Same layout, same copy — just different colour palettes. Which feels right?</p>
+
+<div class="grid">
+
+  <!-- 1: Forest Green (current) -->
+  <div>
+    <div class="label">Option 1 — Forest Green <span>(current)</span></div>
+    <div class="mockup opt1">
+      <div class="nav">
+        <div class="nav-logo">Kimura Massage<small>Therapy &amp; Rehab · Brampton RMT</small></div>
+        <button class="nav-book">Book Now</button>
+      </div>
+      <div class="hero-wrap">
+        <div class="badge">● Open 7 Days · 9AM–9PM · Same-Day Available</div>
+        <h2 class="hero-h1">That Pain in Your Neck<br>Isn't Going Away on Its Own.</h2>
+        <p class="hero-p">Ricky Arora (RMT) treats chronic tension, back pain, stress, and sports injuries in Brampton — with same-day availability, 9AM to 9PM, seven days a week.</p>
+        <div class="btn-row">
+          <button class="btn-primary-hero">Book Today — Same Day</button>
+          <button class="btn-outline-hero">📞 905-226-6336</button>
+        </div>
+        <div class="trust-row">
+          <span>Same-Day Bookings</span>
+          <span>170+ Five-Star Reviews</span>
+          <span>All Insurance Accepted</span>
+        </div>
+      </div>
+      <div class="trust-bar">
+        <div>📅 Same-Day</div>
+        <div>⭐ 5.0 · 170+</div>
+        <div>💳 Insurance</div>
+        <div>🕐 9AM–9PM</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2: Navy Blue -->
+  <div>
+    <div class="label">Option 2 — Deep Navy <span>#1a3a5c</span></div>
+    <div class="mockup opt2">
+      <div class="nav">
+        <div class="nav-logo">Kimura Massage<small>Therapy &amp; Rehab · Brampton RMT</small></div>
+        <button class="nav-book">Book Now</button>
+      </div>
+      <div class="hero-wrap">
+        <div class="badge">● Open 7 Days · 9AM–9PM · Same-Day Available</div>
+        <h2 class="hero-h1">That Pain in Your Neck<br>Isn't Going Away on Its Own.</h2>
+        <p class="hero-p">Ricky Arora (RMT) treats chronic tension, back pain, stress, and sports injuries in Brampton — with same-day availability, 9AM to 9PM, seven days a week.</p>
+        <div class="btn-row">
+          <button class="btn-primary-hero">Book Today — Same Day</button>
+          <button class="btn-outline-hero">📞 905-226-6336</button>
+        </div>
+        <div class="trust-row">
+          <span>Same-Day Bookings</span>
+          <span>170+ Five-Star Reviews</span>
+          <span>All Insurance Accepted</span>
+        </div>
+      </div>
+      <div class="trust-bar">
+        <div>📅 Same-Day</div>
+        <div>⭐ 5.0 · 170+</div>
+        <div>💳 Insurance</div>
+        <div>🕐 9AM–9PM</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3: Deep Teal -->
+  <div>
+    <div class="label">Option 3 — Deep Teal <span>#0f4a47</span></div>
+    <div class="mockup opt3">
+      <div class="nav">
+        <div class="nav-logo">Kimura Massage<small>Therapy &amp; Rehab · Brampton RMT</small></div>
+        <button class="nav-book">Book Now</button>
+      </div>
+      <div class="hero-wrap">
+        <div class="badge">● Open 7 Days · 9AM–9PM · Same-Day Available</div>
+        <h2 class="hero-h1">That Pain in Your Neck<br>Isn't Going Away on Its Own.</h2>
+        <p class="hero-p">Ricky Arora (RMT) treats chronic tension, back pain, stress, and sports injuries in Brampton — with same-day availability, 9AM to 9PM, seven days a week.</p>
+        <div class="btn-row">
+          <button class="btn-primary-hero">Book Today — Same Day</button>
+          <button class="btn-outline-hero">📞 905-226-6336</button>
+        </div>
+        <div class="trust-row">
+          <span>Same-Day Bookings</span>
+          <span>170+ Five-Star Reviews</span>
+          <span>All Insurance Accepted</span>
+        </div>
+      </div>
+      <div class="trust-bar">
+        <div>📅 Same-Day</div>
+        <div>⭐ 5.0 · 170+</div>
+        <div>💳 Insurance</div>
+        <div>🕐 9AM–9PM</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4: Charcoal -->
+  <div>
+    <div class="label">Option 4 — Warm Charcoal <span>#2c3e3c</span></div>
+    <div class="mockup opt4">
+      <div class="nav">
+        <div class="nav-logo">Kimura Massage<small>Therapy &amp; Rehab · Brampton RMT</small></div>
+        <button class="nav-book">Book Now</button>
+      </div>
+      <div class="hero-wrap">
+        <div class="badge">● Open 7 Days · 9AM–9PM · Same-Day Available</div>
+        <h2 class="hero-h1">That Pain in Your Neck<br>Isn't Going Away on Its Own.</h2>
+        <p class="hero-p">Ricky Arora (RMT) treats chronic tension, back pain, stress, and sports injuries in Brampton — with same-day availability, 9AM to 9PM, seven days a week.</p>
+        <div class="btn-row">
+          <button class="btn-primary-hero">Book Today — Same Day</button>
+          <button class="btn-outline-hero">📞 905-226-6336</button>
+        </div>
+        <div class="trust-row">
+          <span>Same-Day Bookings</span>
+          <span>170+ Five-Star Reviews</span>
+          <span>All Insurance Accepted</span>
+        </div>
+      </div>
+      <div class="trust-bar">
+        <div>📅 Same-Day</div>
+        <div>⭐ 5.0 · 170+</div>
+        <div>💳 Insurance</div>
+        <div>🕐 9AM–9PM</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5: Burgundy -->
+  <div>
+    <div class="label">Option 5 — Burgundy / Wine <span>#5c1f35</span></div>
+    <div class="mockup opt5">
+      <div class="nav">
+        <div class="nav-logo">Kimura Massage<small>Therapy &amp; Rehab · Brampton RMT</small></div>
+        <button class="nav-book">Book Now</button>
+      </div>
+      <div class="hero-wrap">
+        <div class="badge">● Open 7 Days · 9AM–9PM · Same-Day Available</div>
+        <h2 class="hero-h1">That Pain in Your Neck<br>Isn't Going Away on Its Own.</h2>
+        <p class="hero-p">Ricky Arora (RMT) treats chronic tension, back pain, stress, and sports injuries in Brampton — with same-day availability, 9AM to 9PM, seven days a week.</p>
+        <div class="btn-row">
+          <button class="btn-primary-hero">Book Today — Same Day</button>
+          <button class="btn-outline-hero">📞 905-226-6336</button>
+        </div>
+        <div class="trust-row">
+          <span>Same-Day Bookings</span>
+          <span>170+ Five-Star Reviews</span>
+          <span>All Insurance Accepted</span>
+        </div>
+      </div>
+      <div class="trust-bar">
+        <div>📅 Same-Day</div>
+        <div>⭐ 5.0 · 170+</div>
+        <div>💳 Insurance</div>
+        <div>🕐 9AM–9PM</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6: Deep Olive -->
+  <div>
+    <div class="label">Option 6 — Deep Olive <span>#3d4a1a</span></div>
+    <div class="mockup opt6">
+      <div class="nav">
+        <div class="nav-logo">Kimura Massage<small>Therapy &amp; Rehab · Brampton RMT</small></div>
+        <button class="nav-book">Book Now</button>
+      </div>
+      <div class="hero-wrap">
+        <div class="badge">● Open 7 Days · 9AM–9PM · Same-Day Available</div>
+        <h2 class="hero-h1">That Pain in Your Neck<br>Isn't Going Away on Its Own.</h2>
+        <p class="hero-p">Ricky Arora (RMT) treats chronic tension, back pain, stress, and sports injuries in Brampton — with same-day availability, 9AM to 9PM, seven days a week.</p>
+        <div class="btn-row">
+          <button class="btn-primary-hero">Book Today — Same Day</button>
+          <button class="btn-outline-hero">📞 905-226-6336</button>
+        </div>
+        <div class="trust-row">
+          <span>Same-Day Bookings</span>
+          <span>170+ Five-Star Reviews</span>
+          <span>All Insurance Accepted</span>
+        </div>
+      </div>
+      <div class="trust-bar">
+        <div>📅 Same-Day</div>
+        <div>⭐ 5.0 · 170+</div>
+        <div>💳 Insurance</div>
+        <div>🕐 9AM–9PM</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Kimura pressure lines favicon</title>
+  <desc id="desc">A Kimura K icon with massage pressure lines.</desc>
+  <rect width="64" height="64" rx="12" fill="#0F2742"/>
+  <path d="M15 49V15h8v14l14-14h10L32 30.2 49 49H38.5L26.3 35.4 23 38.7V49h-8z" fill="#FFFFFF"/>
+  <path d="M39 18h10M36 25h13M39 32h10" stroke="#E85D04" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="18.5" cy="18.5" r="3.5" fill="#E85D04"/>
+</svg>

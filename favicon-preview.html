@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kimura Favicon Options</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <style>
+    :root {
+      --navy: #0F2742;
+      --orange: #E85D04;
+      --bg: #F2F4F8;
+      --text: #0F2742;
+      --muted: #3D5070;
+      --border: #D4DCE8;
+      --white: #FFFFFF;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    main {
+      width: min(1040px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(30px, 5vw, 56px);
+      line-height: 1;
+      letter-spacing: 0;
+      color: var(--navy);
+    }
+
+    .intro {
+      max-width: 720px;
+      margin: 0 0 32px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .option {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 22px;
+    }
+
+    .option.active {
+      border-color: var(--orange);
+      box-shadow: 0 12px 30px rgba(15, 39, 66, .08);
+    }
+
+    .icon-row {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .icon-large {
+      width: 96px;
+      height: 96px;
+      border-radius: 16px;
+      box-shadow: 0 10px 24px rgba(15, 39, 66, .14);
+    }
+
+    .sizes {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sizes img {
+      display: block;
+      border-radius: 6px;
+      background: var(--navy);
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      color: var(--navy);
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    code {
+      display: block;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #F8FAFC;
+      color: var(--navy);
+      overflow-wrap: anywhere;
+      font-size: 13px;
+    }
+
+    .wordmark {
+      margin-top: 28px;
+      padding: 20px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .wordmark img { width: 48px; height: 48px; }
+    .wordmark strong { display: block; font-size: 22px; line-height: 1.1; }
+    .wordmark span { color: rgba(255, 255, 255, .68); font-size: 14px; }
+
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+      main { padding: 32px 0; }
+      .option { padding: 18px; }
+      .icon-large { width: 82px; height: 82px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Kimura Favicon Options</h1>
+    <p class="intro">Small icons need to read fast. These keep the Kimura name front and center with a strong K, using the site navy and orange so the browser tab feels connected to the brand.</p>
+
+    <section class="grid" aria-label="Favicon options">
+      <article class="option active">
+        <div class="icon-row">
+          <img class="icon-large" src="assets/icons/kimura-favicon-monogram.svg" alt="Kimura monogram favicon" />
+          <div class="sizes">
+            <img src="assets/icons/kimura-favicon-monogram.svg" alt="" width="32" height="32" />
+            <img src="assets/icons/kimura-favicon-monogram.svg" alt="" width="24" height="24" />
+            <img src="assets/icons/kimura-favicon-monogram.svg" alt="" width="16" height="16" />
+          </div>
+        </div>
+        <h2>1. Kimura K Monogram</h2>
+        <p>The cleanest favicon. It stays readable at tiny sizes and feels professional for a clinic site.</p>
+        <code>favicon.svg and assets/icons/kimura-favicon-monogram.svg</code>
+      </article>
+
+      <article class="option">
+        <div class="icon-row">
+          <img class="icon-large" src="assets/icons/kimura-favicon-pressure-lines.svg" alt="Kimura pressure lines favicon" />
+          <div class="sizes">
+            <img src="assets/icons/kimura-favicon-pressure-lines.svg" alt="" width="32" height="32" />
+            <img src="assets/icons/kimura-favicon-pressure-lines.svg" alt="" width="24" height="24" />
+            <img src="assets/icons/kimura-favicon-pressure-lines.svg" alt="" width="16" height="16" />
+          </div>
+        </div>
+        <h2>2. Massage Pressure Lines</h2>
+        <p>A more treatment-focused version. The orange lines hint at hands-on pressure and muscle release.</p>
+        <code>assets/icons/kimura-favicon-pressure-lines.svg</code>
+      </article>
+
+      <article class="option">
+        <div class="icon-row">
+          <img class="icon-large" src="assets/icons/kimura-favicon-rehab-ring.svg" alt="Kimura rehab ring favicon" />
+          <div class="sizes">
+            <img src="assets/icons/kimura-favicon-rehab-ring.svg" alt="" width="32" height="32" />
+            <img src="assets/icons/kimura-favicon-rehab-ring.svg" alt="" width="24" height="24" />
+            <img src="assets/icons/kimura-favicon-rehab-ring.svg" alt="" width="16" height="16" />
+          </div>
+        </div>
+        <h2>3. Rehab Mobility Ring</h2>
+        <p>A slightly more active mark. The ring suggests recovery, movement, and rehab support.</p>
+        <code>assets/icons/kimura-favicon-rehab-ring.svg</code>
+      </article>
+    </section>
+
+    <section class="wordmark" aria-label="Brand preview">
+      <img src="favicon.svg" alt="Kimura active favicon" />
+      <div>
+        <strong>Kimura Massage Therapy &amp; Rehab</strong>
+        <span>Active favicon preview using option 1</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
