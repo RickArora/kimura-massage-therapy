@@ -6,14 +6,14 @@
 
   <!-- ===================== SEO META ===================== -->
   <title>RMT Massage Therapy in Brampton | Kimura Massage Therapy &amp; Rehab</title>
-  <meta name="description" content="Massage therapy in Brampton, Ontario. RMT massage with insurance receipts from $60, or relaxation massage from $40. Swedish, deep tissue &amp; sports. Book online or call 647-287-3777." />
+  <meta name="description" content="Massage therapy in Brampton, Ontario. RMT massage with insurance receipts from $60, or relaxation massage from $40. Swedish, deep tissue &amp; sports. Book online or call 905-226-6336." />
   <meta name="keywords" content="RMT Brampton, registered massage therapist Brampton, massage therapy Brampton Ontario, deep tissue massage Brampton, sports massage Brampton, insurance massage Brampton, RMT near me Brampton, Registered Massage Therapist Brampton" />
   <link rel="canonical" href="https://kimuramassage.ca/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="RMT Massage Therapy in Brampton | Kimura Massage Therapy &amp; Rehab" />
-  <meta property="og:description" content="Brampton's highest-rated massage clinic. RMT massage with insurance receipts from $60. Swedish, deep tissue &amp; sports. Same-day bookings. Call 647-287-3777." />
+  <meta property="og:description" content="Brampton's highest-rated massage clinic. RMT massage with insurance receipts from $60. Swedish, deep tissue &amp; sports. Same-day bookings. Call 905-226-6336." />
   <meta property="og:url" content="https://kimuramassage.ca/" />
   <meta property="og:locale" content="en_CA" />
   <meta name="theme-color" content="#0F2742" />
@@ -32,7 +32,7 @@
     "@type": "MedicalBusiness",
     "name": "Kimura Massage Therapy & Rehab",
     "url": "https://kimuramassage.ca",
-    "telephone": "+1-647-287-3777",
+    "telephone": "+1-905-226-6336",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "14 Block Road",
@@ -120,7 +120,7 @@
         "name": "How do I book a massage in Brampton?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Book online through our booking system or call 647-287-3777. Same-day appointments are often available."
+          "text": "Book online through our booking system or call 905-226-6336. Same-day appointments are often available."
         }
       },
       {
@@ -136,7 +136,7 @@
         "name": "What is your cancellation policy?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We require 24 hours' notice to cancel or reschedule. Cancellations with less than 24 hours' notice, including no-shows, may be charged the full session fee. To cancel, call 647-287-3777 or manage your booking online."
+          "text": "We require 24 hours' notice to cancel or reschedule. Cancellations with less than 24 hours' notice, including no-shows, may be charged the full session fee. To cancel, call 905-226-6336 or manage your booking online."
         }
       }
     ]
@@ -752,6 +752,85 @@
     .booking-panel p { font-size:15px; color:rgba(255,255,255,.78); margin-bottom:32px; line-height:1.65; }
     .booking-options { display:flex; flex-direction:column; gap:12px; }
     .booking-note { margin-top:18px; font-size:12px; color:rgba(255,255,255,.48); text-align:center; }
+
+    /* ── Booking widget ─────────────────────────────── */
+    .booking-widget {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 36px 32px;
+      box-shadow: 0 12px 48px rgba(15,39,66,.14);
+    }
+    .bw-header { margin-bottom: 28px; }
+    .bw-badge {
+      display: inline-block; font-size: 11px; font-weight: 700;
+      letter-spacing: .07em; text-transform: uppercase;
+      background: var(--navy-light); color: var(--navy);
+      padding: 4px 12px; border-radius: 999px; margin-bottom: 10px;
+    }
+    .bw-header h3 { font-family: var(--font-head); font-size: 26px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .bw-header p { font-size: 14px; color: var(--text-muted); line-height: 1.55; }
+
+    .bw-step { margin-bottom: 24px; }
+    .bw-step-label {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .09em; color: var(--text-muted); margin-bottom: 10px;
+    }
+
+    /* Session type options */
+    .bw-options { display: flex; flex-direction: column; gap: 8px; }
+    .bw-opt {
+      display: flex; flex-direction: column; align-items: flex-start;
+      padding: 14px 16px; border: 2px solid var(--border); border-radius: 8px;
+      background: var(--bg); cursor: pointer; text-align: left;
+      font-family: var(--font-body); font-size: 14px; font-weight: 600;
+      color: var(--text); transition: all .15s;
+    }
+    .bw-opt span { font-size: 12px; font-weight: 400; color: var(--text-muted); margin-top: 2px; }
+    .bw-opt:hover { border-color: var(--navy); background: var(--white); }
+    .bw-opt.selected { border-color: var(--navy); background: var(--navy); color: #fff; }
+    .bw-opt.selected span { color: rgba(255,255,255,.7); }
+
+    /* Duration options */
+    .bw-duration { flex-direction: row !important; gap: 10px; }
+    .bw-dur {
+      flex: 1; display: flex; flex-direction: column; align-items: center;
+      padding: 14px 10px; border: 2px solid var(--border); border-radius: 8px;
+      background: var(--bg); cursor: pointer; font-family: var(--font-body);
+      position: relative; transition: all .15s;
+    }
+    .bw-dur:hover { border-color: var(--navy); }
+    .bw-dur.selected { border-color: var(--orange); background: #fff6f0; }
+    .bw-dur-time { font-size: 13px; font-weight: 600; color: var(--text); }
+    .bw-dur-price { font-family: var(--font-head); font-size: 22px; font-weight: 700; color: var(--navy); margin-top: 4px; }
+    .bw-dur.selected .bw-dur-price { color: var(--orange); }
+    .bw-dur-badge {
+      position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+      background: var(--orange); color: #fff; font-size: 9px; font-weight: 700;
+      letter-spacing: .06em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px;
+    }
+
+    /* Summary + confirm */
+    .bw-summary {
+      background: var(--navy-light); border: 1px solid var(--border);
+      border-radius: 8px; padding: 12px 16px; font-size: 15px; font-weight: 600;
+      color: var(--navy); margin-bottom: 14px; text-align: center;
+    }
+    .bw-confirm-btns { display: flex; flex-direction: column; gap: 10px; }
+    .bw-confirm-wa {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: #25D366; color: #fff; font-family: var(--font-body);
+      font-weight: 700; font-size: 15px; padding: 15px 24px; border-radius: 8px;
+      transition: background .15s; text-align: center;
+    }
+    .bw-confirm-wa:hover { background: #1ebe5d; }
+    .bw-confirm-call {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--navy); color: #fff; font-family: var(--font-body);
+      font-weight: 700; font-size: 15px; padding: 15px 24px; border-radius: 8px;
+      transition: background .15s; text-align: center;
+    }
+    .bw-confirm-call:hover { background: var(--navy-dark); }
+    .bw-note { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 12px; }
     .btn-whatsapp {
       display:block; text-align:center;
       background:#25D366; color:#fff;
@@ -902,7 +981,7 @@
       </ul>
 
       <div class="nav-right">
-        <span class="nav-phone" style="display:none" id="navPhone">647-287-3777</span>
+        <span class="nav-phone" style="display:none" id="navPhone">905-226-6336</span>
         <a href="#book" class="btn-primary" style="font-size:14px;padding:10px 20px;">Book Now</a>
         <div class="nav-hamburger" id="hamburger">
           <span></span><span></span><span></span>
@@ -913,10 +992,10 @@
     <!-- Urgency Bar -->
     <div class="urgency-bar">
       <div class="urgency-inner">
-        <span class="urgency-text">⚡ <strong>Same-day appointments available today</strong> · 647-287-3777</span>
+        <span class="urgency-text">⚡ <strong>Same-day appointments available today</strong> · 905-226-6336</span>
         <div class="urgency-actions">
           <a href="#book" class="urgency-btn">Book Now</a>
-          <a href="tel:+16472873777" class="urgency-btn outline">📞 Call</a>
+          <a href="tel:9052266336" class="urgency-btn outline">📞 Call</a>
           <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="urgency-btn whatsapp">💬 WhatsApp</a>
         </div>
       </div>
@@ -937,7 +1016,7 @@
       <a href="#reviews" onclick="closeMobileNav()">Reviews</a>
       <a href="#faq" onclick="closeMobileNav()">FAQ</a>
       <a href="#book" onclick="closeMobileNav()">Book Now</a>
-      <a href="tel:+16472873777" style="margin-top:8px;">📞 647-287-3777</a>
+      <a href="tel:9052266336" style="margin-top:8px;">📞 905-226-6336</a>
     </div>
   </div>
 
@@ -959,7 +1038,7 @@
 
           <div class="hero-actions">
             <a href="#book" class="btn-primary">Book Today — Same Day Available</a>
-            <a href="tel:+16472873777" class="btn-outline">📞 647-287-3777</a>
+            <a href="tel:9052266336" class="btn-outline">📞 905-226-6336</a>
           </div>
 
           <div class="hero-proof">
@@ -1061,7 +1140,7 @@
         <div class="why-card">
           <div class="why-icon">⚡</div>
           <h3>Same-Day Availability</h3>
-          <p>Open 7 days a week, 9AM to 9PM. Book online or call 647-287-3777. Most clients get in the same day. No long wait lists, no gaps between appointments.</p>
+          <p>Open 7 days a week, 9AM to 9PM. Book online or call 905-226-6336. Most clients get in the same day. No long wait lists, no gaps between appointments.</p>
         </div>
 
       </div>
@@ -1075,7 +1154,7 @@
         <span class="section-label">Choose Your Treatment</span>
         <h2 class="section-title">Find What Your Body<br>Actually Needs Right Now</h2>
         <p class="section-sub">
-          Available as RMT massage (with insurance receipt) or relaxation massage. Not sure which to book? Call 647-287-3777 and we'll point you in the right direction.
+          Available as RMT massage (with insurance receipt) or relaxation massage. Not sure which to book? Call 905-226-6336 and we'll point you in the right direction.
         </p>
       </div>
 
@@ -1204,7 +1283,7 @@
       </div>
 
       <p class="pricing-note">
-        <em>Only RMT sessions include an official insurance receipt accepted by extended health plans. Not sure which to choose? <a href="tel:+16472873777" style="color:inherit;font-weight:600;">Call us — 647-287-3777.</a></em>
+        <em>Only RMT sessions include an official insurance receipt accepted by extended health plans. Not sure which to choose? <a href="tel:9052266336" style="color:inherit;font-weight:600;">Call us — 905-226-6336.</a></em>
       </p>
     </div>
   </section>
@@ -1356,7 +1435,7 @@
         <div class="how-step">
           <div class="step-num">1</div>
           <h3>Book Online or Call</h3>
-          <p>Choose your session length and book online or call 647-287-3777. Same-day appointments often available.</p>
+          <p>Choose your session length and book online or call 905-226-6336. Same-day appointments often available.</p>
         </div>
         <div class="how-step">
           <div class="step-num">2</div>
@@ -1483,7 +1562,7 @@
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer">
-            Open 7 days a week, 9AM to 9PM. Same-day appointments are available most days — book online or call 647-287-3777 and we'll get you in.
+            Open 7 days a week, 9AM to 9PM. Same-day appointments are available most days — book online or call 905-226-6336 and we'll get you in.
           </div>
         </div>
 
@@ -1493,7 +1572,7 @@
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer">
-            Book online using our booking system or call 647-287-3777. Same-day appointments are available most days. Takes about 2 minutes to lock in your time.
+            Book online using our booking system or call 905-226-6336. Same-day appointments are available most days. Takes about 2 minutes to lock in your time.
           </div>
         </div>
 
@@ -1515,7 +1594,7 @@
           <div class="faq-answer">
             We require <strong>24 hours' notice</strong> to cancel or reschedule your appointment. Cancellations made with less than 24 hours' notice — including no-shows — may be charged the full session fee.<br><br>
             If you're feeling unwell, please cancel as soon as you know — your health and the safety of other clients comes first. The 24-hour policy still applies in the event of illness, so please contact us as early as possible.<br><br>
-            To cancel or reschedule: call <strong>647-287-3777</strong> or manage your booking online.
+            To cancel or reschedule: call <strong>905-226-6336</strong> or manage your booking online.
           </div>
         </div>
 
@@ -1589,7 +1668,7 @@
             <div class="contact-detail-icon">📞</div>
             <div class="contact-detail-text">
               <h4>Phone</h4>
-              <a href="tel:+16472873777">647-287-3777</a>
+              <a href="tel:9052266336">905-226-6336</a>
             </div>
           </div>
 
@@ -1607,17 +1686,58 @@
           </div>
         </div>
 
-        <div class="booking-panel">
-          <h3>Your Body Is Telling You Something. Listen to It.</h3>
-          <p>
-            Open 7 days, 9AM–9PM. Same-day bookings available. Takes 2 minutes to lock in your spot. Insurance receipt ready when you walk out.
-          </p>
-          <div class="booking-options">
-            <a href="#book" class="btn-white">Book Online →</a>
-            <a href="tel:+16472873777" class="btn-white-outline">📞 Call · 647-287-3777</a>
-            <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="btn-whatsapp">💬 WhatsApp Us</a>
+        <!-- Pseudo booking widget -->
+        <div class="booking-widget">
+          <div class="bw-header">
+            <span class="bw-badge">📅 Book Your Session</span>
+            <h3>Quick Booking</h3>
+            <p>Select your session below, then confirm via WhatsApp or phone — we'll lock in your time.</p>
           </div>
-          <p class="booking-note">✅ RMT &amp; Relaxation · All Insurance Accepted · Open 7 Days</p>
+
+          <div class="bw-step">
+            <div class="bw-step-label">1 — Session Type</div>
+            <div class="bw-options" id="typeOptions">
+              <button class="bw-opt selected" data-type="RMT Massage (with insurance receipt)" onclick="selectOpt(this,'typeOptions')">
+                🏥 RMT Massage
+                <span>Insurance receipt included</span>
+              </button>
+              <button class="bw-opt" data-type="Relaxation Massage" onclick="selectOpt(this,'typeOptions')">
+                🌿 Relaxation Massage
+                <span>No insurance receipt · from $40</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="bw-step">
+            <div class="bw-step-label">2 — Duration</div>
+            <div class="bw-options bw-duration" id="durOptions">
+              <button class="bw-dur" data-dur="30 min" data-rmt="$60" data-relax="$40" onclick="selectDur(this)">
+                <span class="bw-dur-time">30 min</span>
+                <span class="bw-dur-price" id="price30">$60</span>
+              </button>
+              <button class="bw-dur selected" data-dur="60 min" data-rmt="$100" data-relax="$70" onclick="selectDur(this)">
+                <span class="bw-dur-time">60 min</span>
+                <span class="bw-dur-price" id="price60">$100</span>
+                <span class="bw-dur-badge">Popular</span>
+              </button>
+              <button class="bw-dur" data-dur="90 min" data-rmt="$160" data-relax="$100" onclick="selectDur(this)">
+                <span class="bw-dur-time">90 min</span>
+                <span class="bw-dur-price" id="price90">$160</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="bw-step">
+            <div class="bw-step-label">3 — Confirm</div>
+            <div class="bw-summary" id="bwSummary">60 min · RMT Massage · $100</div>
+            <div class="bw-confirm-btns">
+              <a id="waBtn" href="#" target="_blank" rel="noopener" class="bw-confirm-wa" onclick="buildWA(event)">
+                💬 Confirm via WhatsApp
+              </a>
+              <a href="tel:9052266336" class="bw-confirm-call">📞 Call to Book · 905-226-6336</a>
+            </div>
+            <p class="bw-note">Open 7 days · 9AM–9PM · Same-day usually available</p>
+          </div>
         </div>
 
       </div>
@@ -1634,7 +1754,7 @@
         <p>Same-day appointments available. Book online in 2 minutes or call us directly. RMT sessions include your insurance receipt — relaxation sessions available from $40.</p>
         <div class="final-cta-actions">
           <a href="#book" class="btn-white">Book Now — Same Day Available</a>
-          <a href="tel:+16472873777" class="btn-white-outline">📞 Call 647-287-3777</a>
+          <a href="tel:9052266336" class="btn-white-outline">📞 Call 905-226-6336</a>
           <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="btn-white-outline">💬 WhatsApp</a>
         </div>
       </div>
@@ -1653,7 +1773,7 @@
           </p>
           <div class="footer-nap">
             <p>📍 14 Block Road, Brampton, ON L7A 5B2</p>
-            <p>📞 647-287-3777</p>
+            <p>📞 905-226-6336</p>
           </div>
         </div>
 
@@ -1698,7 +1818,7 @@
 
   <!-- Floating mobile contact bar -->
   <div class="float-contact" id="floatContact">
-    <a href="tel:+16472873777" class="fc-call">📞 Call Us</a>
+    <a href="tel:9052266336" class="fc-call">📞 Call Us</a>
     <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="fc-wa">💬 WhatsApp</a>
   </div>
 
@@ -1721,6 +1841,50 @@
     });
 
     function closeMobileNav() { mobileNav.classList.remove('open'); }
+
+    /* ── Booking widget logic ───────────────────── */
+    const isRMT = () => document.querySelector('#typeOptions .bw-opt.selected')?.dataset.type.includes('RMT');
+    const selDur = () => document.querySelector('#durOptions .bw-dur.selected');
+
+    function updatePrices() {
+      const rmt = isRMT();
+      document.querySelectorAll('.bw-dur').forEach(btn => {
+        const priceEl = btn.querySelector('.bw-dur-price');
+        if (priceEl) priceEl.textContent = rmt ? btn.dataset.rmt : btn.dataset.relax;
+      });
+      updateSummary();
+    }
+
+    function updateSummary() {
+      const type = document.querySelector('#typeOptions .bw-opt.selected')?.dataset.type || 'RMT Massage';
+      const dur = selDur();
+      const price = dur ? (isRMT() ? dur.dataset.rmt : dur.dataset.relax) : '';
+      const time = dur ? dur.dataset.dur : '60 min';
+      document.getElementById('bwSummary').textContent = `${time} · ${type} · ${price}`;
+    }
+
+    function selectOpt(btn, groupId) {
+      document.querySelectorAll('#' + groupId + ' .bw-opt').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      updatePrices();
+    }
+
+    function selectDur(btn) {
+      document.querySelectorAll('#durOptions .bw-dur').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      updateSummary();
+    }
+
+    function buildWA(e) {
+      e.preventDefault();
+      const type = document.querySelector('#typeOptions .bw-opt.selected')?.dataset.type || 'RMT Massage';
+      const dur = selDur()?.dataset.dur || '60 min';
+      const price = selDur() ? (isRMT() ? selDur().dataset.rmt : selDur().dataset.relax) : '';
+      const msg = encodeURIComponent(`Hi! I'd like to book a ${dur} ${type} session (${price}). Is same-day available?`);
+      window.open('https://wa.me/16472873777?text=' + msg, '_blank');
+    }
+
+    updateSummary();
 
     function checkNavPhone() {
       document.getElementById('navPhone').style.display =
