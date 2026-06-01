@@ -6,14 +6,14 @@
 
   <!-- ===================== SEO META ===================== -->
   <title>RMT Massage Therapy in Brampton | Kimura Massage Therapy &amp; Rehab</title>
-  <meta name="description" content="Massage therapy in Brampton, Ontario. RMT massage with insurance receipts from $60, or relaxation massage from $40. Swedish, deep tissue &amp; sports. Book online or call 905-226-6336." />
+  <meta name="description" content="Massage therapy in Brampton, Ontario. RMT massage with insurance receipts from $60, or relaxation massage from $40. Swedish, deep tissue &amp; sports. Book online or call 647-287-3777." />
   <meta name="keywords" content="RMT Brampton, registered massage therapist Brampton, massage therapy Brampton Ontario, deep tissue massage Brampton, sports massage Brampton, insurance massage Brampton, RMT near me Brampton, Registered Massage Therapist Brampton" />
   <link rel="canonical" href="https://kimuramassage.ca/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="RMT Massage Therapy in Brampton | Kimura Massage Therapy &amp; Rehab" />
-  <meta property="og:description" content="Brampton's highest-rated massage clinic. RMT massage with insurance receipts from $60. Swedish, deep tissue &amp; sports. Same-day bookings. Call 905-226-6336." />
+  <meta property="og:description" content="Brampton's highest-rated massage clinic. RMT massage with insurance receipts from $60. Swedish, deep tissue &amp; sports. Same-day bookings. Call 647-287-3777." />
   <meta property="og:url" content="https://kimuramassage.ca/" />
   <meta property="og:locale" content="en_CA" />
   <meta name="theme-color" content="#0F2742" />
@@ -32,7 +32,7 @@
     "@type": "MedicalBusiness",
     "name": "Kimura Massage Therapy & Rehab",
     "url": "https://kimuramassage.ca",
-    "telephone": "+1-905-226-6336",
+    "telephone": "+1-647-287-3777",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "14 Block Road",
@@ -120,7 +120,7 @@
         "name": "How do I book a massage in Brampton?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Book online through our booking system or call 905-226-6336. Same-day appointments are often available."
+          "text": "Book online through our booking system or call 647-287-3777. Same-day appointments are often available."
         }
       },
       {
@@ -136,7 +136,7 @@
         "name": "What is your cancellation policy?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We require 24 hours' notice to cancel or reschedule. Cancellations with less than 24 hours' notice, including no-shows, may be charged the full session fee. To cancel, call 905-226-6336 or manage your booking online."
+          "text": "We require 24 hours' notice to cancel or reschedule. Cancellations with less than 24 hours' notice, including no-shows, may be charged the full session fee. To cancel, call 647-287-3777 or manage your booking online."
         }
       }
     ]
@@ -752,6 +752,31 @@
     .booking-panel p { font-size:15px; color:rgba(255,255,255,.78); margin-bottom:32px; line-height:1.65; }
     .booking-options { display:flex; flex-direction:column; gap:12px; }
     .booking-note { margin-top:18px; font-size:12px; color:rgba(255,255,255,.48); text-align:center; }
+    .btn-whatsapp {
+      display:block; text-align:center;
+      background:#25D366; color:#fff;
+      font-family:var(--font-body); font-weight:700; font-size:15px;
+      padding:16px 28px; border-radius:6px; border:2px solid #25D366;
+      cursor:pointer; transition:background .2s;
+    }
+    .btn-whatsapp:hover { background:#1ebe5d; border-color:#1ebe5d; }
+    /* WhatsApp urgency bar variant */
+    .urgency-btn.whatsapp { background:#25D366; border-color:#25D366; }
+    .urgency-btn.whatsapp:hover { background:#1ebe5d; }
+    /* Floating mobile contact bar */
+    .float-contact {
+      display:none;
+      position:fixed; bottom:0; left:0; right:0; z-index:150;
+      display:grid; grid-template-columns:1fr 1fr;
+      box-shadow:0 -4px 20px rgba(0,0,0,.18);
+    }
+    .float-contact a {
+      display:flex; align-items:center; justify-content:center; gap:8px;
+      padding:16px 12px; font-family:var(--font-body); font-size:14px;
+      font-weight:700; color:#fff; text-align:center;
+    }
+    .float-contact .fc-call { background:var(--navy); }
+    .float-contact .fc-wa { background:#25D366; }
 
     /* ============================================================
        FINAL CTA (ORANGE)
@@ -808,6 +833,11 @@
     /* ============================================================
        RESPONSIVE
     ============================================================ */
+    /* Float bar only on mobile */
+    @media (min-width: 961px) { .float-contact { display:none !important; } }
+    /* Add padding so footer isn't hidden behind float bar on mobile */
+    @media (max-width: 960px) { body { padding-bottom: 56px; } }
+
     @media (max-width: 960px) {
       .hero-inner { grid-template-columns:1fr; }
       .hero-card { max-width:480px; }
@@ -872,7 +902,7 @@
       </ul>
 
       <div class="nav-right">
-        <span class="nav-phone" style="display:none" id="navPhone">905-226-6336</span>
+        <span class="nav-phone" style="display:none" id="navPhone">647-287-3777</span>
         <a href="#book" class="btn-primary" style="font-size:14px;padding:10px 20px;">Book Now</a>
         <div class="nav-hamburger" id="hamburger">
           <span></span><span></span><span></span>
@@ -883,10 +913,11 @@
     <!-- Urgency Bar -->
     <div class="urgency-bar">
       <div class="urgency-inner">
-        <span class="urgency-text">⚡ <strong>Same-day appointments available today</strong> · 905-226-6336</span>
+        <span class="urgency-text">⚡ <strong>Same-day appointments available today</strong> · 647-287-3777</span>
         <div class="urgency-actions">
           <a href="#book" class="urgency-btn">Book Now</a>
-          <a href="tel:9052266336" class="urgency-btn outline">📞 Call Us</a>
+          <a href="tel:+16472873777" class="urgency-btn outline">📞 Call</a>
+          <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="urgency-btn whatsapp">💬 WhatsApp</a>
         </div>
       </div>
     </div>
@@ -906,7 +937,7 @@
       <a href="#reviews" onclick="closeMobileNav()">Reviews</a>
       <a href="#faq" onclick="closeMobileNav()">FAQ</a>
       <a href="#book" onclick="closeMobileNav()">Book Now</a>
-      <a href="tel:9052266336" style="margin-top:8px;">📞 905-226-6336</a>
+      <a href="tel:+16472873777" style="margin-top:8px;">📞 647-287-3777</a>
     </div>
   </div>
 
@@ -928,7 +959,7 @@
 
           <div class="hero-actions">
             <a href="#book" class="btn-primary">Book Today — Same Day Available</a>
-            <a href="tel:9052266336" class="btn-outline">📞 905-226-6336</a>
+            <a href="tel:+16472873777" class="btn-outline">📞 647-287-3777</a>
           </div>
 
           <div class="hero-proof">
@@ -1030,7 +1061,7 @@
         <div class="why-card">
           <div class="why-icon">⚡</div>
           <h3>Same-Day Availability</h3>
-          <p>Open 7 days a week, 9AM to 9PM. Book online or call 905-226-6336. Most clients get in the same day. No long wait lists, no gaps between appointments.</p>
+          <p>Open 7 days a week, 9AM to 9PM. Book online or call 647-287-3777. Most clients get in the same day. No long wait lists, no gaps between appointments.</p>
         </div>
 
       </div>
@@ -1044,7 +1075,7 @@
         <span class="section-label">Choose Your Treatment</span>
         <h2 class="section-title">Find What Your Body<br>Actually Needs Right Now</h2>
         <p class="section-sub">
-          Available as RMT massage (with insurance receipt) or relaxation massage. Not sure which to book? Call 905-226-6336 and we'll point you in the right direction.
+          Available as RMT massage (with insurance receipt) or relaxation massage. Not sure which to book? Call 647-287-3777 and we'll point you in the right direction.
         </p>
       </div>
 
@@ -1173,7 +1204,7 @@
       </div>
 
       <p class="pricing-note">
-        <em>Only RMT sessions include an official insurance receipt accepted by extended health plans. Not sure which to choose? <a href="tel:9052266336" style="color:inherit;font-weight:600;">Call us — 905-226-6336.</a></em>
+        <em>Only RMT sessions include an official insurance receipt accepted by extended health plans. Not sure which to choose? <a href="tel:+16472873777" style="color:inherit;font-weight:600;">Call us — 647-287-3777.</a></em>
       </p>
     </div>
   </section>
@@ -1325,7 +1356,7 @@
         <div class="how-step">
           <div class="step-num">1</div>
           <h3>Book Online or Call</h3>
-          <p>Choose your session length and book online or call 905-226-6336. Same-day appointments often available.</p>
+          <p>Choose your session length and book online or call 647-287-3777. Same-day appointments often available.</p>
         </div>
         <div class="how-step">
           <div class="step-num">2</div>
@@ -1452,7 +1483,7 @@
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer">
-            Open 7 days a week, 9AM to 9PM. Same-day appointments are available most days — book online or call 905-226-6336 and we'll get you in.
+            Open 7 days a week, 9AM to 9PM. Same-day appointments are available most days — book online or call 647-287-3777 and we'll get you in.
           </div>
         </div>
 
@@ -1462,7 +1493,7 @@
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer">
-            Book online using our booking system or call 905-226-6336. Same-day appointments are available most days. Takes about 2 minutes to lock in your time.
+            Book online using our booking system or call 647-287-3777. Same-day appointments are available most days. Takes about 2 minutes to lock in your time.
           </div>
         </div>
 
@@ -1484,7 +1515,7 @@
           <div class="faq-answer">
             We require <strong>24 hours' notice</strong> to cancel or reschedule your appointment. Cancellations made with less than 24 hours' notice — including no-shows — may be charged the full session fee.<br><br>
             If you're feeling unwell, please cancel as soon as you know — your health and the safety of other clients comes first. The 24-hour policy still applies in the event of illness, so please contact us as early as possible.<br><br>
-            To cancel or reschedule: call <strong>905-226-6336</strong> or manage your booking online.
+            To cancel or reschedule: call <strong>647-287-3777</strong> or manage your booking online.
           </div>
         </div>
 
@@ -1558,7 +1589,7 @@
             <div class="contact-detail-icon">📞</div>
             <div class="contact-detail-text">
               <h4>Phone</h4>
-              <a href="tel:9052266336">905-226-6336</a>
+              <a href="tel:+16472873777">647-287-3777</a>
             </div>
           </div>
 
@@ -1582,8 +1613,9 @@
             Open 7 days, 9AM–9PM. Same-day bookings available. Takes 2 minutes to lock in your spot. Insurance receipt ready when you walk out.
           </p>
           <div class="booking-options">
-            <a href="#book" class="btn-white">Book Today →</a>
-            <a href="tel:9052266336" class="btn-white-outline">📞 905-226-6336</a>
+            <a href="#book" class="btn-white">Book Online →</a>
+            <a href="tel:+16472873777" class="btn-white-outline">📞 Call · 647-287-3777</a>
+            <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="btn-whatsapp">💬 WhatsApp Us</a>
           </div>
           <p class="booking-note">✅ RMT &amp; Relaxation · All Insurance Accepted · Open 7 Days</p>
         </div>
@@ -1602,7 +1634,8 @@
         <p>Same-day appointments available. Book online in 2 minutes or call us directly. RMT sessions include your insurance receipt — relaxation sessions available from $40.</p>
         <div class="final-cta-actions">
           <a href="#book" class="btn-white">Book Now — Same Day Available</a>
-          <a href="tel:9052266336" class="btn-white-outline">📞 Call 905-226-6336</a>
+          <a href="tel:+16472873777" class="btn-white-outline">📞 Call 647-287-3777</a>
+          <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="btn-white-outline">💬 WhatsApp</a>
         </div>
       </div>
     </div>
@@ -1620,7 +1653,7 @@
           </p>
           <div class="footer-nap">
             <p>📍 14 Block Road, Brampton, ON L7A 5B2</p>
-            <p>📞 905-226-6336</p>
+            <p>📞 647-287-3777</p>
           </div>
         </div>
 
@@ -1662,6 +1695,12 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating mobile contact bar -->
+  <div class="float-contact" id="floatContact">
+    <a href="tel:+16472873777" class="fc-call">📞 Call Us</a>
+    <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="fc-wa">💬 WhatsApp</a>
+  </div>
 
   <script>
     function toggleFaq(btn) {
