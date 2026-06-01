@@ -16,9 +16,25 @@
   <meta property="og:description" content="Brampton's highest-rated massage clinic. RMT massage with insurance receipts from $60. Swedish, deep tissue &amp; sports. Same-day bookings. Call 905-226-6336." />
   <meta property="og:url" content="https://kimuramassage.ca/" />
   <meta property="og:locale" content="en_CA" />
+  <meta property="og:image" content="https://kimuramassage.ca/assets/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Kimura Massage Therapy &amp; Rehab — Brampton RMT. Insurance receipts. Same-day appointments. 5.0 stars." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://kimuramassage.ca/assets/og-image.svg" />
   <meta name="theme-color" content="#0F2742" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <meta name="google-site-verification" content="hS7gswZfPI_JaF-V61BI4B5m1jMstucoXdD4AljzMEk" />
+
+  <!-- ===================== GA4 ===================== -->
+  <!-- Replace G-XXXXXXXXXX with your real Measurement ID from analytics.google.com -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 
   <!-- Google Fonts: Oswald + DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,8 +63,33 @@
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
-      "reviewCount": "170"
+      "reviewCount": "170",
+      "bestRating": "5",
+      "worstRating": "1"
     },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "author": { "@type": "Person", "name": "Aisha M." },
+        "datePublished": "2025-04-10",
+        "reviewBody": "Best RMT I've found in Brampton. Strong, controlled pressure and my neck and shoulders finally released after months of tension. Receipt was ready right after."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "author": { "@type": "Person", "name": "Daniel R." },
+        "datePublished": "2025-03-22",
+        "reviewBody": "Easy online booking, clean private space, no rushing. The insurance receipt was ready immediately. Absolutely worth it — I come back every month."
+      },
+      {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "author": { "@type": "Person", "name": "Priya S." },
+        "datePublished": "2025-05-01",
+        "reviewBody": "Ricky is an excellent RMT. Sports massage before my marathon helped enormously with recovery. Deep tissue work is firm and well-controlled — highly recommend."
+      }
+    ],
     "employee": {
       "@type": "Person",
       "name": "Ricky Arora",

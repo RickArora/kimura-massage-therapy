@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F2742;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a1e36;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <!-- Orange accent bar left -->
+  <rect x="0" y="0" width="8" height="630" fill="#E85D04" />
+
+  <!-- Orange accent bottom strip -->
+  <rect x="0" y="590" width="1200" height="40" fill="#E85D04" opacity="0.15" />
+
+  <!-- Clinic name -->
+  <text x="80" y="180" font-family="Georgia, serif" font-size="54" font-weight="700" fill="#ffffff" letter-spacing="1">Kimura Massage Therapy</text>
+  <text x="80" y="245" font-family="Georgia, serif" font-size="54" font-weight="700" fill="#ffffff" letter-spacing="1">&amp; Rehab</text>
+
+  <!-- Tagline -->
+  <text x="80" y="315" font-family="Arial, sans-serif" font-size="28" fill="#E85D04" font-weight="700" letter-spacing="1">BRAMPTON'S HIGHEST-RATED RMT</text>
+
+  <!-- Divider -->
+  <rect x="80" y="340" width="120" height="4" fill="#E85D04" />
+
+  <!-- Key facts -->
+  <text x="80" y="400" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.85)">✓  RMT Massage — Insurance Receipts Provided</text>
+  <text x="80" y="445" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.85)">✓  Relaxation Massage from $40</text>
+  <text x="80" y="490" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.85)">✓  Open 7 Days · 9AM–9PM · Same-Day Available</text>
+
+  <!-- Stars + rating -->
+  <text x="80" y="560" font-family="Arial, sans-serif" font-size="28" fill="#E85D04">★★★★★</text>
+  <text x="230" y="560" font-family="Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.7)">5.0 · 170+ Google Reviews · Brampton, ON</text>
+
+  <!-- URL -->
+  <text x="1120" y="620" font-family="Arial, sans-serif" font-size="18" fill="rgba(255,255,255,0.4)" text-anchor="end">kimuramassage.ca</text>
+</svg>
