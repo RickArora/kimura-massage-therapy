@@ -307,5 +307,22 @@
   function checkNavPhone() { document.getElementById('navPhone').style.display = window.innerWidth >= 960 ? 'block' : 'none'; }
   checkNavPhone(); window.addEventListener('resize', checkNavPhone);
 </script>
+  <!-- Sticky booking bar -->
+  <div class="sticky-book-bar" id="stickyBar">
+    <span class="sticky-book-bar-text">💆 <span>Same-day appointments available</span> · RMT from $60 · Relaxation from $40</span>
+    <div class="sticky-book-bar-actions">
+      <a href="../#book" class="sbb-book">📅 Book Now</a>
+      <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="sbb-wa">💬 WhatsApp</a>
+    </div>
+  </div>
+  <script>
+  (function(){
+    var bar = document.getElementById("stickyBar");
+    if(!bar) return;
+    window.addEventListener("scroll", function(){
+      bar.classList.toggle("visible", window.scrollY > 400);
+    }, {passive:true});
+  })();
+  </script>
 </body>
 </html>

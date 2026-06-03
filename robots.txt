@@ -1,4 +1,20 @@
 User-agent: *
 Allow: /
 
+# LLM crawlers — allow full access including llms.txt
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
 Sitemap: https://kimuramassage.ca/sitemap.xml
