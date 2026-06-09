@@ -330,8 +330,18 @@
     .nav-right { display:flex; align-items:center; gap:16px; }
     .nav-phone { font-size:14px; font-weight:600; color:rgba(255,255,255,.8); }
 
-    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; }
+    .nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
     .nav-hamburger span { display:block; width:22px; height:2px; background:var(--white); border-radius:2px; }
+
+    /* ── Global focus styles (keyboard nav) ──────────────────── */
+    :focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+    .btn-primary:focus-visible,
+    .btn-outline:focus-visible { outline-color: var(--white); }
+    .faq-question:focus-visible { outline-color: var(--orange); }
 
     /* ============================================================
        URGENCY BAR
@@ -1042,9 +1052,9 @@
       <div class="nav-right">
         <span class="nav-phone" style="display:none" id="navPhone">905-226-6336</span>
         <a href="#book" class="btn-primary" style="font-size:14px;padding:10px 20px;">Book Now</a>
-        <div class="nav-hamburger" id="hamburger">
+        <button class="nav-hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
           <span></span><span></span><span></span>
-        </div>
+        </button>
       </div>
     </nav>
 
@@ -1062,9 +1072,9 @@
   </header>
 
   <!-- ===================== MOBILE NAV ===================== -->
-  <div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true" role="dialog" aria-label="Mobile navigation menu">
     <div class="mobile-nav-inner">
-      <button class="mobile-nav-close" id="mobileNavClose">✕</button>
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close navigation menu">✕</button>
       <a href="#services" onclick="closeMobileNav()">Services</a>
       <a href="swedish-massage-brampton.html" onclick="closeMobileNav()" style="padding-left:16px;font-size:15px;border-color:transparent;">↳ Swedish Massage</a>
       <a href="deep-tissue-massage-brampton.html" onclick="closeMobileNav()" style="padding-left:16px;font-size:15px;border-color:transparent;">↳ Deep Tissue</a>
@@ -1232,7 +1242,7 @@
             <span class="service-tag">Full Body</span>
             <span class="service-tag">RMT or Non-RMT</span>
           </div>
-          <a href="swedish-massage-brampton.html" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange);">Learn more →</a>
+          <a href="swedish-massage-brampton.html" aria-label="Learn more about Swedish Massage in Brampton" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange);">Learn more →</a>
         </article>
 
         <article class="service-card">
@@ -1246,7 +1256,7 @@
             <span class="service-tag">Knots & Tightness</span>
             <span class="service-tag">RMT or Non-RMT</span>
           </div>
-          <a href="deep-tissue-massage-brampton.html" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange);">Learn more →</a>
+          <a href="deep-tissue-massage-brampton.html" aria-label="Learn more about Deep Tissue Massage in Brampton" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange);">Learn more →</a>
         </article>
 
         <article class="service-card">
@@ -1260,7 +1270,7 @@
             <span class="service-tag">Recovery</span>
             <span class="service-tag">RMT or Non-RMT</span>
           </div>
-          <a href="sports-massage-brampton.html" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange);">Learn more →</a>
+          <a href="sports-massage-brampton.html" aria-label="Learn more about Sports Massage in Brampton" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange);">Learn more →</a>
         </article>
 
       </div>
@@ -1567,7 +1577,7 @@
       <div class="faq-list">
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
             Is your massage therapist a Registered Massage Therapist (RMT)?
             <span class="faq-toggle">+</span>
           </button>
@@ -1577,7 +1587,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
             Do you accept insurance for massage therapy?
             <span class="faq-toggle">+</span>
           </button>
@@ -1588,7 +1598,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
             What are your massage therapy prices in Brampton?
             <span class="faq-toggle">+</span>
           </button>
@@ -1605,7 +1615,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
             Where are you located?
             <span class="faq-toggle">+</span>
           </button>
@@ -1615,7 +1625,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
             What are your hours?
             <span class="faq-toggle">+</span>
           </button>
@@ -1625,7 +1635,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
             How do I book a massage therapy appointment?
             <span class="faq-toggle">+</span>
           </button>
@@ -1635,7 +1645,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
             What types of massage do you offer?
             <span class="faq-toggle">+</span>
           </button>
@@ -1645,7 +1655,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
             What is your cancellation policy?
             <span class="faq-toggle">+</span>
           </button>
@@ -1657,7 +1667,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
             How is the space kept clean and safe?
             <span class="faq-toggle">+</span>
           </button>
@@ -1671,7 +1681,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
             Am I in control during the session?
             <span class="faq-toggle">+</span>
           </button>
@@ -1682,7 +1692,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
             Do I need to tip?
             <span class="faq-toggle">+</span>
           </button>
@@ -1692,7 +1702,7 @@
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
             Do you serve Mississauga and Caledon?
             <span class="faq-toggle">+</span>
           </button>
@@ -1875,30 +1885,45 @@
   </footer>
 
   <!-- Floating mobile contact bar -->
-  <div class="float-contact" id="floatContact">
-    <a href="tel:9052266336" class="fc-call">📞 Call Us</a>
-    <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="fc-wa">💬 WhatsApp</a>
+  <div class="float-contact" id="floatContact" role="complementary" aria-label="Quick contact">
+    <a href="tel:9052266336" class="fc-call" aria-label="Call us at 905-226-6336">📞 Call Us</a>
+    <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="fc-wa" aria-label="Message us on WhatsApp">💬 WhatsApp</a>
   </div>
 
   <script>
     function toggleFaq(btn) {
       const item = btn.closest('.faq-item');
       const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
+      // Close all open items
+      document.querySelectorAll('.faq-item.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      // Open clicked item if it was closed
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
     }
 
     const hamburger = document.getElementById('hamburger');
     const mobileNav = document.getElementById('mobileNav');
     const mobileNavClose = document.getElementById('mobileNavClose');
 
-    hamburger.addEventListener('click', () => mobileNav.classList.add('open'));
-    mobileNavClose.addEventListener('click', () => mobileNav.classList.remove('open'));
-    mobileNav.addEventListener('click', e => {
-      if (e.target === mobileNav) mobileNav.classList.remove('open');
-    });
+    function openMobileNav() {
+      mobileNav.classList.add('open');
+      mobileNav.setAttribute('aria-hidden', 'false');
+      hamburger.setAttribute('aria-expanded', 'true');
+    }
+    function closeMobileNav() {
+      mobileNav.classList.remove('open');
+      mobileNav.setAttribute('aria-hidden', 'true');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
 
-    function closeMobileNav() { mobileNav.classList.remove('open'); }
+    hamburger.addEventListener('click', openMobileNav);
+    mobileNavClose.addEventListener('click', closeMobileNav);
+    mobileNav.addEventListener('click', e => { if (e.target === mobileNav) closeMobileNav(); });
 
     /* ── Booking widget logic ───────────────────── */
     const isRMT = () => document.querySelector('#typeOptions .bw-opt.selected')?.dataset.type.includes('RMT');

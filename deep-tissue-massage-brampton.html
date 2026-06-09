@@ -127,14 +127,14 @@
     <div class="nav-right">
       <span class="nav-phone" style="display:none" id="navPhone">905-226-6336</span>
       <a href="#book" class="btn-primary" style="font-size:14px;padding:10px 20px;">Book Now</a>
-      <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
     </div>
   </nav>
 </header>
 
-<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav" id="mobileNav" aria-hidden="true" role="dialog" aria-label="Mobile navigation menu">
   <div class="mobile-nav-inner">
-    <button class="mobile-nav-close" id="mobileNavClose">✕</button>
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close navigation menu">✕</button>
     <a href="#services" onclick="closeMobileNav()">Services</a>
     <a href="swedish-massage-brampton.html" onclick="closeMobileNav()" style="padding-left:16px;font-size:15px;border-color:transparent;">↳ Swedish Massage</a>
     <a href="deep-tissue-massage-brampton.html" onclick="closeMobileNav()" style="padding-left:16px;font-size:15px;border-color:transparent;">↳ Deep Tissue</a>
@@ -307,7 +307,7 @@
     <div class="faq-list">
 
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
           Is deep tissue massage painful?
           <span class="faq-toggle">+</span>
         </button>
@@ -315,7 +315,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
           What conditions benefit most from deep tissue massage?
           <span class="faq-toggle">+</span>
         </button>
@@ -323,7 +323,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
           Does insurance cover deep tissue massage in Ontario?
           <span class="faq-toggle">+</span>
         </button>
@@ -331,7 +331,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
           How often should I get deep tissue massage for chronic pain?
           <span class="faq-toggle">+</span>
         </button>
@@ -339,7 +339,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
           Will I be sore after a deep tissue massage?
           <span class="faq-toggle">+</span>
         </button>
@@ -347,7 +347,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
           What is your cancellation policy?
           <span class="faq-toggle">+</span>
         </button>
@@ -355,7 +355,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
           How do you keep the space clean between clients?
           <span class="faq-toggle">+</span>
         </button>

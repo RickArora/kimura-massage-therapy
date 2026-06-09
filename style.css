@@ -443,3 +443,14 @@ footer { background: var(--navy-dark); color: rgba(255,255,255,.8); padding: 56p
   .sticky-book-bar { padding: 10px 16px; }
   .sticky-book-bar-text { display: none; }
 }
+
+/* ── Accessibility: global focus styles ──────────────────────── */
+:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.btn-primary:focus-visible,
+.btn-outline:focus-visible { outline-color: var(--white); }
+.faq-question:focus-visible { outline-color: var(--orange); }
+.nav-hamburger:focus-visible { outline-color: var(--orange); }
