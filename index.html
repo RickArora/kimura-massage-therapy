@@ -191,17 +191,19 @@
     .skip-link { position:absolute; top:-100%; left:0; background:#0F2742; color:#fff; padding:10px 18px; font-size:14px; font-weight:600; z-index:9999; border-radius:0 0 6px 0; text-decoration:none; transition:top .15s; }
     .skip-link:focus { top:0; }
     .demo-banner {
-      background: #FFD60A;
-      color: #1a1a1a;
+      background: var(--navy-dark);
+      color: rgba(255,255,255,.55);
       text-align: center;
-      padding: 10px 20px;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: .01em;
+      padding: 5px 16px;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: .02em;
       position: relative;
       z-index: 200;
+      border-bottom: 1px solid rgba(255,255,255,.08);
     }
-    .demo-banner a { color: #1a1a1a; text-decoration: underline; }
+    .demo-banner strong { font-weight: 600; color: rgba(255,255,255,.7); }
+    .demo-banner a { color: rgba(255,255,255,.55); text-decoration: underline; }
 
     /* ============================================================
        ROOT — Navy Command Palette
@@ -368,10 +370,12 @@
     }
     .urgency-btn:hover { background:var(--orange-dark); }
     .urgency-btn.outline {
-      background:transparent; border:1px solid rgba(255,255,255,.3);
-      color:rgba(255,255,255,.8);
+      background:transparent; border:1px solid rgba(255,255,255,.28);
+      color:rgba(255,255,255,.72);
     }
-    .urgency-btn.outline:hover { background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.5); }
+    .urgency-btn.outline:hover { background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.45); }
+    .urgency-btn.whatsapp { background:transparent; border:1px solid rgba(255,255,255,.28); color:rgba(255,255,255,.72); }
+    .urgency-btn.whatsapp:hover { background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.45); }
 
     /* ============================================================
        MOBILE NAV DRAWER
@@ -417,11 +421,13 @@
       margin-bottom:36px; max-width:520px;
     }
 
-    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:32px; }
+    .hero-actions { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:40px; align-items:center; }
+    .hero-actions .btn-primary { padding:15px 32px; font-size:16px; }
     .hero-actions .btn-outline {
-      color:rgba(255,255,255,.9); border-color:rgba(255,255,255,.38); background:transparent;
+      color:rgba(255,255,255,.72); border-color:rgba(255,255,255,.28); background:transparent;
+      font-size:14px; padding:13px 22px;
     }
-    .hero-actions .btn-outline:hover { background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.6); }
+    .hero-actions .btn-outline:hover { background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.45); }
 
     .hero-proof {
       display:flex; flex-wrap:wrap; gap:20px;
@@ -881,11 +887,11 @@
     .bw-confirm-btns { display: flex; flex-direction: column; gap: 10px; }
     .bw-confirm-wa {
       display: flex; align-items: center; justify-content: center; gap: 8px;
-      background: #25D366; color: #fff; font-family: var(--font-body);
+      background: var(--orange); color: #fff; font-family: var(--font-body);
       font-weight: 700; font-size: 15px; padding: 15px 24px; border-radius: 8px;
       transition: background .15s; text-align: center;
     }
-    .bw-confirm-wa:hover { background: #1ebe5d; }
+    .bw-confirm-wa:hover { background: var(--orange-dark); }
     .bw-confirm-call {
       display: flex; align-items: center; justify-content: center; gap: 8px;
       background: var(--navy); color: #fff; font-family: var(--font-body);
@@ -896,29 +902,15 @@
     .bw-note { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 12px; }
     .btn-whatsapp {
       display:block; text-align:center;
-      background:#25D366; color:#fff;
+      background:transparent; color:rgba(255,255,255,.8);
       font-family:var(--font-body); font-weight:700; font-size:15px;
-      padding:16px 28px; border-radius:6px; border:2px solid #25D366;
-      cursor:pointer; transition:background .2s;
+      padding:16px 28px; border-radius:6px; border:2px solid rgba(255,255,255,.28);
+      cursor:pointer; transition:background .2s, border-color .2s;
     }
-    .btn-whatsapp:hover { background:#1ebe5d; border-color:#1ebe5d; }
+    .btn-whatsapp:hover { background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.45); }
     /* WhatsApp urgency bar variant */
     .urgency-btn.whatsapp { background:#25D366; border-color:#25D366; }
-    .urgency-btn.whatsapp:hover { background:#1ebe5d; }
-    /* Floating mobile contact bar */
-    .float-contact {
-      display:none;
-      position:fixed; bottom:0; left:0; right:0; z-index:150;
-      display:grid; grid-template-columns:1fr 1fr;
-      box-shadow:0 -4px 20px rgba(0,0,0,.18);
-    }
-    .float-contact a {
-      display:flex; align-items:center; justify-content:center; gap:8px;
-      padding:16px 12px; font-family:var(--font-body); font-size:14px;
-      font-weight:700; color:#fff; text-align:center;
-    }
-    .float-contact .fc-call { background:var(--navy); }
-    .float-contact .fc-wa { background:#25D366; }
+    /* Floating bar removed */
 
     /* ============================================================
        FINAL CTA (ORANGE)
@@ -976,9 +968,6 @@
        RESPONSIVE
     ============================================================ */
     /* Float bar only on mobile */
-    @media (min-width: 961px) { .float-contact { display:none !important; } }
-    /* Add padding so footer isn't hidden behind float bar on mobile */
-    @media (max-width: 960px) { body { padding-bottom: 56px; } }
 
     @media (max-width: 960px) {
       .hero-inner { grid-template-columns:1fr; }
@@ -1003,15 +992,17 @@
       .how-steps { grid-template-columns:1fr; }
       .footer-top { grid-template-columns:1fr; }
       .footer-bottom { flex-direction:column; text-align:center; }
-      .hero-actions { flex-direction:column; }
-      .hero-actions .btn-primary,
-      .hero-actions .btn-outline { text-align:center; width:100%; }
+      /* Hero actions: primary full-width, secondary row */
+      .hero-actions { flex-direction:column; gap:10px; }
+      .hero-actions .btn-primary { text-align:center; width:100%; }
+      .hero-actions-secondary { display:flex; gap:10px; width:100%; }
+      .hero-actions .btn-outline { flex:1; text-align:center; }
       .trust-bar-inner { flex-wrap:wrap; }
       .trust-item { flex:1 1 50%; min-width:0; white-space:normal; text-align:center; font-size:12px; border-right:none; border-bottom:1px solid rgba(255,255,255,.1); padding:12px 10px; }
       .trust-item:last-child { border-bottom:none; }
       .nav-right .btn-primary { font-size:12px !important; padding:8px 12px !important; white-space:nowrap; }
-      .urgency-inner { flex-direction:column; gap:10px; text-align:center; }
-      .urgency-text { white-space:normal; }
+      /* Urgency bar: hide on mobile — CTAs already in hero */
+      .urgency-bar { display:none; }
       .final-cta-actions { flex-direction:column; align-items:center; }
       .final-cta .btn-white,
       .final-cta .btn-white-outline { width:100%; max-width:320px; }
@@ -1022,7 +1013,7 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <div class="demo-banner">
-    🚧 <strong>MOCK SITE — For demonstration purposes only.</strong> This is not a real business. Ricky Arora is not yet a Registered Massage Therapist (RMT).
+    🚧 Mock site — not a real business. Ricky Arora is not yet an RMT.
   </div>
 
   <!-- ===================== HEADER ===================== -->
@@ -1101,15 +1092,18 @@
 
           <h1>RMT Massage Therapy in Brampton —<br>Same-Day Appointments.<br><em>Insurance Covered.</em></h1>
 
-          <h2 style="font-family:var(--font-head);font-size:clamp(20px,2.8vw,32px);font-weight:600;color:rgba(255,255,255,.8);line-height:1.25;margin-bottom:20px;">Your Neck's Been Tight for Weeks. Your Back Locks Up Every Morning.<br>You've Been Living With It Long Enough.</h2>
+          <h2 style="font-family:var(--font-head);font-size:clamp(16px,2.2vw,24px);font-weight:500;color:rgba(255,255,255,.55);line-height:1.35;margin-bottom:32px;letter-spacing:.01em;">Your Neck's Been Tight for Weeks. Your Back Locks Up Every Morning.<br>You've Been Living With It Long Enough.</h2>
 
           <p class="hero-desc">
             RMT massage with official insurance receipts from $60, or non-RMT massage from $40. Same-day availability most days. 200+ five-star Google reviews in Brampton.
           </p>
 
           <div class="hero-actions">
-            <a href="#book" class="btn-primary">Book Today — Same Day Available</a>
-            <a href="tel:9052266336" class="btn-outline">📞 905-226-6336</a>
+            <a href="#book" class="btn-primary">Book Now — Same Day Available</a>
+            <div class="hero-actions-secondary">
+              <a href="tel:9052266336" class="btn-outline" aria-label="Call 905-226-6336">📞 Call</a>
+              <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="btn-outline" aria-label="Message on WhatsApp">💬 WhatsApp</a>
+            </div>
           </div>
 
           <div class="hero-proof">
@@ -1884,11 +1878,7 @@
     </div>
   </footer>
 
-  <!-- Floating mobile contact bar -->
-  <div class="float-contact" id="floatContact" role="complementary" aria-label="Quick contact">
-    <a href="tel:9052266336" class="fc-call" aria-label="Call us at 905-226-6336">📞 Call Us</a>
-    <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="fc-wa" aria-label="Message us on WhatsApp">💬 WhatsApp</a>
-  </div>
+  <!-- Floating bar removed — CTAs live in hero + urgency bar -->
 
   <script>
     function toggleFaq(btn) {
