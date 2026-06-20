@@ -662,6 +662,12 @@
     }
     .price-row:last-child { border-bottom:none; }
     .price-row.highlight { background:none; }
+    .price-row-featured {
+      background:rgba(232,93,4,.06); margin:0 -12px; padding:14px 12px;
+      border-radius:8px; border-bottom:none !important;
+    }
+    .price-row-featured .pr-duration { color:var(--navy); font-weight:600; }
+    .price-row-featured .pr-price { color:var(--orange); }
     .pr-duration {
       font-size:15px; color:var(--text-muted);
       display:flex; align-items:center; gap:8px;
@@ -1208,11 +1214,12 @@
           <h2 style="font-family:var(--font-head);font-size:clamp(16px,2.2vw,24px);font-weight:500;color:rgba(255,255,255,.55);line-height:1.35;margin-bottom:32px;letter-spacing:.01em;">Your Neck's Been Tight for Weeks. Your Back Locks Up Every Morning.<br>You've Been Living With It Long Enough.</h2>
 
           <p class="hero-desc">
-            RMT massage with official insurance receipts from $60, or non-RMT massage from $40. Same-day availability most days. 200+ five-star Google reviews in Brampton.
+            RMT massage with official insurance receipts from $60, or non-RMT massage from $40. Same-day availability most days. 213+ five-star Google reviews in Brampton.
           </p>
 
           <div class="hero-actions">
             <a href="#" class="btn-primary open-book-modal">Book Now — Same Day Available</a>
+            <p style="font-size:12px;color:rgba(255,255,255,.32);margin:6px 0 0;letter-spacing:.01em;">No commitment · Open until 9PM tonight · Cancel anytime with 24hr notice</p>
             <div class="hero-actions-secondary">
               <a href="tel:9052266336" class="btn-outline" aria-label="Call 905-226-6336">📞 Call</a>
               <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="btn-outline" aria-label="Message on WhatsApp">💬 WhatsApp</a>
@@ -1220,7 +1227,7 @@
           </div>
 
           <div class="hero-proof">
-            <span class="hero-proof-item">⭐ <strong>200+</strong> Five-Star Reviews</span>
+            <span class="hero-proof-item">⭐ <strong>213+</strong> Five-Star Reviews</span>
             <span class="hero-proof-item">⭐ <strong>5.0</strong> Rating</span>
             <span class="hero-proof-item">📅 Open <strong>7 Days</strong></span>
             <span class="hero-proof-item">✅ <strong>Same-Day</strong> Bookings</span>
@@ -1286,7 +1293,7 @@
   <div class="trust-bar">
     <div class="trust-bar-inner container" style="padding-left:0;padding-right:0;">
       <div class="trust-item">📅 Same-Day Appointments Available</div>
-      <div class="trust-item">⭐ 5.0 Perfect Rating · 200+ Reviews</div>
+      <div class="trust-item">⭐ 5.0 Perfect Rating · 213+ Reviews</div>
       <div class="trust-item">💳 Insurance Receipts Included</div>
       <div class="trust-item">🏥 Ontario Licensed RMT on Staff</div>
       <div class="trust-item">🕐 7 Days · 9AM–9PM · No Waitlist</div>
@@ -1298,7 +1305,7 @@
     <div class="container">
       <div class="why-header">
         <span class="section-label">Why Choose Kimura</span>
-        <h2 class="section-title">Why 200+ Brampton Clients<br>Keep Coming Back</h2>
+        <h2 class="section-title">Why 213+ Brampton Clients<br>Keep Coming Back</h2>
       </div>
 
       <div class="why-grid">
@@ -1407,7 +1414,7 @@
               <span class="pr-duration">30 Minutes</span>
               <span class="pr-price"><sup>$</sup>60</span>
             </div>
-            <div class="price-row">
+            <div class="price-row price-row-featured">
               <span class="pr-duration">60 Minutes <em class="pr-popular">Most Popular</em></span>
               <span class="pr-price"><sup>$</sup>100</span>
             </div>
@@ -1422,7 +1429,8 @@
             <li>Treatment notes kept on file</li>
             <li>Green Shield, Manulife, Sun Life, Canada Life & more</li>
           </ul>
-          <a href="#book" class="btn-primary" style="display:block;text-align:center;">Book RMT Session →</a>
+          <a href="#" class="btn-primary open-book-modal" style="display:block;text-align:center;">Book RMT Session →</a>
+          <p style="font-size:11px;color:var(--text-muted);text-align:center;margin-top:8px;line-height:1.5;">No referral needed · Receipt ready at session end · Cancel 24hr</p>
         </div>
 
         <!-- Divider -->
@@ -1440,7 +1448,7 @@
               <span class="pr-duration">30 Minutes</span>
               <span class="pr-price"><sup>$</sup>40</span>
             </div>
-            <div class="price-row">
+            <div class="price-row price-row-featured">
               <span class="pr-duration">60 Minutes <em class="pr-popular">Most Popular</em></span>
               <span class="pr-price"><sup>$</sup>70</span>
             </div>
@@ -1455,7 +1463,8 @@
             <li>Same-day availability</li>
             <li>No insurance receipt — straightforward rate</li>
           </ul>
-          <a href="#book" class="btn-outline" style="display:block;text-align:center;">Book Non-RMT Session →</a>
+          <a href="#" class="btn-outline open-book-modal" style="display:block;text-align:center;">Book Non-RMT Session →</a>
+          <p style="font-size:11px;color:var(--text-muted);text-align:center;margin-top:8px;line-height:1.5;">No referral needed · Same-day most days · Cancel 24hr</p>
         </div>
 
       </div>
@@ -1463,6 +1472,15 @@
       <p class="pricing-note">
         <em>Only RMT sessions include an official insurance receipt accepted by extended health plans. Not sure which to choose? <a href="tel:9052266336" style="color:inherit;font-weight:600;">Call us — 905-226-6336.</a></em>
       </p>
+
+      <!-- Social proof at decision point (Nielsen Norman / Cialdini) -->
+      <div style="margin-top:32px;background:var(--navy);border-radius:12px;padding:24px 28px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="font-size:28px;line-height:1;flex-shrink:0;">⭐</div>
+        <div>
+          <p style="font-size:15px;color:rgba(255,255,255,.8);line-height:1.65;margin-bottom:8px;font-style:italic;">"The insurance receipt was ready the moment I walked out. Submitted it to Manulife same day — fully covered. I've been back every month since."</p>
+          <p style="font-size:13px;color:rgba(255,255,255,.4);font-weight:500;">Daniel R. · Mississauga · Google · ★★★★★ · April 2025</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1473,7 +1491,7 @@
 
         <div class="about-content">
           <span class="section-label">About Our Clinic</span>
-          <h2 class="section-title">Why 200+ Brampton Clients<br>Keep Coming Back</h2>
+          <h2 class="section-title">Why 213+ Brampton Clients<br>Keep Coming Back</h2>
           <p>
             Most people try massage and feel some relief for a few days. Then it comes back. That's not a failure — it's a sign the underlying tension needs more consistent, targeted attention.
           </p>
@@ -1521,7 +1539,7 @@
           <div class="about-title">Brampton Massage Therapy Clinic</div>
           <div class="about-stats">
             <div class="about-stat">
-              <span class="num">200+</span>
+              <span class="num">213+</span>
               <span class="lbl">Google Reviews</span>
             </div>
             <div class="about-stat">
@@ -1547,11 +1565,11 @@
   <section class="reviews" id="reviews">
     <div class="container">
       <div class="reviews-header">
-        <span class="section-label">200+ Verified Google Reviews · 5.0 Stars</span>
+        <span class="section-label">213+ Verified Google Reviews · 5.0 Stars</span>
         <h2 class="section-title">Don't Take Our Word for It.<br>Take Theirs.</h2>
         <div class="reviews-rating">
           <span class="stars">★★★★★</span>
-          <span class="rating-text">Perfect 5.0 rating · 200+ verified Google reviews · Brampton, ON</span>
+          <span class="rating-text">Perfect 5.0 rating · 213+ verified Google reviews · Brampton, ON</span>
         </div>
       </div>
 
@@ -1564,7 +1582,7 @@
             <div class="review-avatar">A</div>
             <div>
               <div class="review-name">Aisha M.</div>
-              <div class="review-loc">Brampton, ON · Google</div>
+              <div class="review-loc">Brampton, ON · Google · May 2025</div>
             </div>
           </div>
         </div>
@@ -1576,7 +1594,7 @@
             <div class="review-avatar">D</div>
             <div>
               <div class="review-name">Daniel R.</div>
-              <div class="review-loc">Mississauga, ON · Google</div>
+              <div class="review-loc">Mississauga, ON · Google · Apr 2025</div>
             </div>
           </div>
         </div>
@@ -1588,7 +1606,7 @@
             <div class="review-avatar">P</div>
             <div>
               <div class="review-name">Priya S.</div>
-              <div class="review-loc">Caledon, ON · Google</div>
+              <div class="review-loc">Caledon, ON · Google · Mar 2025</div>
             </div>
           </div>
         </div>

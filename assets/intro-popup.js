@@ -72,5 +72,14 @@
     document.addEventListener('keydown', function(e){ if(e.key==='Escape') dismiss(); });
   }
 
+  // Time-delay trigger: 5s
   setTimeout(show, 5000);
+
+  // Exit-intent trigger: mouse leaves viewport toward top (desktop only)
+  document.addEventListener('mouseleave', function onExit(e) {
+    if (e.clientY <= 0 && !sessionStorage.getItem('introDismissed')) {
+      show();
+      document.removeEventListener('mouseleave', onExit);
+    }
+  });
 })();
