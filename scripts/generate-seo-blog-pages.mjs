@@ -725,7 +725,7 @@ const nav = (active = 'Blog') => `
     </ul>
     <div class="nav-right">
       <span class="nav-phone" style="display:none" id="navPhone">905-226-6336</span>
-      <a href="/#book" class="btn-primary" style="font-size:14px;padding:10px 20px;">Book Now</a>
+      <a href="https://kimuramassage.noterro.com/" class="btn-primary" style="font-size:14px;padding:10px 20px;">Book Now</a>
       <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
     </div>
   </nav>
@@ -742,7 +742,7 @@ const nav = (active = 'Blog') => `
     <a href="/blog/" onclick="closeMobileNav()">Blog</a>
     <a href="/#about" onclick="closeMobileNav()">About</a>
     <a href="/#faq" onclick="closeMobileNav()">FAQ</a>
-    <a href="/#book" onclick="closeMobileNav()">Book Now</a>
+    <a href="https://kimuramassage.noterro.com/" onclick="closeMobileNav()">Book Now</a>
     <a href="tel:9052266336" style="margin-top:8px;">Call 905-226-6336</a>
   </div>
 </div>`;
@@ -774,7 +774,7 @@ const footer = `
           <li><a href="/#about">About Ricky Arora RMT</a></li>
           <li><a href="/blog/">Blog</a></li>
           <li><a href="/#faq">FAQ</a></li>
-          <li><a href="/#book">Book Now</a></li>
+          <li><a href="https://kimuramassage.noterro.com/">Book Now</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -963,7 +963,7 @@ ${nav()}
             <p>Book a massage therapy session in Brampton with Ricky Arora, RMT. Same-day appointments are often available.</p>
           </div>
           <div class="article-cta-btns">
-            <a href="/#book" class="btn-white">Book Now</a>
+            <a href="https://kimuramassage.noterro.com/" class="btn-white">Book Now</a>
             <a href="tel:9052266336" class="btn-white-outline">Call 905-226-6336</a>
           </div>
         </div>
@@ -978,7 +978,7 @@ ${nav()}
         <div class="sidebar-book">
           <h3>Book RMT Massage</h3>
           <p>Get treatment for muscle tightness, stiffness, knots, and posture-related tension in Brampton.</p>
-          <a href="/#book" class="btn-white" style="margin-bottom:10px;">Book Now</a>
+          <a href="https://kimuramassage.noterro.com/" class="btn-white" style="margin-bottom:10px;">Book Now</a>
           <a href="tel:9052266336" class="btn-white-outline">Call 905-226-6336</a>
         </div>
         <div class="sidebar-toc">
@@ -1160,7 +1160,7 @@ ${nav()}
             <p>Book a massage therapy session in Brampton with Ricky Arora, RMT. Your treatment will be adjusted to your comfort, goals, and health history.</p>
           </div>
           <div class="article-cta-btns">
-            <a href="/#book" class="btn-white">Book Now</a>
+            <a href="https://kimuramassage.noterro.com/" class="btn-white">Book Now</a>
             <a href="tel:9052266336" class="btn-white-outline">Call 905-226-6336</a>
           </div>
         </div>
@@ -1175,7 +1175,7 @@ ${nav()}
         <div class="sidebar-book">
           <h3>Book RMT Massage</h3>
           <p>Get massage therapy support for pain, stiffness, muscle guarding, and recovery in Brampton.</p>
-          <a href="/#book" class="btn-white" style="margin-bottom:10px;">Book Now</a>
+          <a href="https://kimuramassage.noterro.com/" class="btn-white" style="margin-bottom:10px;">Book Now</a>
           <a href="tel:9052266336" class="btn-white-outline">Call 905-226-6336</a>
         </div>
         <div class="sidebar-toc">
@@ -1351,7 +1351,7 @@ ${nav()}
             <p>Book a massage therapy session in Brampton with Ricky Arora, RMT. Treatment is adjusted to your comfort, posture pattern, and goals.</p>
           </div>
           <div class="article-cta-btns">
-            <a href="/#book" class="btn-white">Book Now</a>
+            <a href="https://kimuramassage.noterro.com/" class="btn-white">Book Now</a>
             <a href="tel:9052266336" class="btn-white-outline">Call 905-226-6336</a>
           </div>
         </div>
@@ -1366,7 +1366,7 @@ ${nav()}
         <div class="sidebar-book">
           <h3>Book RMT Massage</h3>
           <p>Get massage therapy support for posture-related tension, stiffness, and muscle guarding in Brampton.</p>
-          <a href="/#book" class="btn-white" style="margin-bottom:10px;">Book Now</a>
+          <a href="https://kimuramassage.noterro.com/" class="btn-white" style="margin-bottom:10px;">Book Now</a>
           <a href="tel:9052266336" class="btn-white-outline">Call 905-226-6336</a>
         </div>
         <div class="sidebar-toc">
@@ -1535,7 +1535,7 @@ ${cards}
         <p>Swedish, deep tissue, and sports massage by Registered Massage Therapist Ricky Arora.</p>
       </div>
       <div class="booking-panel-actions">
-        <a href="/#book" class="btn-white">Book Online</a>
+        <a href="https://kimuramassage.noterro.com/" class="btn-white">Book Online</a>
         <a href="tel:9052266336" class="btn-white-outline">Call 905-226-6336</a>
       </div>
     </div>

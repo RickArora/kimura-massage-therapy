@@ -704,15 +704,26 @@
 
     .about-visual {
       background:var(--navy); border-radius:16px;
-      padding:52px 44px; text-align:center;
+      padding:44px; text-align:center;
       box-shadow:0 20px 60px rgba(15,39,66,.28);
       display:flex; flex-direction:column; justify-content:center;
+    }
+    .about-photo {
+      width:180px; height:180px; border-radius:50%;
+      margin:0 auto 24px; object-fit:cover;
+      border:4px solid rgba(255,255,255,.18);
+      box-shadow:0 18px 40px rgba(0,0,0,.28);
+      background:rgba(255,255,255,.08);
     }
     .about-name {
       font-family:var(--font-head); font-size:30px; font-weight:700;
       color:#fff; letter-spacing:.02em; margin-bottom:4px;
     }
-    .about-title { font-size:15px; color:rgba(255,255,255,.65); font-weight:500; margin-bottom:36px; }
+    .about-title { font-size:15px; color:rgba(255,255,255,.65); font-weight:500; margin-bottom:18px; }
+    .about-note {
+      font-size:15px; line-height:1.65; color:rgba(255,255,255,.78);
+      margin:0 auto 28px; max-width:390px;
+    }
 
     .about-stats { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
     .about-stat {
@@ -1060,7 +1071,7 @@
       .trust-bar-inner { flex-wrap:wrap; }
       .trust-item { flex:1 1 50%; min-width:0; white-space:normal; text-align:center; font-size:14px; border-right:none; border-bottom:1px solid rgba(255,255,255,.1); padding:14px 10px; }
       .trust-item:last-child { border-bottom:none; }
-      .nav-right .btn-primary { font-size:14px !important; padding:10px 14px !important; min-height:44px; white-space:nowrap; }
+      .nav-right .btn-primary { display:none; }
       .nav-logo span,
       .section-label,
       .hero-badge,
@@ -1139,7 +1150,7 @@
 
       <div class="nav-right">
         <span class="nav-phone" style="display:none" id="navPhone">905-226-6336</span>
-        <a href="#" class="btn-primary open-book-modal" style="font-size:14px;padding:10px 20px;">Book Now</a>
+        <a href="https://kimuramassage.noterro.com/" class="btn-primary" style="font-size:14px;padding:10px 20px;">Book Now</a>
         <button class="nav-hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
           <span></span><span></span><span></span>
         </button>
@@ -1151,7 +1162,7 @@
       <div class="urgency-inner">
         <span class="urgency-text">⚡ <strong>Same-day appointments available today</strong> · 905-226-6336</span>
         <div class="urgency-actions">
-          <a href="#book" class="urgency-btn">Book Now</a>
+          <a href="https://kimuramassage.noterro.com/" class="urgency-btn">Book Now</a>
           <a href="tel:9052266336" class="urgency-btn outline">📞 Call</a>
           <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="urgency-btn whatsapp">💬 WhatsApp</a>
         </div>
@@ -1171,7 +1182,7 @@
       <a href="blog/" onclick="closeMobileNav()">Blog</a>
       <a href="#about" onclick="closeMobileNav()">About</a>
       <a href="#faq" onclick="closeMobileNav()">FAQ</a>
-      <a href="#book" onclick="closeMobileNav()">Book Now</a>
+      <a href="https://kimuramassage.noterro.com/" onclick="closeMobileNav()">Book Now</a>
       <a href="tel:9052266336" style="margin-top:8px;">📞 905-226-6336</a>
     </div>
   </div>
@@ -1195,7 +1206,7 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#" class="btn-primary open-book-modal">Book Now — Same Day Available</a>
+            <a href="https://kimuramassage.noterro.com/" class="btn-primary">Book Now — Same Day Available</a>
             <p style="font-size:12px;color:rgba(255,255,255,.32);margin:6px 0 0;letter-spacing:.01em;">No commitment · Open until 9PM tonight · Cancel anytime with 24hr notice</p>
             <div class="hero-actions-secondary">
               <a href="tel:9052266336" class="btn-outline" aria-label="Call 905-226-6336">📞 Call</a>
@@ -1248,7 +1259,7 @@
               </div>
             </div>
             <div class="hero-card-cta">
-              <a href="#book" class="btn-primary" style="display:block;text-align:center;">Book Online</a>
+              <a href="https://kimuramassage.noterro.com/" class="btn-primary" style="display:block;text-align:center;">Book Online</a>
             </div>
             <p class="hero-card-note">RMT sessions may be covered by extended health benefits</p>
             <div class="ins-pills">
@@ -1405,7 +1416,7 @@
             <li>Treatment notes kept on file</li>
             <li>Green Shield, Manulife, Sun Life, Canada Life & more</li>
           </ul>
-          <a href="#" class="btn-primary open-book-modal" style="display:block;text-align:center;">Book RMT Session →</a>
+          <a href="https://kimuramassage.noterro.com/" class="btn-primary" style="display:block;text-align:center;">Book RMT Session →</a>
           <p style="font-size:11px;color:var(--text-muted);text-align:center;margin-top:8px;line-height:1.5;">No referral needed · Cancel 24hr</p>
         </div>
 
@@ -1459,15 +1470,15 @@
 
         <div class="about-content">
           <span class="section-label">About Our Clinic</span>
-          <h2 class="section-title">Why 200+ Brampton Clients<br>Keep Coming Back</h2>
+          <h2 class="section-title">Know Who's Treating You<br>Before You Book</h2>
           <p>
-            Most people try massage and feel some relief for a few days. Then it comes back. That's not a failure — it's a sign the underlying tension needs more consistent, targeted attention.
+            Kimura is run by Ricky Arora, RMT. His background in Brazilian jiu-jitsu, weight training, and computer science shapes how he treats: practical, focused, and based on what is actually happening in front of him.
           </p>
           <p>
-            At Kimura, every session starts with a proper intake and health history. Your therapist listens to what's going on, then builds the session around your specific situation — not a one-size-fits-all routine. You direct the pressure, the focus areas, and the pace. Your therapist checks in and adjusts throughout.
+            Every session starts with a proper intake and health history. Ricky listens to what's going on, then builds the treatment around your body, your goals, and your comfort level. Deep tissue, sports massage, and Swedish techniques are adjusted to you instead of forced into a template.
           </p>
           <p>
-            Open 7 days a week, with same-day availability most days.
+            If you are nervous about pressure, pain, or not knowing what to ask for, that is normal. You can speak up at any point. Pressure, pace, focus areas, and cupping are always your call.
           </p>
 
           <div class="about-credentials">
@@ -1503,8 +1514,10 @@
         </div>
 
         <div class="about-visual">
-          <div class="about-name">Kimura Massage</div>
-          <div class="about-title">Brampton Massage Therapy Clinic</div>
+          <img class="about-photo" src="assets/rmt-profile-circle-600.png" alt="Ricky Arora, Registered Massage Therapist at Kimura Massage Therapy and Rehab in Brampton">
+          <div class="about-name">Ricky Arora</div>
+          <div class="about-title">Registered Massage Therapist</div>
+          <p class="about-note">Deep tissue, sports massage, and practical treatment for neck, shoulder, back, and gym-related tension.</p>
           <div class="about-stats">
             <div class="about-stat">
               <span class="num">200+</span>
@@ -1515,8 +1528,8 @@
               <span class="lbl">Average Rating</span>
             </div>
             <div class="about-stat">
-              <span class="num">3</span>
-              <span class="lbl">Specialties</span>
+              <span class="num">BJJ</span>
+              <span class="lbl">Athletic Background</span>
             </div>
             <div class="about-stat">
               <span class="num">RMT</span>
@@ -1870,7 +1883,7 @@
         <h2>Same-Day Available. Don't Put It Off.</h2>
         <p>Still tight? Still sore? Most clients get in today. Book in under 2 minutes — RMT massage therapy from $60. Open 7 days, 9AM–9PM.</p>
         <div class="final-cta-actions">
-          <a href="#" class="btn-white open-book-modal">Book Now — Same Day Available</a>
+          <a href="https://kimuramassage.noterro.com/" class="btn-white">Book Now — Same Day Available</a>
           <a href="tel:9052266336" class="btn-white-outline">📞 Call 905-226-6336</a>
           <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="btn-white-outline">💬 WhatsApp</a>
         </div>
@@ -1909,7 +1922,7 @@
           <ul>
             <li><a href="#about">About Our Clinic</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="#book">Book Now</a></li>
+            <li><a href="https://kimuramassage.noterro.com/">Book Now</a></li>
           </ul>
         </div>
 
@@ -1944,7 +1957,7 @@
       <p class="book-modal-sub">Same-day available most days · Open 7 days, 9AM–9PM</p>
       <div class="book-modal-actions">
 
-        <a href="#book" class="bma-btn bma-online" onclick="closeBookModal()" aria-label="Use our online booking form">
+        <a href="https://kimuramassage.noterro.com/" class="bma-btn bma-online" onclick="closeBookModal()" aria-label="Use our online booking form">
           <div class="bma-icon">📅</div>
           <div class="bma-text">
             <span class="bma-label">Book Online</span>
