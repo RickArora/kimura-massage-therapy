@@ -721,7 +721,6 @@ const nav = (active = 'Blog') => `
       <li><a href="/#prices">Prices</a></li>
       <li><a href="/blog/" style="color:var(--orange);font-weight:600;">${active}</a></li>
       <li><a href="/#about">About</a></li>
-      <li><a href="/#reviews">Reviews</a></li>
       <li><a href="/#faq">FAQ</a></li>
     </ul>
     <div class="nav-right">
@@ -754,7 +753,7 @@ const footer = `
     <div class="footer-top">
       <div class="footer-brand">
         <div class="logo">Kimura Massage Therapy &amp; Rehab</div>
-        <p>Registered Massage Therapy in Brampton, Ontario. Insurance receipts provided. Serving Brampton, Mississauga, and Caledon.</p>
+        <p>Registered Massage Therapy in Brampton, Ontario. Serving Brampton, Mississauga, and Caledon.</p>
         <div class="footer-nap">
           <p>14 Block Road, Brampton, ON L7A 5B2</p>
           <p>905-226-6336</p>
@@ -773,7 +772,6 @@ const footer = `
         <h4>Info</h4>
         <ul>
           <li><a href="/#about">About Ricky Arora RMT</a></li>
-          <li><a href="/#reviews">Client Reviews</a></li>
           <li><a href="/blog/">Blog</a></li>
           <li><a href="/#faq">FAQ</a></li>
           <li><a href="/#book">Book Now</a></li>
@@ -957,7 +955,7 @@ ${nav()}
 
         <h2 id="when-to-book">When to Book</h2>
         <p>Consider booking if the tightness keeps coming back, affects work or training, limits your movement, or does not improve with basic self-care. RMT massage in Brampton may be especially helpful when the issue is connected to posture, stress, workouts, or repetitive daily habits.</p>
-        <p>Insurance receipts are available for RMT sessions. If you are not sure which treatment to choose, start with a regular RMT massage appointment and Ricky can adjust the plan during your assessment.</p>
+        <p>If you are not sure which treatment to choose, start with a regular RMT massage appointment and Ricky can adjust the plan during your assessment.</p>
 
         <div class="article-cta">
           <div class="article-cta-text">
@@ -1154,7 +1152,7 @@ ${nav()}
 
         <h2 id="when-to-book">When to Book</h2>
         <p>Book RMT massage if your main goal is to reduce related muscle tension, improve comfort, support recovery, or make daily movement feel easier. If you are unsure whether massage is appropriate, ask your doctor first or book an assessment and share your diagnosis, medications, imaging results, and current restrictions.</p>
-        <p>Insurance receipts are available for RMT sessions in Brampton. Same-day appointments are often available.</p>
+        <p>Same-day RMT appointments are often available in Brampton.</p>
 
         <div class="article-cta">
           <div class="article-cta-text">
@@ -1345,7 +1343,7 @@ ${nav()}
 
         <h2 id="when-to-book">When to Book</h2>
         <p>Book RMT massage if your posture-related tension keeps returning, affects work or training, limits movement, or makes daily activities uncomfortable. Bring any diagnosis, imaging, medical precautions, or exercise recommendations you already have.</p>
-        <p>Insurance receipts are available for RMT sessions in Brampton. Same-day appointments are often available.</p>
+        <p>Same-day RMT appointments are often available in Brampton.</p>
 
         <div class="article-cta">
           <div class="article-cta-text">
@@ -1534,7 +1532,7 @@ ${cards}
     <div class="booking-panel">
       <div class="booking-panel-text">
         <h2>Ready to Book in Brampton?</h2>
-        <p>Swedish, deep tissue, and sports massage by Registered Massage Therapist Ricky Arora. Insurance receipts provided every RMT session.</p>
+        <p>Swedish, deep tissue, and sports massage by Registered Massage Therapist Ricky Arora.</p>
       </div>
       <div class="booking-panel-actions">
         <a href="/#book" class="btn-white">Book Online</a>

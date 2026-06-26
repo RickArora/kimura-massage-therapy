@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>$89 Intro RMT Massage in Brampton — Kimura Massage Therapy</title>
-<meta name="description" content="New client intro: 60-min RMT massage + cupping + hot towels for $89. Insurance receipt included. Same-day available in Brampton, ON. Book in 2 minutes.">
+<meta name="description" content="New client intro: 60-min RMT massage + cupping + hot towels for $89. Same-day available in Brampton, ON. Book in 2 minutes.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,17 +61,6 @@ h1,h2,.section-title,.hero-headline,.bottom-cta-title,
   font-family:var(--font-head);
   letter-spacing:0.02em;
   text-transform:uppercase;
-}
-
-/* ── DEMO BANNER ── */
-.demo-banner{
-  background:var(--navy-dark);
-  color:rgba(255,255,255,.6);
-  text-align:center;
-  padding:6px 16px;
-  font-size:11px;
-  font-weight:400;
-  letter-spacing:.01em;
 }
 
 /* ── TOP STRIP ── */
@@ -336,13 +325,6 @@ section{padding:60px 24px;}
 
 /* ── SOCIAL PROOF ── */
 .proof-section{background:var(--bg);}
-.review-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:24px;}
-@media(min-width:540px){.review-grid{grid-template-columns:1fr 1fr;}}
-.review-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:18px;}
-.stars{color:#E8A500;font-size:13px;letter-spacing:1px;margin-bottom:8px;}
-.review-text{font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:10px;font-style:italic;}
-.review-author{font-size:13px;font-weight:600;color:var(--text);}
-.review-meta{font-size:12px;color:rgba(15,39,66,.4);margin-top:2px;}
 .proof-stat{
   margin-top:24px;text-align:center;
   background:var(--navy);border-radius:10px;padding:26px 20px;
@@ -444,14 +426,162 @@ footer a:hover{color:rgba(255,255,255,.7);}
   body{padding-bottom:74px;}
 }
 @media(min-width:681px){.mobile-bar{display:none!important;}}
+@media(max-width:640px){
+  body { font-size:17px; line-height:1.72; }
+  h1,h2,.section-title,.hero-headline,.bottom-cta-title,
+  .therapist-name,.offer-box-title,.hoc-price,.offer-price,.proof-stat-num {
+    letter-spacing:0;
+  }
+  .top-strip { padding:12px 18px; }
+  .top-strip-logo { font-size:17px; letter-spacing:0; }
+  .hero-inner { padding:44px 22px 52px; }
+  .hero-headline {
+    font-size:clamp(34px,10vw,46px);
+    line-height:1.08;
+    letter-spacing:0;
+    margin-bottom:18px;
+  }
+  .hero-headline em { color:rgba(255,255,255,.94); }
+  .top-strip-phone { color:rgba(255,255,255,.86); }
+  .hero-sub,
+  .section-body,
+  .pain-list li,
+  .therapist-bio,
+  .step-body,
+  .scarcity-body,
+  .faq-a,
+  .bottom-cta-sub {
+    font-size:17px;
+    line-height:1.78;
+  }
+  .hero-sub,
+  .btn-secondary,
+  .hero-star-text,
+  .risk-reversal,
+  .hoc-line,
+  .therapist-bio,
+  .offer-ls,
+  .offer-breakdown,
+  .bottom-cta-sub,
+  .et-text {
+    color:rgba(255,255,255,.82);
+  }
+  .cta-note,
+  .cta-microcopy,
+  .hoc-original,
+  .hoc-scarcity,
+  .proof-stat-label,
+  .bottom-risk,
+  footer,
+  footer a {
+    color:rgba(255,255,255,.72);
+  }
+  .section-label,
+  .hero-eyebrow,
+  .therapist-cred,
+  .hoc-eyebrow {
+    letter-spacing:.04em;
+    font-weight:700;
+  }
+  section { padding:56px 22px; }
+  .section-title {
+    font-size:clamp(29px,8vw,38px);
+    line-height:1.12;
+    letter-spacing:0;
+  }
+  .trust-bar { gap:10px; padding:16px 22px; justify-content:flex-start; }
+  .trust-item { width:100%; color:var(--text); }
+  .therapist-card,
+  .offer-box,
+  .proof-stat,
+  .bottom-cta,
+  .exit-toast {
+    background:#102B49;
+  }
+  .t-badge {
+    color:rgba(255,255,255,.86);
+    background:rgba(255,255,255,.1);
+  }
+  .offer-lt,
+  .step-title,
+  .risk-title,
+  .faq-q,
+  .scarcity-title {
+    font-size:17px;
+    line-height:1.45;
+  }
+  .risk-body,
+  .spots-label,
+  .img-ph-hint {
+    font-size:15px;
+    line-height:1.65;
+  }
+  .ins-pill { font-size:15px; padding:8px 16px; }
+  .faq-toggle { padding:20px 0; }
+  .top-strip-phone,
+  .top-book-btn,
+  .hero-eyebrow,
+  .hero-star-text,
+  .trust-item,
+  .section-label,
+  .therapist-cred,
+  .t-badge,
+  .cta-microcopy,
+  .btn-secondary,
+  .cta-note,
+  .risk-reversal,
+  .img-ph-title,
+  .img-ph-hint,
+  .offer-ls,
+  .offer-breakdown,
+  .risk-body,
+  .spots-label,
+  .bottom-risk,
+  .ins-pill,
+  .proof-google-link,
+  .faq-toggle,
+  footer { font-size:14px; }
+  .top-strip a,
+  .btn-primary,
+  .btn-secondary,
+  .hoc-btn,
+  .offer-cta-btn,
+  .ins-link,
+  .proof-google-link,
+  .et-btn,
+  footer a {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:44px;
+  }
+  .cta-secondary-row .btn-secondary { font-size:14px; padding:13px 14px; }
+  .hero-star-text,
+  .risk-reversal,
+  .offer-ls,
+  .offer-breakdown { color:rgba(255,255,255,.68); }
+  .cta-note,
+  .bottom-risk,
+  footer { color:rgba(255,255,255,.62); }
+  .offer-ls,
+  .offer-breakdown,
+  .therapist-bio,
+  .hoc-line {
+    font-size:16px;
+    line-height:1.72;
+    color:rgba(255,255,255,.84);
+  }
+  .risk-reversal,
+  .cta-microcopy,
+  .cta-note {
+    color:rgba(255,255,255,.76);
+  }
+}
 @media(max-width:520px){.therapist-card{flex-direction:column;}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;}}
 </style>
 </head>
 <body>
-
-<!-- DEMO BANNER -->
-<div class="demo-banner">🚧 Mock site — not a real business. Ricky Arora is not yet an RMT.</div>
 
 <!-- TOP STRIP -->
 <div class="top-strip">
@@ -476,7 +606,7 @@ footer a:hover{color:rgba(255,255,255,.7);}
         <em>Today's the day you do something about it.</em>
       </h1>
 
-      <p class="hero-sub">RMT massage in Brampton — cupping and hot towels included, insurance receipt ready when you walk out. Same-day appointments, 7 days a week.</p>
+      <p class="hero-sub">RMT massage in Brampton — cupping and hot towels included. Same-day appointments, 7 days a week.</p>
 
       <div class="hero-stars">
         <span class="hero-star-icons">★★★★★</span>
@@ -535,10 +665,6 @@ footer a:hover{color:rgba(255,255,255,.7);}
           <div class="hoc-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#E85D04" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           Hot towel treatment
         </div>
-        <div class="hoc-line">
-          <div class="hoc-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#E85D04" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          Insurance receipt included
-        </div>
       </div>
       <a href="https://wa.me/16472873777?text=Hi%2C+I%27d+like+to+book+the+%2489+intro+offer" class="hoc-btn" onclick="trackCTA('hero_card_book_online')">
         Claim this offer →
@@ -575,7 +701,7 @@ footer a:hover{color:rgba(255,255,255,.7);}
 <section class="therapist-section">
   <div class="container">
     <p class="section-label">Your therapist</p>
-    <h2 class="section-title">Know who's treating you<br>before you walk in.</h2>
+    <h2 class="section-title">Know who's treating you before you walk in.</h2>
     <div class="therapist-card">
       <div class="therapist-avatar" title="Add therapist headshot">RA</div>
       <div class="therapist-info">
@@ -584,7 +710,6 @@ footer a:hover{color:rgba(255,255,255,.7);}
         <p class="therapist-bio">Registered with the College of Massage Therapists of Ontario. Every session starts with a proper intake — understanding what's actually going on before touching anything. Treatment is built around your specific situation, not a template. Pressure, pace, and focus areas are yours to direct throughout.</p>
         <div class="therapist-badges">
           <span class="t-badge">CMTO Registered</span>
-          <span class="t-badge">Insurance receipts</span>
           <span class="t-badge">Cupping certified</span>
           <span class="t-badge">Swedish · Deep tissue · Sports</span>
         </div>
@@ -597,7 +722,7 @@ footer a:hover{color:rgba(255,255,255,.7);}
 <section class="offer-section">
   <div class="container">
     <p class="section-label">The intro offer</p>
-    <h2 class="section-title">Everything included.<br>No hidden fees. No upsells.</h2>
+    <h2 class="section-title">Everything included. No hidden fees. No upsells.</h2>
     <div class="offer-box">
       <p class="offer-box-title">Your $89 first visit includes:</p>
       <div class="offer-line">
@@ -611,10 +736,6 @@ footer a:hover{color:rgba(255,255,255,.7);}
       <div class="offer-line">
         <div class="offer-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#E85D04" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div><div class="offer-lt">Hot towel treatment</div><div class="offer-ls">Applied to key areas throughout — loosens tissue before the therapist works into it. Noticeably different from a standard session.</div></div>
-      </div>
-      <div class="offer-line">
-        <div class="offer-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#E85D04" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div><div class="offer-lt">Official insurance receipt — ready when you walk out</div><div class="offer-ls">Submit to Green Shield, Manulife, Sun Life, Canada Life, Blue Cross, or Desjardins the same day. No waiting.</div></div>
       </div>
       <div class="offer-total">
         <div class="offer-price-row">
@@ -634,8 +755,8 @@ footer a:hover{color:rgba(255,255,255,.7);}
 <section class="insurance-section">
   <div class="container">
     <p class="section-label">Extended health benefits</p>
-    <h2 class="section-title" style="color:var(--navy);">Your plan probably covers this.<br>The receipt is ready when you walk out.</h2>
-    <p class="section-body">Most extended health plans cover $300–$750 in RMT massage per year. Your official RMT receipt is ready the moment your session ends. Submit it same day — no chasing paperwork.</p>
+    <h2 class="section-title" style="color:var(--navy);">Your plan may cover RMT massage.</h2>
+    <p class="section-body">Most extended health plans include RMT coverage. Check your plan for your yearly limit and submission rules.</p>
     <div class="ins-pills">
       <span class="ins-pill">Green Shield</span>
       <span class="ins-pill">Manulife</span>
@@ -653,7 +774,7 @@ footer a:hover{color:rgba(255,255,255,.7);}
 <section class="risk-section">
   <div class="container">
     <p class="section-label">No pressure. No commitment.</p>
-    <h2 class="section-title">You're in complete control<br>from start to finish.</h2>
+    <h2 class="section-title">You're in complete control from start to finish.</h2>
     <p class="section-body">The most common reason people don't book a massage is fear of the unknown — what it'll feel like, whether they'll be pressured to come back, whether they'll feel rushed. Here's exactly how it works:</p>
     <div class="risk-grid">
       <div class="risk-card">
@@ -684,7 +805,7 @@ footer a:hover{color:rgba(255,255,255,.7);}
 <section class="how-section">
   <div class="container">
     <p class="section-label">What to expect</p>
-    <h2 class="section-title">Booked in 2 minutes.<br>Treated today.</h2>
+    <h2 class="section-title">Booked in 2 minutes. Treated today.</h2>
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
@@ -710,8 +831,8 @@ footer a:hover{color:rgba(255,255,255,.7);}
       <div class="step">
         <div class="step-num">4</div>
         <div>
-          <div class="step-title">Walk out with receipt in hand</div>
-          <div class="step-body">Your official RMT insurance receipt is ready the moment you finish. Submit it to your benefits plan today. No follow-up needed.</div>
+          <div class="step-title">Leave with a clear next step</div>
+          <div class="step-body">Your therapist can suggest simple aftercare or timing for a follow-up if it makes sense. No pressure, no package pitch.</div>
         </div>
       </div>
     </div>
@@ -721,34 +842,7 @@ footer a:hover{color:rgba(255,255,255,.7);}
 <!-- SOCIAL PROOF -->
 <section class="proof-section">
   <div class="container">
-    <p class="section-label">What clients say</p>
-    <h2 class="section-title">200+ people in Brampton<br>have already been in.</h2>
-    <div class="review-grid">
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Best RMT I've found in Brampton. Strong, controlled pressure and my neck and shoulders finally released after months of tension. Receipt was ready right after."</p>
-        <div class="review-author">Aisha M.</div>
-        <div class="review-meta">Brampton, ON · Google · May 2025</div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Clean private space, no rushing. The insurance receipt was ready immediately. I come back every month now — easiest routine I've added."</p>
-        <div class="review-author">Daniel R.</div>
-        <div class="review-meta">Mississauga, ON · Google · April 2025</div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Excellent RMT. Sports massage before my marathon helped enormously with recovery. Deep tissue work is firm and well-controlled — highly recommend."</p>
-        <div class="review-author">Priya S.</div>
-        <div class="review-meta">Caledon, ON · Google · March 2025</div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Same-day appointment when I needed it most. The RMT listened instead of doing a standard routine. Real difference after one session."</p>
-        <div class="review-author">Marcus T.</div>
-        <div class="review-meta">Brampton, ON · Google · June 2025</div>
-      </div>
-    </div>
+    <h2 class="section-title">200+ people in Brampton have already been in.</h2>
     <div class="proof-stat">
       <div class="proof-stat-num">200+</div>
       <div class="proof-stat-label">five-star Google reviews · 5.0 perfect rating · Brampton, ON</div>
@@ -774,14 +868,14 @@ footer a:hover{color:rgba(255,255,255,.7);}
 <section class="faq-section">
   <div class="container">
     <p class="section-label">Questions</p>
-    <h2 class="section-title">The things people ask<br>before they book.</h2>
+    <h2 class="section-title">The things people ask before they book.</h2>
 
     <div class="faq-item">
       <button class="faq-toggle" aria-expanded="false">
         <span class="faq-q">Is this an actual RMT or just a registered business?</span>
         <svg class="faq-chevron" viewBox="0 0 18 18" fill="none" aria-hidden="true"><polyline points="4,6 9,12 14,6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <div class="faq-a">Your session is performed by a Registered Massage Therapist — Ricky Arora, RMT — registered with the College of Massage Therapists of Ontario. That's why we can issue an insurance receipt your benefits plan accepts. Not all massage services can do this.</div>
+      <div class="faq-a">Your session is performed by Ricky Arora, RMT, a Registered Massage Therapist registered with the College of Massage Therapists of Ontario.</div>
     </div>
 
     <div class="faq-item">
@@ -789,7 +883,7 @@ footer a:hover{color:rgba(255,255,255,.7);}
         <span class="faq-q">Can I use my insurance benefits for the $89 session?</span>
         <svg class="faq-chevron" viewBox="0 0 18 18" fill="none" aria-hidden="true"><polyline points="4,6 9,12 14,6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <div class="faq-a">Yes. Your official RMT receipt is ready when you walk out. Submit it to Green Shield, Manulife, Sun Life, Canada Life, Blue Cross, Desjardins, or most other extended health plans same day. Most plans cover $300–$750 per year in RMT massage.</div>
+      <div class="faq-a">Usually, yes. Many extended health plans cover RMT massage. Check your policy for your yearly limit and claim rules.</div>
     </div>
 
     <div class="faq-item">
@@ -831,7 +925,7 @@ footer a:hover{color:rgba(255,255,255,.7);}
 <section class="bottom-cta" id="bottom-cta">
   <div class="container">
     <h2 class="bottom-cta-title">Still sore? Still tight?<br>Book today. Walk in today.</h2>
-    <p class="bottom-cta-sub">$89. 60 minutes. RMT + cupping + hot towels + insurance receipt. New clients only. 4 spots left this month.</p>
+    <p class="bottom-cta-sub">$89. 60 minutes. RMT + cupping + hot towels. New clients only. 4 spots left this month.</p>
     <div class="bottom-cta-group">
       <a href="https://wa.me/16472873777?text=Hi%2C+I%27d+like+to+book+the+%2489+intro+offer" class="btn-primary" style="max-width:380px;" onclick="trackCTA('bottom_book_online')">
         Claim the $89 intro — WhatsApp →
