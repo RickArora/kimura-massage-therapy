@@ -215,6 +215,19 @@ h1,h2,.section-title,.hero-headline,.bottom-cta-title,
 .img-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 
 .hero-photo{width:100%;height:240px;border-radius:14px;margin-bottom:16px;}
+.therapist-photo-card{
+  background:linear-gradient(145deg,var(--navy-mid),#132f4d);
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow:0 22px 60px rgba(0,0,0,.25);
+  padding:22px;display:flex;align-items:center;gap:18px;
+}
+.therapist-photo-card img{
+  width:112px;height:112px;border-radius:50%;object-fit:cover;flex-shrink:0;
+  border:3px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);
+}
+.therapist-photo-kicker{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:6px;}
+.therapist-photo-title{font-family:var(--head);font-size:22px;font-weight:700;color:var(--white);line-height:1.15;margin-bottom:5px;}
+.therapist-photo-sub{font-size:14px;line-height:1.55;color:rgba(255,255,255,.72);}
 
 /* ── SECTIONS ── */
 section{padding:60px 24px;}
@@ -577,7 +590,10 @@ footer a:hover{color:rgba(255,255,255,.7);}
     color:rgba(255,255,255,.76);
   }
 }
-@media(max-width:520px){.therapist-card{flex-direction:column;}}
+@media(max-width:520px){
+  .therapist-card{flex-direction:column;}
+  .therapist-photo-card{height:auto;min-height:240px;flex-direction:column;text-align:center;justify-content:center;}
+}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;}}
 </style>
 </head>
@@ -638,12 +654,13 @@ footer a:hover{color:rgba(255,255,255,.7);}
       </div>
     </div>
 
-    <!-- Right: photo placeholder -->
-    <div class="hero-photo img-ph" aria-hidden="true">
-      <div class="img-ph-inner">
-        <div class="img-ph-icon">📷</div>
-        <div class="img-ph-title">Clinic / treatment room photo</div>
-        <div class="img-ph-hint">Warm light, clean table, calm space. ~600×600px or larger.</div>
+    <!-- Right: therapist trust card -->
+    <div class="hero-photo therapist-photo-card">
+      <img src="assets/rmt-profile-circle-600.png" alt="Ricky Arora, Registered Massage Therapist at Kimura Massage Therapy and Rehab">
+      <div>
+        <div class="therapist-photo-kicker">Your RMT</div>
+        <div class="therapist-photo-title">Ricky Arora</div>
+        <div class="therapist-photo-sub">Deep tissue, sports massage, and practical care for tight necks, backs, shoulders, and gym soreness.</div>
       </div>
     </div>
 
@@ -769,7 +786,7 @@ footer a:hover{color:rgba(255,255,255,.7);}
       <span class="ins-pill">Desjardins</span>
       <span class="ins-pill">+ most other plans</span>
     </div>
-    <a href="#" class="ins-link" target="_blank" rel="noopener">See our 200+ Google reviews →</a>
+    <a href="https://www.google.com/search?q=Kimura+Massage+Therapy+%26+Rehab+Brampton+reviews" class="ins-link" target="_blank" rel="noopener">See our 200+ Google reviews →</a>
   </div>
 </section>
 
@@ -813,8 +830,8 @@ footer a:hover{color:rgba(255,255,255,.7);}
       <div class="step">
         <div class="step-num">1</div>
         <div>
-          <div class="step-title">Message or call us</div>
-          <div class="step-body">WhatsApp 647-287-3777 or call 905-226-6336. Tell us you want the $89 intro offer. We'll confirm your time slot same day. Most clients are in within hours of reaching out.</div>
+          <div class="step-title">Book online</div>
+          <div class="step-body">Choose your time in the online booking system. If you have questions first, call 905-226-6336 or send a WhatsApp message.</div>
         </div>
       </div>
       <div class="step">
@@ -849,7 +866,7 @@ footer a:hover{color:rgba(255,255,255,.7);}
     <div class="proof-stat">
       <div class="proof-stat-num">200+</div>
       <div class="proof-stat-label">five-star Google reviews · 5.0 perfect rating · Brampton, ON</div>
-      <a href="#" class="proof-google-link" target="_blank" rel="noopener">Verify on Google →</a>
+      <a href="https://www.google.com/search?q=Kimura+Massage+Therapy+%26+Rehab+Brampton+reviews" class="proof-google-link" target="_blank" rel="noopener">Verify on Google →</a>
     </div>
   </div>
 </section>

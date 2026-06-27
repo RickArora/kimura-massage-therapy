@@ -366,6 +366,7 @@ footer { background: var(--navy-dark); color: rgba(255,255,255,.8); padding: 56p
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
   .nav-phone { display: none !important; }
+  .nav-right .btn-primary { display: none !important; }
   .content-grid { grid-template-columns: 1fr; gap: 40px; }
   .pricing-grid { grid-template-columns: 1fr; }
   .related-grid { grid-template-columns: 1fr; }
@@ -389,7 +390,6 @@ footer { background: var(--navy-dark); color: rgba(255,255,255,.8); padding: 56p
   .trust-bar-inner { flex-wrap: wrap; }
   .footer-top { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
-  .nav-right .btn-primary { font-size: 14px !important; padding: 10px 14px !important; min-height: 44px; white-space: nowrap; }
   .breadcrumb-list li:last-child { max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .seo-link-list { grid-template-columns: 1fr; }
   .seo-link-list li a { border-right: none; font-size: 14px; min-height: 44px; }
@@ -427,6 +427,10 @@ footer { background: var(--navy-dark); color: rgba(255,255,255,.8); padding: 56p
   .nav-logo span { font-size: 11px; }
   .nav-right { gap: 10px; }
   .nav-right .btn-primary { display: none; }
+}
+
+@media (max-width: 960px) {
+  header .nav-right > a.btn-primary { display: none !important; }
 }
 
 /* ── Sticky blog booking bar ────────────────────────────────────── */
