@@ -851,6 +851,48 @@
     .contact-areas { margin-top:28px; padding:18px; background:var(--white); border:1px solid var(--border); border-radius:8px; }
     .contact-areas h4 { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--text-muted); margin-bottom:6px; }
     .contact-areas p { font-size:15px; color:var(--text-muted); }
+    .contact-map {
+      margin-top:24px;
+      background:var(--white);
+      border:1px solid var(--border);
+      border-radius:8px;
+      overflow:hidden;
+      box-shadow:0 10px 28px rgba(15,39,66,.08);
+    }
+    .contact-map iframe {
+      display:block;
+      width:100%;
+      height:260px;
+      border:0;
+      background:var(--navy-light);
+    }
+    .contact-map-footer {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:14px 16px;
+    }
+    .contact-map-footer span {
+      font-size:13px;
+      line-height:1.45;
+      color:var(--text-muted);
+    }
+    .contact-map-link {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:44px;
+      padding:0 16px;
+      background:var(--navy);
+      color:#fff;
+      border-radius:8px;
+      font-size:13px;
+      font-weight:700;
+      white-space:nowrap;
+      transition:background .2s, transform .2s;
+    }
+    .contact-map-link:hover { background:var(--orange); transform:translateY(-1px); }
 
     .booking-panel {
       background:var(--navy); border-radius:12px; padding:44px 40px;
@@ -1071,6 +1113,7 @@
       .pricing-vs { width:100%; flex-direction:row; height:48px; border-left:none; border-right:none; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
       .pricing-vs::before { top:50%; left:0; width:40%; height:1px; transform:translateY(-50%); }
       .pricing-vs::after  { top:50%; right:0; left:auto; width:40%; height:1px; transform:translateY(-50%); }
+      .contact-map iframe { height:250px; }
     }
 
     @media (max-width: 640px) {
@@ -1088,6 +1131,8 @@
       .trust-bar-inner { flex-wrap:wrap; }
       .trust-item { flex:1 1 50%; min-width:0; white-space:normal; text-align:center; font-size:14px; border-right:none; border-bottom:1px solid rgba(255,255,255,.1); padding:14px 10px; }
       .trust-item:last-child { border-bottom:none; }
+      .contact-map-footer { align-items:flex-start; flex-direction:column; }
+      .contact-map-link { width:100%; }
       .nav-right .btn-primary { display:none; }
       .nav-logo span,
       .section-label,
@@ -1876,6 +1921,19 @@
           <div class="contact-areas">
             <h4>Service Area</h4>
             <p>Brampton · Mississauga · Caledon · Greater Toronto Area</p>
+          </div>
+
+          <div class="contact-map" aria-label="Map to Kimura Massage Therapy and Rehab">
+            <iframe
+              title="Map to Kimura Massage Therapy and Rehab at 14 Block Road, Brampton"
+              src="https://www.google.com/maps?q=14%20Block%20Road%2C%20Brampton%2C%20Ontario%20L7A%205B2&output=embed"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contact-map-footer">
+              <span>Private treatment space with on-site parking in Brampton.</span>
+              <a class="contact-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=14%20Block%20Road%2C%20Brampton%2C%20Ontario%20L7A%205B2" target="_blank" rel="noopener">Open in Google Maps</a>
+            </div>
           </div>
         </div>
 
