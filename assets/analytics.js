@@ -1,5 +1,7 @@
 (function () {
   var measurementId = 'G-MTQK49YP14';
+  var adsId = 'AW-18223992858';
+  var adsConversionSendTo = 'AW-18223992858/dum6CLTV-8YcEJqg8PFD';
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () {
@@ -13,6 +15,7 @@
 
   window.gtag('js', new Date());
   window.gtag('config', measurementId);
+  window.gtag('config', adsId);
 
   function sendEvent(name, params) {
     if (typeof window.gtag !== 'function') return;
@@ -20,6 +23,16 @@
       event_category: 'conversion',
       page_path: window.location.pathname
     }, params || {}));
+  }
+
+  function sendAdsConversion(label, linkUrl) {
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', 'conversion', {
+      send_to: adsConversionSendTo,
+      event_label: label || 'contact',
+      link_url: linkUrl || '',
+      page_path: window.location.pathname
+    });
   }
 
   window.trackCTA = function (label) {
@@ -38,6 +51,7 @@
         event_label: label || 'phone',
         link_url: href
       });
+      sendAdsConversion(label || 'phone', href);
       return;
     }
 
@@ -46,6 +60,7 @@
         event_label: label || 'whatsapp',
         link_url: href
       });
+      sendAdsConversion(label || 'whatsapp', href);
       return;
     }
 
@@ -54,6 +69,7 @@
         event_label: label || 'book_online',
         link_url: href
       });
+      sendAdsConversion(label || 'book_online', href);
     }
   });
 })();
