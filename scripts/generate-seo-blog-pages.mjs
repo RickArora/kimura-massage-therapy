@@ -724,7 +724,7 @@ const nav = (active = 'Blog') => `
       <li><a href="/#faq">FAQ</a></li>
     </ul>
     <div class="nav-right">
-      <span class="nav-phone" style="display:none" id="navPhone">905-226-6336</span>
+      <span class="nav-phone" style="display:none" id="navPhone">(905) 226-6336</span>
       <a href="https://kimuramassage.noterro.com/" class="btn-primary" style="font-size:14px;padding:10px 20px;">Book Now</a>
       <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
     </div>
@@ -743,7 +743,7 @@ const nav = (active = 'Blog') => `
     <a href="/#about" onclick="closeMobileNav()">About</a>
     <a href="/#faq" onclick="closeMobileNav()">FAQ</a>
     <a href="https://kimuramassage.noterro.com/" onclick="closeMobileNav()">Book Now</a>
-    <a href="tel:9052266336" style="margin-top:8px;">Call 905-226-6336</a>
+    <a href="tel:9052266336" style="margin-top:8px;">Call (905) 226-6336</a>
   </div>
 </div>`;
 
@@ -756,7 +756,7 @@ const footer = `
         <p>Registered Massage Therapy in Brampton, Ontario. Serving Brampton, Mississauga, and Caledon.</p>
         <div class="footer-nap">
           <p>14 Block Road, Brampton, ON L7A 5B2</p>
-          <p>905-226-6336</p>
+          <p>(905) 226-6336</p>
         </div>
       </div>
       <div class="footer-col">
@@ -964,7 +964,7 @@ ${nav()}
           </div>
           <div class="article-cta-btns">
             <a href="https://kimuramassage.noterro.com/" class="btn-white">Book Now</a>
-            <a href="tel:9052266336" class="btn-white-outline">Call 905-226-6336</a>
+            <a href="tel:9052266336" class="btn-white-outline">Call (905) 226-6336</a>
           </div>
         </div>
 
@@ -979,7 +979,7 @@ ${nav()}
           <h3>Book RMT Massage</h3>
           <p>Get treatment for muscle tightness, stiffness, knots, and posture-related tension in Brampton.</p>
           <a href="https://kimuramassage.noterro.com/" class="btn-white" style="margin-bottom:10px;">Book Now</a>
-          <a href="tel:9052266336" class="btn-white-outline">Call 905-226-6336</a>
+          <a href="tel:9052266336" class="btn-white-outline">Call (905) 226-6336</a>
         </div>
         <div class="sidebar-toc">
           <h4>In This Article</h4>
@@ -1161,7 +1161,7 @@ ${nav()}
           </div>
           <div class="article-cta-btns">
             <a href="https://kimuramassage.noterro.com/" class="btn-white">Book Now</a>
-            <a href="tel:9052266336" class="btn-white-outline">Call 905-226-6336</a>
+            <a href="tel:9052266336" class="btn-white-outline">Call (905) 226-6336</a>
           </div>
         </div>
 
@@ -1176,7 +1176,7 @@ ${nav()}
           <h3>Book RMT Massage</h3>
           <p>Get massage therapy support for pain, stiffness, muscle guarding, and recovery in Brampton.</p>
           <a href="https://kimuramassage.noterro.com/" class="btn-white" style="margin-bottom:10px;">Book Now</a>
-          <a href="tel:9052266336" class="btn-white-outline">Call 905-226-6336</a>
+          <a href="tel:9052266336" class="btn-white-outline">Call (905) 226-6336</a>
         </div>
         <div class="sidebar-toc">
           <h4>In This Article</h4>
@@ -1352,7 +1352,7 @@ ${nav()}
           </div>
           <div class="article-cta-btns">
             <a href="https://kimuramassage.noterro.com/" class="btn-white">Book Now</a>
-            <a href="tel:9052266336" class="btn-white-outline">Call 905-226-6336</a>
+            <a href="tel:9052266336" class="btn-white-outline">Call (905) 226-6336</a>
           </div>
         </div>
 
@@ -1367,7 +1367,7 @@ ${nav()}
           <h3>Book RMT Massage</h3>
           <p>Get massage therapy support for posture-related tension, stiffness, and muscle guarding in Brampton.</p>
           <a href="https://kimuramassage.noterro.com/" class="btn-white" style="margin-bottom:10px;">Book Now</a>
-          <a href="tel:9052266336" class="btn-white-outline">Call 905-226-6336</a>
+          <a href="tel:9052266336" class="btn-white-outline">Call (905) 226-6336</a>
         </div>
         <div class="sidebar-toc">
           <h4>In This Article</h4>
@@ -1536,7 +1536,7 @@ ${cards}
       </div>
       <div class="booking-panel-actions">
         <a href="https://kimuramassage.noterro.com/" class="btn-white">Book Online</a>
-        <a href="tel:9052266336" class="btn-white-outline">Call 905-226-6336</a>
+        <a href="tel:9052266336" class="btn-white-outline">Call (905) 226-6336</a>
       </div>
     </div>
   </div>
