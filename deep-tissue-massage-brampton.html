@@ -42,7 +42,11 @@
           "postalCode": "L7A 5B2",
           "addressCountry": "CA"
         },
-        "employee": { "@type": "Person", "name": "Ricky Arora", "honorificSuffix": "RMT" }
+        "employee": {
+          "@type": "Person",
+          "name": "Ricky Arora",
+          "honorificSuffix": "RMT"
+        }
       },
       {
         "@type": "Service",
@@ -50,52 +54,58 @@
         "name": "Deep Tissue Massage Therapy in Brampton, Ontario",
         "serviceType": "Deep Tissue Massage",
         "description": "Deep tissue massage performed by Registered Massage Therapist Ricky Arora in Brampton, Ontario. Targets chronic muscle tension, knots, and postural imbalances.",
-        "provider": { "@id": "https://kimuramassage.ca/#business" },
+        "provider": {
+          "@id": "https://kimuramassage.ca/#business"
+        },
         "areaServed": [
-          { "@type": "City", "name": "Brampton" },
-          { "@type": "City", "name": "Mississauga" },
-          { "@type": "City", "name": "Caledon" }
+          {
+            "@type": "City",
+            "name": "Brampton"
+          },
+          {
+            "@type": "City",
+            "name": "Mississauga"
+          },
+          {
+            "@type": "City",
+            "name": "Caledon"
+          }
         ],
         "offers": [
-          { "@type": "Offer", "name": "30-Minute Deep Tissue Massage", "price": "60", "priceCurrency": "CAD" },
-          { "@type": "Offer", "name": "60-Minute Deep Tissue Massage", "price": "105", "priceCurrency": "CAD" },
-          { "@type": "Offer", "name": "90-Minute Deep Tissue Massage", "price": "160", "priceCurrency": "CAD" }
+          {
+            "@type": "Offer",
+            "name": "30-Minute Deep Tissue Massage",
+            "price": "60",
+            "priceCurrency": "CAD"
+          },
+          {
+            "@type": "Offer",
+            "name": "60-Minute Deep Tissue Massage",
+            "price": "105",
+            "priceCurrency": "CAD"
+          },
+          {
+            "@type": "Offer",
+            "name": "90-Minute Deep Tissue Massage",
+            "price": "160",
+            "priceCurrency": "CAD"
+          }
         ]
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kimuramassage.ca/" },
-          { "@type": "ListItem", "position": 2, "name": "Deep Tissue Massage Brampton", "item": "https://kimuramassage.ca/deep-tissue-massage-brampton.html" }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
           {
-            "@type": "Question",
-            "name": "Is deep tissue massage painful?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Deep tissue massage involves firm pressure and can produce some discomfort in tense areas — often described as a 'good pain' or pressure sensation. Ricky Arora RMT works slowly and checks in throughout the session. You control the pressure at all times and can request adjustments at any point." }
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://kimuramassage.ca/"
           },
           {
-            "@type": "Question",
-            "name": "What conditions benefit from deep tissue massage?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Deep tissue massage is particularly effective for chronic neck and shoulder tension, upper and lower back pain, postural issues from desk work, muscle knots and trigger points, headaches caused by neck tension, and recovery from soft-tissue injuries." }
-          },
-          {
-            "@type": "Question",
-            "name": "Does insurance cover deep tissue massage in Ontario?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes, when performed by a Registered Massage Therapist (RMT). Most employer extended health plans cover RMT massage therapy regardless of the specific technique used." }
-          },
-          {
-            "@type": "Question",
-            "name": "How often should I get deep tissue massage?",
-            "acceptedAnswer": { "@type": "Answer", "text": "For chronic tension or recurring pain, an initial course of sessions every 1–2 weeks for 4–6 weeks is common to break the cycle of tension. Maintenance sessions every 3–4 weeks are typically recommended after that." }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the difference between deep tissue and Swedish massage?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Swedish massage uses lighter, flowing strokes on the superficial muscle layer for relaxation and circulation. Deep tissue uses slow, firm, sustained pressure targeting the deeper muscle layers to release chronic tension and adhesions. Many sessions blend both techniques." }
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Deep Tissue Massage Brampton",
+            "item": "https://kimuramassage.ca/deep-tissue-massage-brampton.html"
           }
         ]
       }
@@ -121,7 +131,8 @@
       <li><a href="#prices">Prices</a></li>
       <li><a href="blog/">Blog</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#faq">FAQ</a></li>
+      <li><a href="./#faq">FAQ</a></li>
+          <li><a href="policies.html">Policies</a></li>
     </ul>
     <div class="nav-right">
       <span class="nav-phone" style="display:none" id="navPhone">905-226-6336</span>
@@ -141,7 +152,8 @@
     <a href="#prices" onclick="closeMobileNav()">Prices</a>
     <a href="blog/" onclick="closeMobileNav()">Blog</a>
     <a href="#about" onclick="closeMobileNav()">About</a>
-    <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+    <a href="./#faq" onclick="closeMobileNav()">FAQ</a>
+    <a href="policies.html" onclick="closeMobileNav()">Policies</a>
     <a href="https://kimuramassage.noterro.com/" onclick="closeMobileNav()">Book Now</a>
     <a href="tel:9052266336" style="margin-top:8px;">📞 905-226-6336</a>
   </div>
@@ -293,71 +305,17 @@
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- FAQ LINK -->
 <section class="faq bg-white">
   <div class="container">
     <div class="faq-header">
-      <span class="section-label">Common Questions</span>
-      <h2 class="section-title">Deep Tissue Massage FAQ</h2>
+      <span class="section-label">Questions</span>
+      <h2 class="section-title">Have questions before booking?</h2>
+      <p class="section-sub">Benefits, receipts, cancellation, parking, consent, and treatment questions are answered in one consolidated FAQ.</p>
     </div>
-    <div class="faq-list">
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-          Is deep tissue massage painful?
-          <span class="faq-toggle">+</span>
-        </button>
-        <div class="faq-answer">Deep tissue massage involves firm pressure and can produce some discomfort in tense areas — often described as a "good pain" or intense pressure that releases. Ricky works slowly and checks in throughout. You control the pressure at all times. Sharp or acute pain is a signal to adjust, and Ricky responds immediately.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-          What conditions benefit most from deep tissue massage?
-          <span class="faq-toggle">+</span>
-        </button>
-        <div class="faq-answer">Deep tissue massage is particularly effective for chronic neck and shoulder tension, upper and lower back pain, postural issues from extended desk work, muscle knots and trigger points, tension headaches, repetitive strain injuries (RSI), and general recovery from soft-tissue overuse.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-          Does insurance cover deep tissue massage in Ontario?
-          <span class="faq-toggle">+</span>
-        </button>
-        <div class="faq-answer">Yes, when performed by a Registered Massage Therapist (RMT). Most employer extended health plans (Green Shield, Manulife, Sun Life, Canada Life, Desjardins) cover RMT massage therapy regardless of the specific technique used. Check your policy for your annual limit.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-          How often should I get deep tissue massage for chronic pain?
-          <span class="faq-toggle">+</span>
-        </button>
-        <div class="faq-answer">For chronic tension or recurring pain, an initial course of sessions every 1–2 weeks for 4–6 weeks is common to break the cycle. After that, monthly maintenance sessions are typically recommended. Your RMT will suggest a frequency based on how your body responds.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-          Will I be sore after a deep tissue massage?
-          <span class="faq-toggle">+</span>
-        </button>
-        <div class="faq-answer">Mild soreness in the treated areas for 24–48 hours is normal after a deep tissue session — similar to how muscles feel after a good workout. It indicates the tissue is responding and reorganizing. Drinking plenty of water and light movement the next day aid recovery. Significant soreness beyond 48 hours is unusual and worth mentioning at your next session.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-          What is your cancellation policy?
-          <span class="faq-toggle">+</span>
-        </button>
-        <div class="faq-answer">We require <strong>24 hours' notice</strong> to cancel or reschedule. Cancellations made with less than 24 hours' notice — including no-shows — may be charged the full session fee. If you're feeling unwell, please cancel as soon as you know. To cancel or reschedule: call 905-226-6336 or manage your booking online.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-          How do you keep the space clean between clients?
-          <span class="faq-toggle">+</span>
-        </button>
-        <div class="faq-answer">🧼 All linens are freshly laundered before every client. 🫧 The table, bolsters, and all contact surfaces are fully disinfected between every appointment. 🤲 Hands are washed before every session. Your health and comfort are always the priority.</div>
-      </div>
-
+    <div class="booking-panel-actions">
+      <a href="./#faq" class="btn-primary">Read the FAQ</a>
+      <a href="policies.html" class="btn-outline">View policies</a>
     </div>
   </div>
 </section>
@@ -430,7 +388,8 @@
         <ul>
           <li><a href="#about">About Ricky Arora RMT</a></li>
           <li><a href="blog/">Blog</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="./#faq">FAQ</a></li>
+          <li><a href="policies.html">Policies</a></li>
           <li><a href="https://kimuramassage.noterro.com/">Book Now</a></li>
         </ul>
       </div>

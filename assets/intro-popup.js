@@ -55,14 +55,19 @@
   ].join('');
 
   function dismiss(){
-    var overlay = document.getElementById('introPopupOverlay');
-    if(overlay){ overlay.style.opacity='0'; overlay.style.transition='opacity .2s'; setTimeout(function(){ overlay.remove(); },200); }
+    var overlays = document.querySelectorAll('#introPopupOverlay');
+    overlays.forEach(function(overlay){
+      overlay.style.opacity='0';
+      overlay.style.transition='opacity .2s';
+      setTimeout(function(){ overlay.remove(); },200);
+    });
     sessionStorage.setItem('introDismissed','1');
     document.body.style.overflow='';
   }
 
   function show(){
     if(sessionStorage.getItem('introDismissed')) return;
+    if(document.getElementById('introPopupOverlay')) return;
     document.body.insertAdjacentHTML('beforeend', html);
     document.body.style.overflow='hidden';
     document.getElementById('introPopupClose').addEventListener('click', dismiss);
