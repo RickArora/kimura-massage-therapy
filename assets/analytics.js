@@ -8,14 +8,20 @@
     window.dataLayer.push(arguments);
   };
 
-  var tag = document.createElement('script');
-  tag.async = true;
-  tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
-  document.head.appendChild(tag);
+  var hasGoogleTag = document.querySelector('script[src*="googletagmanager.com/gtag/js"]');
+  var hasAdsTag = document.querySelector('script[src*="googletagmanager.com/gtag/js?id=' + adsId + '"]');
+  if (!hasGoogleTag) {
+    var tag = document.createElement('script');
+    tag.async = true;
+    tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
+    document.head.appendChild(tag);
+    window.gtag('js', new Date());
+  }
 
-  window.gtag('js', new Date());
   window.gtag('config', measurementId);
-  window.gtag('config', adsId);
+  if (!hasAdsTag) {
+    window.gtag('config', adsId);
+  }
 
   function sendEvent(name, params) {
     if (typeof window.gtag !== 'function') return;

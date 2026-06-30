@@ -3,6 +3,14 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 const site = 'https://kimuramassage.ca';
 const today = '2026-05-29';
 const linkVersion = '20260529-3';
+const googleAdsTag = `<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18223992858"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18223992858');
+</script>`;
 const pagesBase = '';
 const rootHref = (path = '/') => `${pagesBase}${path}`;
 const blogHref = (slug) => `${pagesBase}/blog/${slug}.html?v=${linkVersion}`;
@@ -842,6 +850,7 @@ const pageFor = (topic) => {
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
   <script src="/assets/analytics.js" defer></script>
+  ${googleAdsTag}
   <script type="application/ld+json">
   ${JSON.stringify({
     '@context': 'https://schema.org',
@@ -1040,6 +1049,7 @@ const clinicalPageFor = (topic) => {
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
   <script src="/assets/analytics.js" defer></script>
+  ${googleAdsTag}
   <script type="application/ld+json">
   ${JSON.stringify({
     '@context': 'https://schema.org',
@@ -1238,6 +1248,7 @@ const posturePageFor = (topic) => {
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
   <script src="/assets/analytics.js" defer></script>
+  ${googleAdsTag}
   <script type="application/ld+json">
   ${JSON.stringify({
     '@context': 'https://schema.org',
@@ -1440,6 +1451,7 @@ const indexPage = () => {
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
   <script src="/assets/analytics.js" defer></script>
+  ${googleAdsTag}
   <script type="application/ld+json">
   ${JSON.stringify({
     '@context': 'https://schema.org',
