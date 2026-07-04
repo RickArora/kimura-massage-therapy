@@ -1,6 +1,6 @@
 # Kimura Massage Therapy & Rehab
 
-> Registered massage therapy clinic in Brampton, Ontario. RMT massage with official insurance receipts from $60, or relaxation massage from $40. Open 7 days a week, 9AM–9PM. Same-day appointments available. Serving Brampton, Mississauga, and Caledon.
+> Registered massage therapy clinic in Brampton, Ontario. RMT massage with official insurance receipts from $70, or relaxation massage from $40. Open 7 days a week, 9AM–9PM. Same-day appointments available. Serving Brampton, Mississauga, and Caledon.
 
 ## Business Information
 
@@ -24,9 +24,10 @@
 ## Pricing
 
 ### RMT Massage (Registered Massage Therapist — insurance receipts provided)
-- 30 minutes: $60
+- 30 minutes: $70
 - 60 minutes: $110 (most popular)
-- 90 minutes: $160
+- 75 minutes: $150
+- 90 minutes: $175
 
 ### Relaxation Massage (no insurance receipt)
 - 30 minutes: $40
