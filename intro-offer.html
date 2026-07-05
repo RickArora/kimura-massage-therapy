@@ -16,19 +16,20 @@
 
 :root{
   --navy:#0F2742;
-  --navy-mid:#162F50;
+  --navy-mid:#0A1E36;
   --navy-dark:#080F1C;
+  --navy-light:#E8EEF5;
   --orange:#E85D04;
-  --orange-dark:#C44D00;
+  --orange-dark:#C94D00;
   --bg:#F2F4F8;
-  --bg-dark:#E5E8F0;
-  --text:#1A1F2E;
-  --muted:#4A5568;
+  --bg-dark:#E8EEF5;
+  --text:#0F2742;
+  --muted:#3D5070;
   --white:#FFFFFF;
-  --border:rgba(15,39,66,0.11);
-  --gold-bg:#FBF4E3;
-  --gold-border:rgba(184,134,11,0.22);
-  --gold-text:#854F0B;
+  --border:#D4DCE8;
+  --gold-bg:#FFFFFF;
+  --gold-border:#D4DCE8;
+  --gold-text:#3D5070;
   --font-body:'DM Sans',sans-serif;
   --font-head:'Oswald',sans-serif;
 }
@@ -49,27 +50,40 @@ body{
 h1,h2,.section-title,.hero-headline,.bottom-cta-title,
 .therapist-name,.offer-box-title,.hoc-price,.offer-price,.proof-stat-num{
   font-family:var(--font-head);
-  letter-spacing:0.02em;
-  text-transform:uppercase;
+  letter-spacing:0.01em;
 }
 
 /* ── TOP STRIP ── */
 .top-strip{
   background:var(--navy);
-  padding:10px 20px;
+  min-height:68px;
+  padding:0 24px;
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:12px;
   flex-wrap:wrap;
+  position:sticky;
+  top:0;
+  z-index:100;
 }
 .top-strip-logo{
   font-family:var(--font-head);
-  font-size:15px;
-  letter-spacing:.04em;
+  font-size:20px;
+  font-weight:700;
+  letter-spacing:.02em;
   color:var(--white);
   white-space:nowrap;
   text-decoration:none;
+  line-height:1.2;
+}
+.top-strip-logo span{
+  display:block;
+  font-family:var(--font-body);
+  font-size:11px;
+  font-weight:400;
+  color:rgba(255,255,255,.5);
+  letter-spacing:.05em;
 }
 .top-strip-right{display:flex;align-items:center;gap:14px;}
 .top-strip-phone{
@@ -80,8 +94,8 @@ h1,h2,.section-title,.hero-headline,.bottom-cta-title,
 .top-strip-phone:hover{color:var(--white);}
 .top-book-btn{
   background:var(--orange);color:var(--white);
-  font-size:13px;font-weight:600;
-  padding:8px 16px;border-radius:5px;
+  font-size:14px;font-weight:700;
+  padding:10px 20px;border-radius:6px;
   text-decoration:none;white-space:nowrap;
   transition:background .15s;
 }
@@ -91,27 +105,35 @@ h1,h2,.section-title,.hero-headline,.bottom-cta-title,
 .hero{background:var(--navy);padding:0;position:relative;overflow:hidden;}
 .hero-bg-glow{
   position:absolute;inset:0;
-  background:radial-gradient(ellipse 65% 60% at 30% 110%,rgba(232,93,4,0.12) 0%,transparent 65%);
+  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0));
   pointer-events:none;
 }
 .hero-inner{
   position:relative;z-index:1;
-  max-width:980px;margin:0 auto;
-  padding:48px 24px 56px;
-  display:grid;grid-template-columns:1fr 340px;gap:40px;align-items:start;
+  max-width:1120px;margin:0 auto;
+  padding:72px 24px 72px;
+  display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:64px;align-items:start;
 }
+.hero-right{display:flex;flex-direction:column;gap:18px;}
 .hero-eyebrow{
-  display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;
-  color:var(--orange);text-transform:uppercase;margin-bottom:16px;
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:700;letter-spacing:.08em;
+  color:rgba(255,255,255,.9);text-transform:uppercase;margin-bottom:20px;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+  border-radius:999px;padding:5px 12px;
+}
+.hero-eyebrow::before{
+  content:'';width:7px;height:7px;background:var(--orange);border-radius:50%;
 }
 .hero-headline{
-  font-size:clamp(28px,4.2vw,44px);
-  color:var(--white);line-height:1.12;margin-bottom:16px;font-weight:600;
+  font-size:clamp(36px,5.4vw,64px);
+  color:var(--white);line-height:1.06;margin-bottom:18px;font-weight:700;
+  max-width:720px;
 }
-.hero-headline em{font-style:normal;color:rgba(255,255,255,.55);font-weight:400;}
+.hero-headline em{font-style:normal;color:rgba(255,255,255,.68);font-weight:500;}
 .hero-sub{
-  font-size:16px;color:rgba(255,255,255,.6);
-  line-height:1.7;margin-bottom:28px;max-width:480px;
+  font-size:18px;color:rgba(255,255,255,.72);
+  line-height:1.7;margin-bottom:28px;max-width:620px;
 }
 .hero-stars{display:flex;align-items:center;gap:10px;margin-bottom:28px;}
 .hero-star-icons{color:#E8A500;font-size:15px;letter-spacing:1px;}
@@ -122,8 +144,8 @@ h1,h2,.section-title,.hero-headline,.bottom-cta-title,
 .btn-primary{
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
   background:var(--orange);color:var(--white);
-  font-size:16px;font-weight:600;
-  padding:17px 28px;border-radius:6px;
+  font-size:16px;font-weight:700;
+  padding:16px 28px;border-radius:6px;
   text-decoration:none;border:none;cursor:pointer;
   transition:background .15s;width:100%;
 }
@@ -152,7 +174,7 @@ h1,h2,.section-title,.hero-headline,.bottom-cta-title,
 .hero-offer-card{
   background:rgba(255,255,255,.05);
   border:1px solid rgba(255,255,255,.1);
-  border-radius:14px;padding:28px 24px;
+  border-radius:10px;padding:28px 24px;
 }
 .hoc-eyebrow{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--orange);margin-bottom:12px;}
 .hoc-price{font-size:72px;color:var(--white);line-height:1;margin-bottom:4px;}
@@ -183,11 +205,19 @@ h1,h2,.section-title,.hero-headline,.bottom-cta-title,
 
 /* ── TRUST BAR ── */
 .trust-bar{
-  background:var(--white);border-bottom:1px solid var(--border);
-  padding:14px 24px;display:flex;flex-wrap:wrap;gap:16px;
-  justify-content:center;align-items:center;
+  background:var(--navy-mid);border-top:1px solid rgba(255,255,255,.07);
+  border-bottom:0;
+  padding:0 24px;display:flex;flex-wrap:nowrap;gap:0;
+  justify-content:center;align-items:stretch;
+  overflow-x:auto;
 }
-.trust-item{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:500;color:var(--muted);}
+.trust-item{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  min-width:220px;padding:17px 18px;
+  font-size:13px;font-weight:600;color:rgba(255,255,255,.88);
+  border-right:1px solid rgba(255,255,255,.1);
+}
+.trust-item:last-child{border-right:0;}
 .trust-dot{width:6px;height:6px;border-radius:50%;background:var(--orange);flex-shrink:0;}
 
 /* ── IMAGE PLACEHOLDERS ── */
@@ -206,34 +236,36 @@ h1,h2,.section-title,.hero-headline,.bottom-cta-title,
 
 .hero-photo{width:100%;height:240px;border-radius:14px;margin-bottom:16px;}
 .therapist-photo-card{
-  background:linear-gradient(145deg,var(--navy-mid),#132f4d);
+  background:var(--navy-mid);
   border:1px solid rgba(255,255,255,.1);
-  box-shadow:0 22px 60px rgba(0,0,0,.25);
+  box-shadow:none;
   padding:22px;display:flex;align-items:center;gap:18px;
+  border-radius:10px;
 }
 .therapist-photo-card img{
   width:112px;height:112px;border-radius:50%;object-fit:cover;flex-shrink:0;
   border:3px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);
 }
 .therapist-photo-kicker{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:6px;}
-.therapist-photo-title{font-family:var(--head);font-size:22px;font-weight:700;color:var(--white);line-height:1.15;margin-bottom:5px;}
+.therapist-photo-title{font-family:var(--font-head);font-size:22px;font-weight:700;color:var(--white);line-height:1.15;margin-bottom:5px;}
 .therapist-photo-sub{font-size:14px;line-height:1.55;color:rgba(255,255,255,.72);}
 
 /* ── SECTIONS ── */
 section{padding:60px 24px;}
-.container{max-width:720px;margin:0 auto;}
+.container{max-width:1120px;margin:0 auto;}
 .section-label{
   font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
   color:var(--orange);margin-bottom:10px;
 }
 .section-title{
-  font-size:clamp(24px,3.8vw,36px);
+  font-size:clamp(26px,4vw,48px);
   color:var(--navy);line-height:1.1;margin-bottom:16px;
+  max-width:760px;
 }
-.section-body{font-size:16.5px;color:var(--muted);line-height:1.72;margin-bottom:14px;}
+.section-body{font-size:17px;color:var(--muted);line-height:1.72;margin-bottom:14px;max-width:700px;}
 
 /* ── PROBLEM ── */
-.problem-section{background:var(--bg-dark);}
+.problem-section{background:var(--bg);}
 .pain-list{list-style:none;margin:20px 0;}
 .pain-list li{
   display:flex;gap:12px;font-size:16px;color:var(--muted);
@@ -246,7 +278,8 @@ section{padding:60px 24px;}
 .therapist-section{background:var(--white);}
 .therapist-card{
   display:flex;gap:28px;align-items:flex-start;
-  background:var(--navy);border-radius:12px;padding:28px;margin-top:24px;
+  background:var(--navy);border-radius:10px;padding:32px;margin-top:24px;
+  max-width:760px;
 }
 .therapist-avatar{
   width:80px;height:80px;border-radius:50%;flex-shrink:0;
@@ -267,8 +300,8 @@ section{padding:60px 24px;}
 }
 
 /* ── OFFER BOX ── */
-.offer-section{background:var(--bg-dark);}
-.offer-box{background:var(--navy);border-radius:12px;padding:30px 26px;margin-top:24px;}
+.offer-section{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.offer-box{background:var(--navy);border-radius:10px;padding:32px;margin-top:24px;max-width:760px;}
 .offer-box-title{font-size:20px;color:rgba(255,255,255,.9);margin-bottom:18px;}
 .offer-line{display:flex;align-items:flex-start;gap:13px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.07);}
 .offer-line:last-of-type{border-bottom:none;}
@@ -295,11 +328,7 @@ section{padding:60px 24px;}
 .offer-cta-btn:hover{background:var(--orange-dark);}
 
 /* ── INSURANCE ── */
-.insurance-section{
-  background:rgba(15,39,66,.05);
-  border-top:1px solid rgba(15,39,66,.1);
-  border-bottom:1px solid rgba(15,39,66,.1);
-}
+.insurance-section{background:var(--bg);}
 .ins-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;}
 .ins-pill{
   background:var(--white);border:1px solid rgba(15,39,66,.18);
@@ -330,7 +359,7 @@ section{padding:60px 24px;}
 .proof-section{background:var(--bg);}
 .proof-stat{
   margin-top:24px;text-align:center;
-  background:var(--navy);border-radius:10px;padding:26px 20px;
+  background:var(--navy);border-radius:10px;padding:30px 24px;max-width:760px;
 }
 .proof-stat-num{font-size:52px;color:var(--white);line-height:1;margin-bottom:5px;}
 .proof-stat-label{font-size:14px;color:rgba(255,255,255,.45);}
@@ -353,22 +382,22 @@ section{padding:60px 24px;}
 
 /* ── SCARCITY ── */
 .scarcity-section{
-  background:var(--gold-bg);
+  background:var(--white);
   border-top:1px solid var(--gold-border);
   border-bottom:1px solid var(--gold-border);
-  padding:36px 24px;
+  padding:48px 24px;
 }
-.scarcity-inner{max-width:720px;margin:0 auto;}
+.scarcity-inner{max-width:1120px;margin:0 auto;}
 .scarcity-header{display:flex;align-items:flex-start;gap:13px;margin-bottom:14px;}
 .scarcity-icon{font-size:22px;flex-shrink:0;line-height:1.3;}
 .scarcity-title{font-size:17px;font-weight:600;color:var(--navy);}
 .scarcity-body{font-size:15px;color:var(--muted);line-height:1.65;margin-bottom:18px;}
-.spots-track{background:rgba(184,134,11,.15);border-radius:100px;height:8px;overflow:hidden;margin-bottom:7px;}
-.spots-fill{background:#B8860B;height:100%;border-radius:100px;transition:width .6s ease;}
+.spots-track{background:var(--navy-light);border-radius:100px;height:8px;overflow:hidden;margin-bottom:7px;max-width:520px;}
+.spots-fill{background:var(--orange);height:100%;border-radius:100px;transition:width .6s ease;}
 .spots-label{font-size:13px;font-weight:500;color:var(--gold-text);}
 
 /* ── FAQ ── */
-.faq-section{background:var(--bg-dark);}
+.faq-section{background:var(--bg);}
 .faq-item{border-bottom:1px solid var(--border);}
 .faq-item:first-of-type{border-top:1px solid var(--border);}
 .faq-toggle{
@@ -382,14 +411,18 @@ section{padding:60px 24px;}
 .faq-item.open .faq-a{display:block;}
 
 /* ── BOTTOM CTA ── */
-.bottom-cta{background:var(--navy);padding:68px 24px;text-align:center;}
+.bottom-cta{background:var(--orange);padding:88px 24px;text-align:center;}
 .bottom-cta-title{font-size:clamp(26px,5vw,42px);color:var(--white);line-height:1.1;margin-bottom:10px;}
 .bottom-cta-sub{font-size:16px;color:rgba(255,255,255,.5);margin-bottom:28px;}
 .bottom-cta-group{display:flex;flex-direction:column;align-items:center;gap:10px;}
+.bottom-cta .btn-primary{background:var(--white);border-color:var(--white);color:var(--navy);}
+.bottom-cta .btn-primary:hover{background:rgba(255,255,255,.9);border-color:rgba(255,255,255,.9);}
+.bottom-cta .btn-secondary{border-color:rgba(255,255,255,.55);color:var(--white);}
+.bottom-cta .btn-secondary:hover{background:rgba(255,255,255,.12);border-color:var(--white);}
 .bottom-risk{font-size:12px;color:rgba(255,255,255,.28);margin-top:6px;}
 
 /* ── FOOTER ── */
-footer{background:var(--navy-dark);padding:26px 24px;text-align:center;font-size:13px;color:rgba(255,255,255,.28);line-height:1.9;}
+footer{background:var(--navy-dark);padding:38px 24px;text-align:center;font-size:13px;color:rgba(255,255,255,.42);line-height:1.9;}
 footer a{color:rgba(255,255,255,.4);text-decoration:none;}
 footer a:hover{color:rgba(255,255,255,.7);}
 
@@ -410,7 +443,7 @@ footer a:hover{color:rgba(255,255,255,.7);}
   bottom:84px;left:50%;transform:translateX(-50%);
   z-index:300;background:var(--navy);
   border:1px solid rgba(232,93,4,.4);
-  border-radius:10px;padding:14px 18px;
+  border-radius:8px;padding:14px 18px;
   width:calc(100% - 28px);max-width:400px;
   animation:slideToast .3s ease;
 }
@@ -435,15 +468,20 @@ footer a:hover{color:rgba(255,255,255,.7);}
   .therapist-name,.offer-box-title,.hoc-price,.offer-price,.proof-stat-num {
     letter-spacing:0;
   }
-  .top-strip { padding:12px 18px; }
-  .top-strip-logo { font-size:17px; letter-spacing:0; }
-  .hero-inner { padding:44px 22px 52px; }
+  .top-strip { min-height:68px; padding:0 16px; flex-wrap:nowrap; }
+  .top-strip-logo { font-size:17px; letter-spacing:0; max-width:190px; overflow:hidden; text-overflow:ellipsis; }
+  .top-strip-logo span { display:none; }
+  .top-strip-right { gap:10px; flex-shrink:0; }
+  .top-strip-phone { display:none; }
+  .top-book-btn { padding:10px 14px; }
+  .hero-inner { padding:36px 22px 44px; gap:28px; }
   .hero-headline {
-    font-size:clamp(34px,10vw,46px);
+    font-size:clamp(31px,8.6vw,38px);
     line-height:1.08;
     letter-spacing:0;
-    margin-bottom:18px;
+    margin-bottom:14px;
   }
+  .hero-headline br { display:none; }
   .hero-headline em { color:rgba(255,255,255,.94); }
   .top-strip-phone { color:rgba(255,255,255,.86); }
   .hero-sub,
@@ -457,6 +495,14 @@ footer a:hover{color:rgba(255,255,255,.7);}
     font-size:17px;
     line-height:1.78;
   }
+  .hero-sub { margin-bottom:20px; }
+  .hero-stars { margin-bottom:20px; align-items:flex-start; }
+  .hero-cta { gap:8px; }
+  .risk-reversal { margin-top:12px; }
+  .therapist-photo-card { padding:18px; }
+  .therapist-photo-card img { width:88px; height:88px; }
+  .therapist-photo-title { font-size:20px; }
+  .therapist-photo-sub { font-size:14px; line-height:1.5; }
   .hero-sub,
   .btn-secondary,
   .hero-star-text,
@@ -492,8 +538,8 @@ footer a:hover{color:rgba(255,255,255,.7);}
     line-height:1.12;
     letter-spacing:0;
   }
-  .trust-bar { gap:10px; padding:16px 22px; justify-content:flex-start; }
-  .trust-item { width:100%; color:var(--text); }
+  .trust-bar { padding:0 18px; justify-content:flex-start; }
+  .trust-item { min-width:230px; color:rgba(255,255,255,.88); }
   .therapist-card,
   .offer-box,
   .proof-stat,
@@ -600,7 +646,7 @@ footer a:hover{color:rgba(255,255,255,.7);}
 
 <!-- TOP STRIP -->
 <div class="top-strip">
-  <a href="./" class="top-strip-logo">Kimura Massage Therapy &amp; Rehab</a>
+  <a href="./" class="top-strip-logo">Kimura Massage Therapy &amp; Rehab<span>Registered Massage Therapy · Brampton</span></a>
   <div class="top-strip-right">
     <a class="top-strip-phone" href="tel:9052266336">(905) 226-6336</a>
     <a class="top-book-btn" href="https://kimuramassage.noterro.com/" onclick="trackCTA('topbar_book_online')">Book Online</a>
@@ -653,39 +699,41 @@ footer a:hover{color:rgba(255,255,255,.7);}
       </div>
     </div>
 
-    <!-- Right: therapist trust card -->
-    <div class="hero-photo therapist-photo-card">
-      <img src="assets/rmt-profile-circle-600.png" alt="Ricky Arora, Registered Massage Therapist at Kimura Massage Therapy and Rehab">
-      <div>
-        <div class="therapist-photo-kicker">Your RMT</div>
-        <div class="therapist-photo-title">Ricky Arora</div>
-        <div class="therapist-photo-sub">Deep tissue, sports massage, and practical care for tight necks, backs, shoulders, and gym soreness.</div>
+    <div class="hero-right">
+      <!-- Right: therapist trust card -->
+      <div class="hero-photo therapist-photo-card">
+        <img src="assets/rmt-profile-circle-600.png" alt="Ricky Arora, Registered Massage Therapist at Kimura Massage Therapy and Rehab">
+        <div>
+          <div class="therapist-photo-kicker">Your RMT</div>
+          <div class="therapist-photo-title">Ricky Arora</div>
+          <div class="therapist-photo-sub">Deep tissue, sports massage, and practical care for tight necks, backs, shoulders, and gym soreness.</div>
+        </div>
       </div>
-    </div>
 
-    <!-- Offer card on desktop -->
-    <div class="hero-offer-card" aria-label="Intro offer summary">
-      <p class="hoc-eyebrow">Intro offer — new clients only</p>
-      <div class="hoc-price"><sup>$</sup>99</div>
-      <div class="hoc-original">Regular 60-min RMT: $110</div>
-      <div class="hoc-lines">
-        <div class="hoc-line">
-          <div class="hoc-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#E85D04" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          60-min RMT massage
+      <!-- Offer card on desktop -->
+      <div class="hero-offer-card" aria-label="Intro offer summary">
+        <p class="hoc-eyebrow">Intro offer — new clients only</p>
+        <div class="hoc-price"><sup>$</sup>99</div>
+        <div class="hoc-original">Regular 60-min RMT: $110</div>
+        <div class="hoc-lines">
+          <div class="hoc-line">
+            <div class="hoc-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#E85D04" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            60-min RMT massage
+          </div>
+          <div class="hoc-line">
+            <div class="hoc-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#E85D04" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            Cupping therapy included
+          </div>
+          <div class="hoc-line">
+            <div class="hoc-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#E85D04" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            Hot towel treatment
+          </div>
         </div>
-        <div class="hoc-line">
-          <div class="hoc-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#E85D04" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          Cupping therapy included
-        </div>
-        <div class="hoc-line">
-          <div class="hoc-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#E85D04" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          Hot towel treatment
-        </div>
+        <a href="https://kimuramassage.noterro.com/" class="hoc-btn" onclick="trackCTA('hero_card_book_online')">
+          Claim this offer →
+        </a>
+        <p class="hoc-scarcity" id="card-scarcity">4 spots remaining this month</p>
       </div>
-      <a href="https://kimuramassage.noterro.com/" class="hoc-btn" onclick="trackCTA('hero_card_book_online')">
-        Claim this offer →
-      </a>
-      <p class="hoc-scarcity" id="card-scarcity">⚠ 4 spots remaining this month</p>
     </div>
 
   </div>
