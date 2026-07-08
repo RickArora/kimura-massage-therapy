@@ -8,7 +8,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 
 
 <style>
@@ -362,7 +362,7 @@ section{padding:60px 24px;}
   background:var(--navy);border-radius:10px;padding:30px 24px;max-width:760px;
 }
 .proof-stat-num{font-size:52px;color:var(--white);line-height:1;margin-bottom:5px;}
-.proof-stat-label{font-size:14px;color:rgba(255,255,255,.45);}
+.proof-stat-label{font-size:14px;color:rgba(255,255,255,.7);}
 .proof-google-link{
   display:inline-block;margin-top:14px;
   font-size:13px;font-weight:500;color:rgba(255,255,255,.5);
@@ -472,7 +472,7 @@ footer a:hover{color:rgba(255,255,255,.7);}
   .top-strip-logo { font-size:17px; letter-spacing:0; max-width:190px; overflow:hidden; text-overflow:ellipsis; }
   .top-strip-logo span { display:none; }
   .top-strip-right { gap:10px; flex-shrink:0; }
-  .top-strip-phone { display:none; }
+  .top-strip-phone { display:none !important; }
   .top-book-btn { padding:10px 14px; }
   .hero-inner { padding:36px 22px 44px; gap:28px; }
   .hero-headline {
@@ -538,8 +538,9 @@ footer a:hover{color:rgba(255,255,255,.7);}
     line-height:1.12;
     letter-spacing:0;
   }
-  .trust-bar { padding:0 18px; justify-content:flex-start; }
-  .trust-item { min-width:230px; color:rgba(255,255,255,.88); }
+  .trust-bar { padding:0 18px; flex-wrap:wrap; overflow-x:visible; }
+  .trust-item { min-width:100%; justify-content:flex-start; padding:12px 4px; border-right:0; border-bottom:1px solid rgba(255,255,255,.08); color:rgba(255,255,255,.88); }
+  .trust-item:last-child { border-bottom:0; }
   .therapist-card,
   .offer-box,
   .proof-stat,
@@ -670,8 +671,7 @@ footer a:hover{color:rgba(255,255,255,.7);}
       <p class="hero-sub">RMT massage in Brampton — cupping and hot towels included. Same-day appointments, 7 days a week.</p>
 
       <div class="hero-stars">
-        <span class="hero-star-icons">★★★★★</span>
-        <span class="hero-star-text"><strong>5.0</strong> · 200+ verified Google reviews in Brampton</span>
+        <span class="hero-star-text"><strong>CMTO</strong> Registered Massage Therapist · Insurance receipts provided</span>
       </div>
 
       <div class="hero-cta">
@@ -741,7 +741,7 @@ footer a:hover{color:rgba(255,255,255,.7);}
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
-  <div class="trust-item"><span class="trust-dot"></span>200+ five-star Google reviews</div>
+  <div class="trust-item"><span class="trust-dot"></span>Insurance receipts provided</div>
   <div class="trust-item"><span class="trust-dot"></span>Ontario licensed RMT on staff</div>
   <div class="trust-item"><span class="trust-dot"></span>Same-day appointments available</div>
 </div>
@@ -833,7 +833,7 @@ footer a:hover{color:rgba(255,255,255,.7);}
       <span class="ins-pill">Desjardins</span>
       <span class="ins-pill">+ most other plans</span>
     </div>
-    <a href="https://www.google.com/search?q=Kimura+Massage+Therapy+%26+Rehab+Brampton+reviews" class="ins-link" target="_blank" rel="noopener">See our 200+ Google reviews →</a>
+    <a href="https://cmto.ca.thentiacloud.net/webs/cmto/register/" class="ins-link" target="_blank" rel="noopener">Verify our RMT on the CMTO Public Register →</a>
   </div>
 </section>
 
@@ -906,14 +906,14 @@ footer a:hover{color:rgba(255,255,255,.7);}
   </div>
 </section>
 
-<!-- SOCIAL PROOF -->
+<!-- CREDENTIALS -->
 <section class="proof-section">
   <div class="container">
-    <h2 class="section-title">200+ people in Brampton have already been in.</h2>
+    <h2 class="section-title">Registered. Regulated. Verifiable.</h2>
     <div class="proof-stat">
-      <div class="proof-stat-num">200+</div>
-      <div class="proof-stat-label">five-star Google reviews · 5.0 perfect rating · Brampton, ON</div>
-      <a href="https://www.google.com/search?q=Kimura+Massage+Therapy+%26+Rehab+Brampton+reviews" class="proof-google-link" target="_blank" rel="noopener">Verify on Google →</a>
+      <div class="proof-stat-num">RMT</div>
+      <div class="proof-stat-label">Ricky Arora, Registered Massage Therapist · College of Massage Therapists of Ontario</div>
+      <a href="https://cmto.ca.thentiacloud.net/webs/cmto/register/" class="proof-google-link" target="_blank" rel="noopener">Verify on the CMTO Public Register →</a>
     </div>
   </div>
 </section>

@@ -20,19 +20,18 @@
   <text x="80" y="245" font-family="Georgia, serif" font-size="54" font-weight="700" fill="#ffffff" letter-spacing="1">&amp; Rehab</text>
 
   <!-- Tagline -->
-  <text x="80" y="315" font-family="Arial, sans-serif" font-size="28" fill="#E85D04" font-weight="700" letter-spacing="1">BRAMPTON'S HIGHEST-RATED RMT</text>
+  <text x="80" y="315" font-family="Arial, sans-serif" font-size="28" fill="#E85D04" font-weight="700" letter-spacing="1">REGISTERED MASSAGE THERAPY · BRAMPTON</text>
 
   <!-- Divider -->
   <rect x="80" y="340" width="120" height="4" fill="#E85D04" />
 
   <!-- Key facts -->
   <text x="80" y="400" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.85)">✓  RMT Massage — Insurance Receipts Provided</text>
-  <text x="80" y="445" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.85)">✓  Relaxation Massage from $40</text>
+  <text x="80" y="445" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.85)">✓  Swedish, Deep Tissue &amp; Sports Massage</text>
   <text x="80" y="490" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.85)">✓  Open 7 Days · 9AM–9PM · Same-Day Available</text>
 
-  <!-- Stars + rating -->
-  <text x="80" y="560" font-family="Arial, sans-serif" font-size="28" fill="#E85D04">★★★★★</text>
-  <text x="230" y="560" font-family="Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.7)">5.0 · 200+ Google Reviews · Brampton, ON</text>
+  <!-- Credentials -->
+  <text x="80" y="560" font-family="Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.85)">CMTO Registered · Same-Day Appointments · Brampton, ON</text>
 
   <!-- URL -->
   <text x="1120" y="620" font-family="Arial, sans-serif" font-size="18" fill="rgba(255,255,255,0.4)" text-anchor="end">kimuramassage.ca</text>

@@ -21,7 +21,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
   <script type="application/ld+json">
@@ -150,7 +150,7 @@
           <li><a href="policies.html">Policies</a></li>
     </ul>
     <div class="nav-right">
-      <span class="nav-phone" style="display:none" id="navPhone">(905) 226-6336</span>
+      <a class="nav-phone" id="navPhone" href="tel:9052266336">(905) 226-6336</a>
       <a href="https://kimuramassage.noterro.com/" class="btn-primary" style="font-size:14px;padding:10px 20px;">Book Online</a>
       <button class="nav-hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
     </div>
@@ -197,8 +197,8 @@
     </div>
     <div class="page-hero-trust">
       <span>Same-Day Bookings Available</span>
-      <span>200+ Five-Star Reviews</span>
-      <span>All Insurance Accepted</span>
+      <span>CMTO Registered RMT</span>
+      <span>Insurance Receipts Provided</span>
       <span>Registered Massage Therapist</span>
     </div>
   </div>
@@ -207,8 +207,8 @@
 <div class="trust-bar">
   <div class="trust-bar-inner container" style="padding-left:0;padding-right:0;">
     <div class="trust-item">📅 Same-Day Bookings Available</div>
-    <div class="trust-item">⭐ 5.0 · 200+ Google Reviews</div>
-    <div class="trust-item">💳 All Insurance Accepted</div>
+    <div class="trust-item">🚗 Free On-Site Parking</div>
+    <div class="trust-item">💳 Insurance Receipts Provided</div>
     <div class="trust-item">🏥 Registered Massage Therapist</div>
     <div class="trust-item">🕐 Open 7 Days · 9AM–9PM</div>
   </div>
@@ -449,8 +449,6 @@
   document.getElementById('mobileNavClose').addEventListener('click', () => mobileNav.classList.remove('open'));
   mobileNav.addEventListener('click', e => { if (e.target === mobileNav) mobileNav.classList.remove('open'); });
   function closeMobileNav() { mobileNav.classList.remove('open'); }
-  function checkNavPhone() { document.getElementById('navPhone').style.display = window.innerWidth >= 960 ? 'block' : 'none'; }
-  checkNavPhone(); window.addEventListener('resize', checkNavPhone);
 </script>
 <script src="assets/intro-popup.js"></script>
 </body>

@@ -19,7 +19,7 @@
   <meta property="og:image" content="https://kimuramassage.ca/assets/og-image.svg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Kimura Massage Therapy &amp; Rehab — Brampton RMT. Same-day appointments. 5.0 stars." />
+  <meta property="og:image:alt" content="Kimura Massage Therapy &amp; Rehab — Brampton RMT. Same-day appointments. Open 7 days." />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://kimuramassage.ca/assets/og-image.svg" />
   <meta name="theme-color" content="#0F2742" />
@@ -29,7 +29,7 @@
   <!-- Google Fonts: Oswald + DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <!-- ===================== SCHEMA: MedicalBusiness ===================== -->
   <script type="application/ld+json">
@@ -50,13 +50,6 @@
     "priceRange": "$$",
     "description": "Massage therapy clinic in Brampton, Ontario offering RMT massage, Swedish massage, deep tissue, and sports massage. 7 days a week, 9AM–9PM.",
     "hasMap": "https://maps.google.com/?q=14+Block+Road,+Brampton,+Ontario,+L7A+5B2",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "200",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
     "employee": {
       "@type": "Person",
       "name": "Ricky Arora",
@@ -93,14 +86,6 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Is your massage therapist a Registered Massage Therapist (RMT)?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Your session is with Ricky Arora, RMT, a Registered Massage Therapist registered with the College of Massage Therapists of Ontario."
-        }
-      },
-      {
-        "@type": "Question",
         "name": "Are RMT massage treatments covered by benefits?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -113,6 +98,14 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "We do not offer direct billing at the moment. You receive a receipt after treatment that you can submit to your insurance provider yourself."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is your massage therapist a Registered Massage Therapist (RMT)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Your session is with Ricky Arora, RMT, a Registered Massage Therapist registered with the College of Massage Therapists of Ontario."
         }
       },
       {
@@ -190,7 +183,11 @@
       --navy-dark:   #080F1C;
       --navy-mid:    #0A1E36;
       --navy-light:  #E8EEF5;
-      --orange:      #E85D04;
+      --orange:      #E85D04;      /* graphic accents on dark backgrounds */
+      --orange-btn:  #C94D00;      /* button fills — 4.6:1 with white text */
+      --orange-btn-dark: #A63E00;  /* button hover */
+      --orange-ink:  #C2410C;      /* orange text on light backgrounds — 5.2:1 on white */
+      --orange-bright: #F97316;    /* orange text on navy — 5.4:1 */
       --orange-dark: #C94D00;
       --bg:          #F2F4F8;
       --white:       #FFFFFF;
@@ -219,7 +216,7 @@
     .section-label {
       display:block; font-family:var(--font-body);
       font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
-      color:var(--orange); margin-bottom:12px;
+      color:var(--orange-ink); margin-bottom:12px;
     }
     .section-title {
       font-family:var(--font-head); font-size:clamp(28px,4vw,52px);
@@ -232,12 +229,12 @@
        BUTTONS
     ============================================================ */
     .btn-primary {
-      display:inline-block; background:var(--orange); color:var(--white);
+      display:inline-block; background:var(--orange-btn); color:var(--white);
       font-family:var(--font-body); font-weight:700; font-size:15px;
-      padding:14px 28px; border-radius:6px; border:2px solid var(--orange);
+      padding:14px 28px; border-radius:6px; border:2px solid var(--orange-btn);
       cursor:pointer; transition:background .2s, border-color .2s; letter-spacing:.01em;
     }
-    .btn-primary:hover { background:var(--orange-dark); border-color:var(--orange-dark); }
+    .btn-primary:hover { background:var(--orange-btn-dark); border-color:var(--orange-btn-dark); }
 
     .btn-outline {
       display:inline-block; background:transparent; color:var(--navy);
@@ -382,7 +379,7 @@
     .bma-call .bma-icon { background: rgba(255,255,255,.12); }
     .bma-wa { background: #128C7E; }
     .bma-wa .bma-icon { background: rgba(255,255,255,.15); }
-    .bma-online { background: var(--orange); }
+    .bma-online { background: var(--orange-btn); }
     .bma-online .bma-icon { background: rgba(255,255,255,.15); }
     .bma-divider {
       display: flex; align-items: center; gap: 12px; margin: 4px 0;
@@ -410,12 +407,12 @@
     .urgency-text strong { color:var(--gold); }
     .urgency-actions { display:flex; gap:8px; }
     .urgency-btn {
-      display:inline-block; background:var(--orange); color:var(--white);
+      display:inline-block; background:var(--orange-btn); color:var(--white);
       font-family:var(--font-body); font-size:12px; font-weight:700;
       padding:6px 14px; border-radius:5px; border:none; cursor:pointer;
       transition:background .2s; white-space:nowrap; letter-spacing:.02em;
     }
-    .urgency-btn:hover { background:var(--orange-dark); }
+    .urgency-btn:hover { background:var(--orange-btn-dark); }
     .urgency-btn.outline {
       background:transparent; border:1px solid rgba(255,255,255,.28);
       color:rgba(255,255,255,.72);
@@ -463,7 +460,8 @@
       font-weight:700; line-height:1.05; color:#fff;
       letter-spacing:.01em; margin-bottom:24px;
     }
-    .hero h1 em { color:var(--orange); font-style:normal; }
+    .hero h1 em { color:var(--orange-bright); font-style:normal; }
+    .hero-badge.is-closed::before { background:rgba(255,255,255,.45); }
 
     .hero-desc {
       font-size:18px; color:rgba(255,255,255,.72); line-height:1.72;
@@ -522,7 +520,7 @@
     .rate-price {
       font-family:var(--font-head); font-size:22px; font-weight:700; color:var(--navy);
     }
-    .rate-price.orange { color:var(--orange); }
+    .rate-price.orange { color:var(--orange-ink); }
 
     .hero-card-cta { margin-top:22px; }
     .hero-card-note { font-size:11px; color:var(--text-muted); text-align:center; margin-top:10px; line-height:1.5; }
@@ -650,14 +648,14 @@
       border-radius:8px; border-bottom:none !important;
     }
     .price-row-featured .pr-duration { color:var(--navy); font-weight:600; }
-    .price-row-featured .pr-price { color:var(--orange); }
+    .price-row-featured .pr-price { color:var(--orange-ink); }
     .pr-duration {
       font-size:15px; color:var(--text-muted);
       display:flex; align-items:center; gap:8px;
     }
     .pr-popular {
       font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
-      background:var(--orange); color:#fff; padding:2px 8px; border-radius:999px;
+      background:var(--orange-btn); color:#fff; padding:2px 8px; border-radius:999px;
       font-style:normal;
     }
     .pr-price {
@@ -675,7 +673,7 @@
     }
     .pricing-panel .pricing-includes li:last-child { border-bottom:none; }
     .pricing-panel .pricing-includes li::before {
-      content:'✓'; color:var(--orange); font-weight:700; font-size:13px; flex-shrink:0;
+      content:'✓'; color:var(--orange-ink); font-weight:700; font-size:13px; flex-shrink:0;
     }
 
     /* Vertical divider between panels */
@@ -791,7 +789,7 @@
     .blog-card-top { background:var(--navy); padding:28px; }
     .blog-card-tag {
       font-size:10px; font-weight:700; letter-spacing:.09em; text-transform:uppercase;
-      color:var(--orange); display:block; margin-bottom:10px;
+      color:var(--orange-bright); display:block; margin-bottom:10px;
     }
     .blog-card-top h2 {
       font-family:var(--font-head); font-size:19px; font-weight:600;
@@ -799,7 +797,7 @@
     }
     .blog-card-body { padding:22px 28px; flex:1; display:flex; flex-direction:column; gap:14px; }
     .blog-card-excerpt { font-size:14px; color:var(--text-muted); line-height:1.65; flex:1; }
-    .blog-card-link { font-size:14px; font-weight:600; color:var(--orange); }
+    .blog-card-link { font-size:14px; font-weight:600; color:var(--orange-ink); }
 
     /* ============================================================
        FAQ
@@ -815,14 +813,15 @@
       color:var(--text); cursor:pointer; display:flex; justify-content:space-between;
       align-items:center; gap:16px; transition:color .2s;
     }
-    .faq-question:hover { color:var(--orange); }
+    .faq-question:hover { color:var(--orange-ink); }
+    .faq-answer a { color:var(--orange-ink); text-decoration:underline; }
     .faq-toggle {
       width:24px; height:24px; background:var(--navy-light); border-radius:50%;
       display:flex; align-items:center; justify-content:center;
       flex-shrink:0; font-size:17px; color:var(--navy); font-weight:700;
       transition:background .2s, transform .25s;
     }
-    .faq-item.open .faq-toggle { background:var(--orange); color:#fff; transform:rotate(45deg); }
+    .faq-item.open .faq-toggle { background:var(--orange-btn); color:#fff; transform:rotate(45deg); }
     .faq-answer {
       display:none; font-size:15px; color:var(--text-muted); line-height:1.72;
       padding-bottom:22px; max-width:700px;
@@ -847,10 +846,21 @@
     }
     .contact-detail-text p,
     .contact-detail-text a { font-size:16px; font-weight:500; color:var(--text); transition:color .2s; }
-    .contact-detail-text a:hover { color:var(--orange); }
+    .contact-detail-text a:hover { color:var(--orange-ink); }
     .contact-areas { margin-top:28px; padding:18px; background:var(--white); border:1px solid var(--border); border-radius:8px; }
     .contact-areas h4 { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--text-muted); margin-bottom:6px; }
     .contact-areas p { font-size:15px; color:var(--text-muted); }
+    .clinic-photo {
+      margin:24px 0 0;
+      background:var(--white);
+      border:1px solid var(--border);
+      border-radius:8px;
+      overflow:hidden;
+      box-shadow:0 10px 28px rgba(15,39,66,.08);
+    }
+    .clinic-photo img { width:100%; height:auto; max-height:520px; object-fit:cover; object-position:center 70%; display:block; }
+    .clinic-photo figcaption { font-size:13px; color:var(--text-muted); padding:10px 14px; line-height:1.45; }
+
     .contact-map {
       margin-top:24px;
       background:var(--white);
@@ -892,7 +902,7 @@
       white-space:nowrap;
       transition:background .2s, transform .2s;
     }
-    .contact-map-link:hover { background:var(--orange); transform:translateY(-1px); }
+    .contact-map-link:hover { background:var(--orange-btn); transform:translateY(-1px); }
 
     .booking-panel {
       background:var(--navy); border-radius:12px; padding:44px 40px;
@@ -903,7 +913,7 @@
     }
     .booking-panel p { font-size:15px; color:rgba(255,255,255,.78); margin-bottom:32px; line-height:1.65; }
     .booking-options { display:flex; flex-direction:column; gap:12px; }
-    .booking-note { margin-top:18px; font-size:12px; color:rgba(255,255,255,.48); text-align:center; }
+    .booking-note { margin-top:18px; font-size:12px; color:rgba(255,255,255,.65); text-align:center; }
 
     /* ── Booking widget ─────────────────────────────── */
     .booking-widget {
@@ -952,13 +962,13 @@
       position: relative; transition: all .15s;
     }
     .bw-dur:hover { border-color: var(--navy); }
-    .bw-dur.selected { border-color: var(--orange); background: #fff6f0; }
+    .bw-dur.selected { border-color: var(--orange-btn); background: #fff6f0; }
     .bw-dur-time { font-size: 13px; font-weight: 600; color: var(--text); }
     .bw-dur-price { font-family: var(--font-head); font-size: 22px; font-weight: 700; color: var(--navy); margin-top: 4px; }
-    .bw-dur.selected .bw-dur-price { color: var(--orange); }
+    .bw-dur.selected .bw-dur-price { color: var(--orange-ink); }
     .bw-dur-badge {
       position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
-      background: var(--orange); color: #fff; font-size: 9px; font-weight: 700;
+      background: var(--orange-btn); color: #fff; font-size: 9px; font-weight: 700;
       letter-spacing: .06em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px;
     }
 
@@ -971,11 +981,11 @@
     .bw-confirm-btns { display: flex; flex-direction: column; gap: 10px; }
     .bw-confirm-wa {
       display: flex; align-items: center; justify-content: center; gap: 8px;
-      background: var(--orange); color: #fff; font-family: var(--font-body);
+      background: var(--orange-btn); color: #fff; font-family: var(--font-body);
       font-weight: 700; font-size: 15px; padding: 15px 24px; border-radius: 8px;
       transition: background .15s; text-align: center;
     }
-    .bw-confirm-wa:hover { background: var(--orange-dark); }
+    .bw-confirm-wa:hover { background: var(--orange-btn-dark); }
     .bw-confirm-call {
       display: flex; align-items: center; justify-content: center; gap: 8px;
       background: var(--navy); color: #fff; font-family: var(--font-body);
@@ -1009,14 +1019,14 @@
     }
     .intro-offer-badge {
       display:inline-block; font-size:11px; font-weight:600; letter-spacing:.08em;
-      text-transform:uppercase; color:var(--orange); margin-bottom:10px;
+      text-transform:uppercase; color:var(--orange-bright); margin-bottom:10px;
     }
     .intro-offer-banner h2 {
       font-family:var(--font-head); font-size:clamp(26px,4vw,40px);
       font-weight:700; color:#fff; line-height:1.1; margin-bottom:10px; letter-spacing:.02em;
     }
     .intro-offer-banner p {
-      font-size:15px; color:rgba(255,255,255,.5); line-height:1.6; margin:0;
+      font-size:15px; color:rgba(255,255,255,.68); line-height:1.6; margin:0;
     }
     .intro-offer-price {
       text-align:center; flex-shrink:0;
@@ -1025,15 +1035,15 @@
       font-family:var(--font-head); font-size:72px; font-weight:700;
       color:#fff; line-height:1; letter-spacing:.01em;
     }
-    .iop-amount sup { font-size:.4em; vertical-align:super; color:var(--orange); }
-    .iop-label { font-size:12px; color:rgba(255,255,255,.35); margin-bottom:16px; letter-spacing:.03em; }
+    .iop-amount sup { font-size:.4em; vertical-align:super; color:var(--orange-bright); }
+    .iop-label { font-size:12px; color:rgba(255,255,255,.62); margin-bottom:16px; letter-spacing:.03em; }
     .iop-btn {
-      display:block; background:var(--orange); color:#fff;
+      display:block; background:var(--orange-btn); color:#fff;
       font-size:15px; font-weight:600; padding:14px 28px; border-radius:6px;
       text-decoration:none; white-space:nowrap; transition:background .15s;
     }
-    .iop-btn:hover { background:var(--orange-dark); }
-    .iop-sub { font-size:11px; color:rgba(255,255,255,.28); margin-top:8px; }
+    .iop-btn:hover { background:var(--orange-btn-dark); }
+    .iop-sub { font-size:11px; color:rgba(255,255,255,.55); margin-top:8px; }
     @media(max-width:640px) {
       .intro-offer-inner { grid-template-columns:1fr; gap:24px; }
       .intro-offer-price { text-align:left; display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
@@ -1044,13 +1054,13 @@
     /* ============================================================
        FINAL CTA (ORANGE)
     ============================================================ */
-    .final-cta { background:var(--orange); padding:88px 0; }
+    .final-cta { background:var(--orange-btn); padding:88px 0; }
     .final-cta-inner { text-align:center; max-width:700px; margin:0 auto; }
     .final-cta h2 {
       font-family:var(--font-head); font-size:clamp(32px,5vw,58px);
       font-weight:700; color:#fff; letter-spacing:.01em; line-height:1.06; margin-bottom:16px;
     }
-    .final-cta p { font-size:18px; color:rgba(255,255,255,.82); line-height:1.7; margin-bottom:36px; }
+    .final-cta p { font-size:18px; color:rgba(255,255,255,.95); line-height:1.7; margin-bottom:36px; }
     .final-cta-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
     .final-cta .btn-white { display:inline-block; width:auto; }
     .final-cta .btn-white-outline { display:inline-block; width:auto; }
@@ -1070,12 +1080,12 @@
     }
     .footer-brand > p { font-size:14px; color:rgba(255,255,255,.55); line-height:1.65; max-width:260px; }
     .footer-nap { margin-top:20px; }
-    .footer-nap p { font-size:13px; color:rgba(255,255,255,.45); margin-bottom:4px; }
+    .footer-nap p { font-size:13px; color:rgba(255,255,255,.65); margin-bottom:4px; }
 
     .footer-col h4 {
       font-family:var(--font-head); font-size:11px; font-weight:600;
       letter-spacing:.1em; text-transform:uppercase;
-      color:rgba(255,255,255,.3); margin-bottom:18px;
+      color:rgba(255,255,255,.55); margin-bottom:18px;
     }
     .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
     .footer-col ul a { font-size:14px; color:rgba(255,255,255,.6); transition:color .2s; }
@@ -1086,7 +1096,7 @@
       display:flex; justify-content:space-between; align-items:center;
       flex-wrap:wrap; gap:12px;
     }
-    .footer-bottom p { font-size:13px; color:rgba(255,255,255,.3); }
+    .footer-bottom p { font-size:13px; color:rgba(255,255,255,.55); }
     .footer-rmt-badge {
       font-size:12px; font-weight:600; color:rgba(255,255,255,.5);
       background:rgba(255,255,255,.07); padding:6px 14px;
@@ -1172,10 +1182,13 @@
       .footer-col ul a { font-size:14px !important; line-height:1.5; }
       .service-card > a { display:inline-flex !important; align-items:center; min-height:44px; }
       .pricing-note a,
-      .contact-detail-text a { display:inline-flex; align-items:center; min-height:32px; }
+      .contact-detail-text a { display:inline-flex; align-items:center; min-height:44px; }
       .bw-dur { font-size:14px; }
+      /* 2×2 duration grid — 4-across is too cramped under 480px */
+      .bw-duration { flex-wrap:wrap; }
+      .bw-dur { flex:1 1 42%; min-height:64px; }
       .hero-actions > p { color:rgba(255,255,255,.68) !important; }
-      .footer-col ul a { display:inline-flex; align-items:center; min-height:36px; }
+      .footer-col ul a { display:inline-flex; align-items:center; min-height:44px; }
       /* Urgency bar: hide on mobile — CTAs already in hero */
       .urgency-bar { display:none; }
       .final-cta-actions { flex-direction:column; align-items:center; }
@@ -1212,7 +1225,17 @@
       }
       .site-mobile-cta-book {
         color:#fff;
-        background:var(--orange);
+        background:var(--orange-btn);
+      }
+    }
+
+    /* ── Reduced motion (WCAG 2.3.3) ─────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior:auto; }
+      *, *::before, *::after {
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
       }
     }
   </style>
@@ -1254,7 +1277,7 @@
       </ul>
 
       <div class="nav-right">
-        <span class="nav-phone" style="display:none" id="navPhone">(905) 226-6336</span>
+        <a class="nav-phone" id="navPhone" href="tel:9052266336">(905) 226-6336</a>
         <a href="https://kimuramassage.noterro.com/" class="btn-primary" style="font-size:14px;padding:10px 20px;">Book Online</a>
         <button class="nav-hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
           <span></span><span></span><span></span>
@@ -1301,19 +1324,19 @@
       <div class="hero-inner">
 
         <div class="hero-content">
-          <span class="hero-badge">Open 7 Days · 9AM–9PM · Brampton, ON</span>
+          <span class="hero-badge" id="openBadge">Open 7 Days · 9AM–9PM · Brampton, ON</span>
 
-          <h1>RMT Massage Therapy in Brampton —<br>Same-Day Appointments.<br><em>Insurance Covered.</em></h1>
+          <h1>RMT Massage Therapy in Brampton —<br>Same-Day Appointments.<br><em>Insurance-Eligible.</em></h1>
 
           <h2 style="font-family:var(--font-head);font-size:clamp(16px,2.2vw,24px);font-weight:500;color:rgba(255,255,255,.55);line-height:1.35;margin-bottom:32px;letter-spacing:.01em;">Your neck has felt tight for weeks. Your back feels stiff every morning.<br>You do not have to keep putting it off.</h2>
 
           <p class="hero-desc">
-            RMT massage therapy from $70. Same-day availability most days. 200+ five-star Google reviews in Brampton.
+            RMT massage therapy from $70. Same-day availability most days. Registered with the College of Massage Therapists of Ontario.
           </p>
 
           <div class="hero-actions">
-            <a href="https://kimuramassage.noterro.com/" class="btn-primary">Book Online</a>
-            <p style="font-size:12px;color:rgba(255,255,255,.32);margin:6px 0 0;letter-spacing:.01em;">No commitment · Open until 9PM tonight · Cancel anytime with 24hr notice</p>
+            <a href="https://kimuramassage.noterro.com/" class="btn-primary">Book Your RMT Session</a>
+            <p style="font-size:12px;color:rgba(255,255,255,.65);margin:6px 0 0;letter-spacing:.01em;">Opens our secure booking system (Noterro) · Takes about 2 minutes · Cancel anytime with 24hr notice</p>
             <div class="hero-actions-secondary">
               <a href="tel:9052266336" class="btn-outline" aria-label="Call (905) 226-6336">📞 Call</a>
               <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="btn-outline" aria-label="Message on WhatsApp">💬 WhatsApp</a>
@@ -1321,8 +1344,8 @@
           </div>
 
           <div class="hero-proof">
-            <span class="hero-proof-item">⭐ <strong>200+</strong> Five-Star Reviews</span>
-            <span class="hero-proof-item">⭐ <strong>5.0</strong> Rating</span>
+            <span class="hero-proof-item">🏥 <strong>CMTO</strong> Registered RMT</span>
+            <span class="hero-proof-item">🧾 <strong>Insurance</strong> Receipts Provided</span>
             <span class="hero-proof-item">📅 Open <strong>7 Days</strong></span>
             <span class="hero-proof-item">✅ <strong>Same-Day</strong> Bookings</span>
           </div>
@@ -1371,7 +1394,8 @@
             <div class="hero-card-cta">
               <a href="https://kimuramassage.noterro.com/" class="btn-primary" style="display:block;text-align:center;">Book Online</a>
             </div>
-            <p class="hero-card-note">RMT sessions may be covered by extended health benefits</p>
+            <p class="hero-card-note">Ricky Arora, RMT · <a href="https://cmto.ca.thentiacloud.net/webs/cmto/register/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Verify on the CMTO Public Register</a></p>
+            <p class="hero-card-note" style="margin-top:4px;">RMT sessions may be covered by extended health benefits</p>
             <div class="ins-pills">
               <span class="ins-pill">Green Shield</span>
               <span class="ins-pill">Manulife</span>
@@ -1391,7 +1415,7 @@
   <div class="trust-bar">
     <div class="trust-bar-inner container" style="padding-left:0;padding-right:0;">
       <div class="trust-item">📅 Same-Day Appointments Available</div>
-      <div class="trust-item">⭐ 5.0 Perfect Rating · 200+ Reviews</div>
+      <div class="trust-item">🧾 Insurance Receipts Provided</div>
       <div class="trust-item">🏥 Ontario Licensed RMT on Staff</div>
       <div class="trust-item">🕐 7 Days · 9AM–9PM · No Waitlist</div>
     </div>
@@ -1403,18 +1427,18 @@
       <div class="about-inner">
 
         <div class="about-visual">
-          <img class="about-photo" src="assets/rmt-profile-circle-600.png" alt="Ricky Arora, Registered Massage Therapist at Kimura Massage Therapy and Rehab in Brampton">
+          <img class="about-photo" src="assets/rmt-profile-circle-600.png" width="600" height="600" alt="Ricky Arora, Registered Massage Therapist at Kimura Massage Therapy and Rehab in Brampton">
           <div class="about-name">Ricky Arora</div>
           <div class="about-title">Registered Massage Therapist</div>
           <p class="about-note">Deep tissue massage, trigger point work, sports recovery, and practical stretches for neck, shoulder, back, hip, and gym-related tension.</p>
           <div class="about-stats">
             <div class="about-stat">
-              <span class="num">200+</span>
-              <span class="lbl">Google Reviews</span>
+              <span class="num">CMTO</span>
+              <span class="lbl">Registered Massage Therapist</span>
             </div>
             <div class="about-stat">
-              <span class="num">5.0</span>
-              <span class="lbl">Average Rating</span>
+              <span class="num">7 Days</span>
+              <span class="lbl">Open 9AM–9PM</span>
             </div>
             <div class="about-stat">
               <span class="num">BJJ</span>
@@ -1448,7 +1472,7 @@
               <span class="credential-icon">🏥</span>
               <div class="credential-text">
                 <h4>Registered Massage Therapist</h4>
-                <p>Licensed with the College of Massage Therapists of Ontario</p>
+                <p>Licensed with the College of Massage Therapists of Ontario — <a href="https://cmto.ca.thentiacloud.net/webs/cmto/register/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">verify on the CMTO Public Register</a></p>
               </div>
             </div>
             <div class="credential-item">
@@ -1526,7 +1550,7 @@
     <div class="container">
       <div class="why-header">
         <span class="section-label">Why Choose Kimura</span>
-        <h2 class="section-title">Why 200+ Brampton Clients<br>Keep Coming Back</h2>
+        <h2 class="section-title">Treatment That's Personal,<br>Clear, and Easy to Book</h2>
       </div>
 
       <div class="why-grid">
@@ -1577,7 +1601,7 @@
             <span class="service-tag">Full Body</span>
             <span class="service-tag">RMT Massage</span>
           </div>
-          <a href="swedish-massage-brampton.html" aria-label="Learn more about Swedish Massage in Brampton" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange);">Learn more →</a>
+          <a href="swedish-massage-brampton.html" aria-label="Learn more about Swedish Massage in Brampton" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange-ink);">Learn more →</a>
         </article>
 
         <article class="service-card">
@@ -1591,7 +1615,7 @@
             <span class="service-tag">Knots & Tightness</span>
             <span class="service-tag">RMT Massage</span>
           </div>
-          <a href="deep-tissue-massage-brampton.html" aria-label="Learn more about Deep Tissue Massage in Brampton" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange);">Learn more →</a>
+          <a href="deep-tissue-massage-brampton.html" aria-label="Learn more about Deep Tissue Massage in Brampton" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange-ink);">Learn more →</a>
         </article>
 
         <article class="service-card">
@@ -1605,7 +1629,7 @@
             <span class="service-tag">Recovery</span>
             <span class="service-tag">RMT Massage</span>
           </div>
-          <a href="sports-massage-brampton.html" aria-label="Learn more about Sports Massage in Brampton" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange);">Learn more →</a>
+          <a href="sports-massage-brampton.html" aria-label="Learn more about Sports Massage in Brampton" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange-ink);">Learn more →</a>
         </article>
 
       </div>
@@ -1755,16 +1779,6 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-            Is your massage therapist a Registered Massage Therapist (RMT)?
-            <span class="faq-toggle">+</span>
-          </button>
-          <div class="faq-answer">
-            Yes. Your session is with Ricky Arora, RMT, a Registered Massage Therapist registered with the College of Massage Therapists of Ontario.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
             Are treatments covered by my benefits plan?
             <span class="faq-toggle">+</span>
           </button>
@@ -1785,6 +1799,16 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+            Is your massage therapist a Registered Massage Therapist (RMT)?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. Your session is with Ricky Arora, RMT, a Registered Massage Therapist registered with the College of Massage Therapists of Ontario. You can verify his registration on the <a href="https://cmto.ca.thentiacloud.net/webs/cmto/register/" target="_blank" rel="noopener">CMTO Public Register</a>.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
             What are your massage therapy prices in Brampton?
             <span class="faq-toggle">+</span>
           </button>
@@ -1793,6 +1817,16 @@
             30 min — $70 &nbsp;|&nbsp; 60 min — $110 &nbsp;|&nbsp; 75 min — $150 &nbsp;|&nbsp; 90 min — $175<br><br>
             <strong>First visit RMT offer:</strong><br>
             60 min — $99 for new clients. No hidden fees. Payment can be made by cash, debit, credit card, e-transfer, Apple Pay, or Google Pay.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+            Am I in control during the session?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. Every session starts with intake and consent. You can adjust pressure, change focus areas, skip an area, or stop treatment at any time. Consent is ongoing, and your comfort matters.
           </div>
         </div>
 
@@ -1868,16 +1902,6 @@
 
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-            Am I in control during the session?
-            <span class="faq-toggle">+</span>
-          </button>
-          <div class="faq-answer">
-            Yes. Every session starts with intake and consent. You can adjust pressure, change focus areas, skip an area, or stop treatment at any time. Consent is ongoing, and your comfort matters.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
             How can I access my treatment records?
             <span class="faq-toggle">+</span>
           </button>
@@ -1939,6 +1963,11 @@
             <p>Brampton · Mississauga · Caledon · Greater Toronto Area</p>
           </div>
 
+          <figure class="clinic-photo">
+            <img src="assets/kimura-treatment-room.webp" width="765" height="1020" loading="lazy" alt="Treatment room at Kimura Massage Therapy and Rehab in Brampton — massage table, towel warmer, and credentials on the wall">
+            <figcaption>Your treatment room — a private, quiet space in northwest Brampton.</figcaption>
+          </figure>
+
           <div class="contact-map" aria-label="Map to Kimura Massage Therapy and Rehab">
             <iframe
               title="Map to Kimura Massage Therapy and Rehab at 14 Block Road, Brampton"
@@ -1999,11 +2028,11 @@
             <div class="bw-summary" id="bwSummary">60 min · RMT Massage · $110</div>
             <div class="bw-confirm-btns">
               <a id="waBtn" href="https://kimuramassage.noterro.com/" class="bw-confirm-wa">
-                Book Online
+                Book This Session — $110
               </a>
               <a href="tel:9052266336" class="bw-confirm-call">📞 Call (905) 226-6336</a>
             </div>
-            <p class="bw-note">Open 7 days · 9AM–9PM · Same-day usually available</p>
+            <p class="bw-note">Opens our secure booking system (Noterro) · Open 7 days · Same-day usually available</p>
           </div>
         </div>
 
@@ -2053,7 +2082,7 @@
         <div class="footer-brand">
           <div class="logo">Kimura Massage Therapy &amp; Rehab</div>
           <p>
-            RMT massage therapy from $70. Open 7 days, same-day available. Brampton's highest-rated massage clinic.
+            RMT massage therapy from $70 in Brampton. Registered with the College of Massage Therapists of Ontario. Open 7 days, same-day available.
           </p>
           <div class="footer-nap">
             <p>📍 14 Block Road, Brampton, ON L7A 5B2</p>
@@ -2201,6 +2230,7 @@
       const price = dur ? dur.dataset.rmt : '';
       const time = dur ? dur.dataset.dur : '60 min';
       document.getElementById('bwSummary').textContent = `${time} · ${type} · ${price}`;
+      document.getElementById('waBtn').textContent = `Book This Session — ${price}`;
     }
 
     function selectOpt(btn, groupId) {
@@ -2237,12 +2267,18 @@
       btn.addEventListener('click', openBookModal);
     });
 
-    function checkNavPhone() {
-      document.getElementById('navPhone').style.display =
-        window.innerWidth >= 960 ? 'block' : 'none';
-    }
-    checkNavPhone();
-    window.addEventListener('resize', checkNavPhone);
+    /* ── Live open-now indicator (open daily 9:00–21:00) ── */
+    (function () {
+      const badge = document.getElementById('openBadge');
+      if (!badge) return;
+      const now = new Date();
+      const hour = now.getHours();
+      const open = hour >= 9 && hour < 21;
+      badge.textContent = open
+        ? 'Open Now · Closes 9PM · Brampton, ON'
+        : 'Opens ' + (hour >= 21 ? 'Tomorrow' : 'Today') + ' at 9AM · Brampton, ON';
+      badge.classList.toggle('is-closed', !open);
+    })();
   </script>
 
 <script src="assets/intro-popup.js"></script>
