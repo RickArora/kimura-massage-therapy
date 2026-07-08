@@ -36,7 +36,7 @@
     '<div class="ip-overlay" id="introPopupOverlay" role="dialog" aria-modal="true" aria-labelledby="ipTitle">',
     '<div class="ip-modal">',
     '<button class="ip-close" id="introPopupClose" aria-label="Close offer">✕</button>',
-    '<span class="ip-badge">New clients only · 4 spots left this month</span>',
+    '<span class="ip-badge">New clients only · Capped at 10 per month</span>',
     '<h2 class="ip-headline" id="ipTitle">Claim Your $99<br>First Visit Intro</h2>',
     '<p class="ip-sub">60-min RMT massage — cupping + hot towels included. Insurance receipt ready when you walk out.</p>',
     '<div class="ip-price-row">',
