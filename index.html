@@ -461,6 +461,8 @@
       letter-spacing:.01em; margin-bottom:24px;
     }
     .hero h1 em { color:var(--orange-bright); font-style:normal; }
+    /* Status light: green while open, gray when closed (orange = static no-JS fallback) */
+    .hero-badge.is-open::before { background:#2EBD59; box-shadow:0 0 6px rgba(46,189,89,.8); }
     .hero-badge.is-closed::before { background:rgba(255,255,255,.45); }
 
     .hero-desc {
@@ -2277,6 +2279,7 @@
       badge.textContent = open
         ? 'Open Now · Closes 9PM · Brampton, ON'
         : 'Opens ' + (hour >= 21 ? 'Tomorrow' : 'Today') + ' at 9AM · Brampton, ON';
+      badge.classList.toggle('is-open', open);
       badge.classList.toggle('is-closed', !open);
     })();
   </script>
