@@ -1350,14 +1350,14 @@
       <div class="hero-inner">
 
         <div class="hero-content">
-          <span class="hero-badge" id="openBadge">Open 7 Days · 9AM–9PM · Brampton, ON</span>
+          <span class="hero-badge" id="openBadge">Open 7 Days · Direct Billing Available · Brampton, ON</span>
 
           <h1>RMT Massage Therapy in Brampton —<br>Same-Day Appointments.<br><em>Insurance-Eligible.</em></h1>
 
           <h2 style="font-family:var(--font-head);font-size:clamp(16px,2.2vw,24px);font-weight:500;color:rgba(255,255,255,.55);line-height:1.35;margin-bottom:32px;letter-spacing:.01em;">Your neck has felt tight for weeks. Your back feels stiff every morning.<br>You do not have to keep putting it off.</h2>
 
           <p class="hero-desc">
-            RMT massage therapy from $70. Same-day availability most days. Registered with the College of Massage Therapists of Ontario.
+            RMT massage therapy from $70. Same-day availability most days. Direct billing available for 30+ major insurers.
           </p>
 
           <div class="hero-actions">
@@ -2356,8 +2356,8 @@
       const hour = now.getHours();
       const open = hour >= 9 && hour < 21;
       badge.textContent = open
-        ? 'Open Now · Closes 9PM · Brampton, ON'
-        : 'Opens ' + (hour >= 21 ? 'Tomorrow' : 'Today') + ' at 9AM · Brampton, ON';
+        ? 'Open Now · Direct Billing Available · Brampton, ON'
+        : 'Opens ' + (hour >= 21 ? 'Tomorrow' : 'Today') + ' at 9AM · Direct Billing Available';
       badge.classList.toggle('is-open', open);
       badge.classList.toggle('is-closed', !open);
     })();
