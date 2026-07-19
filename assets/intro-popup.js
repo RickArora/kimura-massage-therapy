@@ -41,7 +41,7 @@
     '<p class="ip-sub">60-min RMT massage — cupping + hot towels included. Insurance receipt ready when you walk out.</p>',
     '<div class="ip-price-row">',
     '<span class="ip-price"><sup>$</sup>99</span>',
-    '<span class="ip-was">$110 reg.</span>',
+    '<span class="ip-was">$115 reg.</span>',
     '</div>',
     '<ul class="ip-includes">',
     '<li>60-min RMT massage (insurance receipt included)</li>',
