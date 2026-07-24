@@ -44,6 +44,11 @@
   }
 
   function trackBookOnline(label, linkUrl) {
+    sendEvent('book_online', {
+      event_label: label || 'book_online',
+      link_url: linkUrl || '',
+      booking_provider: 'noterro'
+    });
     sendEvent('book_online_click', {
       event_label: label || 'book_online',
       link_url: linkUrl || '',
