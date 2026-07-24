@@ -27,6 +27,7 @@
     if (typeof window.gtag !== 'function') return;
     window.gtag('event', name, Object.assign({
       event_category: 'conversion',
+      transport_type: 'beacon',
       page_path: window.location.pathname
     }, params || {}));
   }
@@ -37,13 +38,30 @@
       send_to: adsConversionSendTo,
       event_label: label || 'contact',
       link_url: linkUrl || '',
+      transport_type: 'beacon',
       page_path: window.location.pathname
     });
+  }
+
+  function trackBookOnline(label, linkUrl) {
+    sendEvent('book_online_click', {
+      event_label: label || 'book_online',
+      link_url: linkUrl || '',
+      booking_provider: 'noterro'
+    });
+    sendEvent('generate_lead', {
+      event_label: label || 'book_online',
+      link_url: linkUrl || '',
+      method: 'noterro'
+    });
+    sendAdsConversion(label || 'book_online', linkUrl || '');
   }
 
   window.trackCTA = function (label) {
     sendEvent('cta_click', { event_label: label || 'cta' });
   };
+
+  window.trackBookOnline = trackBookOnline;
 
   document.addEventListener('click', function (event) {
     var link = event.target.closest && event.target.closest('a[href]');
@@ -71,11 +89,7 @@
     }
 
     if (href.indexOf('https://kimuramassage.noterro.com') === 0) {
-      sendEvent('book_online_click', {
-        event_label: label || 'book_online',
-        link_url: href
-      });
-      sendAdsConversion(label || 'book_online', href);
+      trackBookOnline(label || 'book_online', href);
     }
   });
 })();
