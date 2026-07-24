@@ -9,7 +9,6 @@
   };
 
   var hasGoogleTag = document.querySelector('script[src*="googletagmanager.com/gtag/js"]');
-  var hasAdsTag = document.querySelector('script[src*="googletagmanager.com/gtag/js?id=' + adsId + '"]');
   if (!hasGoogleTag) {
     var tag = document.createElement('script');
     tag.async = true;
@@ -18,8 +17,16 @@
     window.gtag('js', new Date());
   }
 
-  window.gtag('config', measurementId);
-  if (!hasAdsTag) {
+  function hasConfig(id) {
+    return window.dataLayer.some(function (item) {
+      return item && item[0] === 'config' && item[1] === id;
+    });
+  }
+
+  if (!hasConfig(measurementId)) {
+    window.gtag('config', measurementId);
+  }
+  if (!hasConfig(adsId)) {
     window.gtag('config', adsId);
   }
 
