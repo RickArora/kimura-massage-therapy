@@ -7,7 +7,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-MTQK49YP14');
 </script>
 <meta charset="UTF-8">
@@ -18,292 +17,504 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-
+<script src="assets/analytics.js" defer></script>
 
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
-  --ink:#0B1726;--navy:#102A43;--navy-2:#163B5C;--paper:#F7F8FA;--white:#FFFFFF;
-  --line:#DDE4EC;--muted:#53657A;--orange:#E85D04;--orange-2:#C94D00;
-  --green:#1F7A5A;--soft:#EDF2F7;--font-body:'DM Sans',sans-serif;--font-head:'Oswald',sans-serif;
+  --navy:#0F2742;--navy-dark:#080F1C;--navy-mid:#1A3A5C;
+  --orange:#E85D04;--orange-2:#C94D00;--orange-glow:rgba(232,93,4,.18);
+  --ink:#0B1726;--paper:#F2F4F8;--white:#FFFFFF;
+  --line:#DDE4EC;--muted:#536578;--soft:#EDF2F7;
+  --gold:#FFB071;--green:#1F7A5A;
+  --font-body:'DM Sans',sans-serif;--font-head:'Oswald',sans-serif;
 }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
-body{font-family:var(--font-body);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;padding-bottom:86px;}
-a{color:inherit;}img{max-width:100%;display:block;}strong{font-weight:800;color:inherit;}
-a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid #FFB071;outline-offset:3px;}
-h1,h2,h3,.brand,.price,.stat-number{font-family:var(--font-head);letter-spacing:0;line-height:1.05;}
-.skip-link{position:absolute;left:-999px;top:12px;background:var(--white);color:var(--ink);padding:10px 14px;z-index:999;border-radius:6px;}
-.skip-link:focus{left:12px;}
-.topbar{position:sticky;top:0;z-index:90;background:rgba(11,23,38,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1);}
-.topbar-inner{max-width:1160px;margin:0 auto;min-height:64px;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
-.brand{font-size:20px;font-weight:700;color:var(--white);text-decoration:none;line-height:1;}
-.brand span{display:block;margin-top:5px;font-family:var(--font-body);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.62);}
-.top-actions{display:flex;align-items:center;gap:10px;}.top-phone{display:none;color:rgba(255,255,255,.82);font-size:14px;text-decoration:none;font-weight:700;}
-.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:8px;padding:13px 18px;font-weight:800;text-decoration:none;border:1px solid transparent;cursor:pointer;text-align:center;line-height:1.2;}
-.btn-primary{background:var(--orange);color:#fff;box-shadow:0 14px 34px rgba(232,93,4,.28);}.btn-primary:hover{background:var(--orange-2);}
-.btn-dark{background:var(--ink);color:#fff;}.btn-outline{background:#fff;color:var(--navy);border-color:var(--line);}.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.18);}
-section{padding:46px 18px;}.container{max-width:1160px;margin:0 auto;}.narrow{max-width:760px;}.label{font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;}
-.section-title{font-size:clamp(30px,8vw,52px);color:var(--ink);margin-bottom:14px;}.section-copy{color:var(--muted);font-size:17px;line-height:1.75;max-width:760px;}
-.hero{background:var(--ink);color:#fff;padding:0 0 22px;position:relative;overflow:hidden;}.hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:42%;background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.045));pointer-events:none;}
-.hero-inner{position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:34px 18px 22px;display:grid;gap:24px;}
-.hero-copy{display:grid;gap:16px;}.hero-person{display:grid;grid-template-columns:62px 1fr;gap:12px;align-items:center;margin-top:2px;}.hero-person img{width:62px;height:62px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.9);box-shadow:0 10px 24px rgba(0,0,0,.22);}.hero-person-name{font-family:var(--font-head);font-size:24px;line-height:1;color:#fff;}.hero-person-role{font-size:12px;font-weight:900;letter-spacing:.07em;text-transform:uppercase;color:#FFB071;margin-top:5px;}.pill{display:inline-flex;align-items:center;gap:8px;width:max-content;max-width:100%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);color:rgba(255,255,255,.92);border-radius:999px;padding:7px 11px;font-size:12px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;}
-.pill::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--orange);flex:0 0 auto;}.hero h1{font-size:clamp(38px,11vw,72px);max-width:780px;}.hero h1 span{color:#FFB071;}.hero-sub{font-size:18px;line-height:1.62;color:rgba(255,255,255,.82);max-width:660px;}
-.hero-points{display:grid;grid-template-columns:1fr;gap:8px;list-style:none;margin:2px 0;}.hero-points li{display:flex;gap:9px;align-items:flex-start;color:rgba(255,255,255,.86);font-size:15px;line-height:1.45;}.check{width:20px;height:20px;border-radius:50%;background:rgba(232,93,4,.2);color:#FFB071;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:13px;font-weight:900;}
-.hero-actions{display:grid;gap:10px;max-width:440px;}.micro{font-size:13px;color:rgba(255,255,255,.68);text-align:center;}.secondary-actions{display:grid;grid-template-columns:1fr;gap:10px;}.hero-actions .btn{width:100%;}
-.offer-card{background:#fff;color:var(--ink);border-radius:10px;border:1px solid rgba(255,255,255,.16);box-shadow:0 26px 70px rgba(0,0,0,.28);overflow:hidden;}.hero-rmt{display:grid;grid-template-columns:74px 1fr;gap:14px;align-items:center;padding:18px;background:#0F2742;color:#fff;}.hero-rmt img{width:74px;height:74px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.9);}.hero-rmt-name{font-family:var(--font-head);font-size:24px;line-height:1;}.hero-rmt-role{font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#FFB071;margin-top:5px;}.hero-rmt-copy{font-size:13px;color:rgba(255,255,255,.76);line-height:1.35;margin-top:5px;}.offer-top{padding:18px;background:linear-gradient(135deg,#fff,#F1F5F9);border-bottom:1px solid var(--line);}.offer-kicker{font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:8px;}.price-row{display:flex;align-items:flex-end;gap:12px;}.price{font-size:72px;color:var(--ink);}.was{color:var(--muted);font-size:15px;text-decoration:line-through;margin-bottom:12px;}.offer-body{padding:18px;display:grid;gap:12px;}.included{display:grid;gap:9px;}.included div{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;color:#24374B;}.offer-note{background:#FFF3EA;border:1px solid #FFD8BE;color:#71310E;border-radius:8px;padding:12px;font-size:14px;line-height:1.45;font-weight:700;}.offer-card .btn{width:100%;}
-.trust-strip{background:#fff;border-bottom:1px solid var(--line);}.trust-grid{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr;}.trust-item{padding:14px 18px;border-top:1px solid var(--line);display:flex;gap:10px;align-items:center;font-size:15px;font-weight:800;color:var(--navy);}.trust-item:first-child{border-top:0;}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);flex:0 0 auto;}
-.about-band{background:#fff;padding-top:34px;}.about-card{display:grid;gap:18px;border:1px solid var(--line);border-radius:10px;background:#fff;box-shadow:0 18px 45px rgba(15,42,67,.08);padding:18px;}.profile-row{display:grid;grid-template-columns:92px 1fr;gap:16px;align-items:center;}.profile-row img{width:92px;height:92px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 8px 24px rgba(15,42,67,.18);}.profile-title{font-size:26px;color:var(--ink);}.profile-sub{font-weight:900;color:var(--orange);font-size:13px;text-transform:uppercase;letter-spacing:.06em;margin-top:4px;}.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}.stat{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:12px;}.stat-number{font-size:30px;color:var(--navy);}.stat-label{font-size:12px;font-weight:800;color:var(--muted);line-height:1.25;}.about-text{color:var(--muted);line-height:1.72;}.about-text strong{color:var(--navy);}
-.problem-grid,.value-grid,.control-grid{display:grid;gap:12px;margin-top:22px;}.problem-card,.value-card,.control-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px;box-shadow:0 12px 28px rgba(15,42,67,.055);}.problem-card h3,.value-card h3,.control-card h3{font-family:var(--font-body);font-size:17px;line-height:1.25;margin-bottom:8px;color:var(--navy);}.problem-card p,.value-card p,.control-card p{color:var(--muted);font-size:15px;line-height:1.6;}
-.value{background:#fff;}.value-card{background:var(--paper);box-shadow:none;}.value-card b{color:var(--ink);}.decision{background:var(--navy);color:#fff;}.decision .section-title{color:#fff;}.decision .section-copy{color:rgba(255,255,255,.78);}.decision-panel{margin-top:24px;display:grid;gap:12px;}.decision-item{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:16px;}.decision-item h3{font-family:var(--font-body);font-size:16px;margin-bottom:6px;}.decision-item p{color:rgba(255,255,255,.74);font-size:15px;line-height:1.62;}
-.insurance{background:#fff;}.insurance-box{margin-top:22px;background:#F4F8FB;border:1px solid var(--line);border-left:5px solid var(--green);border-radius:10px;padding:18px;}.insurance-box h3{font-family:var(--font-body);font-size:18px;margin-bottom:8px;color:var(--navy);}.ins-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}.ins-pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:14px;font-weight:800;color:var(--navy);}.small-note{font-size:13px;color:var(--muted);line-height:1.6;margin-top:14px;}
-.steps{display:grid;gap:14px;margin-top:22px;}.step{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:start;}.step-num{width:42px;height:42px;border-radius:8px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:24px;}.step h3{font-family:var(--font-body);font-size:17px;margin-bottom:4px;color:var(--navy);}.step p{color:var(--muted);font-size:15px;line-height:1.62;}
-.cta-panel{background:var(--orange);color:#fff;text-align:center;}.cta-panel .section-title{color:#fff;max-width:800px;margin-left:auto;margin-right:auto;}.cta-panel p{color:rgba(255,255,255,.88);max-width:640px;margin:0 auto 20px;}.cta-panel .btn-primary{background:#fff;color:var(--ink);box-shadow:none;}.cta-panel .btn-primary:hover{background:#F2F4F8;}.cta-row{max-width:420px;margin:0 auto;display:grid;gap:10px;}.cta-panel .micro{color:rgba(255,255,255,.78);}
-.faq-link{background:var(--paper);}.link-row{display:grid;gap:10px;margin-top:20px;max-width:420px;}.disclaimer{font-size:13px;color:var(--muted);line-height:1.65;margin-top:18px;max-width:760px;}
-footer{background:#07111F;color:rgba(255,255,255,.62);font-size:13px;line-height:1.8;text-align:center;padding:34px 18px 112px;}footer a{color:rgba(255,255,255,.78);text-decoration:none;}.footer-links{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px auto;}.footer-links a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:8px 12px;background:rgba(255,255,255,.06);}
-.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:120;background:rgba(7,17,31,.97);border-top:1px solid rgba(255,255,255,.12);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:.8fr 1.2fr;gap:8px;}.mobile-bar a{min-height:48px;border-radius:8px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:900;font-size:13px;}.mb-secondary{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#fff;}.mb-primary{background:var(--orange);color:#fff;}
-.exit-toast{display:none;position:fixed;left:12px;right:12px;bottom:92px;z-index:130;background:#fff;color:var(--ink);border:1px solid #FFD8BE;border-left:5px solid var(--orange);border-radius:10px;box-shadow:0 18px 45px rgba(0,0,0,.18);padding:12px;}.et-row{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;}.et-text{font-size:14px;line-height:1.35;color:#31455A;}.et-btn{background:var(--orange);color:#fff;text-decoration:none;border-radius:7px;padding:10px 12px;font-size:13px;font-weight:900;}.et-close{min-width:36px;min-height:36px;border:0;background:var(--soft);border-radius:7px;font-size:20px;color:var(--muted);cursor:pointer;}
-@media(min-width:700px){body{padding-bottom:0;}.topbar-inner{padding:12px 24px;}.top-phone{display:inline-flex;}.hero-inner{grid-template-columns:minmax(0,1fr) 390px;gap:42px;align-items:center;padding:58px 24px 64px;}.hero-points{grid-template-columns:1fr 1fr;}.trust-grid{grid-template-columns:repeat(4,1fr);}.trust-item{border-top:0;border-left:1px solid var(--line);justify-content:center;text-align:center;}.trust-item:first-child{border-left:0;}.about-card{grid-template-columns:1.1fr .9fr;align-items:center;padding:24px;}.problem-grid,.value-grid,.control-grid{grid-template-columns:repeat(3,1fr);}.decision-panel{grid-template-columns:repeat(3,1fr);}.steps{grid-template-columns:repeat(2,1fr);}.link-row,.cta-row{grid-template-columns:1fr 1fr;max-width:620px;}.mobile-bar{display:none;}footer{padding-bottom:34px;}.exit-toast{left:auto;right:24px;bottom:24px;max-width:430px;}}
-@media(min-width:980px){section{padding:72px 24px;}.hero-inner{gap:68px;padding-top:72px;}.offer-top,.offer-body{padding:24px;}.profile-row{grid-template-columns:118px 1fr;}.profile-row img{width:118px;height:118px;}.stat-grid{grid-template-columns:repeat(4,1fr);}.stat{padding:14px;}}
-@media(max-width:380px){.brand{font-size:18px;}.hero-inner{padding-left:16px;padding-right:16px;}.hero h1{font-size:36px;}.price{font-size:64px;}.hero-rmt{grid-template-columns:64px 1fr;}.hero-rmt img{width:64px;height:64px;}.profile-row{grid-template-columns:78px 1fr;}.profile-row img{width:78px;height:78px;}.stat-grid{grid-template-columns:1fr;}.et-row{grid-template-columns:1fr auto;}.et-btn{grid-column:1 / -1;text-align:center;}}
+body{font-family:var(--font-body);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;padding-bottom:80px;}
+@media(min-width:700px){body{padding-bottom:0;}}
+a{color:inherit;text-decoration:none;}img{max-width:100%;display:block;}
+h1,h2,h3,.brand{font-family:var(--font-head);line-height:1.05;letter-spacing:.01em;}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
+.skip{position:absolute;left:-999px;top:12px;background:#fff;color:var(--ink);padding:10px 14px;z-index:999;border-radius:6px;}
+.skip:focus{left:12px;}
+
+/* ── TOPBAR ───────────────────────────────────────── */
+.topbar{position:sticky;top:0;z-index:90;background:rgba(8,15,28,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);}
+.topbar-inner{max-width:1100px;margin:0 auto;padding:0 18px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.brand{font-size:19px;font-weight:700;color:#fff;line-height:1;}
+.brand span{display:block;margin-top:4px;font-family:var(--font-body);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);}
+.top-cta{min-height:40px;padding:0 16px;background:var(--orange);color:#fff;font-weight:700;font-size:14px;border-radius:7px;display:inline-flex;align-items:center;}
+.top-cta:hover{background:var(--orange-2);}
+.top-phone{display:none;color:rgba(255,255,255,.75);font-size:14px;font-weight:600;}
+@media(min-width:600px){.top-phone{display:inline;}}
+
+/* ── HERO ─────────────────────────────────────────── */
+.hero{background:var(--navy-dark);background-image:radial-gradient(ellipse 80% 60% at 50% -10%, rgba(232,93,4,.12) 0%, transparent 70%);color:#fff;padding:0;}
+.hero-inner{max-width:1100px;margin:0 auto;padding:48px 18px 52px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:rgba(255,255,255,.82);border-radius:999px;padding:6px 14px;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:22px;}
+.hero-badge::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--orange);flex:0 0 auto;}
+.hero-price-block{margin-bottom:28px;}
+.hero-price-label{font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:6px;}
+.hero-price-row{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;}
+.hero-price{font-family:var(--font-head);font-size:clamp(80px,22vw,130px);line-height:.9;color:#fff;font-weight:700;letter-spacing:-.01em;}
+.hero-price-old{display:flex;flex-direction:column;gap:4px;padding-bottom:12px;}
+.hero-price-old .was{font-size:18px;font-weight:600;color:rgba(255,255,255,.38);text-decoration:line-through;}
+.hero-price-old .save{font-size:14px;font-weight:700;color:var(--gold);background:rgba(255,176,113,.12);border:1px solid rgba(255,176,113,.22);padding:3px 10px;border-radius:99px;width:max-content;}
+.hero-h1{font-size:clamp(26px,6vw,44px);font-weight:700;color:#fff;max-width:680px;line-height:1.12;margin-bottom:18px;}
+.hero-h1 em{font-style:normal;color:var(--gold);}
+.hero-checklist{display:grid;gap:11px;margin-bottom:32px;}
+.hero-checklist li{display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,.84);font-size:16px;list-style:none;line-height:1.4;}
+.hc-icon{width:22px;height:22px;border-radius:50%;background:rgba(232,93,4,.22);color:var(--gold);display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:12px;font-weight:900;margin-top:1px;}
+.hero-cta-group{display:grid;gap:10px;max-width:440px;}
+.btn-xl{min-height:58px;width:100%;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:10px;font-family:var(--font-head);font-size:22px;font-weight:700;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:none;}
+.btn-xl-primary{background:var(--orange);color:#fff;box-shadow:0 16px 40px rgba(232,93,4,.38);}
+.btn-xl-primary:hover{background:var(--orange-2);}
+.btn-xl-ghost{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);color:#fff;font-size:16px;min-height:48px;}
+.btn-xl-ghost:hover{background:rgba(255,255,255,.12);}
+.hero-meta{font-size:13px;color:rgba(255,255,255,.45);text-align:center;padding-top:4px;}
+
+/* ── SOCIAL PROOF STRIP ───────────────────────────── */
+.proof-strip{background:#fff;border-bottom:1px solid var(--line);}
+.proof-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);}
+@media(min-width:700px){.proof-inner{grid-template-columns:repeat(4,1fr);}}
+.proof-item{padding:18px 14px;text-align:center;border-right:1px solid var(--line);}
+.proof-item:last-child{border-right:0;}
+.proof-item:nth-child(2){border-right:0;}
+@media(min-width:700px){.proof-item:nth-child(2){border-right:1px solid var(--line);}}
+.proof-item:nth-child(n+3){border-top:1px solid var(--line);}
+@media(min-width:700px){.proof-item:nth-child(n+3){border-top:none;}}
+.proof-num{font-family:var(--font-head);font-size:clamp(28px,6vw,38px);color:var(--navy);font-weight:700;line-height:1;}
+.proof-num span{color:var(--orange);}
+.proof-lbl{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:4px;}
+
+/* ── VALUE STACK ──────────────────────────────────── */
+.value-section{padding:56px 18px;}
+.section-eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;}
+.section-h2{font-size:clamp(28px,7vw,48px);color:var(--ink);margin-bottom:10px;}
+.section-p{color:var(--muted);font-size:17px;line-height:1.75;max-width:680px;}
+.wrap{max-width:1100px;margin:0 auto;}
+
+.value-grid{display:grid;gap:14px;margin-top:30px;}
+@media(min-width:600px){.value-grid{grid-template-columns:1fr 1fr;}}
+@media(min-width:900px){.value-grid{grid-template-columns:repeat(3,1fr);}}
+.value-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 20px;position:relative;overflow:hidden;}
+.value-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--orange);}
+.value-card-icon{font-size:28px;margin-bottom:12px;}
+.value-card h3{font-family:var(--font-body);font-size:17px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.value-card p{color:var(--muted);font-size:15px;line-height:1.6;}
+.value-card-price{display:inline-block;font-size:13px;font-weight:700;color:var(--green);background:rgba(31,122,90,.08);border:1px solid rgba(31,122,90,.18);border-radius:99px;padding:3px 10px;margin-top:10px;}
+
+/* ── PRICING CALLOUT ──────────────────────────────── */
+.pricing-callout{background:var(--navy);padding:56px 18px;}
+.pricing-inner{max-width:640px;margin:0 auto;text-align:center;}
+.pricing-callout .section-eyebrow{color:var(--gold);}
+.pricing-callout .section-h2{color:#fff;}
+.price-compare{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;margin:32px 0 28px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 20px;}
+.pc-item{text-align:center;}
+.pc-item .pcl{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:8px;}
+.pc-item .pcv{font-family:var(--font-head);font-size:52px;color:#fff;line-height:1;}
+.pc-item.featured .pcl{color:var(--gold);}
+.pc-item.featured .pcv{color:var(--gold);}
+.pc-divider{color:rgba(255,255,255,.2);font-size:28px;font-weight:300;}
+.price-cta{display:block;width:100%;min-height:58px;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--orange);color:#fff;font-family:var(--font-head);font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:.02em;border-radius:10px;box-shadow:0 16px 40px rgba(232,93,4,.38);}
+.price-cta:hover{background:var(--orange-2);}
+.price-note{font-size:13px;color:rgba(255,255,255,.38);margin-top:12px;}
+
+/* ── INSURANCE ────────────────────────────────────── */
+.insurance-section{padding:56px 18px;background:#fff;}
+.ins-header{display:grid;gap:8px;margin-bottom:28px;}
+.ins-hook{font-family:var(--font-head);font-size:clamp(26px,6vw,42px);color:var(--ink);}
+.ins-hook em{font-style:normal;color:var(--orange);}
+.ins-sub{color:var(--muted);font-size:16px;line-height:1.7;max-width:620px;}
+.ins-card{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--green);border-radius:12px;padding:22px;}
+.ins-card-head{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:14px;}
+.ins-pills{display:flex;flex-wrap:wrap;gap:8px;}
+.ins-pill{background:#fff;border:1px solid var(--line);border-radius:99px;padding:7px 14px;font-size:14px;font-weight:700;color:var(--navy);}
+.ins-disclaimer{font-size:13px;color:var(--muted);margin-top:14px;line-height:1.6;}
+
+/* ── PROBLEM ──────────────────────────────────────── */
+.problem-section{padding:56px 18px;background:var(--paper);}
+.problem-grid{display:grid;gap:12px;margin-top:26px;}
+@media(min-width:600px){.problem-grid{grid-template-columns:1fr 1fr;}}
+@media(min-width:900px){.problem-grid{grid-template-columns:repeat(3,1fr);}}
+.problem-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;}
+.problem-card h3{font-family:var(--font-body);font-size:17px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.problem-card p{color:var(--muted);font-size:15px;line-height:1.6;}
+
+/* ── THERAPIST BIO ────────────────────────────────── */
+.bio-section{padding:56px 18px;background:#fff;}
+.bio-card{background:var(--navy);border-radius:16px;padding:28px 22px;color:#fff;display:grid;gap:22px;}
+@media(min-width:700px){.bio-card{grid-template-columns:auto 1fr;align-items:center;gap:36px;padding:36px 36px;}}
+.bio-photo{width:110px;height:110px;border-radius:50%;object-fit:cover;border:4px solid rgba(255,255,255,.2);box-shadow:0 16px 40px rgba(0,0,0,.35);flex-shrink:0;}
+.bio-name{font-family:var(--font-head);font-size:30px;color:#fff;line-height:1;margin-bottom:6px;}
+.bio-role{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.bio-copy{color:rgba(255,255,255,.78);font-size:16px;line-height:1.72;}
+.bio-copy strong{color:#fff;}
+.bio-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px;}
+@media(min-width:700px){.bio-stats{margin-top:0;}}
+.bio-stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:14px;}
+.bs-num{font-family:var(--font-head);font-size:30px;color:#fff;line-height:1;}
+.bs-lbl{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:4px;}
+
+/* ── HOW IT WORKS ─────────────────────────────────── */
+.steps-section{padding:56px 18px;background:var(--paper);}
+.steps-grid{display:grid;gap:14px;margin-top:28px;}
+@media(min-width:700px){.steps-grid{grid-template-columns:1fr 1fr;}}
+.step-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;}
+.step-num{width:48px;height:48px;border-radius:10px;background:var(--navy);color:#fff;font-family:var(--font-head);font-size:26px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+.step-card h3{font-family:var(--font-body);font-size:17px;font-weight:700;color:var(--navy);margin-bottom:5px;}
+.step-card p{color:var(--muted);font-size:15px;line-height:1.6;}
+
+/* ── RISK REVERSAL ────────────────────────────────── */
+.risk-section{padding:56px 18px;background:var(--paper);}
+.risk-grid{display:grid;gap:12px;margin-top:24px;}
+@media(min-width:700px){.risk-grid{grid-template-columns:repeat(3,1fr);}}
+.risk-card{border:1px solid var(--line);border-radius:12px;padding:20px;background:#fff;}
+.risk-card h3{font-family:var(--font-body);font-size:16px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.risk-card p{color:var(--muted);font-size:15px;line-height:1.6;}
+
+/* ── BOTTOM CTA ───────────────────────────────────── */
+.final-cta{background:var(--orange);padding:64px 18px;text-align:center;}
+.final-cta h2{font-size:clamp(28px,7vw,52px);color:#fff;max-width:720px;margin:0 auto 12px;}
+.final-cta p{color:rgba(255,255,255,.84);font-size:17px;max-width:560px;margin:0 auto 28px;}
+.final-cta-btns{display:grid;gap:10px;max-width:440px;margin:0 auto;}
+.btn-white{min-height:56px;display:flex;align-items:center;justify-content:center;background:#fff;color:var(--ink);font-family:var(--font-head);font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:.02em;border-radius:10px;}
+.btn-white:hover{background:#F2F4F8;}
+.btn-ghost-w{min-height:48px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;font-weight:600;font-size:16px;border-radius:10px;}
+.btn-ghost-w:hover{background:rgba(255,255,255,.2);}
+.final-meta{font-size:13px;color:rgba(255,255,255,.55);margin-top:14px;}
+
+/* ── FOOTER ───────────────────────────────────────── */
+footer{background:var(--navy-dark);color:rgba(255,255,255,.5);font-size:13px;text-align:center;padding:36px 18px 100px;}
+@media(min-width:700px){footer{padding-bottom:36px;}}
+.footer-nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0 0;}
+.footer-nav a{color:rgba(255,255,255,.65);border:1px solid rgba(255,255,255,.12);border-radius:7px;padding:7px 12px;font-size:12px;font-weight:600;}
+.disclaimer{font-size:12px;color:rgba(255,255,255,.28);margin-top:14px;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.7;}
+
+/* ── STICKY MOBILE BAR ────────────────────────────── */
+.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:120;background:rgba(8,15,28,.97);border-top:1px solid rgba(255,255,255,.1);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:.85fr 1.15fr;gap:8px;}
+@media(min-width:700px){.mobile-bar{display:none;}}
+.mobile-bar a{min-height:48px;border-radius:8px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:700;font-size:14px;}
+.mb-sec{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);color:#fff;}
+.mb-pri{background:var(--orange);color:#fff;}
+
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
 </style>
-  <script src="assets/analytics.js" defer></script>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="topbar" aria-label="Site header">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
   <div class="topbar-inner">
     <a href="./" class="brand">Kimura Massage<span>Therapy &amp; Rehab</span></a>
-    <div class="top-actions">
-      <a class="top-phone" href="tel:9052266336" onclick="trackCTA('topbar_call')">(905) 226-6336</a>
-      <a class="btn btn-primary" href="https://kimuramassage.noterro.com/" onclick="trackCTA('topbar_book_online')">Book Online</a>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <a class="top-phone" href="tel:9052266336">(905) 226-6336</a>
+      <a class="top-cta" href="https://kimuramassage.noterro.com/" onclick="trackCTA('topbar_book')">Book $99 Intro</a>
     </div>
   </div>
 </header>
 
 <main id="main">
-  <section class="hero" aria-labelledby="hero-title">
+
+  <!-- ── HERO ── -->
+  <section class="hero" aria-labelledby="hero-h1">
     <div class="hero-inner">
-      <div class="hero-copy">
-        <span class="pill">New client intro · Brampton RMT</span>
-        <div class="hero-person" aria-label="Your Registered Massage Therapist">
-          <img src="assets/rmt-profile-circle-600.png" alt="Ricky Arora, Registered Massage Therapist">
-          <div>
-            <div class="hero-person-name">Ricky Arora</div>
-            <div class="hero-person-role">Registered Massage Therapist</div>
-          </div>
-        </div>
-        <h1 id="hero-title"><span>$99</span> for your first 60-minute RMT treatment.</h1>
-        <p class="hero-sub">Deep tissue massage, trigger point work, optional cupping, hot towels, and simple stretches when they make sense. Built for tight necks, backs, shoulders, hips, and gym-related tension.</p>
-        <ul class="hero-points" aria-label="Offer highlights">
-          <li><span class="check">✓</span><span><strong>Direct billing available</strong> for 30+ insurers.</span></li>
-          <li><span class="check">✓</span><span><strong>New clients only.</strong> Regular 60-minute visits are $115.</span></li>
-          <li><span class="check">✓</span><span><strong>Book online</strong> in a couple of minutes.</span></li>
-          <li><span class="check">✓</span><span><strong>No packages.</strong> No pressure to rebook.</span></li>
-        </ul>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://kimuramassage.noterro.com/" onclick="trackCTA('hero_book_online')">Book the $99 intro</a>
-          <span class="micro">Open 7 days · 9AM-9PM · 14 Block Rd, Brampton</span>
-          <div class="secondary-actions">
-            <a class="btn btn-ghost" href="tel:9052266336" onclick="trackCTA('hero_call')">Call (905) 226-6336</a>
+      <div class="hero-badge">New client offer &middot; Brampton RMT</div>
+
+      <div class="hero-price-block">
+        <div class="hero-price-label">Your first 60-minute RMT treatment</div>
+        <div class="hero-price-row">
+          <div class="hero-price">$99</div>
+          <div class="hero-price-old">
+            <span class="was">$115 regular</span>
+            <span class="save">Save $16</span>
           </div>
         </div>
       </div>
 
-      <aside class="offer-card" aria-label="$99 intro offer summary">
-        <div class="hero-rmt">
-          <img src="assets/rmt-profile-circle-600.png" alt="Ricky Arora, Registered Massage Therapist">
-          <div>
-            <div class="hero-rmt-name">Ricky Arora</div>
-            <div class="hero-rmt-role">Registered Massage Therapist</div>
-            <p class="hero-rmt-copy">Deep tissue, trigger point work, sports recovery, and practical stretches.</p>
-          </div>
-        </div>
-        <div class="offer-top">
-          <p class="offer-kicker">First visit offer</p>
-          <div class="price-row"><div class="price">$99</div><div class="was">$115 regular</div></div>
-        </div>
-        <div class="offer-body">
-          <div class="included">
-            <div><span class="check">✓</span><span>60-minute appointment with Ricky Arora, Registered Massage Therapist.</span></div>
-            <div><span class="check">✓</span><span>Deep tissue and trigger point focused treatment when appropriate.</span></div>
-            <div><span class="check">✓</span><span>Optional cupping and hot towels included at no extra charge.</span></div>
-            <div><span class="check">✓</span><span>Simple home stretches or aftercare suggestions.</span></div>
-          </div>
-          <div class="offer-note">Capped at 10 new client intro spots per month so first visits do not get rushed.</div>
-          <a class="btn btn-primary" href="https://kimuramassage.noterro.com/" onclick="trackCTA('hero_card_book_online')">Book Online</a>
-        </div>
-      </aside>
+      <h1 class="hero-h1" id="hero-h1">A full RMT massage — <em>not a watered-down intro.</em></h1>
+
+      <ul class="hero-checklist">
+        <li><span class="hc-icon">✓</span><span><strong>60 minutes of treatment</strong> — cupping + hot towels included at no extra charge</span></li>
+        <li><span class="hc-icon">✓</span><span><strong>Direct billing</strong> to 28+ insurers — you may pay $0 upfront</span></li>
+        <li><span class="hc-icon">✓</span><span><strong>CMTO-registered RMT</strong> — receipt ready when you walk out</span></li>
+        <li><span class="hc-icon">✓</span><span><strong>No packages, no pressure</strong> to rebook</span></li>
+      </ul>
+
+      <div class="hero-cta-group">
+        <a class="btn-xl btn-xl-primary" href="https://kimuramassage.noterro.com/" onclick="trackCTA('hero_book_online')">Book the $99 Intro →</a>
+        <a class="btn-xl btn-xl-ghost" href="tel:9052266336" onclick="trackCTA('hero_call')">Call (905) 226-6336</a>
+      </div>
+      <div class="hero-meta">Open 7 days · 9AM–9PM · 14 Block Rd, Brampton</div>
     </div>
   </section>
 
-  <div class="trust-strip" aria-label="Clinic trust points">
-    <div class="trust-grid">
-      <div class="trust-item"><span class="dot"></span>200+ Google reviews</div>
-      <div class="trust-item"><span class="dot"></span>5.0 average rating</div>
-      <div class="trust-item"><span class="dot"></span>CMTO registered RMT</div>
-      <div class="trust-item"><span class="dot"></span>Direct billing available</div>
+  <!-- ── SOCIAL PROOF STRIP ── -->
+  <div class="proof-strip" role="region" aria-label="Trust signals">
+    <div class="proof-inner">
+      <div class="proof-item"><div class="proof-num">200<span>+</span></div><div class="proof-lbl">Google Reviews</div></div>
+      <div class="proof-item"><div class="proof-num">5.<span>0</span></div><div class="proof-lbl">Avg Rating</div></div>
+      <div class="proof-item"><div class="proof-num"><span>28</span>+</div><div class="proof-lbl">Insurers Billed</div></div>
+      <div class="proof-item"><div class="proof-num" style="font-size:clamp(18px,4vw,26px);padding-top:6px;">CMTO</div><div class="proof-lbl">Registered RMT</div></div>
     </div>
   </div>
 
-  <section class="about-band" aria-labelledby="about-title">
-    <div class="container">
-      <div class="about-card">
-        <div>
-          <div class="profile-row">
-            <img src="assets/rmt-profile-circle-600.png" alt="Ricky Arora, Registered Massage Therapist">
-            <div>
-              <h2 class="profile-title" id="about-title">Ricky Arora</h2>
-              <p class="profile-sub">Registered Massage Therapist</p>
-            </div>
-          </div>
-          <p class="about-text" style="margin-top:16px;">I lift, train Brazilian jiu-jitsu, and spend enough time around desk posture to understand why bodies get tight. My work focuses on <strong>deep tissue massage</strong>, <strong>trigger point work</strong>, sports recovery, and practical stretches for neck, shoulder, back, hip, and gym-related tension.</p>
-        </div>
-        <div class="stat-grid" aria-label="Ricky credentials and background">
-          <div class="stat"><div class="stat-number">200+</div><div class="stat-label">Google Reviews</div></div>
-          <div class="stat"><div class="stat-number">5.0</div><div class="stat-label">Average Rating</div></div>
-          <div class="stat"><div class="stat-number">BJJ</div><div class="stat-label">Athletic Background</div></div>
-          <div class="stat"><div class="stat-number">RMT</div><div class="stat-label">Ontario Licensed</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section aria-labelledby="problem-title">
-    <div class="container">
-      <p class="label">Why people book</p>
-      <h2 class="section-title" id="problem-title">You do not need a dramatic injury to need care.</h2>
-      <p class="section-copy">Most people book because a small issue keeps showing up: a stiff neck after work, a low back that feels guarded, shoulder tension from training, or hips that feel locked after sitting.</p>
-      <div class="problem-grid">
-        <article class="problem-card"><h3>Desk and phone tension</h3><p>Long sitting, screen work, and forward head posture can make the neck, upper traps, chest, and mid back feel overloaded.</p></article>
-        <article class="problem-card"><h3>Gym and sport tightness</h3><p>Training can leave calves, quads, hips, shoulders, and low back feeling stiff when recovery does not keep up.</p></article>
-        <article class="problem-card"><h3>Stress holding patterns</h3><p>Stress can show up as jaw clenching, shallow breathing, raised shoulders, and muscles that never fully relax.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="value" aria-labelledby="value-title">
-    <div class="container">
-      <p class="label">What you get</p>
-      <h2 class="section-title" id="value-title">A full first visit, not a watered-down discount massage.</h2>
+  <!-- ── VALUE STACK ── -->
+  <section class="value-section" aria-labelledby="value-h2">
+    <div class="wrap">
+      <div class="section-eyebrow">What you get</div>
+      <h2 class="section-h2" id="value-h2">Everything included. Nothing sold separately.</h2>
+      <p class="section-p">The $99 intro covers a complete first visit — intake, hands-on treatment, and aftercare. No add-ons, no up-selling at checkout.</p>
       <div class="value-grid">
-        <article class="value-card"><h3>Assessment first</h3><p>Your RMT asks what is going on, checks comfort and goals, then builds the session around your main areas.</p></article>
-        <article class="value-card"><h3>60 minutes of treatment</h3><p>Pressure is adjusted to you. Deep tissue and trigger point work can be used where appropriate.</p></article>
-        <article class="value-card"><h3>Cupping optional</h3><p>Cupping may help support comfort and tissue mobility for some clients. It is always optional.</p></article>
-        <article class="value-card"><h3>Hot towels included</h3><p>Hot towels are used to make the session feel calmer and help the body settle between focused work.</p></article>
-        <article class="value-card"><h3>Stretches that make sense</h3><p>You can leave with a few simple stretches or aftercare steps instead of a confusing routine.</p></article>
-        <article class="value-card"><h3>Clear next step</h3><p>If a follow-up makes sense, your RMT can explain why. There is no package pitch.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="insurance" aria-labelledby="insurance-title">
-    <div class="container">
-      <p class="label">Benefits and direct billing</p>
-      <h2 class="section-title" id="insurance-title">Direct billing is available.</h2>
-      <p class="section-copy">Many extended health plans include Registered Massage Therapy. Direct billing is available for the insurers below when your plan allows it. If your insurer does not approve the claim at the appointment, you can still receive a receipt to submit yourself.</p>
-      <div class="insurance-box">
-        <h3>Common supported insurers</h3>
-        <div class="ins-pills">
-          <span class="ins-pill">Blue Cross</span><span class="ins-pill">BPA</span><span class="ins-pill">Canada Life</span><span class="ins-pill">Chambers of Commerce Group</span><span class="ins-pill">CINUP</span><span class="ins-pill">ClaimSecure</span><span class="ins-pill">Desjardins</span><span class="ins-pill">Green Shield</span><span class="ins-pill">Green Life</span><span class="ins-pill">Manulife</span><span class="ins-pill">Sun Life</span><span class="ins-pill">TELUS Adjudicare</span><span class="ins-pill">LiUNA</span><span class="ins-pill">People Corporation</span><span class="ins-pill">RWAM</span><span class="ins-pill">And more</span>
+        <div class="value-card">
+          <div class="value-card-icon">⏱</div>
+          <h3>60-Minute Appointment</h3>
+          <p>A full hour of hands-on treatment. Not a 60-minute booking with 20 minutes of intake and undressing.</p>
+          <span class="value-card-price">Included</span>
         </div>
-        <p class="small-note">Coverage, deductibles, plan limits, and direct billing approval depend on your individual benefits plan.</p>
+        <div class="value-card">
+          <div class="value-card-icon">🧲</div>
+          <h3>Deep Tissue &amp; Trigger Point</h3>
+          <p>Focused pressure on tight, overloaded areas. Used where appropriate, adjusted to how your body responds.</p>
+          <span class="value-card-price">Included</span>
+        </div>
+        <div class="value-card">
+          <div class="value-card-icon">🔵</div>
+          <h3>Cupping Therapy</h3>
+          <p>Optional silicone cupping for the upper back, hips, and legs. Adds no cost — just ask if you want it.</p>
+          <span class="value-card-price">Included — optional</span>
+        </div>
+        <div class="value-card">
+          <div class="value-card-icon">🌡️</div>
+          <h3>Hot Towels</h3>
+          <p>Warm towels between focused work to help the body settle and ease into the session.</p>
+          <span class="value-card-price">Included</span>
+        </div>
+        <div class="value-card">
+          <div class="value-card-icon">📋</div>
+          <h3>Insurance Receipt</h3>
+          <p>CMTO-registered RMT receipt, ready when you leave — valid for extended health benefit claims.</p>
+          <span class="value-card-price">Included</span>
+        </div>
+        <div class="value-card">
+          <div class="value-card-icon">🧘</div>
+          <h3>Stretches &amp; Aftercare</h3>
+          <p>Practical stretches or recovery suggestions — 2 or 3, not a pamphlet. Only what will actually help.</p>
+          <span class="value-card-price">Included</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="decision" aria-labelledby="control-title">
-    <div class="container">
-      <p class="label">No weird pressure</p>
-      <h2 class="section-title" id="control-title">You stay in control of the appointment.</h2>
-      <p class="section-copy">A strong treatment should still feel professional, respectful, and adjustable. You can ask for lighter pressure, deeper pressure, a different focus area, or to stop a technique at any time.</p>
-      <div class="decision-panel">
-        <article class="decision-item"><h3>Pressure is adjustable</h3><p>Deep tissue does not mean pushing through pain. Communication guides the session.</p></article>
-        <article class="decision-item"><h3>No package pitch</h3><p>Book once, see how it feels, and decide from there.</p></article>
-        <article class="decision-item"><h3>New clients only</h3><p>The $99 intro is for your first visit. Return 60-minute visits are $115.</p></article>
+  <!-- ── PRICING CALLOUT ── -->
+  <section class="pricing-callout" aria-labelledby="price-h2">
+    <div class="pricing-inner">
+      <div class="section-eyebrow">First visit pricing</div>
+      <h2 class="section-h2" id="price-h2">One discounted visit. Then you decide.</h2>
+      <div class="price-compare">
+        <div class="pc-item featured">
+          <div class="pcl">Intro (first visit)</div>
+          <div class="pcv">$99</div>
+        </div>
+        <div class="pc-divider">vs</div>
+        <div class="pc-item">
+          <div class="pcl">Regular price</div>
+          <div class="pcv">$115</div>
+        </div>
+      </div>
+      <a class="price-cta" href="https://kimuramassage.noterro.com/" onclick="trackCTA('pricing_book')">Book the $99 Intro →</a>
+      <p class="price-note">New clients only. Return 60-minute visits are $115. No packages required.</p>
+    </div>
+  </section>
+
+  <!-- ── INSURANCE ── -->
+  <section class="insurance-section" aria-labelledby="ins-h2">
+    <div class="wrap">
+      <div class="ins-header">
+        <div class="section-eyebrow">Direct billing</div>
+        <h2 class="ins-hook" id="ins-h2">You probably <em>pay $0 upfront.</em></h2>
+        <p class="ins-sub">If your extended health plan covers Registered Massage Therapy, we direct bill on your behalf — no forms to fill out, no waiting for reimbursement. You pay the difference only if your plan doesn't cover the full amount.</p>
+      </div>
+      <div class="ins-card">
+        <div class="ins-card-head">Direct billing available for these insurers:</div>
+        <div class="ins-pills">
+          <span class="ins-pill">Alberta Blue Cross</span>
+          <span class="ins-pill">Beneva (La Capitale)</span>
+          <span class="ins-pill">BPA</span>
+          <span class="ins-pill">Canada Life</span>
+          <span class="ins-pill">Chambers of Commerce</span>
+          <span class="ins-pill">CINUP</span>
+          <span class="ins-pill">ClaimSecure</span>
+          <span class="ins-pill">Cowan</span>
+          <span class="ins-pill">D.A. Townley</span>
+          <span class="ins-pill">Desjardins</span>
+          <span class="ins-pill">Empire Life</span>
+          <span class="ins-pill">First Canadian</span>
+          <span class="ins-pill">GMS</span>
+          <span class="ins-pill">Green Shield</span>
+          <span class="ins-pill">GroupHEALTH</span>
+          <span class="ins-pill">GroupSource</span>
+          <span class="ins-pill">Industrial Alliance</span>
+          <span class="ins-pill">Johnson Inc.</span>
+          <span class="ins-pill">LiUNA</span>
+          <span class="ins-pill">Manulife</span>
+          <span class="ins-pill">Maximum Benefit</span>
+          <span class="ins-pill">People Corporation</span>
+          <span class="ins-pill">RWAM</span>
+          <span class="ins-pill">SSQ</span>
+          <span class="ins-pill">Sun Life</span>
+          <span class="ins-pill">TELUS Adjudicare</span>
+          <span class="ins-pill">Medavie Blue Cross</span>
+          <span class="ins-pill">UV Insurance</span>
+        </div>
+        <p class="ins-disclaimer">Coverage, deductibles, and direct billing approval depend on your individual plan. If your insurer isn't on this list or doesn't approve at the time of your visit, a receipt is provided to submit yourself.</p>
       </div>
     </div>
   </section>
 
-  <section aria-labelledby="steps-title">
-    <div class="container">
-      <p class="label">What happens next</p>
-      <h2 class="section-title" id="steps-title">Simple booking. Clear appointment.</h2>
-      <div class="steps">
-        <div class="step"><div class="step-num">1</div><div><h3>Book Online</h3><p>Pick your time through Noterro. Same-day appointments are available when the schedule has space.</p></div></div>
-        <div class="step"><div class="step-num">2</div><div><h3>Arrive and talk it through</h3><p>Your RMT reviews your intake, goals, and comfort level before treatment begins.</p></div></div>
-        <div class="step"><div class="step-num">3</div><div><h3>Get the focused treatment</h3><p>Deep tissue, trigger point work, Swedish massage, cupping, or hot towels may be used based on what fits.</p></div></div>
-        <div class="step"><div class="step-num">4</div><div><h3>Leave with next steps</h3><p>You can get simple stretches or recovery suggestions to support the work after your visit.</p></div></div>
+  <!-- ── WHO IT'S FOR ── -->
+  <section class="problem-section" aria-labelledby="prob-h2">
+    <div class="wrap">
+      <div class="section-eyebrow">Who books this</div>
+      <h2 class="section-h2" id="prob-h2">You don't need a dramatic injury to come in.</h2>
+      <p class="section-p">Most people book because something small keeps showing up — and ignoring it isn't working.</p>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <h3>Desk &amp; Screen Tension</h3>
+          <p>A stiff neck, upper trap tightness, or a mid-back that feels locked after sitting all day.</p>
+        </div>
+        <div class="problem-card">
+          <h3>Gym &amp; Sport Tightness</h3>
+          <p>Calves, hips, shoulders, or low back that stay sore longer than they should after training.</p>
+        </div>
+        <div class="problem-card">
+          <h3>Stress Holding Patterns</h3>
+          <p>Jaw clenching, raised shoulders, shallow breathing — tension the body never fully lets go of.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="cta-panel" id="bottom-cta" aria-labelledby="book-title">
-    <div class="container">
-      <h2 class="section-title" id="book-title">Try the 60-minute RMT intro appointment for $99.</h2>
-      <p>New clients only. Cupping and hot towels included when appropriate. Direct billing available for many major insurers.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://kimuramassage.noterro.com/" onclick="trackCTA('bottom_book_online')">Book Online</a>
-        <a class="btn btn-ghost" href="tel:9052266336" onclick="trackCTA('bottom_call')">Call (905) 226-6336</a>
+  <!-- ── THERAPIST BIO ── -->
+  <section class="bio-section" aria-labelledby="bio-h2">
+    <div class="wrap">
+      <div class="section-eyebrow">Your therapist</div>
+      <h2 class="section-h2" id="bio-h2" style="margin-bottom:22px;">Ricky Arora, RMT</h2>
+      <div class="bio-card">
+        <div>
+          <img class="bio-photo" src="assets/rmt-profile-circle.png" alt="Ricky Arora, Registered Massage Therapist" width="110" height="110">
+          <div class="bio-stats">
+            <div class="bio-stat"><div class="bs-num">200+</div><div class="bs-lbl">Google Reviews</div></div>
+            <div class="bio-stat"><div class="bs-num">5.0</div><div class="bs-lbl">Avg Rating</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="bio-name">Ricky Arora</div>
+          <div class="bio-role">Registered Massage Therapist · CMTO</div>
+          <p class="bio-copy">I lift, train Brazilian jiu-jitsu, and spend enough time around desk posture to understand why bodies get tight. My work focuses on <strong>deep tissue massage</strong>, <strong>trigger point therapy</strong>, and sports recovery — with a specific focus on neck, shoulder, back, hip, and gym-related tension. Treatment is always adjusted to what your body actually needs, not a template.</p>
+        </div>
       </div>
-      <span class="micro" style="display:block;margin-top:12px;">14 Block Rd, Brampton · Open 7 days · 9AM-9PM</span>
     </div>
   </section>
 
-  <section class="faq-link" aria-labelledby="details-title">
-    <div class="container narrow">
-      <p class="label">Before you book</p>
-      <h2 class="section-title" id="details-title">Need the details?</h2>
-      <p class="section-copy">Read the FAQ for benefits, parking, treatment questions, and what to expect. The policies page covers cancellation, payment, late arrivals, and appointment rules.</p>
-      <div class="link-row">
-        <a class="btn btn-outline" href="./#faq">Read the FAQ</a>
-        <a class="btn btn-outline" href="policies.html">View policies</a>
+  <!-- ── HOW IT WORKS ── -->
+  <section class="steps-section" aria-labelledby="steps-h2">
+    <div class="wrap">
+      <div class="section-eyebrow">What happens next</div>
+      <h2 class="section-h2" id="steps-h2">Four steps. Under 2 minutes to book.</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div>
+            <h3>Book Online</h3>
+            <p>Pick a time on Noterro. Same-day available when the schedule has space. Takes about 2 minutes.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div>
+            <h3>Fill Out Intake</h3>
+            <p>A short health history form is sent to you. Takes 5 minutes and means no paperwork at the clinic.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div>
+            <h3>Talk It Through</h3>
+            <p>Your RMT reviews your goals, comfort, and main areas before the session starts.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <div>
+            <h3>Get Treated &amp; Leave Ready</h3>
+            <p>Full 60-minute treatment, then leave with simple aftercare steps if they make sense for you.</p>
+          </div>
+        </div>
       </div>
-      <p class="disclaimer">This page is general information and is not medical advice. Massage therapy is not a substitute for medical care. If you have a new injury, unexplained symptoms, or a medical condition, speak with a physician or qualified healthcare provider.</p>
     </div>
   </section>
+
+  <!-- ── RISK REVERSAL ── -->
+  <section class="risk-section" aria-labelledby="risk-h2">
+    <div class="wrap">
+      <div class="section-eyebrow">No weird pressure</div>
+      <h2 class="section-h2" id="risk-h2">You stay in control.</h2>
+      <div class="risk-grid">
+        <div class="risk-card">
+          <h3>Pressure is adjustable — always</h3>
+          <p>Deep tissue doesn't mean pushing through pain. If something doesn't feel right, you say so and it changes.</p>
+        </div>
+        <div class="risk-card">
+          <h3>No package pitch at checkout</h3>
+          <p>Book once. See how it feels. If a follow-up makes sense, your RMT can explain why — and you decide.</p>
+        </div>
+        <div class="risk-card">
+          <h3>One-time intro offer</h3>
+          <p>The $99 price is for your first visit only. Regular 60-minute visits are $115. Nothing hidden, nothing recurring.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINAL CTA ── -->
+  <section class="final-cta" id="bottom-cta" aria-labelledby="cta-h2">
+    <h2 id="cta-h2">Try your first 60-minute RMT massage for $99.</h2>
+    <p>New clients only. Cupping and hot towels included. Direct billing available for 28+ insurers.</p>
+    <div class="final-cta-btns">
+      <a class="btn-white" href="https://kimuramassage.noterro.com/" onclick="trackCTA('bottom_book_online')">Book Online Now →</a>
+      <a class="btn-ghost-w" href="tel:9052266336" onclick="trackCTA('bottom_call')">Call (905) 226-6336</a>
+    </div>
+    <p class="final-meta">14 Block Rd, Brampton · Open 7 days · 9AM–9PM</p>
+  </section>
+
 </main>
 
 <footer>
   <p>Kimura Massage Therapy &amp; Rehab · 14 Block Road, Brampton, ON L7A 5B2</p>
-  <p class="footer-links"><a href="tel:9052266336">(905) 226-6336</a><a href="./">Main site</a><a href="policies.html">Policies</a></p>
-  <p>© 2026 Kimura Massage Therapy &amp; Rehab. All rights reserved.</p>
+  <div class="footer-nav">
+    <a href="./">Main Site</a>
+    <a href="./#faq">FAQ</a>
+    <a href="policies.html">Policies</a>
+    <a href="tel:9052266336">(905) 226-6336</a>
+  </div>
+  <p class="disclaimer">This page is general information, not medical advice. Massage therapy is not a substitute for medical care. If you have a new injury, unexplained symptoms, or a medical condition, consult a physician or qualified healthcare provider before booking.</p>
+  <p style="margin-top:14px;">&copy; 2026 Kimura Massage Therapy &amp; Rehab. All rights reserved.</p>
 </footer>
 
 <div class="mobile-bar" id="mobile-bar" aria-label="Quick booking actions">
-  <a href="tel:9052266336" class="mb-secondary" onclick="trackCTA('mobilebar_call')">Call</a>
-  <a href="https://kimuramassage.noterro.com/" class="mb-primary" onclick="trackCTA('mobilebar_book_online')">Book Online</a>
-</div>
-
-<div class="exit-toast" id="exit-toast" role="status" aria-live="polite">
-  <div class="et-row">
-    <p class="et-text"><strong>$99 intro is for new clients only.</strong> Book online when you are ready.</p>
-    <a href="https://kimuramassage.noterro.com/" class="et-btn" onclick="trackCTA('exit_toast_book_online')">Book</a>
-    <button class="et-close" type="button" onclick="document.getElementById('exit-toast').style.display='none'" aria-label="Close offer reminder">×</button>
-  </div>
+  <a href="tel:9052266336" class="mb-sec" onclick="trackCTA('mobilebar_call')">Call</a>
+  <a href="https://kimuramassage.noterro.com/" class="mb-pri" onclick="trackCTA('mobilebar_book')">Book $99 Intro</a>
 </div>
 
 <script>
-var mobileBar=document.getElementById('mobile-bar');
-var bottomCta=document.getElementById('bottom-cta');
-if(mobileBar&&bottomCta&&window.IntersectionObserver){
-  new IntersectionObserver(function(entries){
-    mobileBar.style.display=entries[0].isIntersecting?'none':'';
-  },{threshold:0.1}).observe(bottomCta);
-}
-
-var toastShown=false;
-var exitToast=document.getElementById('exit-toast');
-var footer=document.querySelector('footer');
-if(exitToast&&footer&&window.IntersectionObserver){
-  new IntersectionObserver(function(entries){
-    if(entries[0].isIntersecting&&!toastShown){
-      toastShown=true;
-      exitToast.style.display='block';
-      setTimeout(function(){if(exitToast.style.display==='block')exitToast.style.display='none';},9000);
-    }
-  },{threshold:0.15}).observe(footer);
-}
+(function(){
+  var bar=document.getElementById('mobile-bar');
+  var cta=document.getElementById('bottom-cta');
+  if(bar&&cta&&window.IntersectionObserver){
+    new IntersectionObserver(function(e){bar.style.display=e[0].isIntersecting?'none':'';},{threshold:0.1}).observe(cta);
+  }
+})();
 </script>
 
 </body>
