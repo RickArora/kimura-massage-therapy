@@ -35,8 +35,9 @@
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
 body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px; }
+body.mobile-nav-open { overflow: hidden; }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 
@@ -125,7 +126,12 @@ nav { display: flex; align-items: center; justify-content: space-between; height
 /* ── Mobile Nav ── */
 .mobile-nav { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(8,15,28,.6); }
 .mobile-nav.open { display: block; }
-.mobile-nav-inner { position: absolute; top: 0; right: 0; width: 290px; height: 100%; background: var(--white); padding: 28px 24px; display: flex; flex-direction: column; gap: 4px; }
+.mobile-nav-inner {
+  position: absolute; top: 0; right: 0; width: min(290px, calc(100vw - 28px));
+  height: 100%; height: 100dvh; overflow-y: auto; overscroll-behavior: contain;
+  background: var(--white); padding: 20px 24px calc(100px + env(safe-area-inset-bottom));
+  display: flex; flex-direction: column; gap: 4px;
+}
 .mobile-nav-close { align-self: flex-end; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text); margin-bottom: 16px; width: 44px; height: 44px; }
 .mobile-nav a { display: flex; align-items: center; min-height: 44px; font-size: 17px; font-weight: 500; color: var(--text); padding: 10px 0; border-bottom: 1px solid var(--border); }
 
@@ -526,7 +532,11 @@ footer { background: var(--navy-dark); color: rgba(255,255,255,.8); padding: 56p
     background: rgba(8,15,28,.96);
     border-top: 1px solid rgba(255,255,255,.12);
     box-shadow: 0 -8px 28px rgba(8,15,28,.28);
+    transform: translateY(110%);
+    transition: transform .22s ease;
   }
+  .site-mobile-cta.is-visible { transform: translateY(0); }
+  body.mobile-nav-open .site-mobile-cta { transform: translateY(110%); pointer-events: none; }
   .site-mobile-cta a {
     min-height: 48px;
     display: flex;

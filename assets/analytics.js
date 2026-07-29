@@ -2,6 +2,8 @@
   var measurementId = 'G-MTQK49YP14';
   var adsId = 'AW-18223992858';
   var adsConversionSendTo = 'AW-18223992858/dum6CLTV-8YcEJqg8PFD';
+  var genericBookingUrl = 'https://kimuramassage.noterro.com/';
+  var appointmentCategoryUrl = 'https://kimuramassage.noterro.com/service-category/59418/Appointments';
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () {
@@ -79,6 +81,9 @@
     var year = String(new Date().getFullYear());
     document.querySelectorAll('.js-year').forEach(function (node) {
       node.textContent = year;
+    });
+    document.querySelectorAll('a[href="' + genericBookingUrl + '"]').forEach(function (link) {
+      link.setAttribute('href', appointmentCategoryUrl);
     });
   });
 
