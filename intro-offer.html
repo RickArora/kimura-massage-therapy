@@ -202,6 +202,11 @@ footer{background:var(--navy-dark);color:rgba(255,255,255,.5);font-size:13px;tex
 .mb-sec{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);color:#fff;}
 .mb-pri{background:var(--orange);color:#fff;}
 
+@media(max-width:699px){
+  .hero-cta-group .btn-xl-ghost{display:none;}
+  .hero-inner{padding-bottom:72px;}
+}
+
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
 </style>
 </head>
@@ -247,7 +252,7 @@ footer{background:var(--navy-dark);color:rgba(255,255,255,.5);font-size:13px;tex
 
       <ul class="hero-checklist">
         <li><span class="hc-icon">✓</span><span><strong>60 minutes of treatment</strong> — cupping + hot towels included at no extra charge</span></li>
-        <li><span class="hc-icon">✓</span><span><strong>Direct billing</strong> to 28+ insurers — you may pay $0 upfront</span></li>
+        <li><span class="hc-icon">✓</span><span><strong>Direct billing available</strong> for 28+ insurers when approved by your plan</span></li>
         <li><span class="hc-icon">✓</span><span><strong>CMTO-registered RMT</strong> — receipt ready when you walk out</span></li>
         <li><span class="hc-icon">✓</span><span><strong>No packages, no pressure</strong> to rebook</span></li>
       </ul>
@@ -343,7 +348,7 @@ footer{background:var(--navy-dark);color:rgba(255,255,255,.5);font-size:13px;tex
     <div class="wrap">
       <div class="ins-header">
         <div class="section-eyebrow">Direct billing</div>
-        <h2 class="ins-hook" id="ins-h2">You probably <em>pay $0 upfront.</em></h2>
+        <h2 class="ins-hook" id="ins-h2">Direct billing <em>is available.</em></h2>
         <p class="ins-sub">If your extended health plan covers Registered Massage Therapy, we direct bill on your behalf — no forms to fill out, no waiting for reimbursement. You pay the difference only if your plan doesn't cover the full amount.</p>
       </div>
       <div class="ins-card">
@@ -510,7 +515,7 @@ footer{background:var(--navy-dark);color:rgba(255,255,255,.5);font-size:13px;tex
     <a href="tel:9052266336">(905) 226-6336</a>
   </div>
   <p class="disclaimer">This page is general information, not medical advice. Massage therapy is not a substitute for medical care. If you have a new injury, unexplained symptoms, or a medical condition, consult a physician or qualified healthcare provider before booking.</p>
-  <p style="margin-top:14px;">&copy; 2026 Kimura Massage Therapy &amp; Rehab. All rights reserved.</p>
+  <p style="margin-top:14px;">&copy; <span class="js-year"></span> Kimura Massage Therapy &amp; Rehab. All rights reserved.</p>
 </footer>
 
 <div class="mobile-bar" id="mobile-bar" aria-label="Quick booking actions">

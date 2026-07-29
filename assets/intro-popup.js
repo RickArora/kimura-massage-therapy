@@ -1,5 +1,6 @@
 (function(){
   if(sessionStorage.getItem('introDismissed')) return;
+  if (/intro-offer/.test(window.location.pathname)) return;
 
   var isInBlog = window.location.pathname.indexOf('/blog/') !== -1;
   var offerUrl = isInBlog ? '../intro-offer.html' : 'intro-offer.html';
@@ -9,7 +10,7 @@
     '@keyframes ipFadeIn{from{opacity:0}to{opacity:1}}',
     '.ip-modal{background:#0F2742;border-radius:16px;width:100%;max-width:460px;padding:36px 28px 32px;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.55);animation:ipSlideUp .28s cubic-bezier(.4,0,.2,1);}',
     '@keyframes ipSlideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}',
-    '.ip-close{position:absolute;top:14px;right:16px;background:none;border:none;color:rgba(255,255,255,.35);font-size:22px;cursor:pointer;line-height:1;padding:4px 6px;border-radius:4px;}',
+    '.ip-close{position:absolute;top:10px;right:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.72);font-size:22px;cursor:pointer;line-height:1;width:44px;height:44px;display:flex;align-items:center;justify-content:center;padding:0;border-radius:8px;}',
     '.ip-close:hover{color:rgba(255,255,255,.7);}',
     '.ip-badge{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#F97316;margin-bottom:12px;}',
     '.ip-headline{font-family:"Oswald",sans-serif;font-size:clamp(22px,5vw,30px);font-weight:700;color:#fff;line-height:1.1;letter-spacing:.02em;text-transform:uppercase;margin-bottom:8px;}',
@@ -23,7 +24,7 @@
     '.ip-includes li::before{content:"✓";color:#F97316;font-weight:700;font-size:13px;flex-shrink:0;}',
     '.ip-cta{display:block;width:100%;text-align:center;background:#C94D00;color:#fff;font-size:16px;font-weight:600;padding:16px 20px;border-radius:8px;text-decoration:none;transition:background .15s;}',
     '.ip-cta:hover{background:#C44D00;}',
-    '.ip-dismiss{display:block;text-align:center;margin-top:12px;font-size:12px;color:rgba(255,255,255,.25);cursor:pointer;background:none;border:none;width:100%;}',
+    '.ip-dismiss{display:block;text-align:center;margin-top:12px;font-size:13px;color:rgba(255,255,255,.62);cursor:pointer;background:none;border:none;width:100%;min-height:44px;}',
     '.ip-dismiss:hover{color:rgba(255,255,255,.5);}',
     '@media(max-width:480px){.ip-modal{padding:28px 20px 24px;}.ip-price{font-size:44px;}}'
   ].join('');
@@ -69,7 +70,6 @@
     if(sessionStorage.getItem('introDismissed')) return;
     if(document.getElementById('introPopupOverlay')) return;
     document.body.insertAdjacentHTML('beforeend', html);
-    document.body.style.overflow='hidden';
     document.getElementById('introPopupClose').addEventListener('click', dismiss);
     document.getElementById('introPopupDismiss').addEventListener('click', dismiss);
     document.getElementById('introPopupCTA').addEventListener('click', function(){ sessionStorage.setItem('introDismissed','1'); document.body.style.overflow=''; });
@@ -77,8 +77,14 @@
     document.addEventListener('keydown', function(e){ if(e.key==='Escape') dismiss(); });
   }
 
-  // Time-delay trigger: 5s
-  setTimeout(show, 5000);
+  // Scroll-depth trigger: wait for demonstrated interest before interrupting.
+  window.addEventListener('scroll', function onScroll(){
+    var pct = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+    if (pct > 0.45) {
+      show();
+      window.removeEventListener('scroll', onScroll);
+    }
+  }, { passive: true });
 
   // Exit-intent trigger: mouse leaves viewport toward top (desktop only)
   document.addEventListener('mouseleave', function onExit(e) {

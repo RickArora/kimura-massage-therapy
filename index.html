@@ -360,8 +360,6 @@
       color:rgba(255,255,255,.78); box-shadow:none; font-weight:600;
     }
     .urgency-btn.outline:hover { background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.45); }
-    .urgency-btn.whatsapp { background:transparent; border:1px solid rgba(255,255,255,.28); color:rgba(255,255,255,.72); }
-    .urgency-btn.whatsapp:hover { background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.45); }
 
     /* ============================================================
        MOBILE NAV DRAWER
@@ -413,6 +411,30 @@
       border:1px solid rgba(255,255,255,.2); letter-spacing:.07em; text-transform:uppercase;
     }
     .hero-badge::before { content:''; width:7px; height:7px; background:var(--orange); border-radius:50%; }
+
+    .hero-ricky {
+      display:flex; align-items:center; gap:12px;
+      margin:0 0 20px; max-width:460px;
+      padding:12px; border-radius:12px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.14);
+    }
+    .hero-ricky img {
+      width:58px; height:58px; border-radius:50%; object-fit:cover;
+      border:2px solid rgba(255,255,255,.85);
+      box-shadow:0 8px 22px rgba(0,0,0,.24);
+      flex:0 0 auto;
+    }
+    .hero-ricky-name {
+      font-family:var(--font-head); font-size:22px; color:#fff; line-height:1;
+    }
+    .hero-ricky-role {
+      margin-top:4px; font-size:12px; font-weight:700;
+      letter-spacing:.08em; text-transform:uppercase; color:var(--orange-bright);
+    }
+    .hero-ricky-copy {
+      margin-top:5px; font-size:13px; line-height:1.4; color:rgba(255,255,255,.72);
+    }
 
     .hero h1 {
       font-family:var(--font-head); font-size:clamp(36px,5.5vw,70px);
@@ -978,16 +1000,6 @@
     }
     .bw-book-secondary:hover { border-color: var(--navy); background: var(--bg); }
     .bw-note { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 14px; line-height: 1.5; }
-    .btn-whatsapp {
-      display:block; text-align:center;
-      background:transparent; color:rgba(255,255,255,.8);
-      font-family:var(--font-body); font-weight:700; font-size:15px;
-      padding:16px 28px; border-radius:6px; border:2px solid rgba(255,255,255,.28);
-      cursor:pointer; transition:background .2s, border-color .2s;
-    }
-    .btn-whatsapp:hover { background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.45); }
-    /* WhatsApp urgency bar variant */
-    .urgency-btn.whatsapp { background:#25D366; border-color:#25D366; }
     /* Floating bar removed */
 
     /* ============================================================
@@ -1156,11 +1168,11 @@
     }
 
     @media (max-width: 640px) {
-      body { padding-bottom:76px; }
+      body { padding-bottom:86px; font-size:17px; }
       .why-kimura, .services, .pricing, .about,
       .how, .blog-preview, .faq, .contact, .final-cta { padding:64px 0; }
       /* Hero: compress so the CTA lands above the fold */
-      .hero { padding:32px 0 44px; }
+      .hero { padding:32px 0 104px; }
       .hero h1 { font-size:34px; line-height:1.1; margin-bottom:16px; }
       .hero-badge { margin-bottom:18px; font-size:10px; padding:6px 12px; }
       .hero-desc { font-size:16px; margin-bottom:22px; }
@@ -1202,6 +1214,9 @@
       .hero-actions .btn-primary { text-align:center; width:100%; }
       .hero-actions-secondary { display:flex; gap:10px; width:100%; }
       .hero-actions .btn-outline { flex:1; text-align:center; }
+      .hero-inner > div:last-child { display:none; }
+      .hero-proof { gap:10px; margin-top:4px; }
+      .hero-proof-item { flex:1 1 100%; font-size:14px; }
       .trust-bar-inner { flex-wrap:wrap; }
       .trust-item { flex:1 1 50%; min-width:0; white-space:normal; text-align:center; font-size:14px; border-right:none; border-bottom:1px solid rgba(255,255,255,.1); padding:14px 10px; }
       .trust-item:last-child { border-bottom:none; }
@@ -1244,7 +1259,7 @@
       .pricing-note a,
       .contact-detail-text a { display:inline-flex; align-items:center; min-height:44px; }
       .hero-actions > p { color:rgba(255,255,255,.68) !important; }
-      .footer-col ul a { display:inline-flex; align-items:center; min-height:44px; }
+      .footer-col ul a { display:inline-flex; align-items:center; min-height:44px; min-width:44px; }
       /* Urgency bar: hide on mobile — CTAs already in hero */
       .urgency-bar { display:none; }
       .final-cta-actions { flex-direction:column; align-items:center; }
@@ -1373,10 +1388,19 @@
         <div class="hero-content">
           <span class="hero-badge" id="openBadge">Open 7 Days · Direct Billing Available · Brampton, ON</span>
 
+          <div class="hero-ricky">
+            <img src="assets/rmt-profile-circle-600.png" alt="Ricky Arora, Registered Massage Therapist">
+            <div>
+              <div class="hero-ricky-name">Ricky Arora</div>
+              <div class="hero-ricky-role">Registered Massage Therapist</div>
+              <p class="hero-ricky-copy">Deep tissue, trigger point work, sports recovery, and practical stretches.</p>
+            </div>
+          </div>
+
           <h1>RMT Massage Therapy in Brampton. <em>Same-day. Insurance-eligible.</em></h1>
 
           <p class="hero-desc">
-            From <strong>$70</strong> — direct billing for 30+ insurers, so many clients pay $0 upfront. Book in about 2 minutes.
+            RMT massage from <strong>$70</strong>. Direct billing available when approved by your plan. Book online in about 2 minutes.
           </p>
 
           <div class="hero-actions">
@@ -1384,7 +1408,7 @@
             <div class="hero-actions-secondary">
               <a href="tel:9052266336" class="btn-outline" aria-label="Call (905) 226-6336">📞 Call (905) 226-6336</a>
             </div>
-            <p style="font-size:12px;color:rgba(255,255,255,.65);margin:10px 0 0;letter-spacing:.01em;">Secure booking via Noterro · Free cancellation with 24hr notice</p>
+            <p style="font-size:12px;color:rgba(255,255,255,.65);margin:10px 0 0;letter-spacing:.01em;">Secure booking via Noterro · 24hr cancellation policy</p>
           </div>
 
           <div class="hero-proof">
@@ -1435,7 +1459,7 @@
               <a href="https://kimuramassage.noterro.com/" class="btn-primary" style="display:block;text-align:center;">Book Online</a>
             </div>
             <p class="hero-card-note">Ricky Arora, RMT · <a href="https://cmto.ca.thentiacloud.net/webs/cmto/register/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Verify on the CMTO Public Register</a></p>
-            <p class="hero-card-note" style="margin-top:8px;">💳 <strong>Direct billing for 30+ insurers</strong> — you may pay $0 upfront</p>
+            <p class="hero-card-note" style="margin-top:8px;">💳 <strong>Direct billing for 30+ insurers</strong> when approved by your plan</p>
             <div class="ins-pills">
               <span class="ins-pill">Manulife</span>
               <span class="ins-pill">Sun Life</span>
@@ -2193,7 +2217,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>© 2025 Kimura Massage Therapy &amp; Rehab. All rights reserved.</p>
+        <p>© <span class="js-year"></span> Kimura Massage Therapy &amp; Rehab. All rights reserved.</p>
         <span class="footer-rmt-badge">Kimura Massage Therapy &amp; Rehab · Brampton, ON</span>
       </div>
     </div>

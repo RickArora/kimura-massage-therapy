@@ -75,6 +75,13 @@
 
   window.trackBookOnline = trackBookOnline;
 
+  document.addEventListener('DOMContentLoaded', function () {
+    var year = String(new Date().getFullYear());
+    document.querySelectorAll('.js-year').forEach(function (node) {
+      node.textContent = year;
+    });
+  });
+
   document.addEventListener('click', function (event) {
     var link = event.target.closest && event.target.closest('a[href]');
     if (!link) return;
@@ -88,15 +95,6 @@
         link_url: href
       });
       sendAdsConversion(label || 'phone', href);
-      return;
-    }
-
-    if (href.indexOf('https://wa.me/16472873777') === 0) {
-      sendEvent('whatsapp_click', {
-        event_label: label || 'whatsapp',
-        link_url: href
-      });
-      sendAdsConversion(label || 'whatsapp', href);
       return;
     }
 
