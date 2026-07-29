@@ -331,74 +331,6 @@
     .faq-question:focus-visible { outline-color: var(--orange); }
 
     /* ============================================================
-       BOOKING MODAL
-    ============================================================ */
-    .book-modal-overlay {
-      display: none; position: fixed; inset: 0; z-index: 300;
-      background: rgba(8,15,28,.72); backdrop-filter: blur(4px);
-      align-items: flex-end; justify-content: center;
-    }
-    .book-modal-overlay.open { display: flex; }
-    .book-modal {
-      background: var(--white); width: 100%; max-width: 480px;
-      border-radius: 20px 20px 0 0; padding: 32px 24px 40px;
-      animation: slideUp .25s cubic-bezier(.4,0,.2,1);
-    }
-    @keyframes slideUp { from { transform:translateY(100%); } to { transform:translateY(0); } }
-    /* Desktop: center the modal instead of bottom sheet */
-    @media (min-width: 641px) {
-      .book-modal-overlay { align-items: center; }
-      .book-modal { border-radius: 16px; max-width: 460px; animation: fadeScale .2s cubic-bezier(.4,0,.2,1); }
-      @keyframes fadeScale { from { opacity:0; transform:scale(.96); } to { opacity:1; transform:scale(1); } }
-    }
-    .book-modal-header {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 8px;
-    }
-    .book-modal-title {
-      font-family: var(--font-head); font-size: 22px; font-weight: 700;
-      color: var(--navy); letter-spacing: .01em;
-    }
-    .book-modal-close {
-      background: var(--bg); border: none; border-radius: 50%;
-      width: 34px; height: 34px; font-size: 18px; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--text-muted);
-    }
-    .book-modal-sub {
-      font-size: 14px; color: var(--text-muted); margin-bottom: 28px; line-height: 1.5;
-    }
-    .book-modal-actions { display: flex; flex-direction: column; gap: 12px; }
-    .bma-btn {
-      display: flex; align-items: center; gap: 14px;
-      padding: 16px 20px; border-radius: 12px; cursor: pointer;
-      text-decoration: none; border: none; width: 100%;
-      font-family: var(--font-body); transition: opacity .15s, transform .1s;
-    }
-    .bma-btn:hover { opacity: .92; transform: translateY(-1px); }
-    .bma-btn:active { transform: translateY(0); }
-    .bma-icon {
-      width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center; font-size: 20px;
-    }
-    .bma-text { display: flex; flex-direction: column; text-align: left; }
-    .bma-label { font-size: 16px; font-weight: 700; color: var(--white); line-height: 1.2; }
-    .bma-sub { font-size: 12px; color: rgba(255,255,255,.7); margin-top: 2px; }
-    .bma-call { background: var(--navy); }
-    .bma-call .bma-icon { background: rgba(255,255,255,.12); }
-    .bma-wa { background: #128C7E; }
-    .bma-wa .bma-icon { background: rgba(255,255,255,.15); }
-    .bma-online { background: var(--orange-btn); }
-    .bma-online .bma-icon { background: rgba(255,255,255,.15); }
-    .bma-divider {
-      display: flex; align-items: center; gap: 12px; margin: 4px 0;
-      font-size: 12px; color: var(--text-muted); letter-spacing: .04em;
-    }
-    .bma-divider::before, .bma-divider::after {
-      content: ''; flex: 1; height: 1px; background: var(--border);
-    }
-
-    /* ============================================================
        URGENCY BAR
     ============================================================ */
     .urgency-bar {
@@ -416,15 +348,16 @@
     .urgency-text strong { color:var(--gold); }
     .urgency-actions { display:flex; gap:8px; }
     .urgency-btn {
-      display:inline-block; background:var(--orange-btn); color:var(--white);
-      font-family:var(--font-body); font-size:12px; font-weight:700;
-      padding:6px 14px; border-radius:5px; border:none; cursor:pointer;
+      display:inline-flex; align-items:center; background:var(--orange-btn); color:var(--white);
+      font-family:var(--font-body); font-size:13px; font-weight:700;
+      padding:8px 18px; border-radius:6px; border:none; cursor:pointer;
       transition:background .2s; white-space:nowrap; letter-spacing:.02em;
+      box-shadow:0 4px 14px rgba(201,77,0,.35);
     }
     .urgency-btn:hover { background:var(--orange-btn-dark); }
     .urgency-btn.outline {
       background:transparent; border:1px solid rgba(255,255,255,.28);
-      color:rgba(255,255,255,.72);
+      color:rgba(255,255,255,.78); box-shadow:none; font-weight:600;
     }
     .urgency-btn.outline:hover { background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.45); }
     .urgency-btn.whatsapp { background:transparent; border:1px solid rgba(255,255,255,.28); color:rgba(255,255,255,.72); }
@@ -442,11 +375,28 @@
     }
     .mobile-nav-close { align-self:flex-end; background:none; border:none; font-size:24px; cursor:pointer; color:var(--text); margin-bottom:16px; width:44px; height:44px; }
     .mobile-nav a { display:flex; align-items:center; min-height:44px; font-size:17px; font-weight:500; color:var(--text); padding:10px 0; border-bottom:1px solid var(--border); }
+    .mnav-offer { color:var(--orange-ink) !important; font-weight:700 !important; }
+    .mnav-book {
+      justify-content:center; margin-top:16px; border-bottom:none !important;
+      background:var(--orange-btn); color:#fff !important; font-weight:700 !important;
+      border-radius:8px; min-height:52px !important; padding:10px 16px !important;
+    }
+    .mnav-call {
+      justify-content:center; margin-top:8px; border-bottom:none !important;
+      border:2px solid var(--border) !important; border-radius:8px;
+      min-height:48px !important; font-weight:600 !important; padding:10px 16px !important;
+    }
+
+    /* Nav offer highlight */
+    .nav-offer {
+      color:var(--gold) !important; font-weight:700 !important;
+    }
+    .nav-offer:hover { color:#fff !important; }
 
     /* ============================================================
        HERO
     ============================================================ */
-    .hero { background:var(--navy); padding:104px 0 100px; }
+    .hero { background:var(--navy); padding:72px 0 80px; }
 
     .hero-inner {
       display:grid; grid-template-columns:minmax(0,1fr) 380px;
@@ -469,15 +419,16 @@
       font-weight:700; line-height:1.05; color:#fff;
       letter-spacing:.01em; margin-bottom:24px;
     }
-    .hero h1 em { color:var(--orange-bright); font-style:normal; }
+    .hero h1 em { color:var(--orange-bright); font-style:normal; display:block; margin-top:.15em; }
     /* Status light: green while open, gray when closed (orange = static no-JS fallback) */
     .hero-badge.is-open::before { background:#2EBD59; box-shadow:0 0 6px rgba(46,189,89,.8); }
     .hero-badge.is-closed::before { background:rgba(255,255,255,.45); }
 
     .hero-desc {
-      font-size:18px; color:rgba(255,255,255,.72); line-height:1.72;
-      margin-bottom:36px; max-width:520px;
+      font-size:17px; color:rgba(255,255,255,.72); line-height:1.6;
+      margin-bottom:28px; max-width:500px;
     }
+    .hero-desc strong { color:#fff; }
 
     .hero-actions { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:40px; align-items:center; }
     .hero-actions .btn-primary { padding:15px 32px; font-size:16px; }
@@ -508,11 +459,9 @@
       letter-spacing:.08em; text-transform:uppercase; color:var(--text-muted); margin-bottom:18px;
     }
 
-    .rate-cols { display:grid; grid-template-columns:1fr 1px 1fr; gap:0; margin-bottom:6px; }
+    .rate-cols { display:block; margin-bottom:6px; }
     .rate-col { display:flex; flex-direction:column; }
-    .rate-col:first-child { padding-right:16px; }
-    .rate-col:last-child  { padding-left:16px; }
-    .rate-divider { background:var(--border); }
+    .rate-divider { display:none; }
 
     .rate-col-label {
       font-size:10px; font-weight:700; text-transform:uppercase;
@@ -527,23 +476,53 @@
       padding:10px 0; border-bottom:1px solid var(--border);
     }
     .rate-row:last-of-type { border-bottom:none; }
-    .rate-dur { font-size:13px; color:var(--text-muted); }
+    .rate-dur { font-size:14px; color:var(--text-muted); }
     .rate-price {
       font-family:var(--font-head); font-size:22px; font-weight:700; color:var(--navy);
     }
     .rate-price.orange { color:var(--orange-ink); }
 
-    .hero-card-cta { margin-top:22px; }
-    .hero-card-note { font-size:11px; color:var(--text-muted); text-align:center; margin-top:10px; line-height:1.5; }
+    /* ── Hero card: intro offer callout ── */
+    .hero-card-offer {
+      display:block; margin-top:18px; padding:16px;
+      background:linear-gradient(135deg,#FFF6F0,#FFEFE4);
+      border:1.5px solid #FFCBA4; border-radius:10px;
+      transition:border-color .15s, transform .15s;
+    }
+    .hero-card-offer:hover { border-color:var(--orange); transform:translateY(-1px); }
+    .hco-label {
+      display:block; font-size:11px; font-weight:700; letter-spacing:.08em;
+      text-transform:uppercase; color:var(--orange-ink); margin-bottom:8px;
+    }
+    .hco-row { display:flex; align-items:center; gap:12px; }
+    .hco-price {
+      font-family:var(--font-head); font-size:40px; font-weight:700;
+      color:var(--navy); line-height:1; flex-shrink:0;
+    }
+    .hco-meta { display:flex; flex-direction:column; gap:2px; min-width:0; }
+    .hco-was { font-size:13px; color:var(--text-muted); text-decoration:line-through; }
+    .hco-dur { font-size:12px; color:var(--text-muted); line-height:1.4; }
+    .hco-link {
+      display:block; margin-top:10px; font-size:13px;
+      font-weight:700; color:var(--orange-ink);
+    }
+
+    .hero-card-cta { margin-top:18px; }
+    .hero-card-note { font-size:12px; color:var(--text-muted); text-align:center; margin-top:10px; line-height:1.5; }
 
     /* Insurance pills */
-    .ins-pills { display:flex; flex-wrap:wrap; gap:5px; margin-top:14px; }
+    .ins-pills { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; justify-content:center; }
     .ins-pill {
-      font-size:9px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
-      padding:4px 9px; border-radius:999px;
+      font-size:12px; font-weight:600; letter-spacing:.01em;
+      padding:5px 11px; border-radius:999px;
       background:var(--bg); border:1px solid var(--border); color:var(--text-muted);
       white-space:nowrap;
     }
+    .ins-pill-more {
+      background:var(--navy-light); border-color:#B9CADF;
+      color:var(--navy); font-weight:700;
+    }
+    .ins-pill-more:hover { background:var(--navy); color:#fff; border-color:var(--navy); }
 
     /* ============================================================
        TRUST BAR
@@ -944,67 +923,60 @@
     .bw-header h3 { font-family: var(--font-head); font-size: 26px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
     .bw-header p { font-size: 14px; color: var(--text-muted); line-height: 1.55; }
 
-    .bw-step { margin-bottom: 24px; }
-    .bw-step-label {
+    /* Rates list */
+    .bw-rates { margin-bottom: 20px; }
+    .bw-rates-label {
       font-size: 11px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .09em; color: var(--text-muted); margin-bottom: 10px;
+      letter-spacing: .09em; color: var(--text-muted); margin-bottom: 6px;
+    }
+    .bw-rate {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 0; border-bottom: 1px solid var(--border);
+    }
+    .bw-rate:last-child { border-bottom: none; }
+    .bw-rate span { font-size: 15px; color: var(--text-muted); display: flex; align-items: center; gap: 8px; }
+    .bw-rate strong { font-family: var(--font-head); font-size: 24px; font-weight: 700; color: var(--navy); }
+    .bw-rate-pop { background: rgba(232,93,4,.05); margin: 0 -12px; padding: 12px; border-radius: 8px; border-bottom: none; }
+    .bw-rate-pop span { color: var(--navy); font-weight: 600; }
+    .bw-rate-pop strong { color: var(--orange-ink); }
+    .bw-rate-pop em {
+      font-style: normal; font-size: 10px; font-weight: 700; letter-spacing: .06em;
+      text-transform: uppercase; background: var(--orange-btn); color: #fff;
+      padding: 3px 8px; border-radius: 999px;
     }
 
-    /* Session type options */
-    .bw-options { display: flex; flex-direction: column; gap: 8px; }
-    .bw-opt {
-      display: flex; flex-direction: column; align-items: flex-start;
-      padding: 14px 16px; border: 2px solid var(--border); border-radius: 8px;
-      background: var(--bg); cursor: pointer; text-align: left;
-      font-family: var(--font-body); font-size: 14px; font-weight: 600;
-      color: var(--text); transition: all .15s;
+    /* Intro offer cross-link */
+    .bw-intro {
+      display: block; padding: 14px 16px; margin-bottom: 18px;
+      background: linear-gradient(135deg,#FFF6F0,#FFEFE4);
+      border: 1.5px solid #FFCBA4; border-radius: 10px;
+      transition: border-color .15s;
     }
-    .bw-opt span { font-size: 12px; font-weight: 400; color: var(--text-muted); margin-top: 2px; }
-    .bw-opt:hover { border-color: var(--navy); background: var(--white); }
-    .bw-opt.selected { border-color: var(--navy); background: var(--navy); color: #fff; }
-    .bw-opt.selected span { color: rgba(255,255,255,.7); }
+    .bw-intro:hover { border-color: var(--orange); }
+    .bw-intro-tag {
+      display: block; font-size: 11px; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--orange-ink); margin-bottom: 4px;
+    }
+    .bw-intro-body { font-size: 14px; color: var(--text); line-height: 1.5; }
+    .bw-intro-body strong { font-family: var(--font-head); font-size: 20px; color: var(--navy); }
 
-    /* Duration options */
-    .bw-duration { flex-direction: row !important; gap: 10px; }
-    .bw-dur {
-      flex: 1; display: flex; flex-direction: column; align-items: center;
-      padding: 14px 10px; border: 2px solid var(--border); border-radius: 8px;
-      background: var(--bg); cursor: pointer; font-family: var(--font-body);
-      position: relative; transition: all .15s;
+    /* Booking buttons */
+    .bw-book-primary {
+      display: flex; align-items: center; justify-content: center;
+      min-height: 56px; background: var(--orange-btn); color: #fff;
+      font-family: var(--font-head); font-size: 20px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .02em; border-radius: 8px;
+      box-shadow: 0 10px 28px rgba(201,77,0,.32); transition: background .15s;
     }
-    .bw-dur:hover { border-color: var(--navy); }
-    .bw-dur.selected { border-color: var(--orange-btn); background: #fff6f0; }
-    .bw-dur-time { font-size: 13px; font-weight: 600; color: var(--text); }
-    .bw-dur-price { font-family: var(--font-head); font-size: 22px; font-weight: 700; color: var(--navy); margin-top: 4px; }
-    .bw-dur.selected .bw-dur-price { color: var(--orange-ink); }
-    .bw-dur-badge {
-      position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
-      background: var(--orange-btn); color: #fff; font-size: 9px; font-weight: 700;
-      letter-spacing: .06em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px;
-    }
-
-    /* Summary + confirm */
-    .bw-summary {
-      background: var(--navy-light); border: 1px solid var(--border);
-      border-radius: 8px; padding: 12px 16px; font-size: 15px; font-weight: 600;
-      color: var(--navy); margin-bottom: 14px; text-align: center;
-    }
-    .bw-confirm-btns { display: flex; flex-direction: column; gap: 10px; }
-    .bw-confirm-wa {
+    .bw-book-primary:hover { background: var(--orange-btn-dark); }
+    .bw-book-secondary {
       display: flex; align-items: center; justify-content: center; gap: 8px;
-      background: var(--orange-btn); color: #fff; font-family: var(--font-body);
-      font-weight: 700; font-size: 15px; padding: 15px 24px; border-radius: 8px;
-      transition: background .15s; text-align: center;
+      min-height: 48px; margin-top: 10px; background: transparent;
+      border: 2px solid var(--border); color: var(--navy);
+      font-weight: 700; font-size: 15px; border-radius: 8px; transition: all .15s;
     }
-    .bw-confirm-wa:hover { background: var(--orange-btn-dark); }
-    .bw-confirm-call {
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      background: var(--navy); color: #fff; font-family: var(--font-body);
-      font-weight: 700; font-size: 15px; padding: 15px 24px; border-radius: 8px;
-      transition: background .15s; text-align: center;
-    }
-    .bw-confirm-call:hover { background: var(--navy-dark); }
-    .bw-note { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 12px; }
+    .bw-book-secondary:hover { border-color: var(--navy); background: var(--bg); }
+    .bw-note { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 14px; line-height: 1.5; }
     .btn-whatsapp {
       display:block; text-align:center;
       background:transparent; color:rgba(255,255,255,.8);
@@ -1035,6 +1007,18 @@
       transition:border-color .15s, background .15s;
     }
     .db-pill:hover { border-color:var(--orange); background:rgba(232,93,4,.04); }
+    .db-more { margin-bottom:36px; }
+    .db-more summary {
+      cursor:pointer; display:inline-flex; align-items:center; gap:8px;
+      min-height:44px; font-size:14px; font-weight:700; color:var(--navy);
+      list-style:none; user-select:none;
+    }
+    .db-more summary::-webkit-details-marker { display:none; }
+    .db-more summary::after { content:'▾'; font-size:12px; transition:transform .2s; }
+    .db-more[open] summary::after { transform:rotate(180deg); }
+    .db-more summary:hover { color:var(--orange-ink); }
+    .db-grid-rest { margin-top:14px; margin-bottom:0; }
+
     .db-cta { border-top:1px solid var(--border); padding-top:32px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
     .db-cta-text { font-size:15px; color:var(--text-muted); max-width:420px; }
     .db-cta-actions { display:flex; gap:12px; flex-wrap:wrap; }
@@ -1096,9 +1080,18 @@
       font-weight:700; color:#fff; letter-spacing:.01em; line-height:1.06; margin-bottom:16px;
     }
     .final-cta p { font-size:18px; color:rgba(255,255,255,.95); line-height:1.7; margin-bottom:36px; }
-    .final-cta-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
-    .final-cta .btn-white { display:inline-block; width:auto; }
-    .final-cta .btn-white-outline { display:inline-block; width:auto; }
+    .final-cta-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; align-items:center; }
+    .final-cta .btn-white {
+      display:inline-flex; align-items:center; justify-content:center; width:auto;
+      font-family:var(--font-head); font-size:22px; font-weight:700;
+      text-transform:uppercase; letter-spacing:.02em;
+      padding:18px 40px; min-height:60px;
+      box-shadow:0 14px 36px rgba(0,0,0,.22);
+    }
+    .final-cta .btn-white-outline {
+      display:inline-flex; align-items:center; justify-content:center; width:auto;
+      font-size:15px; padding:14px 24px; min-height:52px;
+    }
 
     /* ============================================================
        FOOTER
@@ -1163,8 +1156,43 @@
 
     @media (max-width: 640px) {
       body { padding-bottom:76px; }
-      .hero, .why-kimura, .services, .pricing, .about,
+      .why-kimura, .services, .pricing, .about,
       .how, .blog-preview, .faq, .contact, .final-cta { padding:64px 0; }
+      /* Hero: compress so the CTA lands above the fold */
+      .hero { padding:32px 0 44px; }
+      .hero h1 { font-size:34px; line-height:1.1; margin-bottom:16px; }
+      .hero-badge { margin-bottom:18px; font-size:10px; padding:6px 12px; }
+      .hero-desc { font-size:16px; margin-bottom:22px; }
+      .hero-actions { margin-bottom:0 !important; }
+      .hero-proof { gap:10px 18px; margin-top:24px; }
+      .hero-proof-item { font-size:13px; }
+      .hero-card { margin-top:32px; padding:24px 20px; }
+
+      /* Cards: compress so each doesn't eat a whole screen */
+      .why-card, .service-card { padding:24px 20px; }
+      .why-icon, .service-icon { width:42px; height:42px; font-size:19px; margin-bottom:14px; border-radius:10px; }
+      .why-card h3, .service-card h3 { font-size:20px; margin-bottom:8px; }
+      .why-card p, .service-card p { font-size:15px; line-height:1.55; margin-bottom:14px; }
+      .service-tags { gap:6px; }
+      .service-tag { font-size:11px !important; padding:4px 9px; }
+      .why-grid, .services-grid, .blog-grid { gap:14px; }
+      .why-header, .services-header, .pricing-header,
+      .faq-header, .how-header, .db-header { margin-bottom:28px; }
+
+      /* Pricing rows: keep the badge from colliding with the price */
+      .pricing-panel { padding:28px 20px; }
+      .pricing-panel-header { min-height:0; margin-bottom:20px; }
+      .pr-duration { font-size:15px; flex-wrap:wrap; gap:6px; }
+      .pr-popular { font-size:10px; padding:3px 8px; }
+      .pr-price { font-size:28px; }
+      .price-row { padding:12px 0; gap:12px; }
+      .price-row-featured { margin:0; padding:14px 10px; }
+
+      /* Direct billing: 32 pills would be a scroll wall at full size */
+      .db-grid { gap:7px; margin-bottom:28px; }
+      .db-pill { font-size:13px !important; padding:6px 12px; }
+      .section-title { margin-bottom:12px; }
+      .section-sub { font-size:16px; line-height:1.6; }
       .how-steps { grid-template-columns:1fr; }
       .footer-top { grid-template-columns:1fr; }
       .footer-bottom { flex-direction:column; text-align:center; }
@@ -1187,7 +1215,6 @@
       .rate-dur,
       .hero-card-note,
       .pricing-panel-badge,
-      .pr-popular,
       .pricing-vs,
       .credential-text p,
       .about-stat .lbl,
@@ -1195,9 +1222,7 @@
       .contact-detail-text h4,
       .contact-areas h4,
       .bw-badge,
-      .bw-step-label,
-      .bw-opt span,
-      .bw-dur-time,
+      .bw-rates-label,
       .bw-note,
       .intro-offer-badge,
       .iop-label,
@@ -1207,8 +1232,7 @@
       .footer-bottom p,
       .footer-rmt-badge { font-size:14px; }
       .ins-pill,
-      .service-tag,
-      .bw-dur-badge { font-size:14px; }
+      .service-tag { font-size:14px; }
       .hero-actions > p,
       .service-card > a,
       .pricing-panel > p,
@@ -1218,10 +1242,6 @@
       .service-card > a { display:inline-flex !important; align-items:center; min-height:44px; }
       .pricing-note a,
       .contact-detail-text a { display:inline-flex; align-items:center; min-height:44px; }
-      .bw-dur { font-size:14px; }
-      /* 2×2 duration grid — 4-across is too cramped under 480px */
-      .bw-duration { flex-wrap:wrap; }
-      .bw-dur { flex:1 1 42%; min-height:64px; }
       .hero-actions > p { color:rgba(255,255,255,.68) !important; }
       .footer-col ul a { display:inline-flex; align-items:center; min-height:44px; }
       /* Urgency bar: hide on mobile — CTAs already in hero */
@@ -1297,10 +1317,9 @@
           </div>
         </li>
         <li><a href="#prices">Prices</a></li>
-        <li><a href="blog/">Blog</a></li>
+        <li><a href="intro-offer.html" class="nav-offer">$99 Intro Offer</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="policies.html">Policies</a></li>
       </ul>
 
       <div class="nav-right">
@@ -1315,11 +1334,10 @@
     <!-- Urgency Bar -->
     <div class="urgency-bar">
       <div class="urgency-inner">
-        <span class="urgency-text">⚡ <strong>Same-day appointments available today</strong> · (905) 226-6336</span>
+        <span class="urgency-text">⚡ <strong>Same-day appointments available today</strong></span>
         <div class="urgency-actions">
-          <a href="https://kimuramassage.noterro.com/" class="urgency-btn">Book Online</a>
-          <a href="tel:9052266336" class="urgency-btn outline">📞 Call</a>
-          <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="urgency-btn whatsapp">💬 WhatsApp</a>
+          <a href="tel:9052266336" class="urgency-btn outline">📞 (905) 226-6336</a>
+          <a href="https://kimuramassage.noterro.com/" class="urgency-btn">Book Online →</a>
         </div>
       </div>
     </div>
@@ -1334,12 +1352,13 @@
       <a href="deep-tissue-massage-brampton.html" onclick="closeMobileNav()" style="padding-left:16px;font-size:15px;border-color:transparent;">↳ Deep Tissue</a>
       <a href="sports-massage-brampton.html" onclick="closeMobileNav()" style="padding-left:16px;font-size:15px;">↳ Sports Massage</a>
       <a href="#prices" onclick="closeMobileNav()">Prices</a>
-      <a href="blog/" onclick="closeMobileNav()">Blog</a>
+      <a href="intro-offer.html" onclick="closeMobileNav()" class="mnav-offer">$99 Intro Offer</a>
       <a href="#about" onclick="closeMobileNav()">About</a>
       <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+      <a href="blog/" onclick="closeMobileNav()">Blog</a>
       <a href="policies.html" onclick="closeMobileNav()">Policies</a>
-      <a href="https://kimuramassage.noterro.com/" onclick="closeMobileNav()">Book Online</a>
-      <a href="tel:9052266336" style="margin-top:8px;">📞 (905) 226-6336</a>
+      <a href="https://kimuramassage.noterro.com/" onclick="closeMobileNav()" class="mnav-book">Book Online →</a>
+      <a href="tel:9052266336" class="mnav-call">📞 (905) 226-6336</a>
     </div>
   </div>
 
@@ -1353,28 +1372,24 @@
         <div class="hero-content">
           <span class="hero-badge" id="openBadge">Open 7 Days · Direct Billing Available · Brampton, ON</span>
 
-          <h1>RMT Massage Therapy in Brampton —<br>Same-Day Appointments.<br><em>Insurance-Eligible.</em></h1>
-
-          <h2 style="font-family:var(--font-head);font-size:clamp(16px,2.2vw,24px);font-weight:500;color:rgba(255,255,255,.55);line-height:1.35;margin-bottom:32px;letter-spacing:.01em;">Your neck has felt tight for weeks. Your back feels stiff every morning.<br>You do not have to keep putting it off.</h2>
+          <h1>RMT Massage Therapy in Brampton. <em>Same-day. Insurance-eligible.</em></h1>
 
           <p class="hero-desc">
-            RMT massage therapy from $70. Same-day availability most days. Direct billing available for 30+ major insurers.
+            From <strong>$70</strong> — direct billing for 30+ insurers, so many clients pay $0 upfront. Book in about 2 minutes.
           </p>
 
           <div class="hero-actions">
-            <a href="https://kimuramassage.noterro.com/" class="btn-primary">Book Your RMT Session</a>
-            <p style="font-size:12px;color:rgba(255,255,255,.65);margin:6px 0 0;letter-spacing:.01em;">Opens our secure booking system (Noterro) · Takes about 2 minutes · Cancel anytime with 24hr notice</p>
+            <a href="https://kimuramassage.noterro.com/" class="btn-primary">Book Online →</a>
             <div class="hero-actions-secondary">
-              <a href="tel:9052266336" class="btn-outline" aria-label="Call (905) 226-6336">📞 Call</a>
-              <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="btn-outline" aria-label="Message on WhatsApp">💬 WhatsApp</a>
+              <a href="tel:9052266336" class="btn-outline" aria-label="Call (905) 226-6336">📞 Call (905) 226-6336</a>
             </div>
+            <p style="font-size:12px;color:rgba(255,255,255,.65);margin:10px 0 0;letter-spacing:.01em;">Secure booking via Noterro · Free cancellation with 24hr notice</p>
           </div>
 
           <div class="hero-proof">
             <span class="hero-proof-item">🏥 <strong>CMTO</strong> Registered RMT</span>
             <span class="hero-proof-item">💳 <strong>Direct Billing</strong> · 30+ Plans</span>
-            <span class="hero-proof-item">📅 Open <strong>7 Days</strong></span>
-            <span class="hero-proof-item">✅ <strong>Same-Day</strong> Bookings</span>
+            <span class="hero-proof-item">📅 Open <strong>7 Days</strong> · 9AM–9PM</span>
           </div>
         </div>
 
@@ -1401,37 +1416,33 @@
                   <span class="rate-price">$175</span>
                 </div>
               </div>
-              <div class="rate-divider"></div>
-              <div class="rate-col">
-                <div class="rate-col-label relax">🌿 New Client Offer</div>
-                <div class="rate-row">
-                  <span class="rate-dur">60 min</span>
-                  <span class="rate-price orange">$99</span>
-                </div>
-                <div class="rate-row">
-                  <span class="rate-dur">Includes</span>
-                  <span class="rate-price" style="font-size:16px;">RMT</span>
-                </div>
-                <div class="rate-row">
-                  <span class="rate-dur">For</span>
-                  <span class="rate-price" style="font-size:16px;">New clients</span>
-                </div>
-              </div>
             </div>
+
+            <a href="intro-offer.html" class="hero-card-offer">
+              <span class="hco-label">New client first visit</span>
+              <span class="hco-row">
+                <span class="hco-price">$99</span>
+                <span class="hco-meta">
+                  <span class="hco-was">$115 regular</span>
+                  <span class="hco-dur">60 min · cupping + hot towels included</span>
+                </span>
+              </span>
+              <span class="hco-link">See the intro offer →</span>
+            </a>
+
             <div class="hero-card-cta">
               <a href="https://kimuramassage.noterro.com/" class="btn-primary" style="display:block;text-align:center;">Book Online</a>
             </div>
             <p class="hero-card-note">Ricky Arora, RMT · <a href="https://cmto.ca.thentiacloud.net/webs/cmto/register/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Verify on the CMTO Public Register</a></p>
-            <p class="hero-card-note" style="margin-top:4px;">💳 <strong>Direct billing available for 30+ major insurers</strong></p>
+            <p class="hero-card-note" style="margin-top:8px;">💳 <strong>Direct billing for 30+ insurers</strong> — you may pay $0 upfront</p>
             <div class="ins-pills">
               <span class="ins-pill">Manulife</span>
               <span class="ins-pill">Sun Life</span>
               <span class="ins-pill">Canada Life</span>
               <span class="ins-pill">Blue Cross</span>
               <span class="ins-pill">Desjardins</span>
-              <span class="ins-pill">ClaimSecure</span>
-              <span class="ins-pill">Green Life</span>
-              <span class="ins-pill">+ more</span>
+              <span class="ins-pill">Green Shield</span>
+              <a href="#insurance" class="ins-pill ins-pill-more">+ 25 more</a>
             </div>
           </div>
         </div>
@@ -1450,52 +1461,237 @@
     </div>
   </div>
 
+  <!-- ===================== SERVICES ===================== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services-header">
+        <span class="section-label">Choose Your Treatment</span>
+        <h2 class="section-title">What's Holding Your Body<br>Back Right Now?</h2>
+        <p class="section-sub">
+          Every session starts with an assessment to understand what has been bothering you. Swedish, deep tissue, or sports massage can be adapted to your goals, comfort, and treatment plan. Not sure which to book? Call (905) 226-6336.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service-card">
+          <div class="service-icon">🌿</div>
+          <h3>Swedish Massage</h3>
+          <p>
+            Full-body, unhurried work that helps your nervous system let go of weeks of built-up stress. For when you need to stop running on empty.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag">Stress & Tension</span>
+            <span class="service-tag">Full Body</span>
+            <span class="service-tag">RMT Massage</span>
+          </div>
+          <a href="swedish-massage-brampton.html" aria-label="Learn more about Swedish Massage in Brampton" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange-ink);">Learn more →</a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">💪</div>
+          <h3>Deep Tissue Massage</h3>
+          <p>
+            That knot has been there for months. Deep tissue works into the layers where chronic tension actually lives — real pressure, not a light rub. Built for desk workers and recurring neck or shoulder pain.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag">Chronic Tension</span>
+            <span class="service-tag">Knots & Tightness</span>
+            <span class="service-tag">RMT Massage</span>
+          </div>
+          <a href="deep-tissue-massage-brampton.html" aria-label="Learn more about Deep Tissue Massage in Brampton" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange-ink);">Learn more →</a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🏃</div>
+          <h3>Sports Massage</h3>
+          <p>
+            Tightness that builds between sessions eventually becomes an injury. Pre-event prep, post-event recovery, and maintenance for active people who can't afford to be sidelined.
+          </p>
+          <div class="service-tags">
+            <span class="service-tag">Athletes</span>
+            <span class="service-tag">Recovery</span>
+            <span class="service-tag">RMT Massage</span>
+          </div>
+          <a href="sports-massage-brampton.html" aria-label="Learn more about Sports Massage in Brampton" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange-ink);">Learn more →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHY KIMURA ===================== -->
+  <section class="why-kimura" id="why">
+    <div class="container">
+      <div class="why-header">
+        <span class="section-label">Why Choose Kimura</span>
+        <h2 class="section-title">Treatment That's Personal,<br>Clear, and Easy to Book</h2>
+      </div>
+
+      <div class="why-grid">
+
+        <div class="why-card">
+          <div class="why-icon">🎯</div>
+          <h3>Treatment Built Around You</h3>
+          <p>Every session starts with a proper intake and assessment. Your therapist identifies what's actually going on and builds the session around it — not a template. You control the pressure, focus areas, and pace throughout.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">💬</div>
+          <h3>Clear, Comfortable Treatment</h3>
+          <p>Your therapist checks in, adjusts pressure, and explains what is happening as needed. You should never feel rushed, confused, or stuck with a pressure level that does not work for you.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <h3>Same-Day. 7 Days. No Waitlist.</h3>
+          <p>Open Monday to Sunday, 9AM to 9PM. Most clients get in the same day they call. No long waitlists. No referral needed. Book online in under 2 minutes.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRICING ===================== -->
+  <section class="pricing" id="prices">
+    <div class="container">
+      <div class="pricing-header">
+        <span class="section-label">Transparent Pricing</span>
+        <h2 class="section-title">Massage Prices in Brampton — No Hidden Fees</h2>
+        <p class="section-sub">RMT massage therapy from $70. No referral needed. Same-day availability most days. What you see is what you pay.</p>
+      </div>
+
+      <div class="pricing-comparison">
+
+        <!-- RMT Tier -->
+        <div class="pricing-panel">
+          <div class="pricing-panel-header">
+            <span class="pricing-panel-badge rmt">🏥 Insurance Eligible</span>
+            <h3>RMT Massage</h3>
+            <p class="pricing-panel-desc">Performed by our Registered Massage Therapist. Choose the length that fits your body, your schedule, and how much focused work you want done.</p>
+          </div>
+          <div class="pricing-panel-rows">
+            <div class="price-row">
+              <span class="pr-duration">30 Minutes</span>
+              <span class="pr-price"><sup>$</sup>70</span>
+            </div>
+            <div class="price-row price-row-featured">
+              <span class="pr-duration">60 Minutes <em class="pr-popular">Most Popular</em></span>
+              <span class="pr-price"><sup>$</sup>115</span>
+            </div>
+            <div class="price-row">
+              <span class="pr-duration">75 Minutes</span>
+              <span class="pr-price"><sup>$</sup>150</span>
+            </div>
+            <div class="price-row">
+              <span class="pr-duration">90 Minutes</span>
+              <span class="pr-price"><sup>$</sup>175</span>
+            </div>
+          </div>
+          <ul class="pricing-includes">
+            <li>RMT health assessment included</li>
+            <li>Benefits-friendly RMT appointment</li>
+            <li>Treatment notes kept on file</li>
+            <li>Green Shield, Manulife, Sun Life, Canada Life & more</li>
+          </ul>
+          <a href="https://kimuramassage.noterro.com/" class="btn-primary" style="display:block;text-align:center;">Book Online</a>
+          <p style="font-size:11px;color:var(--text-muted);text-align:center;margin-top:8px;line-height:1.5;">No referral needed · Cancel 24hr</p>
+        </div>
+
+        <!-- Divider -->
+        <div class="pricing-vs">or</div>
+
+        <!-- Intro Offer Tier -->
+        <div class="pricing-panel">
+          <div class="pricing-panel-header">
+            <span class="pricing-panel-badge relaxation">🌿 New Client Offer</span>
+            <h3>First Visit RMT Offer</h3>
+            <p class="pricing-panel-desc">A focused first visit for new clients. Includes a 60-minute RMT massage, cupping if appropriate, and hot towels.</p>
+          </div>
+          <div class="pricing-panel-rows">
+            <div class="price-row">
+              <span class="pr-duration">60 Minutes</span>
+              <span class="pr-price"><sup>$</sup>99</span>
+            </div>
+            <div class="price-row price-row-featured">
+              <span class="pr-duration">Regular Rate</span>
+              <span class="pr-price"><sup>$</sup>115</span>
+            </div>
+            <div class="price-row">
+              <span class="pr-duration">New Client Savings</span>
+              <span class="pr-price"><sup>$</sup>16</span>
+            </div>
+          </div>
+          <ul class="pricing-includes">
+            <li>RMT intake and health history included</li>
+            <li>RMT appointment</li>
+            <li>Cupping included when appropriate</li>
+            <li>New clients only, limited monthly spots</li>
+          </ul>
+          <a href="intro-offer.html" class="btn-outline" style="display:block;text-align:center;">See Intro Offer →</a>
+          <p style="font-size:11px;color:var(--text-muted);text-align:center;margin-top:8px;line-height:1.5;">New clients only · Cancel 24hr</p>
+        </div>
+
+      </div>
+
+      <p class="pricing-note">
+        <em>Not sure which length to choose? <a href="tel:9052266336" style="color:inherit;font-weight:600;">Call us — (905) 226-6336.</a></em>
+      </p>
+
+    </div>
+  </section>
+
   <!-- ===================== DIRECT BILLING ===================== -->
   <section class="direct-billing" id="insurance">
     <div class="container">
       <div class="db-header">
         <span class="section-label">Direct Billing · 30+ Insurance Plans</span>
-        <h2 class="section-title">Have Benefits?<br>We Can Direct Bill Many Plans.</h2>
-        <p class="section-sub">Kimura Massage Therapy offers direct billing for 30+ major insurers. Bring your benefits card or policy details. Approval depends on your plan rules, remaining coverage, and the insurer's response at the time of submission.</p>
+        <h2 class="section-title">Have Benefits?<br>You May Pay <em style="font-style:normal;color:var(--orange-ink);">$0 Upfront.</em></h2>
+        <p class="section-sub">We direct bill 30+ major insurers on your behalf — no claim forms, no waiting for reimbursement. Just bring your benefits card. Approval depends on your plan rules and remaining coverage.</p>
       </div>
       <div class="db-grid">
-        <div class="db-pill">Blue Cross</div>
-        <div class="db-pill">BPA - Benefit Plan Administrators</div>
         <div class="db-pill">Manulife Financial</div>
         <div class="db-pill">Sun Life Financial</div>
         <div class="db-pill">Canada Life</div>
-        <div class="db-pill">Canada Construction Workers Union</div>
-        <div class="db-pill">Chambers of Commerce Group</div>
-        <div class="db-pill">CINUP</div>
-        <div class="db-pill">ClaimSecure</div>
-        <div class="db-pill">Cowan Insurance Group</div>
-        <div class="db-pill">D.A. Townley</div>
-        <div class="db-pill">Desjardins Insurance</div>
-        <div class="db-pill">First Canadian</div>
-        <div class="db-pill">GMS Carrier 49</div>
-        <div class="db-pill">GMS Carrier 50</div>
+        <div class="db-pill">Blue Cross</div>
         <div class="db-pill">Green Shield</div>
-        <div class="db-pill">Green Life</div>
-        <div class="db-pill">GroupHEALTH</div>
-        <div class="db-pill">GroupSource</div>
-        <div class="db-pill">Industrial Alliance</div>
-        <div class="db-pill">Johnson Inc.</div>
-        <div class="db-pill">Johnston Group Inc.</div>
-        <div class="db-pill">La Capitale Insurance and Financial Services</div>
-        <div class="db-pill">LiUNA Local 183</div>
-        <div class="db-pill">LiUNA Local 506</div>
-        <div class="db-pill">Manion</div>
-        <div class="db-pill">Maximum Benefit</div>
-        <div class="db-pill">People Corporation</div>
-        <div class="db-pill">RWAM Insurance Administrators</div>
+        <div class="db-pill">Desjardins Insurance</div>
+        <div class="db-pill">ClaimSecure</div>
         <div class="db-pill">TELUS AdjudiCare</div>
-        <div class="db-pill">Union Benefits</div>
-        <div class="db-pill">UV Insurance</div>
       </div>
+      <details class="db-more">
+        <summary>Show all 32 insurers we direct bill</summary>
+        <div class="db-grid db-grid-rest">
+          <div class="db-pill">BPA - Benefit Plan Administrators</div>
+          <div class="db-pill">Canada Construction Workers Union</div>
+          <div class="db-pill">Chambers of Commerce Group</div>
+          <div class="db-pill">CINUP</div>
+          <div class="db-pill">Cowan Insurance Group</div>
+          <div class="db-pill">D.A. Townley</div>
+          <div class="db-pill">First Canadian</div>
+          <div class="db-pill">GMS Carrier 49</div>
+          <div class="db-pill">GMS Carrier 50</div>
+          <div class="db-pill">Green Life</div>
+          <div class="db-pill">GroupHEALTH</div>
+          <div class="db-pill">GroupSource</div>
+          <div class="db-pill">Industrial Alliance</div>
+          <div class="db-pill">Johnson Inc.</div>
+          <div class="db-pill">Johnston Group Inc.</div>
+          <div class="db-pill">La Capitale Insurance and Financial Services</div>
+          <div class="db-pill">LiUNA Local 183</div>
+          <div class="db-pill">LiUNA Local 506</div>
+          <div class="db-pill">Manion</div>
+          <div class="db-pill">Maximum Benefit</div>
+          <div class="db-pill">People Corporation</div>
+          <div class="db-pill">RWAM Insurance Administrators</div>
+          <div class="db-pill">Union Benefits</div>
+          <div class="db-pill">UV Insurance</div>
+        </div>
+      </details>
       <div class="db-cta">
         <p class="db-cta-text">If direct billing is not approved, payment is due at the appointment and you can submit your RMT receipt manually.</p>
         <div class="db-cta-actions">
-          <a href="#" class="btn-primary open-book-modal" style="width:auto;padding:14px 32px;">Book Online</a>
+          <a href="https://kimuramassage.noterro.com/" class="btn-primary" style="width:auto;padding:14px 32px;">Book Online →</a>
           <a href="tel:9052266336" class="btn-outline" style="width:auto;padding:14px 24px;">📞 905-226-6336</a>
         </div>
       </div>
@@ -1626,183 +1822,20 @@
     </div>
   </section>
 
-  <!-- ===================== WHY KIMURA ===================== -->
-  <section class="why-kimura" id="why">
-    <div class="container">
-      <div class="why-header">
-        <span class="section-label">Why Choose Kimura</span>
-        <h2 class="section-title">Treatment That's Personal,<br>Clear, and Easy to Book</h2>
+  <!-- ===================== INTRO OFFER BANNER ===================== -->
+  <section class="intro-offer-banner">
+    <div class="intro-offer-inner">
+      <div>
+        <span class="intro-offer-badge">New clients only · 10 spots per month</span>
+        <h2>First Visit Intro Offer</h2>
+        <p>60-min RMT massage + cupping + hot towels. Capped at 10 new clients per month.</p>
       </div>
-
-      <div class="why-grid">
-
-        <div class="why-card">
-          <div class="why-icon">🎯</div>
-          <h3>Treatment Built Around You</h3>
-          <p>Every session starts with a proper intake and assessment. Your therapist identifies what's actually going on and builds the session around it — not a template. You control the pressure, focus areas, and pace throughout.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-icon">💬</div>
-          <h3>Clear, Comfortable Treatment</h3>
-          <p>Your therapist checks in, adjusts pressure, and explains what is happening as needed. You should never feel rushed, confused, or stuck with a pressure level that does not work for you.</p>
-        </div>
-
-        <div class="why-card">
-          <div class="why-icon">⚡</div>
-          <h3>Same-Day. 7 Days. No Waitlist.</h3>
-          <p>Open Monday to Sunday, 9AM to 9PM. Most clients get in the same day they call. No long waitlists. No referral needed. Book online in under 2 minutes.</p>
-        </div>
-
+      <div class="intro-offer-price">
+        <div class="iop-amount"><sup>$</sup>99</div>
+        <div class="iop-label">Reg. $115 · New clients only</div>
+        <a href="intro-offer.html" class="iop-btn">See the offer →</a>
+        <div class="iop-sub">No commitment · No upsells</div>
       </div>
-    </div>
-  </section>
-
-  <!-- ===================== SERVICES ===================== -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="services-header">
-        <span class="section-label">Choose Your Treatment</span>
-        <h2 class="section-title">What's Holding Your Body<br>Back Right Now?</h2>
-        <p class="section-sub">
-          Every session starts with an assessment to understand what has been bothering you. Swedish, deep tissue, or sports massage can be adapted to your goals, comfort, and treatment plan. Not sure which to book? Call (905) 226-6336.
-        </p>
-      </div>
-
-      <div class="services-grid">
-
-        <article class="service-card">
-          <div class="service-icon">🌿</div>
-          <h3>Swedish Massage</h3>
-          <p>
-            You've been carrying stress in your body for weeks. Swedish massage works with your nervous system to release accumulated tension — full body, unhurried, and actually restorative. For when you need to stop running on empty.
-          </p>
-          <div class="service-tags">
-            <span class="service-tag">Stress & Tension</span>
-            <span class="service-tag">Full Body</span>
-            <span class="service-tag">RMT Massage</span>
-          </div>
-          <a href="swedish-massage-brampton.html" aria-label="Learn more about Swedish Massage in Brampton" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange-ink);">Learn more →</a>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon">💪</div>
-          <h3>Deep Tissue Massage</h3>
-          <p>
-            That knot has been there for months. Deep tissue works into the layers where chronic tension actually lives — not just the surface. Built for desk workers, people with recurring neck and shoulder pain, and anyone who needs real pressure, not a light rub.
-          </p>
-          <div class="service-tags">
-            <span class="service-tag">Chronic Tension</span>
-            <span class="service-tag">Knots & Tightness</span>
-            <span class="service-tag">RMT Massage</span>
-          </div>
-          <a href="deep-tissue-massage-brampton.html" aria-label="Learn more about Deep Tissue Massage in Brampton" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange-ink);">Learn more →</a>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon">🏃</div>
-          <h3>Sports Massage</h3>
-          <p>
-            Tightness that builds between sessions eventually becomes an injury. Sports massage keeps your body ahead of overuse — pre-event prep, post-event recovery, and maintenance for athletes and active people who can't afford to be sidelined.
-          </p>
-          <div class="service-tags">
-            <span class="service-tag">Athletes</span>
-            <span class="service-tag">Recovery</span>
-            <span class="service-tag">RMT Massage</span>
-          </div>
-          <a href="sports-massage-brampton.html" aria-label="Learn more about Sports Massage in Brampton" style="display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--orange-ink);">Learn more →</a>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== PRICING ===================== -->
-  <section class="pricing" id="prices">
-    <div class="container">
-      <div class="pricing-header">
-        <span class="section-label">Transparent Pricing</span>
-        <h2 class="section-title">Massage Prices in Brampton — No Hidden Fees</h2>
-        <p class="section-sub">RMT massage therapy from $70. No referral needed. Same-day availability most days. What you see is what you pay.</p>
-      </div>
-
-      <div class="pricing-comparison">
-
-        <!-- RMT Tier -->
-        <div class="pricing-panel">
-          <div class="pricing-panel-header">
-            <span class="pricing-panel-badge rmt">🏥 Insurance Eligible</span>
-            <h3>RMT Massage</h3>
-            <p class="pricing-panel-desc">Performed by our Registered Massage Therapist. Choose the length that fits your body, your schedule, and how much focused work you want done.</p>
-          </div>
-          <div class="pricing-panel-rows">
-            <div class="price-row">
-              <span class="pr-duration">30 Minutes</span>
-              <span class="pr-price"><sup>$</sup>70</span>
-            </div>
-            <div class="price-row price-row-featured">
-              <span class="pr-duration">60 Minutes <em class="pr-popular">Most Popular</em></span>
-              <span class="pr-price"><sup>$</sup>115</span>
-            </div>
-            <div class="price-row">
-              <span class="pr-duration">75 Minutes</span>
-              <span class="pr-price"><sup>$</sup>150</span>
-            </div>
-            <div class="price-row">
-              <span class="pr-duration">90 Minutes</span>
-              <span class="pr-price"><sup>$</sup>175</span>
-            </div>
-          </div>
-          <ul class="pricing-includes">
-            <li>RMT health assessment included</li>
-            <li>Benefits-friendly RMT appointment</li>
-            <li>Treatment notes kept on file</li>
-            <li>Green Shield, Manulife, Sun Life, Canada Life & more</li>
-          </ul>
-          <a href="https://kimuramassage.noterro.com/" class="btn-primary" style="display:block;text-align:center;">Book Online</a>
-          <p style="font-size:11px;color:var(--text-muted);text-align:center;margin-top:8px;line-height:1.5;">No referral needed · Cancel 24hr</p>
-        </div>
-
-        <!-- Divider -->
-        <div class="pricing-vs">or</div>
-
-        <!-- Intro Offer Tier -->
-        <div class="pricing-panel">
-          <div class="pricing-panel-header">
-            <span class="pricing-panel-badge relaxation">🌿 New Client Offer</span>
-            <h3>First Visit RMT Offer</h3>
-            <p class="pricing-panel-desc">A focused first visit for new clients. Includes a 60-minute RMT massage, cupping if appropriate, and hot towels.</p>
-          </div>
-          <div class="pricing-panel-rows">
-            <div class="price-row">
-              <span class="pr-duration">60 Minutes</span>
-              <span class="pr-price"><sup>$</sup>99</span>
-            </div>
-            <div class="price-row price-row-featured">
-              <span class="pr-duration">Regular Rate</span>
-              <span class="pr-price"><sup>$</sup>115</span>
-            </div>
-            <div class="price-row">
-              <span class="pr-duration">New Client Savings</span>
-              <span class="pr-price"><sup>$</sup>16</span>
-            </div>
-          </div>
-          <ul class="pricing-includes">
-            <li>RMT intake and health history included</li>
-            <li>RMT appointment</li>
-            <li>Cupping included when appropriate</li>
-            <li>New clients only, limited monthly spots</li>
-          </ul>
-          <a href="intro-offer.html" class="btn-outline" style="display:block;text-align:center;">See Intro Offer →</a>
-          <p style="font-size:11px;color:var(--text-muted);text-align:center;margin-top:8px;line-height:1.5;">New clients only · Cancel 24hr</p>
-        </div>
-
-      </div>
-
-      <p class="pricing-note">
-        <em>Not sure which length to choose? <a href="tel:9052266336" style="color:inherit;font-weight:600;">Call us — (905) 226-6336.</a></em>
-      </p>
-
     </div>
   </section>
 
@@ -2003,7 +2036,6 @@
         </div>
 
       </div>
-      </div>
     </div>
   </section>
 
@@ -2064,58 +2096,30 @@
           </div>
         </div>
 
-        <!-- Pseudo booking widget -->
+        <!-- Booking panel -->
         <div class="booking-widget">
           <div class="bw-header">
             <span class="bw-badge">📅 Same-Day Available</span>
             <h3>Book Your Session</h3>
-            <p>Pick your session type and length. Then book online — takes under 2 minutes.</p>
+            <p>Pick your time in our booking system. Takes about 2 minutes — no account needed.</p>
           </div>
 
-          <div class="bw-step">
-            <div class="bw-step-label">1 — Session Type</div>
-            <div class="bw-options" id="typeOptions">
-              <button class="bw-opt selected" data-type="RMT Massage" onclick="selectOpt(this,'typeOptions')">
-                🏥 RMT Massage
-                <span>Assessment included</span>
-              </button>
-            </div>
+          <div class="bw-rates">
+            <div class="bw-rates-label">RMT Massage Rates</div>
+            <div class="bw-rate"><span>30 minutes</span><strong>$70</strong></div>
+            <div class="bw-rate bw-rate-pop"><span>60 minutes <em>Most popular</em></span><strong>$115</strong></div>
+            <div class="bw-rate"><span>75 minutes</span><strong>$150</strong></div>
+            <div class="bw-rate"><span>90 minutes</span><strong>$175</strong></div>
           </div>
 
-          <div class="bw-step">
-            <div class="bw-step-label">2 — Duration</div>
-            <div class="bw-options bw-duration" id="durOptions">
-              <button class="bw-dur" data-dur="30 min" data-rmt="$70" onclick="selectDur(this)">
-                <span class="bw-dur-time">30 min</span>
-                <span class="bw-dur-price" id="price30">$70</span>
-              </button>
-              <button class="bw-dur selected" data-dur="60 min" data-rmt="$115" onclick="selectDur(this)">
-                <span class="bw-dur-time">60 min</span>
-                <span class="bw-dur-price" id="price60">$115</span>
-                <span class="bw-dur-badge">Popular</span>
-              </button>
-              <button class="bw-dur" data-dur="75 min" data-rmt="$150" onclick="selectDur(this)">
-                <span class="bw-dur-time">75 min</span>
-                <span class="bw-dur-price" id="price75">$150</span>
-              </button>
-              <button class="bw-dur" data-dur="90 min" data-rmt="$175" onclick="selectDur(this)">
-                <span class="bw-dur-time">90 min</span>
-                <span class="bw-dur-price" id="price90">$175</span>
-              </button>
-            </div>
-          </div>
+          <a href="intro-offer.html" class="bw-intro">
+            <span class="bw-intro-tag">First visit?</span>
+            <span class="bw-intro-body"><strong>$99</strong> for your first 60-minute treatment — see the intro offer →</span>
+          </a>
 
-          <div class="bw-step">
-            <div class="bw-step-label">3 — Confirm</div>
-            <div class="bw-summary" id="bwSummary">60 min · RMT Massage · $115</div>
-            <div class="bw-confirm-btns">
-              <a id="waBtn" href="https://kimuramassage.noterro.com/" class="bw-confirm-wa">
-                Book This Session — $115
-              </a>
-              <a href="tel:9052266336" class="bw-confirm-call">📞 Call (905) 226-6336</a>
-            </div>
-            <p class="bw-note">Opens our secure booking system (Noterro) · Open 7 days · Same-day usually available</p>
-          </div>
+          <a href="https://kimuramassage.noterro.com/" class="bw-book-primary">Book Online →</a>
+          <a href="tel:9052266336" class="bw-book-secondary">📞 Call (905) 226-6336</a>
+          <p class="bw-note">Opens our secure booking system (Noterro) · Open 7 days, 9AM–9PM · 24hr cancellation</p>
         </div>
 
       </div>
@@ -2124,23 +2128,6 @@
 
   </main>
 
-  <!-- ===================== INTRO OFFER BANNER ===================== -->
-  <section class="intro-offer-banner">
-    <div class="intro-offer-inner">
-      <div>
-        <span class="intro-offer-badge">New clients only · 10 spots per month</span>
-        <h2>First Visit Intro Offer</h2>
-        <p>60-min RMT massage + cupping + hot towels. Capped at 10 new clients per month.</p>
-      </div>
-      <div class="intro-offer-price">
-        <div class="iop-amount"><sup>$</sup>99</div>
-        <div class="iop-label">Reg. $115 · New clients only</div>
-        <a href="intro-offer.html" class="iop-btn">See the offer →</a>
-        <div class="iop-sub">No commitment · No upsells</div>
-      </div>
-    </div>
-  </section>
-
   <!-- ===================== FINAL CTA ===================== -->
   <section class="final-cta">
     <div class="container">
@@ -2148,9 +2135,8 @@
         <h2>Same-Day Available. Don't Put It Off.</h2>
         <p>Still tight? Still sore? Most clients get in today. Book in under 2 minutes — RMT massage therapy from $70. Open 7 days, 9AM–9PM.</p>
         <div class="final-cta-actions">
-          <a href="https://kimuramassage.noterro.com/" class="btn-white">Book Online</a>
+          <a href="https://kimuramassage.noterro.com/" class="btn-white">Book Online →</a>
           <a href="tel:9052266336" class="btn-white-outline">📞 Call (905) 226-6336</a>
-          <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="btn-white-outline">💬 WhatsApp</a>
         </div>
       </div>
     </div>
@@ -2185,20 +2171,21 @@
         <div class="footer-col">
           <h4>Info</h4>
           <ul>
+            <li><a href="intro-offer.html">$99 Intro Offer</a></li>
             <li><a href="#about">About Our Clinic</a></li>
+            <li><a href="blog/">Blog</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="policies.html">Policies</a></li>
-            <li><a href="https://kimuramassage.noterro.com/">Book Online</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Service Area</h4>
           <ul>
-            <li><a href="#home">Brampton</a></li>
-            <li><a href="#home">Mississauga</a></li>
-            <li><a href="#home">Caledon</a></li>
-            <li><a href="#home">Greater Toronto Area</a></li>
+            <li><a href="massage-therapy-northwest-brampton.html">Northwest Brampton</a></li>
+            <li><a href="massage-therapy-mississauga.html">Mississauga</a></li>
+            <li><a href="massage-therapy-caledon.html">Caledon</a></li>
+            <li><a href="https://kimuramassage.noterro.com/">Book Online</a></li>
           </ul>
         </div>
 
@@ -2217,46 +2204,6 @@
   </div>
 
   <!-- Floating bar removed — CTAs live in hero + urgency bar -->
-
-  <!-- Booking modal — must be before <script> so getElementById finds it -->
-  <div class="book-modal-overlay" id="bookModal" aria-hidden="true" role="dialog" aria-label="Book your session">
-    <div class="book-modal">
-      <div class="book-modal-header">
-        <span class="book-modal-title">Book Your Session</span>
-        <button class="book-modal-close" id="bookModalClose" aria-label="Close booking options">✕</button>
-      </div>
-      <p class="book-modal-sub">Same-day available most days · Open 7 days, 9AM–9PM<br><strong style="color:var(--orange);">💳 Direct billing available for 30+ major insurers</strong></p>
-      <div class="book-modal-actions">
-
-        <a href="https://kimuramassage.noterro.com/" class="bma-btn bma-online" onclick="closeBookModal()" aria-label="Use our online booking form">
-          <div class="bma-icon">📅</div>
-          <div class="bma-text">
-            <span class="bma-label">Book Online</span>
-            <span class="bma-sub">Pick your session type &amp; duration</span>
-          </div>
-        </a>
-
-        <div class="bma-divider">or</div>
-
-        <a href="tel:9052266336" class="bma-btn bma-call" aria-label="Call (905) 226-6336">
-          <div class="bma-icon">📞</div>
-          <div class="bma-text">
-            <span class="bma-label">Call</span>
-            <span class="bma-sub">(905) 226-6336 · Fastest option</span>
-          </div>
-        </a>
-
-        <a href="https://wa.me/16472873777" target="_blank" rel="noopener" class="bma-btn bma-wa" aria-label="Message on WhatsApp">
-          <div class="bma-icon">💬</div>
-          <div class="bma-text">
-            <span class="bma-label">WhatsApp</span>
-            <span class="bma-sub">Message us — usually respond in minutes</span>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </div>
 
   <script>
     function toggleFaq(btn) {
@@ -2292,62 +2239,6 @@
     hamburger.addEventListener('click', openMobileNav);
     mobileNavClose.addEventListener('click', closeMobileNav);
     mobileNav.addEventListener('click', e => { if (e.target === mobileNav) closeMobileNav(); });
-
-    /* ── Booking widget logic ───────────────────── */
-    const isRMT = () => true;
-    const selDur = () => document.querySelector('#durOptions .bw-dur.selected');
-
-    function updatePrices() {
-      const rmt = isRMT();
-      document.querySelectorAll('.bw-dur').forEach(btn => {
-        const priceEl = btn.querySelector('.bw-dur-price');
-        if (priceEl) priceEl.textContent = btn.dataset.rmt;
-      });
-      updateSummary();
-    }
-
-    function updateSummary() {
-      const type = document.querySelector('#typeOptions .bw-opt.selected')?.dataset.type || 'RMT Massage';
-      const dur = selDur();
-      const price = dur ? dur.dataset.rmt : '';
-      const time = dur ? dur.dataset.dur : '60 min';
-      document.getElementById('bwSummary').textContent = `${time} · ${type} · ${price}`;
-      document.getElementById('waBtn').textContent = `Book This Session — ${price}`;
-    }
-
-    function selectOpt(btn, groupId) {
-      document.querySelectorAll('#' + groupId + ' .bw-opt').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      updatePrices();
-    }
-
-    function selectDur(btn) {
-      document.querySelectorAll('#durOptions .bw-dur').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      updateSummary();
-    }
-
-    updateSummary();
-
-    /* ── Booking modal ──────────────────────────── */
-    const bookModal = document.getElementById('bookModal');
-    function openBookModal(e) {
-      if (e) e.preventDefault();
-      bookModal.classList.add('open');
-      bookModal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeBookModal() {
-      bookModal.classList.remove('open');
-      bookModal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-    document.getElementById('bookModalClose').addEventListener('click', closeBookModal);
-    bookModal.addEventListener('click', e => { if (e.target === bookModal) closeBookModal(); });
-    // Wire all primary Book Online buttons to open modal
-    document.querySelectorAll('.open-book-modal').forEach(btn => {
-      btn.addEventListener('click', openBookModal);
-    });
 
     /* ── Live open-now indicator (open daily 9:00–21:00) ── */
     (function () {
