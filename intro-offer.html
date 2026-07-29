@@ -51,6 +51,10 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 /* ── HERO ─────────────────────────────────────────── */
 .hero{background:var(--navy-dark);background-image:radial-gradient(ellipse 80% 60% at 50% -10%, rgba(232,93,4,.12) 0%, transparent 70%);color:#fff;padding:0;}
 .hero-inner{max-width:1100px;margin:0 auto;padding:48px 18px 52px;}
+.hero-therapist{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.hero-therapist img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.85);box-shadow:0 8px 24px rgba(0,0,0,.3);}
+.ht-name{font-family:var(--font-head);font-size:20px;color:#fff;line-height:1;}
+.ht-role{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--gold);margin-top:4px;}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:rgba(255,255,255,.82);border-radius:999px;padding:6px 14px;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:22px;}
 .hero-badge::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--orange);flex:0 0 auto;}
 .hero-price-block{margin-bottom:28px;}
@@ -219,6 +223,13 @@ footer{background:var(--navy-dark);color:rgba(255,255,255,.5);font-size:13px;tex
   <!-- ── HERO ── -->
   <section class="hero" aria-labelledby="hero-h1">
     <div class="hero-inner">
+      <div class="hero-therapist">
+        <img src="assets/rmt-profile-circle.png" alt="Ricky Arora RMT" width="56" height="56">
+        <div>
+          <div class="ht-name">Ricky Arora</div>
+          <div class="ht-role">Registered Massage Therapist</div>
+        </div>
+      </div>
       <div class="hero-badge">New client offer &middot; Brampton RMT</div>
 
       <div class="hero-price-block">
