@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300" role="img" aria-labelledby="title desc">
+  <title id="title">Kimura logo mark</title>
+  <desc id="desc">A navy rounded square with a white K and orange Kimura accents.</desc>
+  <rect width="300" height="300" rx="42" fill="#0F2742"/>
+  <path d="M67 232V68h44v68.7L180.2 68h55L162.4 140.3 246.5 232h-56.1l-59.5-66.2L111 185.7V232H67z" fill="#FFFFFF"/>
+  <path d="M252 68v44h-63.3l44-44H252z" fill="#E85D04"/>
+  <path d="M252 188v44h-65.5l-40.1-44H252z" fill="#E85D04"/>
+  <path d="M45 45h210" stroke="#E85D04" stroke-width="8" stroke-linecap="round"/>
+  <path d="M45 255h210" stroke="#E85D04" stroke-width="8" stroke-linecap="round"/>
+</svg>

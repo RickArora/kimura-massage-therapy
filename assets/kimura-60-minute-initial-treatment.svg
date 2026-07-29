@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Kimura 60 minute initial treatment image</title>
+  <desc id="desc">A branded Kimura Massage Therapy and Rehab service image for a 60 minute initial treatment for new clients.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F2742"/>
+      <stop offset="0.58" stop-color="#0A1E36"/>
+      <stop offset="1" stop-color="#080F1C"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F2F4F8"/>
+    </linearGradient>
+    <clipPath id="photoClip">
+      <circle cx="902" cy="374" r="168"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect x="0" y="0" width="18" height="900" fill="#E85D04"/>
+  <rect x="0" y="806" width="1200" height="94" fill="#E85D04" opacity="0.13"/>
+  <circle cx="1018" cy="134" r="250" fill="#FFFFFF" opacity="0.035"/>
+  <circle cx="1032" cy="694" r="230" fill="#E85D04" opacity="0.08"/>
+
+  <g transform="translate(76 70)">
+    <rect x="0" y="0" width="88" height="88" rx="18" fill="#0F2742" stroke="#E85D04" stroke-width="4"/>
+    <path d="M25 69V19h13.5v21L59.4 19h16.7L54.1 41l25.3 28H62.3L44.5 48.8l-6 6.1V69H25z" fill="#FFFFFF"/>
+    <path d="M80 19v13.5H61.2L74.5 19H80z" fill="#E85D04"/>
+    <path d="M80 55.5V69H60.4L48.7 55.5H80z" fill="#E85D04"/>
+    <text x="112" y="34" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" letter-spacing="0">Kimura Massage</text>
+    <text x="112" y="66" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="rgba(255,255,255,0.62)">Therapy &amp; Rehab</text>
+  </g>
+
+  <g transform="translate(78 214)">
+    <rect x="0" y="0" width="604" height="468" rx="22" fill="url(#card)"/>
+    <rect x="0" y="0" width="604" height="12" fill="#E85D04"/>
+    <text x="44" y="74" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" fill="#E85D04" letter-spacing="2.2">NEW CLIENTS ONLY</text>
+    <text x="44" y="148" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" fill="#0F2742">60 Minute</text>
+    <text x="44" y="214" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" fill="#0F2742">Initial Treatment</text>
+    <rect x="44" y="244" width="126" height="5" fill="#E85D04"/>
+
+    <g transform="translate(44 286)">
+      <text x="0" y="54" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="800" fill="#0F2742">$89</text>
+      <text x="164" y="31" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#0F2742">Intro offer</text>
+      <text x="164" y="65" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#536275">Regular 60-min RMT: $105</text>
+    </g>
+
+    <g transform="translate(44 386)" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#0F2742">
+      <circle cx="10" cy="10" r="5" fill="#E85D04"/>
+      <text x="30" y="18">RMT intake, assessment, and focused treatment</text>
+      <circle cx="10" cy="52" r="5" fill="#E85D04"/>
+      <text x="30" y="60">Cupping and hot towels included when appropriate</text>
+    </g>
+  </g>
+
+  <g transform="translate(744 186)">
+    <circle cx="158" cy="188" r="186" fill="#E85D04" opacity="0.22"/>
+    <circle cx="158" cy="188" r="178" fill="#FFFFFF" opacity="0.12"/>
+    <image href="rmt-profile-circle-600.png" x="-10" y="20" width="336" height="336" clip-path="url(#photoClip)" preserveAspectRatio="xMidYMid slice"/>
+    <circle cx="158" cy="188" r="170" fill="none" stroke="#FFFFFF" stroke-width="8" opacity="0.92"/>
+    <circle cx="158" cy="188" r="180" fill="none" stroke="#E85D04" stroke-width="5"/>
+  </g>
+
+  <g transform="translate(742 590)">
+    <text x="0" y="0" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700" fill="#FFFFFF">Ricky Arora, RMT</text>
+    <text x="0" y="42" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="rgba(255,255,255,0.78)">Deep tissue, trigger point work,</text>
+    <text x="0" y="76" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="rgba(255,255,255,0.78)">sports recovery, and practical stretches.</text>
+  </g>
+
+  <g transform="translate(78 742)">
+    <rect x="0" y="0" width="362" height="64" rx="8" fill="#E85D04"/>
+    <text x="181" y="41" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF" text-anchor="middle">Book Online</text>
+    <text x="388" y="25" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="rgba(255,255,255,0.78)">kimuramassage.noterro.com</text>
+    <text x="388" y="58" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="rgba(255,255,255,0.56)">Brampton, ON</text>
+  </g>
+</svg>
