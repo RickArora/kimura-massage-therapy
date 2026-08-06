@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Kimura Mobile Redesign Concept</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0f2742;
+      --navy-dark: #08192b;
+      --navy-soft: #173653;
+      --orange: #c94d00;
+      --orange-bright: #f97316;
+      --cream: #fbf8f3;
+      --paper: #fff;
+      --mist: #eef2f6;
+      --ink: #102842;
+      --muted: #52647a;
+      --line: #d9e0e8;
+      --green: #38c26f;
+      --shadow: 0 18px 45px rgba(15, 39, 66, .12);
+      --head: "Oswald", sans-serif;
+      --body: "DM Sans", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.55;
+      padding-bottom: 82px;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { color: inherit; font: inherit; }
+    img { display: block; max-width: 100%; }
+
+    .shell { width: min(100%, 1120px); margin: 0 auto; padding-inline: 18px; }
+    .eyebrow {
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { font-family: var(--head); line-height: 1.05; }
+    h2 { font-size: clamp(32px, 8vw, 48px); letter-spacing: -.01em; }
+    .section { padding-block: 58px; }
+    .section-copy { color: var(--muted); margin-top: 14px; }
+
+    .site-header {
+      align-items: center;
+      background: rgba(15, 39, 66, .97);
+      color: #fff;
+      display: flex;
+      height: 66px;
+      justify-content: space-between;
+      padding-inline: 18px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    .brand {
+      font-family: var(--head);
+      font-size: 20px;
+      line-height: 1;
+    }
+    .brand span {
+      color: rgba(255,255,255,.62);
+      display: block;
+      font-family: var(--body);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      margin-top: 5px;
+      text-transform: uppercase;
+    }
+    .menu {
+      align-items: center;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,.26);
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      height: 42px;
+      justify-content: center;
+      padding: 0;
+      width: 42px;
+    }
+    .menu span {
+      background: #fff;
+      border-radius: 999px;
+      display: block;
+      height: 2px;
+      width: 18px;
+    }
+    .nav-overlay {
+      background: rgba(8,25,43,.62);
+      inset: 0;
+      opacity: 0;
+      pointer-events: none;
+      position: fixed;
+      transition: opacity .2s;
+      z-index: 39;
+    }
+    .nav-drawer {
+      background: var(--paper);
+      border-radius: 18px 0 0 18px;
+      bottom: 0;
+      box-shadow: -20px 0 60px rgba(8,25,43,.22);
+      display: flex;
+      flex-direction: column;
+      max-width: 342px;
+      padding: 18px;
+      position: fixed;
+      right: 0;
+      top: 0;
+      transform: translateX(105%);
+      transition: transform .22s ease;
+      width: calc(100% - 34px);
+      z-index: 40;
+    }
+    body.nav-open { overflow: hidden; }
+    body.nav-open .nav-overlay { opacity: 1; pointer-events: auto; }
+    body.nav-open .nav-drawer { transform: translateX(0); }
+    .drawer-top {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+    .drawer-label {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .nav-close {
+      align-items: center;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      font-size: 23px;
+      height: 44px;
+      justify-content: center;
+      width: 44px;
+    }
+    .drawer-links { display: grid; }
+    .drawer-links a {
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      font-size: 16px;
+      font-weight: 600;
+      justify-content: space-between;
+      min-height: 54px;
+    }
+    .drawer-links a::after { color: var(--muted); content: "→"; }
+    .drawer-links .offer-link {
+      background: #fff2e9;
+      border: 1px solid #f0c8ad;
+      border-radius: 11px;
+      color: var(--orange);
+      margin: 8px 0 10px;
+      min-height: 62px;
+      padding: 0 14px;
+    }
+    .drawer-links .offer-link::after { color: var(--orange); }
+    .drawer-book {
+      align-items: center;
+      background: var(--orange);
+      border-radius: 10px;
+      color: #fff;
+      display: flex;
+      font-weight: 700;
+      justify-content: center;
+      margin-top: auto;
+      min-height: 54px;
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 110% 8%, rgba(249,115,22,.25), transparent 35%),
+        var(--navy);
+      color: #fff;
+      overflow: hidden;
+      padding: 26px 0 34px;
+      position: relative;
+    }
+    .motion-mark {
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      height: 180px;
+      position: absolute;
+      right: -72px;
+      top: 110px;
+      transform: rotate(32deg);
+      width: 96px;
+    }
+    .motion-mark::after {
+      background: var(--orange-bright);
+      border-radius: inherit;
+      content: "";
+      height: 62px;
+      left: 17px;
+      opacity: .9;
+      position: absolute;
+      top: 12px;
+      width: 8px;
+    }
+    .status {
+      align-items: center;
+      color: rgba(255,255,255,.78);
+      display: flex;
+      font-size: 12px;
+      font-weight: 700;
+      gap: 8px;
+      letter-spacing: .05em;
+      margin-bottom: 19px;
+      text-transform: uppercase;
+    }
+    .status-dot {
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(56,194,111,.75);
+      height: 8px;
+      width: 8px;
+    }
+    .hero h1 {
+      font-size: clamp(42px, 12vw, 69px);
+      letter-spacing: -.02em;
+      max-width: 720px;
+    }
+    .hero h1 em { color: var(--orange-bright); font-style: normal; }
+    .hero-sub {
+      color: rgba(255,255,255,.75);
+      font-size: 16px;
+      margin: 17px 0 21px;
+      max-width: 570px;
+    }
+    .hero-sub strong { color: #fff; }
+    .booking-paths { display: grid; gap: 10px; position: relative; z-index: 1; }
+    .path {
+      align-items: center;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      min-height: 62px;
+      padding: 11px 15px;
+    }
+    .path-primary { background: var(--orange); color: #fff; }
+    .path-secondary {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.27);
+      color: #fff;
+    }
+    .path-kicker {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      opacity: .75;
+      text-transform: uppercase;
+    }
+    .path-label { display: block; font-size: 16px; font-weight: 700; }
+    .path-arrow { font-size: 23px; }
+    .microcopy {
+      color: rgba(255,255,255,.58);
+      font-size: 12px;
+      margin-top: 13px;
+      text-align: center;
+    }
+
+    .review-proof {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      margin: -1px auto 0;
+      padding: 18px;
+      position: relative;
+      transform: translateY(22px);
+      z-index: 2;
+    }
+    .review-top {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 9px;
+    }
+    .stars { color: #e95d0b; letter-spacing: 2px; }
+    .verified { color: var(--muted); font-size: 11px; font-weight: 700; text-transform: uppercase; }
+    .review-proof blockquote { font-size: 15px; font-weight: 600; line-height: 1.45; }
+    .review-note { color: var(--muted); font-size: 11px; margin-top: 8px; }
+
+    .offer-section {
+      background: var(--navy-dark);
+      color: #fff;
+      overflow: hidden;
+      position: relative;
+    }
+    .offer-section::after {
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 50%;
+      content: "";
+      height: 260px;
+      position: absolute;
+      right: -150px;
+      top: -75px;
+      width: 260px;
+    }
+    .offer-layout { position: relative; z-index: 1; }
+    .offer-section .eyebrow { color: var(--orange-bright); }
+    .offer-section h2 { color: #fff; }
+    .offer-section .section-copy { color: rgba(255,255,255,.66); }
+    .offer-price {
+      align-items: baseline;
+      display: flex;
+      gap: 12px;
+      margin: 24px 0 18px;
+    }
+    .offer-price strong { font-family: var(--head); font-size: 72px; line-height: 1; }
+    .offer-price span { color: rgba(255,255,255,.6); font-size: 13px; }
+    .offer-list { display: grid; gap: 9px; list-style: none; padding: 0; }
+    .offer-list li { align-items: center; display: flex; font-size: 14px; gap: 9px; }
+    .offer-list li::before { color: var(--orange-bright); content: "✓"; font-weight: 700; }
+    .offer-button {
+      align-items: center;
+      background: var(--orange);
+      border-radius: 10px;
+      color: #fff;
+      display: flex;
+      font-weight: 700;
+      justify-content: space-between;
+      margin-top: 24px;
+      min-height: 58px;
+      padding: 0 17px;
+    }
+
+    .goal-section { padding-top: 80px; }
+    .goals { display: grid; gap: 12px; margin-top: 26px; }
+    .goal {
+      align-items: center;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      cursor: pointer;
+      display: grid;
+      gap: 13px;
+      grid-template-columns: 48px 1fr 24px;
+      min-height: 84px;
+      padding: 15px;
+      text-align: left;
+      transition: border-color .18s, transform .18s;
+      width: 100%;
+    }
+    .goal:hover, .goal[aria-pressed="true"] {
+      border-color: var(--orange);
+      transform: translateY(-2px);
+    }
+    .goal[aria-pressed="true"] { background: #fff8f3; }
+    .goal-number {
+      align-items: center;
+      background: var(--navy);
+      border-radius: 12px;
+      color: #fff;
+      display: flex;
+      font-family: var(--head);
+      font-size: 20px;
+      height: 48px;
+      justify-content: center;
+    }
+    .goal strong { display: block; font-size: 16px; }
+    .goal small { color: var(--muted); display: block; font-size: 12px; margin-top: 3px; }
+    .goal-arrow { color: var(--orange); font-size: 20px; }
+    .recommendation {
+      background: var(--navy);
+      border-radius: 14px;
+      color: #fff;
+      display: none;
+      margin-top: 13px;
+      padding: 17px;
+    }
+    .recommendation.show { display: block; }
+    .recommendation small { color: rgba(255,255,255,.6); display: block; font-weight: 700; text-transform: uppercase; }
+    .recommendation strong { display: block; margin-top: 4px; }
+
+    .pricing-section { background: var(--mist); }
+    .price-card {
+      background: var(--paper);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      margin-top: 27px;
+      overflow: hidden;
+    }
+    .price-row {
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      min-height: 64px;
+      padding: 12px 18px;
+    }
+    .price-row:last-child { border-bottom: 0; }
+    .price-row.popular { background: #fff5ef; }
+    .duration { font-weight: 600; }
+    .popular-tag {
+      background: var(--orange);
+      border-radius: 999px;
+      color: #fff;
+      font-size: 9px;
+      font-weight: 700;
+      margin-left: 6px;
+      padding: 4px 7px;
+      text-transform: uppercase;
+    }
+    .amount { font-family: var(--head); font-size: 29px; }
+    .benefit-line {
+      align-items: center;
+      color: var(--muted);
+      display: flex;
+      font-size: 13px;
+      gap: 9px;
+      margin-top: 16px;
+    }
+    .benefit-check {
+      align-items: center;
+      background: var(--navy);
+      border-radius: 50%;
+      color: #fff;
+      display: flex;
+      flex: 0 0 auto;
+      height: 24px;
+      justify-content: center;
+      width: 24px;
+    }
+
+    .provider-card {
+      background: var(--navy);
+      border-radius: 18px;
+      color: #fff;
+      margin-top: 28px;
+      overflow: hidden;
+    }
+    .provider-photo-wrap {
+      background: linear-gradient(135deg, #193a5b, var(--navy-dark));
+      min-height: 238px;
+      overflow: hidden;
+      position: relative;
+    }
+    .provider-photo {
+      height: 238px;
+      margin: 0 auto;
+      object-fit: cover;
+      object-position: center 18%;
+      width: 100%;
+    }
+    .photo-label {
+      background: rgba(8,25,43,.88);
+      bottom: 14px;
+      left: 14px;
+      padding: 9px 12px;
+      position: absolute;
+    }
+    .photo-label strong { display: block; font-family: var(--head); font-size: 20px; line-height: 1; }
+    .photo-label span { color: rgba(255,255,255,.66); font-size: 11px; }
+    .provider-body { padding: 20px; }
+    .provider-body p { color: rgba(255,255,255,.72); font-size: 14px; }
+    .credentials { display: grid; gap: 9px; margin-top: 17px; }
+    .credential {
+      align-items: center;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 9px;
+      display: flex;
+      font-size: 13px;
+      gap: 10px;
+      padding: 11px;
+    }
+    .credential b { color: var(--orange-bright); }
+
+    .visit-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      margin-top: 28px;
+      overflow: hidden;
+    }
+    .room-photo { height: 210px; object-fit: cover; width: 100%; }
+    .visit-body { padding: 19px; }
+    .visit-detail {
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      gap: 3px;
+      padding-block: 10px;
+    }
+    .visit-detail:last-child { border: 0; }
+    .visit-detail span { color: var(--muted); font-size: 11px; font-weight: 700; text-transform: uppercase; }
+    .visit-detail strong { font-size: 14px; }
+
+    .faq-list { margin-top: 24px; }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-question {
+      align-items: center;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      display: flex;
+      font-weight: 700;
+      justify-content: space-between;
+      min-height: 66px;
+      text-align: left;
+      width: 100%;
+    }
+    .faq-answer { color: var(--muted); display: none; font-size: 14px; padding: 0 32px 18px 0; }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-toggle { color: var(--orange); font-size: 23px; }
+
+    .steps {
+      display: grid;
+      gap: 13px;
+      margin-top: 26px;
+    }
+    .step {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+    }
+    .step-number {
+      color: var(--orange);
+      font-family: var(--head);
+      font-size: 14px;
+      letter-spacing: .08em;
+    }
+    .step h3 { font-size: 21px; margin: 8px 0 7px; }
+    .step p { color: var(--muted); font-size: 13px; }
+
+    .site-footer {
+      background: var(--navy-dark);
+      color: rgba(255,255,255,.68);
+      padding: 42px 18px 110px;
+    }
+    .footer-brand { color: #fff; font-family: var(--head); font-size: 23px; }
+    .footer-summary { font-size: 13px; margin: 10px 0 24px; max-width: 440px; }
+    .footer-links { display: grid; grid-template-columns: 1fr 1fr; }
+    .footer-links a { align-items: center; display: flex; font-size: 13px; min-height: 42px; }
+    .footer-legal {
+      border-top: 1px solid rgba(255,255,255,.12);
+      font-size: 11px;
+      margin-top: 24px;
+      padding-top: 18px;
+    }
+
+    .concept-note {
+      background: #fff3d7;
+      border: 1px solid #efd597;
+      color: #654b16;
+      font-size: 12px;
+      padding: 14px 18px;
+      text-align: center;
+    }
+
+    .mobile-actions {
+      background: rgba(8,25,43,.97);
+      bottom: 0;
+      display: grid;
+      gap: 9px;
+      grid-template-columns: .75fr 1.25fr;
+      left: 0;
+      padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+      position: fixed;
+      right: 0;
+      z-index: 30;
+    }
+    .mobile-actions a {
+      align-items: center;
+      border-radius: 9px;
+      color: #fff;
+      display: flex;
+      font-size: 14px;
+      font-weight: 700;
+      justify-content: center;
+      min-height: 50px;
+    }
+    .call-action { border: 1px solid rgba(255,255,255,.3); }
+    .book-action { background: var(--orange); }
+
+    @media (min-width: 760px) {
+      body { padding-bottom: 0; }
+      .site-header { padding-inline: max(24px, calc((100% - 1120px) / 2)); }
+      .hero { padding-block: 72px; }
+      .hero-grid { align-items: center; display: grid; gap: 70px; grid-template-columns: 1.2fr .8fr; }
+      .booking-paths { margin-top: 0; }
+      .review-proof { margin-left: 0; margin-right: 0; max-width: 520px; }
+      .goals { grid-template-columns: repeat(2, 1fr); }
+      .split { align-items: start; display: grid; gap: 38px; grid-template-columns: 1fr 1fr; }
+      .offer-layout { align-items: center; display: grid; gap: 70px; grid-template-columns: 1.1fr .9fr; }
+      .steps { grid-template-columns: repeat(3, 1fr); }
+      .provider-photo { height: 320px; }
+      .provider-photo-wrap { min-height: 320px; }
+      .mobile-actions { display: none; }
+      .concept-note { font-size: 13px; }
+      .site-footer { padding-bottom: 42px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="concept-note">Design concept only — booking links and review copy are intentionally non-live.</div>
+
+  <header class="site-header">
+    <a class="brand" href="#top">Kimura Massage<span>Therapy &amp; Rehab · Brampton</span></a>
+    <button class="menu" id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navDrawer">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+  <aside class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+    <div class="drawer-top">
+      <span class="drawer-label">Explore Kimura</span>
+      <button class="nav-close" id="navClose" type="button" aria-label="Close navigation menu">×</button>
+    </div>
+    <nav class="drawer-links" aria-label="Mockup navigation">
+      <a href="#top">Home</a>
+      <a class="offer-link" href="#offer">$99 New Client Offer</a>
+      <a href="#treatments">Choose a treatment</a>
+      <a href="#pricing">Prices &amp; direct billing</a>
+      <a href="#provider">Meet Ricky</a>
+      <a href="#visit">Clinic &amp; location</a>
+      <a href="#faq">Quick answers</a>
+      <a href="#policies">Policies</a>
+    </nav>
+    <a class="drawer-book" href="#pricing">Book an appointment</a>
+  </aside>
+
+  <main id="top">
+    <section class="hero">
+      <div class="motion-mark" aria-hidden="true"></div>
+      <div class="shell hero-grid">
+        <div>
+          <div class="status"><span class="status-dot"></span> Open today · 9 AM–9 PM · Brampton</div>
+          <h1>RMT care that gets you <em>moving again.</em></h1>
+          <p class="hero-sub">Focused massage therapy from <strong>$70</strong>. Direct billing available when approved by your plan.</p>
+        </div>
+        <div>
+          <div class="booking-paths" aria-label="Choose a booking path">
+            <a class="path path-primary" href="https://kimuramassage.noterro.com/book-online/service/314303/Initial-Appointment-first-time-clients-only">
+              <span><span class="path-kicker">New to Kimura?</span><span class="path-label">Book your $99 first visit</span></span>
+              <span class="path-arrow">→</span>
+            </a>
+            <a class="path path-secondary" href="#pricing">
+              <span><span class="path-kicker">Been here before?</span><span class="path-label">Book a follow-up visit</span></span>
+              <span class="path-arrow">→</span>
+            </a>
+          </div>
+          <p class="microcopy">Secure booking · RMT receipt provided · 24hr cancellation</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="shell">
+      <aside class="review-proof" aria-label="Proposed review placement">
+        <div class="review-top"><span class="stars" aria-hidden="true">★★★★★</span><span class="verified">Verified Google review</span></div>
+        <blockquote>“A real patient review about communication, comfort, and the treatment experience would appear here.”</blockquote>
+        <p class="review-note">Placeholder only — replace with an authentic review before publishing.</p>
+      </aside>
+    </div>
+
+    <section class="section offer-section" id="offer">
+      <div class="shell offer-layout">
+        <div>
+          <p class="eyebrow">A clear first step</p>
+          <h2>Your first RMT visit, all in.</h2>
+          <p class="section-copy">An unhurried introduction designed to understand what is bothering you and start useful hands-on treatment in the same appointment.</p>
+        </div>
+        <div>
+          <div class="offer-price"><strong>$99</strong><span>60-minute new client visit<br>Regularly $115</span></div>
+          <ul class="offer-list">
+            <li>Health history and movement assessment</li>
+            <li>60 minutes of hands-on RMT treatment</li>
+            <li>Cupping and hot towels when appropriate</li>
+            <li>Insurance-friendly RMT receipt</li>
+          </ul>
+          <a class="offer-button" href="https://kimuramassage.noterro.com/book-online/service/314303/Initial-Appointment-first-time-clients-only">Book the $99 first visit <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section goal-section" id="treatments">
+      <div class="shell">
+        <p class="eyebrow">Start with what you feel</p>
+        <h2>What brings you in?</h2>
+        <p class="section-copy">You do not need to know which massage style to choose. Pick the outcome you want and we’ll guide the session.</p>
+        <div class="goals">
+          <button class="goal" type="button" data-result="Swedish massage · A calmer, full-body session" aria-pressed="false">
+            <span class="goal-number">01</span><span><strong>I need to unwind</strong><small>Stress, sleep, full-body tension</small></span><span class="goal-arrow">→</span>
+          </button>
+          <button class="goal" type="button" data-result="Deep tissue massage · Focused work for recurring tightness" aria-pressed="false">
+            <span class="goal-number">02</span><span><strong>I feel pain or tightness</strong><small>Neck, shoulders, back, stubborn knots</small></span><span class="goal-arrow">→</span>
+          </button>
+          <button class="goal" type="button" data-result="Sports massage · Recovery work built around your training" aria-pressed="false">
+            <span class="goal-number">03</span><span><strong>I train and need recovery</strong><small>Mobility, soreness, performance</small></span><span class="goal-arrow">→</span>
+          </button>
+          <button class="goal" type="button" data-result="Start with an assessment · Ricky will help choose the approach" aria-pressed="false">
+            <span class="goal-number">04</span><span><strong>I’m not sure yet</strong><small>That’s normal—we’ll figure it out together</small></span><span class="goal-arrow">→</span>
+          </button>
+        </div>
+        <div class="recommendation" role="status" aria-live="polite"><small>Your best starting point</small><strong id="recommendationText"></strong></div>
+      </div>
+    </section>
+
+    <section class="section pricing-section" id="pricing">
+      <div class="shell split">
+        <div>
+          <p class="eyebrow">Clear before you book</p>
+          <h2>Simple pricing. No surprises.</h2>
+          <p class="section-copy">Every appointment includes an RMT assessment, treatment adapted to your comfort, and an insurance-friendly receipt.</p>
+          <div class="benefit-line"><span class="benefit-check">✓</span><span>Direct billing with 30+ major insurers when approved</span></div>
+          <div class="benefit-line"><span class="benefit-check">✓</span><span>No referral needed · New clients welcome</span></div>
+        </div>
+        <div class="price-card">
+          <div class="price-row"><span class="duration">30 minutes</span><span class="amount">$70</span></div>
+          <div class="price-row popular"><span class="duration">60 minutes <span class="popular-tag">Most popular</span></span><span class="amount">$115</span></div>
+          <div class="price-row"><span class="duration">75 minutes</span><span class="amount">$150</span></div>
+          <div class="price-row"><span class="duration">90 minutes</span><span class="amount">$175</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="provider">
+      <div class="shell split">
+        <div>
+          <p class="eyebrow">Know who is treating you</p>
+          <h2>Practical care. Your comfort leads.</h2>
+          <p class="section-copy">Pressure, pace, focus areas, trigger-point work, and cupping are always your call.</p>
+        </div>
+        <article class="provider-card">
+          <div class="provider-photo-wrap">
+            <img class="provider-photo" src="assets/rmt-profile-circle-600.png" alt="Ricky Arora, Registered Massage Therapist">
+            <div class="photo-label"><strong>Ricky Arora</strong><span>Registered Massage Therapist</span></div>
+          </div>
+          <div class="provider-body">
+            <p>Ricky’s background in weight lifting and Brazilian jiu-jitsu shapes a focused, movement-aware treatment style.</p>
+            <div class="credentials">
+              <div class="credential"><b>01</b> Registered with the CMTO</div>
+              <div class="credential"><b>02</b> Deep tissue and trigger-point focus</div>
+              <div class="credential"><b>03</b> You can adjust pressure at any time</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section pricing-section" id="visit">
+      <div class="shell split">
+        <div>
+          <p class="eyebrow">Your visit</p>
+          <h2>Private, quiet, and easy to get to.</h2>
+          <p class="section-copy">See the space and the practical details before you decide.</p>
+        </div>
+        <article class="visit-card">
+          <img class="room-photo" src="assets/kimura-treatment-room.webp" alt="Private Kimura massage treatment room">
+          <div class="visit-body">
+            <div class="visit-detail"><span>Location</span><strong>14 Block Road, Brampton, ON</strong></div>
+            <div class="visit-detail"><span>Hours</span><strong>Monday–Sunday · 9 AM–9 PM</strong></div>
+            <div class="visit-detail"><span>Arrival</span><strong>Private treatment space · On-site parking</strong></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <p class="eyebrow">What happens next</p>
+        <h2>A simple first visit.</h2>
+        <div class="steps">
+          <article class="step"><span class="step-number">STEP 01</span><h3>Book your time</h3><p>Choose new client or follow-up, then select a duration and an available appointment.</p></article>
+          <article class="step"><span class="step-number">STEP 02</span><h3>Talk and assess</h3><p>Share what you feel, what you want from the visit, and any preferences about pressure or focus.</p></article>
+          <article class="step"><span class="step-number">STEP 03</span><h3>Get treated</h3><p>Your session adapts as you go. You leave with an RMT receipt and practical next steps.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing-section" id="faq">
+      <div class="shell">
+        <p class="eyebrow">Before you book</p>
+        <h2>Three quick answers.</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">Will I pay anything upfront?<span class="faq-toggle">+</span></button>
+            <p class="faq-answer">You may pay $0 upfront when direct billing is approved by your plan. If it is not approved, payment is due at the appointment and you can submit your receipt manually.</p>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">What should I book first?<span class="faq-toggle">+</span></button>
+            <p class="faq-answer">New clients can start with the $99 first visit. It includes an intake, movement assessment, and 60 minutes of hands-on treatment.</p>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">Am I in control of pressure?<span class="faq-toggle">+</span></button>
+            <p class="faq-answer">Yes. Pressure, pace, focus areas, and optional techniques can be changed or stopped at any point.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="policies">
+    <div class="shell">
+      <div class="footer-brand">Kimura Massage Therapy &amp; Rehab</div>
+      <p class="footer-summary">Focused RMT care in northwest Brampton. Open seven days, direct billing available, and new clients welcome.</p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#treatments">Treatments</a>
+        <a href="#pricing">Prices</a>
+        <a href="#offer">$99 first visit</a>
+        <a href="#provider">Meet Ricky</a>
+        <a href="#visit">Location</a>
+        <a href="policies.html">Full policies</a>
+      </nav>
+      <p class="footer-legal">14 Block Road, Brampton, ON · (905) 226-6336 · © Kimura Massage Therapy &amp; Rehab</p>
+    </div>
+  </footer>
+
+  <nav class="mobile-actions" aria-label="Mobile contact actions">
+    <a class="call-action" href="tel:9052266336">Call</a>
+    <a class="book-action" href="#pricing">Choose appointment</a>
+  </nav>
+
+  <script>
+    const goals = document.querySelectorAll(".goal");
+    const recommendation = document.querySelector(".recommendation");
+    const recommendationText = document.getElementById("recommendationText");
+
+    goals.forEach((goal) => {
+      goal.addEventListener("click", () => {
+        goals.forEach((item) => item.setAttribute("aria-pressed", "false"));
+        goal.setAttribute("aria-pressed", "true");
+        recommendationText.textContent = goal.dataset.result;
+        recommendation.classList.add("show");
+      });
+    });
+
+    document.querySelectorAll(".faq-question").forEach((question) => {
+      question.addEventListener("click", () => {
+        const item = question.closest(".faq-item");
+        const isOpen = item.classList.toggle("open");
+        question.setAttribute("aria-expanded", String(isOpen));
+        question.querySelector(".faq-toggle").textContent = isOpen ? "−" : "+";
+      });
+    });
+
+    const menuButton = document.getElementById("menuButton");
+    const navDrawer = document.getElementById("navDrawer");
+    const navClose = document.getElementById("navClose");
+    const navOverlay = document.getElementById("navOverlay");
+    let lastFocused = null;
+
+    function openNavigation() {
+      lastFocused = document.activeElement;
+      document.body.classList.add("nav-open");
+      menuButton.setAttribute("aria-expanded", "true");
+      navDrawer.setAttribute("aria-hidden", "false");
+      navClose.focus();
+    }
+
+    function closeNavigation() {
+      document.body.classList.remove("nav-open");
+      menuButton.setAttribute("aria-expanded", "false");
+      navDrawer.setAttribute("aria-hidden", "true");
+      if (lastFocused) lastFocused.focus();
+    }
+
+    menuButton.addEventListener("click", openNavigation);
+    navClose.addEventListener("click", closeNavigation);
+    navOverlay.addEventListener("click", closeNavigation);
+    navDrawer.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeNavigation));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && document.body.classList.contains("nav-open")) closeNavigation();
+    });
+  </script>
+</body>
+</html>

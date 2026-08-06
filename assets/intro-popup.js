@@ -2,7 +2,9 @@
   if(sessionStorage.getItem('introDismissed')) return;
   if (/intro-offer/.test(window.location.pathname)) return;
 
-  var offerUrl = 'https://kimuramassage.noterro.com/book-online/service/314303/Initial-Appointment-first-time-clients-only';
+  var offerUrl = 'https://kimuramassage.noterro.com/book-online/practitioner/1594190/Ricky-Arora';
+  var offerInfoUrl = 'intro-offer.html';
+  var regularBookingUrl = 'https://kimuramassage.noterro.com/service-category/59418/Appointments';
 
   var css = [
     '.ip-overlay{position:fixed;inset:0;z-index:9999;background:rgba(8,15,28,.75);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:16px;animation:ipFadeIn .25s ease;}',
@@ -21,10 +23,13 @@
     '.ip-includes{list-style:none;margin:0 0 22px;padding:0;border-top:1px solid rgba(255,255,255,.08);padding-top:16px;}',
     '.ip-includes li{display:flex;align-items:center;gap:9px;font-size:14px;color:rgba(255,255,255,.7);padding:5px 0;}',
     '.ip-includes li::before{content:"✓";color:#F97316;font-weight:700;font-size:13px;flex-shrink:0;}',
-    '.ip-cta{display:block;width:100%;text-align:center;background:#C94D00;color:#fff;font-size:16px;font-weight:600;padding:16px 20px;border-radius:8px;text-decoration:none;transition:background .15s;}',
+    '.ip-actions{display:grid;gap:10px;}',
+    '.ip-cta{display:flex;width:100%;min-height:54px;align-items:center;justify-content:center;text-align:center;background:#C94D00;color:#fff;font-size:16px;font-weight:700;padding:13px 20px;border:2px solid #C94D00;border-radius:8px;text-decoration:none;transition:background .15s,border-color .15s;}',
     '.ip-cta:hover{background:#C44D00;}',
-    '.ip-dismiss{display:block;text-align:center;margin-top:12px;font-size:13px;color:rgba(255,255,255,.62);cursor:pointer;background:none;border:none;width:100%;min-height:44px;}',
-    '.ip-dismiss:hover{color:rgba(255,255,255,.5);}',
+    '.ip-cta-secondary{background:transparent;border-color:rgba(255,255,255,.42);color:#fff;}',
+    '.ip-cta-secondary:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.65);}',
+    '.ip-full-price{display:flex;align-items:center;justify-content:center;text-align:center;margin-top:8px;font-size:13px;color:rgba(255,255,255,.64);width:100%;min-height:44px;text-decoration:underline;text-underline-offset:3px;}',
+    '.ip-full-price:hover{color:#fff;}',
     '@media(max-width:640px){.ip-overlay{align-items:flex-end;padding:0;}.ip-modal{max-width:none;max-height:calc(100dvh - 24px);padding:28px 20px calc(24px + env(safe-area-inset-bottom));border-radius:18px 18px 0 0;}.ip-price{font-size:44px;}}'
   ].join('');
 
@@ -48,8 +53,11 @@
     '<li>Cupping therapy — no extra charge</li>',
     '<li>Hot towel treatment</li>',
     '</ul>',
-    '<a href="'+offerUrl+'" class="ip-cta" id="introPopupCTA">Claim the $99 Intro Offer →</a>',
-    '<button class="ip-dismiss" id="introPopupDismiss">Continue browsing</button>',
+    '<div class="ip-actions">',
+    '<a href="'+offerUrl+'" class="ip-cta" id="introPopupCTA">Claim Now →</a>',
+    '<a href="'+offerInfoUrl+'" class="ip-cta ip-cta-secondary" id="introPopupInfo">Show Me More Info</a>',
+    '</div>',
+    '<a href="'+regularBookingUrl+'" class="ip-full-price" id="introPopupFullPrice">No thanks, I\'ll pay full price</a>',
     '</div>',
     '</div>'
   ].join('');
@@ -102,12 +110,17 @@
     document.body.insertAdjacentHTML('beforeend', html);
     document.body.style.overflow='hidden';
     document.getElementById('introPopupClose').addEventListener('click', dismiss);
-    document.getElementById('introPopupDismiss').addEventListener('click', dismiss);
     document.getElementById('introPopupCTA').addEventListener('click', function(){ sessionStorage.setItem('introDismissed','1'); document.body.style.overflow=''; });
+    document.getElementById('introPopupInfo').addEventListener('click', function(){ sessionStorage.setItem('introDismissed','1'); document.body.style.overflow=''; });
+    document.getElementById('introPopupFullPrice').addEventListener('click', function(){ sessionStorage.setItem('introDismissed','1'); document.body.style.overflow=''; });
     document.getElementById('introPopupOverlay').addEventListener('click', function(e){ if(e.target===this) dismiss(); });
     document.addEventListener('keydown', handleDialogKeydown);
     document.getElementById('introPopupClose').focus();
   }
+
+  // Make the offer visible early even when a visitor does not scroll.
+  // Existing session dismissal still prevents repeat interruptions.
+  window.setTimeout(show, 3000);
 
   // Scroll-depth trigger: wait for demonstrated interest before interrupting.
   window.addEventListener('scroll', function onScroll(){
