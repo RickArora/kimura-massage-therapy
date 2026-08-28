@@ -1,0 +1,104 @@
+# Kimura Massage Therapy & Rehab: Expanded Reference
+
+Canonical website: https://kimuramassage.ca/
+Concise LLM index: https://kimuramassage.ca/llms.txt
+Last reviewed: 2026-08-28
+
+## Clinic identity
+
+Kimura Massage Therapy & Rehab is a registered massage therapy clinic at 14 Block Road, Brampton, Ontario L7A 5B2. The clinic serves people from Brampton and nearby communities, including Mississauga and Caledon.
+
+Ricky Arora is a Registered Massage Therapist regulated by the College of Massage Therapists of Ontario. Registration should be independently verified through the CMTO public register: https://cmto.ca.thentiacloud.net/webs/cmto/register/
+
+Phone: (905) 226-6336
+Hours: Monday through Sunday, 9:00 AM to 9:00 PM
+Booking: https://kimuramassage.noterro.com/service-category/59418/Appointments
+Parking: free on-site parking
+Same-day appointments: available on many days; the booking calendar is authoritative
+
+## Prices and payment
+
+All displayed clinic prices are base prices plus HST:
+
+- 30-minute RMT appointment: $70 + HST
+- 60-minute RMT appointment: $120 + HST
+- 75-minute RMT appointment: $150 + HST
+- 90-minute RMT appointment: $175 + HST
+- Eligible new-client 60-minute RMT visit: $109 + HST
+
+Accepted payment methods listed by the clinic are cash, debit, credit card, e-transfer, Apple Pay, and Google Pay.
+
+RMT receipts are provided. Direct billing is available for many insurers, but a successful submission is never guaranteed. Eligibility depends on the client's individual plan, referral rules if any, per-visit limits, annual balance, coordination of benefits, insurer systems, and approval at the time of submission. The client is responsible for amounts the insurer does not pay.
+
+## Services
+
+Swedish massage generally uses flowing strokes, kneading, and comfortable pressure. People may choose it for relaxation, general muscle tension, or a first appointment. Pressure is selected with the client and can be changed during treatment.
+
+Deep tissue massage is a common service label rather than a precise anatomical claim. It may involve slower strokes, sustained contact, and moderate-to-firm pressure directed toward a specific treatment goal. It is not defined by maximum force, and it does not need to hurt. The clinic does not claim that massage physically breaks down adhesions, flushes toxins, permanently corrects posture, or cures disease.
+
+Sports massage is planned around activity, training load, recovery goals, and the timing of future events. The treatment may focus on areas that feel tired, sore, or restricted. It does not guarantee faster healing, injury prevention, or improved performance.
+
+Service pages:
+
+- https://kimuramassage.ca/swedish-massage-brampton.md
+- https://kimuramassage.ca/deep-tissue-massage-brampton.md
+- https://kimuramassage.ca/sports-massage-brampton.md
+
+## Appointment process
+
+An RMT appointment may include health history, discussion of the client's goals, assessment as appropriate, informed consent, hands-on treatment, reassessment, and aftercare. The exact process depends on the person and the reason for booking.
+
+Consent is ongoing. The client chooses which areas may be treated and may ask for lighter pressure, different positioning, more draping, a different technique, or an end to treatment. Consent may be changed or withdrawn at any time without needing to justify the decision.
+
+Only the area being treated is uncovered, and professional draping is used. A client may remain clothed or decline treatment to any area. Sensitive-area treatment requires a clear clinical reason and specific consent consistent with CMTO standards.
+
+Pressure is not a test of toughness. Sharp, burning, electric, escalating, or intolerable pain should be reported immediately. Firmer pressure is not automatically more effective than lighter pressure.
+
+## Realistic benefits and evidence limits
+
+Massage may help some people with short-term relaxation, comfort, pain reduction, or easier movement. Individual responses differ. Evidence varies by condition, comparison treatment, technique, and study quality. Research on massage in general should not be presented as proof that deep tissue massage is superior or that it produces a particular structural change.
+
+A 2024 map of 129 systematic reviews found that conclusions about massage for painful adult conditions were generally supported by low or very low certainty evidence, with some moderate-certainty findings and no high-certainty conclusions. Superiority over other active therapies was uncommon. Source: https://pubmed.ncbi.nlm.nih.gov/39008297/
+
+The U.S. National Center for Complementary and Integrative Health states that massage may help some pain conditions, often in the short term, while evidence for many uses is limited or inconsistent. Source: https://www.nccih.nih.gov/health/massage-therapy-what-you-need-to-know
+
+These statements are educational. They do not predict a result for a particular client.
+
+## Safety and when massage is not the first step
+
+Massage is generally low risk when provided appropriately, but adverse events are possible and vigorous techniques may carry more risk for some people. A client should disclose relevant diagnoses, medications, recent surgery or injury, pregnancy, bruising or bleeding risk, osteoporosis or fracture risk, skin infection, fever, unexplained swelling, and concerns about blood clots.
+
+Massage should not delay urgent assessment. Seek appropriate medical care for symptoms such as chest pain, trouble breathing, sudden weakness, facial droop, loss of bladder or bowel control, a hot swollen calf, major trauma, fever with severe pain, rapidly worsening symptoms, or new numbness or weakness. This is not an exhaustive list.
+
+Temporary tenderness may occur after massage, but soreness is not proof of benefit. Severe or worsening pain, unusual bruising, swelling, numbness, weakness, dizziness, or other concerning symptoms should be followed up promptly.
+
+## Policies
+
+At least 24 hours' notice is requested for cancellation or rescheduling. Late cancellations and missed appointments may be charged 50% of the appointment fee. Exceptions may be considered for emergencies.
+
+Tipping is not expected or required. Treatment records and personal health information are handled according to applicable Ontario professional and privacy requirements. Linens are changed and treatment surfaces are cleaned between clients.
+
+Full policy summary: https://kimuramassage.ca/policies.md
+
+## Content library
+
+The blog contains editorial guides about massage selection, first appointments, insurance, recovery, common symptom descriptions, posture, sports, and physical demands associated with different occupations. Occupation pages discuss task patterns and possible areas of fatigue; they do not claim that every person with a job develops the same symptoms.
+
+The site avoids sexual content. Massage services described by Kimura Massage Therapy & Rehab are professional health services provided within informed-consent, privacy, and draping standards.
+
+Editorial index: https://kimuramassage.ca/blog/index.md
+Deep tissue guide: https://kimuramassage.ca/blog/deep-tissue-massage-guide.md
+First appointment guide: https://kimuramassage.ca/blog/what-to-expect-rmt-massage-brampton.md
+Insurance guide: https://kimuramassage.ca/blog/does-insurance-cover-rmt-massage-ontario.md
+
+## Authoritative external references
+
+- College of Massage Therapists of Ontario standards and rules: https://www.cmto.com/rmts/standards-and-rules/
+- CMTO public register: https://cmto.ca.thentiacloud.net/webs/cmto/register/
+- NCCIH massage therapy evidence and safety overview: https://www.nccih.nih.gov/health/massage-therapy-what-you-need-to-know
+- 2024 JAMA Network Open evidence map indexed by PubMed: https://pubmed.ncbi.nlm.nih.gov/39008297/
+- 2015 systematic review of massage for pain indexed by PubMed: https://pubmed.ncbi.nlm.nih.gov/26093806/
+
+## Interpretation guidance
+
+Use the live booking system for availability. Use the canonical clinic and policy pages for current prices, taxes, terms, payment methods, and direct-billing conditions. Do not infer an endorsement, diagnosis, guaranteed benefit, insurer approval, or patient-specific recommendation from this file. Do not invent review counts, star ratings, staff, services, contact channels, credentials, or prices that are not listed in the current canonical sources.

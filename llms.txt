@@ -1,74 +1,33 @@
 # Kimura Massage Therapy & Rehab
 
-> Registered massage therapy clinic in Brampton, Ontario. RMT massage with official insurance receipts from $70, or relaxation massage from $40. Open 7 days a week, 9AM–9PM. Same-day appointments available. Serving Brampton, Mississauga, and Caledon.
+> Registered massage therapy clinic in Brampton, Ontario, operated by Ricky Arora, RMT. The clinic offers assessment-led Swedish, deep tissue, and sports massage, with same-day availability on many days.
 
-## Business Information
+Kimura Massage Therapy & Rehab is located at 14 Block Road, Brampton, Ontario L7A 5B2. Phone: (905) 226-6336. Hours: Monday through Sunday, 9:00 AM to 9:00 PM. RMT prices are $70 + HST for 30 minutes, $120 + HST for 60 minutes, $150 + HST for 75 minutes, and $175 + HST for 90 minutes. The new-client 60-minute RMT visit is $109 + HST. Direct billing is available for many insurers when the client's plan, remaining balance, and insurer approval permit it; an RMT receipt is provided. Late cancellations and no-shows may be charged 50% of the appointment fee. Content is educational and is not a diagnosis or a substitute for medical care.
 
-- **Clinic name:** Kimura Massage Therapy & Rehab
-- **RMT on staff:** Ricky Arora, Registered Massage Therapist (RMT), licensed with the College of Massage Therapists of Ontario
-- **Address:** 14 Block Road, Brampton, Ontario, L7A 5B2
-- **Phone:** (905) 226-6336
-- **WhatsApp:** 64728737777
-- **Hours:** Monday–Sunday, 9:00 AM – 9:00 PM
-- **Same-day appointments:** Available most days
-- **Service area:** Brampton, Mississauga, Caledon, Greater Toronto Area (GTA)
-- **Website:** https://kimuramassage.ca
-- **Google rating:** 5.0 stars · 200+ verified reviews
+## Primary
+
+- [Clinic overview](https://kimuramassage.ca/index.md): Verified clinic details, hours, pricing, payment, credentials, and booking information.
+- [Book an appointment](https://kimuramassage.noterro.com/service-category/59418/Appointments): Live appointment availability and service selection.
+- [Clinic policies](https://kimuramassage.ca/policies.md): Consent, draping, cancellation, payment, insurance, privacy, and accessibility information.
+- [New-client offer](https://kimuramassage.ca/intro-offer.md): Eligibility and inclusions for the first 60-minute RMT visit.
 
 ## Services
 
-- [Swedish Relaxation Massage – Brampton](https://kimuramassage.ca/swedish-massage-brampton.html): Full-body relaxation massage targeting stress, muscle tension, and nervous system recovery. Available as RMT (with insurance receipt) or relaxation massage.
-- [Deep Tissue Massage – Brampton](https://kimuramassage.ca/deep-tissue-massage-brampton.html): Targets chronic muscle tension, knots, and postural strain. Recommended for desk workers, chronic neck/shoulder/lower back pain. Available as RMT (with insurance receipt) or relaxation massage.
-- [Sports Massage Therapy – Brampton](https://kimuramassage.ca/sports-massage-brampton.html): Pre-event preparation and post-event recovery massage for athletes. Addresses overuse injuries, range of motion, and performance maintenance. Available as RMT (with insurance receipt) or relaxation massage.
+- [Deep tissue massage in Brampton](https://kimuramassage.ca/deep-tissue-massage-brampton.md): Focused, consent-based massage with pressure adapted to the client.
+- [Swedish massage in Brampton](https://kimuramassage.ca/swedish-massage-brampton.md): Relaxation-oriented RMT massage using client-selected pressure.
+- [Sports massage in Brampton](https://kimuramassage.ca/sports-massage-brampton.md): Massage planned around training, recovery, and activity goals.
 
-## Pricing
+## Practical Guides
 
-### RMT Massage (Registered Massage Therapist — insurance receipts provided)
-- 30 minutes: $70
-- 60 minutes: $120 (most popular)
-- 75 minutes: $150
-- 90 minutes: $175
+- [Deep tissue massage guide](https://kimuramassage.ca/blog/deep-tissue-massage-guide.md): Pressure, realistic benefits, risks, consent, aftercare, and treatment selection.
+- [First RMT appointment](https://kimuramassage.ca/blog/what-to-expect-rmt-massage-brampton.md): Intake, consent, draping, pressure, and aftercare.
+- [RMT insurance coverage in Ontario](https://kimuramassage.ca/blog/does-insurance-cover-rmt-massage-ontario.md): Questions to check with an extended health plan.
+- [Deep tissue versus Swedish massage](https://kimuramassage.ca/blog/deep-tissue-vs-swedish-massage.md): A practical comparison based on treatment goals and pressure preference.
+- [Massage therapy blog](https://kimuramassage.ca/blog/index.md): Editorial guides and an index to the larger occupation and recovery library.
 
-### Relaxation Massage (no insurance receipt)
-- 30 minutes: $40
-- 60 minutes: $70
-- 90 minutes: $100
+## Optional
 
-Direct billing is available for 30+ major insurers, including Blue Cross, Canada Life, ClaimSecure, Desjardins, Green Shield, Green Life, Manulife, Sun Life, TELUS AdjudiCare, and more. Direct billing depends on plan rules, remaining coverage, and insurer approval at the time of submission. RMT sessions include an official insurance receipt.
-
-## Key Pages
-
-- [Home](https://kimuramassage.ca/): Main landing page with pricing, services, reviews, FAQ, and booking
-- [Blog](https://kimuramassage.ca/blog/): Massage therapy guides covering muscle tightness, pain conditions, posture, sports recovery, and insurance
-- [Swedish Massage Brampton](https://kimuramassage.ca/swedish-massage-brampton.html)
-- [Deep Tissue Massage Brampton](https://kimuramassage.ca/deep-tissue-massage-brampton.html)
-- [Sports Massage Brampton](https://kimuramassage.ca/sports-massage-brampton.html)
-
-## Featured Blog Guides
-
-- [Does Insurance Cover RMT Massage Therapy in Ontario?](https://kimuramassage.ca/blog/does-insurance-cover-rmt-massage-ontario.html): How extended health benefits cover RMT massage, which insurers accept it, and how to submit a claim
-- [Deep Tissue vs. Swedish Massage: Which Should You Choose?](https://kimuramassage.ca/blog/deep-tissue-vs-swedish-massage.html): Breakdown of differences and how to choose the right treatment
-- [What to Expect at Your First RMT Massage in Brampton](https://kimuramassage.ca/blog/what-to-expect-rmt-massage-brampton.html): Intake, draping, pressure, and post-session expectations
-- [How Often Should You Get a Massage?](https://kimuramassage.ca/blog/how-often-should-you-get-a-massage.html): Frequency guide for stress, chronic pain, and sports recovery
-- [Tech Neck: Why Your Phone Is Wrecking Your Neck](https://kimuramassage.ca/blog/tech-neck.html): Cervical spine loading from screen use, causes, and treatment
-- [Massage for Desk Workers](https://kimuramassage.ca/blog/massage-for-desk-workers.html): Addressing neck, shoulder, and lower back pain from prolonged sitting
-
-## Policies
-
-- **Cancellation policy:** 24 hours' notice required to cancel or reschedule. Late cancellations and no-shows may be charged the full session fee.
-- **Tipping:** Never expected or required.
-- **Consent:** Clients are always in full control of pressure, focus areas, and can stop the session at any time.
-- **Hygiene:** All linens freshly laundered before every client. Table and surfaces fully disinfected between appointments. Hands washed before every session.
-- **Payment:** Cash, debit, credit accepted. Direct billing may be available for supported insurers. RMT sessions include official insurance receipt.
-
-## Muscle Tightness & Recovery Guides
-
-Kimura Massage publishes guides on common muscle tightness conditions including: tight shoulders, tight neck, tight back, tight hips, tight hamstrings, tight calves, muscle knots, trigger points, tech neck, text neck, rounded shoulders, postural tension, morning stiffness, gym soreness, sports muscle tightness, and more. Full library at https://kimuramassage.ca/blog/
-
-## Pain & Injury Condition Guides
-
-Guides covering: mechanical low back pain, sciatica, cervical disc herniation, rotator cuff tendinopathy, IT band syndrome, plantar fasciitis, carpal tunnel syndrome, piriformis syndrome, frozen shoulder, tennis elbow, golfer's elbow, fibromyalgia, myofascial pain syndrome, and 150+ other musculoskeletal conditions. Full library at https://kimuramassage.ca/blog/
-
-## Posture & Alignment Guides
-
-Guides covering: kyphosis, lordosis, scoliosis, forward head posture, rounded shoulders, upper crossed syndrome, lower crossed syndrome, anterior pelvic tilt, scapular winging, and more. Full library at https://kimuramassage.ca/blog/
+- [Expanded site reference](https://kimuramassage.ca/llms-full.txt): Consolidated facts, service context, safety boundaries, and source links.
+- [CMTO public register](https://cmto.ca.thentiacloud.net/webs/cmto/register/): Independent registration lookup for Ontario massage therapists.
+- [CMTO standards and rules](https://www.cmto.com/rmts/standards-and-rules/): Professional standards governing Ontario RMT practice.
+- [NCCIH massage therapy overview](https://www.nccih.nih.gov/health/massage-therapy-what-you-need-to-know): Evidence and safety overview from the U.S. National Center for Complementary and Integrative Health.

@@ -1,9 +1,9 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 
 const site = 'https://kimuramassage.ca';
-const today = '2026-08-19';
-const displayDate = 'August 19, 2026';
-const linkVersion = '20260819-1';
+const today = '2026-08-28';
+const displayDate = 'August 28, 2026';
+const linkVersion = '20260828-1';
 const googleAdsTag = `<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18223992858"></script>
 <script>
@@ -552,6 +552,13 @@ const trafficTopics = [
 
 const existingPosts = [
   {
+    href: '/blog/deep-tissue-massage-guide.html',
+    tag: 'Treatment Guide',
+    title: 'Deep Tissue Massage: Pressure, Benefits, Risks &amp; What to Expect',
+    excerpt: 'A candid guide to what deep tissue massage means, why harder is not always better, realistic evidence, safety precautions, consent, and aftercare.',
+    meta: 'By Ricky Arora, RMT · August 28, 2026 · 9 min read'
+  },
+  {
     href: '/blog/does-insurance-cover-rmt-massage-ontario.html',
     tag: 'Insurance &amp; Benefits',
     title: 'Does Insurance Cover RMT Massage Therapy in Ontario?',
@@ -936,6 +943,7 @@ const legacyJobPageFor = (job) => {
   <title>${safeTitle} | Kimura Massage Therapy Brampton</title>
   <meta name="description" content="${escapeHtml(description)}" />
   <link rel="canonical" href="${url}" />
+  <link rel="describedby" href="/llms.txt" type="text/plain" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="${safeTitle}" />
   <meta property="og:description" content="${escapeHtml(description)}" />
@@ -1413,6 +1421,7 @@ const occupationPageFor = (occupation) => {
   <title>${escapeHtml(seoTitle)}</title>
   <meta name="description" content="${escapeHtml(description)}" />
   <link rel="canonical" href="${url}" />
+  <link rel="describedby" href="/llms.txt" type="text/plain" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="${escapeHtml(title)}" />
   <meta property="og:description" content="${escapeHtml(description)}" />
@@ -1520,6 +1529,7 @@ const jobPageFor = (job) => {
   <meta name="description" content="${escapeHtml(description)}" />
   <meta name="robots" content="noindex,follow" />
   <link rel="canonical" href="${occupationUrl}" />
+  <link rel="describedby" href="/llms.txt" type="text/plain" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="${escapeHtml(title)}" />
   <meta property="og:description" content="${escapeHtml(description)}" />
@@ -1633,6 +1643,7 @@ const trafficPageFor = (topic) => {
   <title>${safeTitle} | Kimura Massage Therapy Brampton</title>
   <meta name="description" content="${escapeHtml(description)}" />
   <link rel="canonical" href="${url}" />
+  <link rel="describedby" href="/llms.txt" type="text/plain" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="${safeTitle}" />
   <meta property="og:description" content="${escapeHtml(description)}" />
@@ -1912,6 +1923,7 @@ const pageFor = (topic) => {
   <title>${safeTitle} | Kimura Massage Therapy Brampton</title>
   <meta name="description" content="${escapeHtml(description)}" />
   <link rel="canonical" href="${url}" />
+  <link rel="describedby" href="/llms.txt" type="text/plain" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="${safeTitle}" />
   <meta property="og:description" content="${escapeHtml(description)}" />
@@ -2096,6 +2108,7 @@ const clinicalPageFor = (topic) => {
   <title>${safeTitle} | Kimura Massage Therapy Brampton</title>
   <meta name="description" content="${escapeHtml(description)}" />
   <link rel="canonical" href="${url}" />
+  <link rel="describedby" href="/llms.txt" type="text/plain" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="${safeTitle}" />
   <meta property="og:description" content="${escapeHtml(description)}" />
@@ -2280,6 +2293,7 @@ const posturePageFor = (topic) => {
   <title>${safeTitle} | Kimura Massage Therapy Brampton</title>
   <meta name="description" content="${escapeHtml(description)}" />
   <link rel="canonical" href="${url}" />
+  <link rel="describedby" href="/llms.txt" type="text/plain" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="${safeTitle}" />
   <meta property="og:description" content="${escapeHtml(description)}" />
@@ -2436,6 +2450,144 @@ ${footer}
 `;
 };
 
+const deepTissueGuidePage = () => {
+  const canonical = `${site}/blog/deep-tissue-massage-guide.html`;
+  const title = 'Deep Tissue Massage: Pressure, Benefits, Risks & What to Expect';
+  const description = 'An RMT explains deep tissue massage, realistic benefits, pressure, risks, consent, aftercare, and when to choose another kind of care.';
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${escapeHtml(title)} | Brampton RMT</title>
+  <meta name="description" content="${escapeHtml(description)}" />
+  <link rel="canonical" href="${canonical}" />
+  <link rel="describedby" href="/llms.txt" type="text/plain" />
+  <link rel="alternate" href="/blog/deep-tissue-massage-guide.md" type="text/markdown" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="${escapeHtml(title)}" />
+  <meta property="og:description" content="${escapeHtml(description)}" />
+  <meta property="og:url" content="${canonical}" />
+  <meta property="og:image" content="${site}/assets/kimura-treatment-room.jpg" />
+  <meta property="og:locale" content="en_CA" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0F2742" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/assets/analytics.js" defer></script>
+  ${googleAdsTag}
+  <script type="application/ld+json">
+  ${JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Article',
+        headline: title,
+        description,
+        datePublished: today,
+        dateModified: today,
+        mainEntityOfPage: canonical,
+        image: `${site}/assets/kimura-treatment-room.jpg`,
+        author: { '@type': 'Person', name: 'Ricky Arora', jobTitle: 'Registered Massage Therapist' },
+        publisher: { '@id': `${site}/#business` }
+      },
+      { '@type': 'MedicalBusiness', '@id': `${site}/#business`, name: 'Kimura Massage Therapy & Rehab', url: site, telephone: '+1-905-226-6336' },
+      { '@type': 'BreadcrumbList', itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${site}/` },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: `${site}/blog/` },
+        { '@type': 'ListItem', position: 3, name: 'Deep Tissue Massage Guide', item: canonical }
+      ] }
+    ]
+  }, null, 2)}
+  </script>
+</head>
+<body>
+${nav()}
+<main id="main-content">
+<nav class="breadcrumb-nav" aria-label="Breadcrumb"><div class="container"><ol class="breadcrumb-list">
+  <li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li><li>Deep Tissue Massage Guide</li>
+</ol></div></nav>
+
+<section class="article-hero"><div class="container"><div class="post-header-inner">
+  <div class="post-meta"><span class="post-tag">Treatment Guide</span><span class="post-date">August 28, 2026</span><span class="post-read-time">9 min read</span></div>
+  <h1>Deep Tissue Massage: Pressure, Benefits, Risks &amp; What to Expect</h1>
+  <p class="post-intro">Deep tissue massage is often sold as the “serious” option for stubborn knots. The useful version is less dramatic: focused, consent-based treatment whose pressure matches your body and your goal.</p>
+  <div class="post-author"><div class="post-author-avatar">RA</div><div><div class="post-author-name">Ricky Arora, RMT</div><div class="post-author-title">Registered Massage Therapist · Kimura Massage Therapy &amp; Rehab, Brampton</div></div></div>
+</div></div></section>
+
+<section class="article-layout"><div class="container"><div class="article-inner">
+<article class="article-body">
+  <div class="article-callout"><p><strong>In brief:</strong> Deep tissue massage does not need to hurt. It may help some people feel less tense or move more comfortably for a time, but stronger pressure is not automatically better and massage cannot diagnose or cure an underlying condition.</p></div>
+
+  <figure style="margin:28px 0;"><img src="/assets/kimura-treatment-room.webp" width="765" height="1020" loading="eager" alt="Private treatment room at Kimura Massage Therapy and Rehab in Brampton" style="width:100%;max-height:520px;object-fit:cover;border-radius:6px;"><figcaption style="font-size:14px;color:var(--text-muted);margin-top:8px;">The private treatment room at Kimura Massage Therapy &amp; Rehab.</figcaption></figure>
+
+  <h2 id="meaning">What “deep tissue” actually means</h2>
+  <p>There is no universal pressure setting or single sequence that turns a massage into deep tissue work. In everyday clinic language, the term usually means a more focused session using slower strokes, sustained contact, and sometimes moderate-to-firm pressure. The therapist may spend more time on a smaller number of areas than during a broad relaxation session.</p>
+  <p>The name can be misleading. It does not prove that a therapist has reached a specific anatomical layer, moved scar tissue, or changed the structure of a muscle. Claims about “breaking down adhesions,” “flushing toxins,” or permanently correcting posture go beyond what massage research can establish. A more defensible goal is short-term symptom relief, relaxation, or making a movement feel easier.</p>
+
+  <h2 id="pressure">Does deep tissue massage have to hurt?</h2>
+  <p>No. Pressure should feel tolerable and useful, not like something you must endure to earn a result. Pain can make a person brace, hold their breath, or leave the table sore enough that the session works against the original goal.</p>
+  <p>Some focused pressure may feel intense or tender, especially in an already sensitive area. That sensation should remain within a range you freely accept. Sharp, burning, electric, escalating, or intolerable pain is a reason to speak up immediately. You can ask for lighter pressure, a different technique, a new position, another treatment area, or an end to the session.</p>
+  <p>A good pressure conversation is specific. “A little lighter on the next pass” is as valid as “that pressure feels fine.” Consent is ongoing; agreeing at the start does not lock you into the same plan for the full appointment.</p>
+
+  <h2 id="evidence">What benefits are realistic?</h2>
+  <p>Massage research covers many techniques and conditions, and it rarely isolates the exact service label used by a clinic. The best-supported conclusions are modest: massage may reduce pain or improve function for some people and some conditions, often over the short term. Results are variable, and massage is seldom clearly superior to other active care.</p>
+  <p>A 2024 evidence map reviewed 129 systematic reviews of massage for painful adult conditions. It found no high-certainty conclusions, some moderate-certainty findings, and many low- or very-low-certainty findings. That does not mean massage cannot help an individual. It means no honest therapist can predict a guaranteed result or claim that deep pressure is the proven mechanism.</p>
+  <p>Reasonable goals for a session may include feeling less guarded, getting temporary relief from muscle tension, relaxing after a demanding week, or testing whether a movement feels easier afterward. Longer-term progress may also depend on sleep, activity level, workload, training, stress, and appropriate medical or rehabilitation care.</p>
+
+  <h2 id="who">Who might choose a focused session?</h2>
+  <p>Deep tissue massage may suit someone who prefers focused work and has a clear area or activity to discuss. Common reasons for booking include recurring shoulder tension after computer work, back or hip stiffness after long periods in one position, tired legs after training, or a general preference for slower and firmer contact.</p>
+  <p>A service label is only a starting point. If you want relaxation but also need focused shoulder work, the session can blend approaches. If you booked deep tissue but the area is irritable that day, lighter work may be the better choice. The treatment should follow the assessment and your response, not a menu stereotype.</p>
+
+  <h2 id="caution">When to use caution or choose medical assessment first</h2>
+  <p>Tell your RMT about relevant diagnoses, medications, recent procedures, injuries, skin changes, and unusual symptoms. Extra caution or medical guidance may be appropriate with blood-thinning medication or easy bruising, bleeding disorders, osteoporosis or fracture risk, recent surgery, acute injury, pregnancy-related concerns, active cancer treatment, fever or infection, significant loss of sensation, or suspected blood clots.</p>
+  <p>Massage should not delay urgent assessment. Seek appropriate medical care for chest pain, trouble breathing, sudden weakness, facial droop, loss of bladder or bowel control, major trauma, a hot swollen calf, fever with severe pain, or new and worsening numbness or weakness. This list is not exhaustive; when symptoms are severe, unexplained, or rapidly changing, diagnosis comes before massage.</p>
+
+  <h2 id="appointment">What happens at an appointment?</h2>
+  <p>The visit starts with health history, the reason you booked, and questions about what makes the issue better or worse. An RMT may assess comfortable movement when it is relevant. You then agree on treatment areas, positioning, draping, techniques, and pressure before hands-on treatment begins.</p>
+  <p>Professional draping is used, and only the area being treated is uncovered. You may remain clothed or decline treatment to any area. During the massage, check-ins should support communication without making you responsible for managing the whole appointment. The RMT should notice your breathing, guarding, and feedback and adjust accordingly.</p>
+  <p>Near the end, the therapist may reassess a movement or ask how the area feels. Aftercare should be proportionate. Complicated detox routines are unnecessary; ordinary hydration, food, rest, and comfortable movement are usually enough unless another health professional has given you different instructions.</p>
+
+  <h2 id="aftercare">Soreness and aftercare</h2>
+  <p>Temporary tenderness can occur after firmer massage, but soreness is not a sign that tissue has been repaired or that a treatment was effective. If you feel good, normal daily movement is reasonable. If an area feels tender, reduce unusually demanding activity for the rest of the day and see how it responds.</p>
+  <p>Contact the clinic or an appropriate health professional if pain is severe or worsening, or if you notice unusual bruising, swelling, numbness, weakness, dizziness, or another concerning change. A future session can always use a different pressure or plan based on what you learned.</p>
+
+  <h2 id="comparison">Deep tissue, Swedish, or sports massage?</h2>
+  <ul>
+    <li><strong>Choose deep tissue</strong> when you want focused work and are comfortable discussing pressure throughout the session.</li>
+    <li><strong>Choose Swedish massage</strong> when relaxation and broader flowing work are the main goals. It can still include focused attention.</li>
+    <li><strong>Choose sports massage</strong> when treatment needs to account for training, an event, or an activity-specific recovery goal.</li>
+  </ul>
+  <p>You do not need to diagnose yourself from the booking menu. Describe your goal, health history, and preferred pressure; the RMT can adapt the appointment after assessment.</p>
+
+  <h2 id="booking">Deep tissue massage pricing in Brampton</h2>
+  <p>Kimura Massage Therapy &amp; Rehab offers RMT appointments at $70 + HST for 30 minutes, $120 + HST for 60 minutes, $150 + HST for 75 minutes, and $175 + HST for 90 minutes. Eligible new clients can book a 60-minute visit for $109 + HST. RMT receipts are provided, and direct billing may be available when approved by your plan.</p>
+
+  <div class="article-cta"><div class="article-cta-text"><h3>Book an Assessment-Led RMT Session</h3><p>Choose a time, then discuss pressure and treatment goals with Ricky Arora, RMT, before treatment begins.</p></div><div class="article-cta-btns"><a href="https://kimuramassage.noterro.com/service-category/59418/Appointments" class="btn-white">Book Online</a><a href="tel:9052266336" class="btn-white-outline">Call (905) 226-6336</a></div></div>
+
+  <h2 id="sources">Sources and further reading</h2>
+  <ul>
+    <li><a href="https://www.nccih.nih.gov/health/massage-therapy-what-you-need-to-know">NCCIH: Massage Therapy — What You Need To Know</a></li>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/39008297/">JAMA Network Open evidence map of massage therapy for painful adult health conditions (2024)</a></li>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/26093806/">Systematic review and meta-analysis of massage therapy for pain (2015)</a></li>
+    <li><a href="https://www.cmto.com/rmts/standards-and-rules/">College of Massage Therapists of Ontario: Standards and Rules</a></li>
+  </ul>
+  <p><em>This article is general education, not a diagnosis or individualized medical advice.</em></p>
+</article>
+
+<aside class="article-sidebar"><div class="sidebar-book"><h3>Book RMT Massage</h3><p>Focused massage with pressure adjusted to your comfort and goals.</p><a href="https://kimuramassage.noterro.com/service-category/59418/Appointments" class="btn-white" style="margin-bottom:10px;">Book Online</a><a href="tel:9052266336" class="btn-white-outline">Call (905) 226-6336</a></div><div class="sidebar-toc"><h4>In This Article</h4><ul>
+  <li><a href="#meaning">What It Means</a></li><li><a href="#pressure">Pressure and Pain</a></li><li><a href="#evidence">Realistic Benefits</a></li><li><a href="#caution">Safety</a></li><li><a href="#appointment">The Appointment</a></li><li><a href="#aftercare">Aftercare</a></li><li><a href="#comparison">Compare Styles</a></li><li><a href="#booking">Pricing</a></li><li><a href="#sources">Sources</a></li>
+</ul></div></aside>
+</div></div></section>
+</main>
+${footer}
+</body>
+</html>`;
+};
+
 const indexPage = () => {
   const cards = existingPosts.map((post) => `
       <a href="${blogHref(post.href.replace('/blog/', '').replace('.html', ''))}" class="blog-card">
@@ -2478,6 +2630,8 @@ const indexPage = () => {
   <title>Massage Therapy Blog — Brampton RMT Tips | Kimura Massage Therapy &amp; Rehab</title>
   <meta name="description" content="Massage therapy insights from Brampton RMT Ricky Arora. Learn about muscle tightness, stiffness, knots, posture tension, insurance coverage, and massage treatment options." />
   <link rel="canonical" href="${site}/blog/" />
+  <link rel="describedby" href="/llms.txt" type="text/plain" />
+  <link rel="alternate" href="/blog/index.md" type="text/markdown" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Massage Therapy Blog — Brampton RMT Tips | Kimura Massage Therapy &amp; Rehab" />
   <meta property="og:description" content="Massage therapy insights from Brampton RMT Ricky Arora for tight muscles, stiff backs, posture tension, recovery, and RMT treatment planning." />
@@ -2640,6 +2794,7 @@ const sitemap = () => {
     ['/deep-tissue-massage-brampton.html', '2025-05-01', 'monthly', '0.9'],
     ['/sports-massage-brampton.html', '2025-05-01', 'monthly', '0.9'],
     ['/blog/', today, 'weekly', '0.8'],
+    ['/blog/deep-tissue-massage-guide.html', today, 'monthly', '0.8'],
     ['/blog/what-to-expect-rmt-massage-brampton.html', '2025-06-01', 'monthly', '0.7'],
     ['/blog/does-insurance-cover-rmt-massage-ontario.html', '2025-05-01', 'monthly', '0.7'],
     ['/blog/deep-tissue-vs-swedish-massage.html', '2025-04-15', 'monthly', '0.7'],
@@ -2682,7 +2837,8 @@ for (const occupation of occupationRows) {
 for (const topic of trafficTopics) {
   writeFileSync(`blog/${trafficSlugFor(topic)}.html`, trafficPageFor(topic));
 }
+writeFileSync('blog/deep-tissue-massage-guide.html', deepTissueGuidePage());
 writeFileSync('blog/index.html', indexPage());
 writeFileSync('sitemap.xml', sitemap());
 
-console.log(`Generated ${topics.length + clinicalTopics.length + postureTopics.length + jobTitleRows.length + occupationRows.length + trafficTopics.length} blog pages (${occupationRows.length} canonical occupation guides and ${jobTitleRows.length} job-title reference pages), updated blog/index.html, and updated sitemap.xml.`);
+console.log(`Generated ${topics.length + clinicalTopics.length + postureTopics.length + jobTitleRows.length + occupationRows.length + trafficTopics.length + 1} blog pages (${occupationRows.length} canonical occupation guides and ${jobTitleRows.length} job-title reference pages), updated blog/index.html, and updated sitemap.xml.`);
