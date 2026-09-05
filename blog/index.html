@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Massage Therapy Blog — Brampton RMT Tips | Kimura Massage Therapy &amp; Rehab</title>
   <meta name="description" content="Massage therapy insights from Brampton RMT Ricky Arora. Learn about muscle tightness, stiffness, knots, posture tension, insurance coverage, and massage treatment options." />
   <link rel="canonical" href="https://kimuramassage.com/blog/" />
@@ -18,8 +18,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css?v=20260905" />
-  <script src="../assets/analytics.js?v=20260905" defer></script>
+  <link rel="stylesheet" href="../style.css?v=20260905-mobile2" />
+  <script src="../assets/analytics.js?v=20260905-mobile2" defer></script>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18223992858"></script>
 <script>
@@ -69,7 +69,10 @@
 }
   </script>
 
-<link rel="stylesheet" href="../assets/site.css?v=20260905"><script src="../assets/site.js?v=20260905" defer></script>
+
+
+
+<script src="../assets/booking.js?v=20260905-mobile2" defer></script><link rel="stylesheet" href="../assets/site.css?v=20260905-mobile2"><script src="../assets/site.js?v=20260905-mobile2" defer></script>
 </head>
 <body>
 
@@ -82,8 +85,8 @@
       <details class="site-service-menu"><summary>Our care</summary><div><a href="../swedish-massage-brampton.html">Swedish massage</a><a href="../deep-tissue-massage-brampton.html">Deep tissue massage</a><a href="../sports-massage-brampton.html">Sports massage</a></div></details>
       <a href="../#prices">Prices</a><a href="../#about">Meet Ricky</a><a href="../blog/">Guides</a>
     </div>
-    <div class="site-nav-booking"><a class="site-return" href="https://kimuramassage.noterro.com/book-online/service/314304/Follow-up-Appointment" data-cta="header_returning">Returning client?</a><a class="site-button" href="https://kimuramassage.noterro.com/book-online/service/314303/Initial-Appointment-first-time-clients-only" data-cta="header_first_visit">Book first visit <span aria-hidden="true">↗</span></a></div>
-    <details class="site-mobile-menu"><summary>Menu <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile navigation"><a href="../#services">Our care</a><a href="../#prices">Prices</a><a href="../#about">Meet Ricky</a><a href="../#faq">First-visit questions</a><a href="../blog/">Health &amp; recovery guides</a><a href="../intro-offer.html">$109 + HST first visit</a><a href="https://kimuramassage.noterro.com/book-online/service/314303/Initial-Appointment-first-time-clients-only" data-cta="mobile_menu_first_visit">Book your first visit ↗</a><a href="https://kimuramassage.noterro.com/book-online/service/314304/Follow-up-Appointment" data-cta="mobile_menu_returning">Book a returning visit ↗</a><a href="tel:9052266336">Call (905) 226-6336</a></nav></details>
+    <div class="site-nav-booking"><a class="site-return" href="https://kimuramassage.noterro.com/book-online/service/314304/Follow-up-Appointment" data-cta="header_returning">Returning client?</a><a class="site-button" href="https://kimuramassage.noterro.com/book-online/service/314303/Initial-Appointment-first-time-clients-only" data-booking-choice="header" data-cta="header_first_visit"><span data-booking-label>See available appointments</span> <span aria-hidden="true">↗</span></a></div>
+    <a class="site-mobile-prices" href="../#prices">Prices</a><details class="site-mobile-menu"><summary>Menu <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile navigation"><a class="site-menu-book" data-booking-choice="menu" href="https://kimuramassage.noterro.com/book-online/service/314303/Initial-Appointment-first-time-clients-only" data-cta="mobile_menu_first_visit"><span data-booking-label>See available appointments</span> ↗</a><a href="../#services">Treatments</a><a href="../#about">Meet Ricky</a><a href="../#book">Location &amp; parking</a><a href="../#faq">First-visit questions</a><a href="../blog/">Health &amp; recovery guides</a><a href="https://kimuramassage.noterro.com/book-online/service/314304/Follow-up-Appointment" data-cta="mobile_menu_returning">Returning appointments ↗</a><a href="tel:9052266336">Call (905) 226-6336</a></nav></details>
   </nav>
 </header>
 
@@ -106,7 +109,7 @@
   </div>
 </section>
 
-<section class="guide-search"><div class="container"><label for="guide-search">Find a guide by topic or occupation</label><input id="guide-search" type="search" placeholder="Try neck tension, insurance, or software developer" autocomplete="off" aria-describedby="guide-search-status"><p id="guide-search-status" role="status" aria-live="polite">Browse by topic below, or search for a specific concern or occupation.</p></div></section>
+<section class="guide-search"><div class="container"><label for="guide-search">Find a guide by topic or occupation</label><input id="guide-search" type="search" placeholder="Try neck tension, insurance, or software developer" autocomplete="off" aria-describedby="guide-search-status"><div class="guide-categories" role="group" aria-label="Filter guides by topic" hidden><button type="button" data-guide-category="all" aria-pressed="true">All topics</button><button type="button" data-guide-category="pain" aria-pressed="false">Pain &amp; tension</button><button type="button" data-guide-category="training" aria-pressed="false">Training</button><button type="button" data-guide-category="first" aria-pressed="false">First visit</button><button type="button" data-guide-category="insurance" aria-pressed="false">Insurance</button><button type="button" id="guide-reset">Clear filters</button></div><p id="guide-search-status" role="status" aria-live="polite">Browse by topic below, or search for a specific concern or occupation.</p></div></section>
 <section class="blog-listing">
   <div class="container">
     <div class="blog-listing-header">
@@ -180,11 +183,7 @@
 
 <section class="content-section bg-white">
   <div class="container">
-    <div class="blog-listing-header">
-      <span class="section-label">Tightness &amp; Recovery Library</span>
-      <h2 class="section-title">Find Your Muscle Tightness Guide</h2>
-      <p class="section-sub">Browse simple guides on why common muscle tightness happens, stretches that may help, and when to book RMT massage therapy in Brampton.</p>
-    </div>
+    <details class="guide-library"><summary>Find Your Muscle Tightness Guide</summary>
     <div class="content-panel">
       <ul class="benefit-list seo-link-list">
               <li><a href="../blog/tight-shoulders.html?v=20260828-1">Read article: Tight shoulders</a></li>
@@ -389,16 +388,11 @@
               <li><a href="../blog/tight-jaw-from-clenching.html?v=20260828-1">Read article: Tight jaw from clenching</a></li>
       </ul>
     </div>
-  </div>
-</section>
+  </details></div></section>
 
 <section class="content-section bg-white">
   <div class="container">
-    <div class="blog-listing-header">
-      <span class="section-label">High-Intent Massage Search Library</span>
-      <h2 class="section-title">More Massage Therapy Questions People Search</h2>
-      <p class="section-sub">Helpful guides for local RMT searches, booking questions, insurance basics, treatment choices, aftercare, sports recovery, and work-related muscle tension.</p>
-    </div>
+    <details class="guide-library"><summary>More Massage Therapy Questions People Search</summary>
     <div class="content-panel">
       <ul class="benefit-list seo-link-list">
               <li><a href="../blog/rmt-massage-near-me-in-brampton.html?v=20260828-1">RMT Massage Near Me In Brampton</a></li>
@@ -473,16 +467,11 @@
               <li><a href="../blog/massage-for-gardening-back-pain.html?v=20260828-1">Massage For Gardening Back Pain</a></li>
       </ul>
     </div>
-  </div>
-</section>
+  </details></div></section>
 
 <section class="content-section">
   <div class="container">
-    <div class="blog-listing-header">
-      <span class="section-label">Occupation Recovery Library</span>
-      <h2 class="section-title">Find a Guide for Your Type of Work</h2>
-      <p class="section-sub">These in-depth guides group related job titles by the work they actually involve. Each covers likely task demands, areas that may feel tired, realistic recovery ideas, and the limits of massage therapy.</p>
-    </div>
+    <details class="guide-library"><summary>Find a Guide for Your Type of Work</summary>
     <div class="content-panel">
       <ul class="benefit-list seo-link-list">
               <li><a href="../blog/work-recovery-guide-cooks-institution-and-cafeteria.html?v=20260828-1">Cooks, Institution and Cafeteria: massage and work recovery</a></li>
@@ -1341,16 +1330,11 @@
               <li><a href="../blog/work-recovery-guide-nurse-practitioners.html?v=20260828-1">Nurse Practitioners: massage and work recovery</a></li>
       </ul>
     </div>
-  </div>
-</section>
+  </details></div></section>
 
 <section class="content-section">
   <div class="container">
-    <div class="blog-listing-header">
-      <span class="section-label">Pain &amp; Condition Library</span>
-      <h2 class="section-title">Find Your Pain or Injury Guide</h2>
-      <p class="section-sub">Simple, cautious guides on common musculoskeletal conditions, what they may feel like, when to seek medical care, and how RMT massage therapy may support comfort and movement.</p>
-    </div>
+    <details class="guide-library"><summary>Find Your Pain or Injury Guide</summary>
     <div class="content-panel">
       <ul class="benefit-list seo-link-list">
               <li><a href="../blog/mechanical-low-back-pain.html?v=20260828-1">Read article: Mechanical low back pain</a></li>
@@ -1540,16 +1524,11 @@
               <li><a href="../blog/occupational-overuse-injuries.html?v=20260828-1">Read article: Occupational overuse injuries</a></li>
       </ul>
     </div>
-  </div>
-</section>
+  </details></div></section>
 
 <section class="content-section bg-white">
   <div class="container">
-    <div class="blog-listing-header">
-      <span class="section-label">Posture &amp; Alignment Library</span>
-      <h2 class="section-title">Find Your Posture Guide</h2>
-      <p class="section-sub">Simple guides on common posture and alignment patterns, why they may happen, what they can feel like, and how RMT massage therapy may support comfort and movement.</p>
-    </div>
+    <details class="guide-library"><summary>Find Your Posture Guide</summary>
     <div class="content-panel">
       <ul class="benefit-list seo-link-list">
               <li><a href="../blog/kyphosis.html?v=20260828-1">Read article: Kyphosis</a></li>
@@ -1578,8 +1557,7 @@
               <li><a href="../blog/functional-leg-length-discrepancy.html?v=20260828-1">Read article: Functional leg length discrepancy</a></li>
       </ul>
     </div>
-  </div>
-</section>
+  </details></div></section>
 
 <section class="booking-section" style="border-top:1px solid var(--border);">
   <div class="container">
@@ -1601,6 +1579,9 @@
 
 
 
-<div class="booking-dock" aria-label="Quick booking"><a href="tel:9052266336" class="dock-call" data-cta="mobile_call">Call</a><a class="site-button" href="https://kimuramassage.noterro.com/book-online/service/314303/Initial-Appointment-first-time-clients-only" data-cta="mobile_first_visit">First visit · $109 + HST <span aria-hidden="true">↗</span></a></div>
+
+
+
+<div class="booking-dock" aria-label="Quick booking"><a href="tel:9052266336" class="dock-call" data-cta="mobile_call">Call</a><a class="site-button" href="https://kimuramassage.noterro.com/book-online/service/314303/Initial-Appointment-first-time-clients-only" data-booking-choice="dock" data-cta="mobile_first_visit"><span><strong data-booking-label>See available times</strong><small data-visit-summary>First visit · $109 + HST</small></span><span aria-hidden="true">↗</span></a></div>
 </body>
 </html>

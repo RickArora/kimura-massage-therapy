@@ -17,7 +17,7 @@ Static RMT clinic website. Cloudflare Workers Builds publishes the `main` branch
 
 ## Shared design
 
-`scripts/site-shell.mjs` owns the shared header, footer, booking destinations, and release version. Run `node scripts/refresh-site.mjs` after editing the shared shell. The article generator reapplies it automatically. Shared styling and interactions are in `assets/site.css` and `assets/site.js`; homepage/offer styling is in `assets/home.css`.
+`scripts/site-shell.mjs` owns the shared header, footer, booking destinations, and release version. Run `node scripts/refresh-site.mjs` after editing the shared shell. The article generator reapplies it automatically. Shared styling and interactions are in `assets/site.css` and `assets/site.js`; homepage/offer styling is in `assets/home.css`. `assets/booking.js` keeps generic booking controls synchronized with the first/returning choice for the current browser tab. Explicit first-visit and returning links retain their labeled destinations.
 
 ## Booking and analytics
 

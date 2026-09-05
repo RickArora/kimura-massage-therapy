@@ -58,7 +58,7 @@ for (const [file, {html}] of docs) {
   }
 }
 
-for (const file of ['assets/site.js', 'assets/home.js', 'assets/analytics.js']) {
+for (const file of ['assets/site.js', 'assets/booking.js', 'assets/home.js', 'assets/analytics.js']) {
   try { new vm.Script(readFileSync(file, 'utf8')); } catch(error) { issue(file, error.message); }
 }
 console.log(`Checked ${files.length} HTML pages, ${links} internal references, ${schemas} structured-data blocks, and shared JavaScript.`);

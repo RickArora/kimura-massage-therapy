@@ -1,6 +1,6 @@
 export const initialBooking = 'https://kimuramassage.noterro.com/book-online/service/314303/Initial-Appointment-first-time-clients-only';
 export const returningBooking = 'https://kimuramassage.noterro.com/book-online/service/314304/Follow-up-Appointment';
-export const release = '20260905';
+export const release = '20260905-mobile2';
 
 export function siteHeader(prefix = './') {
   return `<header class="site-header">
@@ -10,8 +10,8 @@ export function siteHeader(prefix = './') {
       <details class="site-service-menu"><summary>Our care</summary><div><a href="${prefix}swedish-massage-brampton.html">Swedish massage</a><a href="${prefix}deep-tissue-massage-brampton.html">Deep tissue massage</a><a href="${prefix}sports-massage-brampton.html">Sports massage</a></div></details>
       <a href="${prefix}#prices">Prices</a><a href="${prefix}#about">Meet Ricky</a><a href="${prefix}blog/">Guides</a>
     </div>
-    <div class="site-nav-booking"><a class="site-return" href="${returningBooking}" data-cta="header_returning">Returning client?</a><a class="site-button" href="${initialBooking}" data-cta="header_first_visit">Book first visit <span aria-hidden="true">↗</span></a></div>
-    <details class="site-mobile-menu"><summary>Menu <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile navigation"><a href="${prefix}#services">Our care</a><a href="${prefix}#prices">Prices</a><a href="${prefix}#about">Meet Ricky</a><a href="${prefix}#faq">First-visit questions</a><a href="${prefix}blog/">Health &amp; recovery guides</a><a href="${prefix}intro-offer.html">$109 + HST first visit</a><a href="${initialBooking}" data-cta="mobile_menu_first_visit">Book your first visit ↗</a><a href="${returningBooking}" data-cta="mobile_menu_returning">Book a returning visit ↗</a><a href="tel:9052266336">Call (905) 226-6336</a></nav></details>
+    <div class="site-nav-booking"><a class="site-return" href="${returningBooking}" data-cta="header_returning">Returning client?</a><a class="site-button" href="${initialBooking}" data-booking-choice="header" data-cta="header_first_visit"><span data-booking-label>See available appointments</span> <span aria-hidden="true">↗</span></a></div>
+    <a class="site-mobile-prices" href="${prefix}#prices">Prices</a><details class="site-mobile-menu"><summary>Menu <span aria-hidden="true">☰</span></summary><nav aria-label="Mobile navigation"><a class="site-menu-book" data-booking-choice="menu" href="${initialBooking}" data-cta="mobile_menu_first_visit"><span data-booking-label>See available appointments</span> ↗</a><a href="${prefix}#services">Treatments</a><a href="${prefix}#about">Meet Ricky</a><a href="${prefix}#book">Location &amp; parking</a><a href="${prefix}#faq">First-visit questions</a><a href="${prefix}blog/">Health &amp; recovery guides</a><a href="${returningBooking}" data-cta="mobile_menu_returning">Returning appointments ↗</a><a href="tel:9052266336">Call (905) 226-6336</a></nav></details>
   </nav>
 </header>`;
 }
@@ -21,5 +21,5 @@ export function siteFooter(prefix = './') {
 }
 
 export function bookingDock() {
-  return `<div class="booking-dock" aria-label="Quick booking"><a href="tel:9052266336" class="dock-call" data-cta="mobile_call">Call</a><a class="site-button" href="${initialBooking}" data-cta="mobile_first_visit">First visit · $109 + HST <span aria-hidden="true">↗</span></a></div>`;
+  return `<div class="booking-dock" aria-label="Quick booking"><a href="tel:9052266336" class="dock-call" data-cta="mobile_call">Call</a><a class="site-button" href="${initialBooking}" data-booking-choice="dock" data-cta="mobile_first_visit"><span><strong data-booking-label>See available times</strong><small data-visit-summary>First visit · $109 + HST</small></span><span aria-hidden="true">↗</span></a></div>`;
 }
