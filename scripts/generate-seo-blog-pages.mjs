@@ -1,6 +1,7 @@
+import { refreshSite } from './refresh-site.mjs';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 
-const site = 'https://kimuramassage.ca';
+const site = 'https://kimuramassage.com';
 const today = '2026-08-28';
 const displayDate = 'August 28, 2026';
 const linkVersion = '20260828-1';
@@ -2564,7 +2565,7 @@ ${nav()}
   <p>You do not need to diagnose yourself from the booking menu. Describe your goal, health history, and preferred pressure; the RMT can adapt the appointment after assessment.</p>
 
   <h2 id="booking">Deep tissue massage pricing in Brampton</h2>
-  <p>Kimura Massage Therapy &amp; Rehab offers RMT appointments at $70 + HST for 30 minutes, $120 + HST for 60 minutes, $150 + HST for 75 minutes, and $175 + HST for 90 minutes. Eligible new clients can book a 60-minute visit for $109 + HST. RMT receipts are provided, and direct billing may be available when approved by your plan.</p>
+  <p>Kimura Massage Therapy &amp; Rehab offers RMT appointments at $80 + HST for 30 minutes, $120 + HST for 60 minutes, $150 + HST for 75 minutes, and $175 + HST for 90 minutes. Eligible new clients can book a 60-minute visit for $109 + HST. RMT receipts are provided, and direct billing may be available when approved by your plan.</p>
 
   <div class="article-cta"><div class="article-cta-text"><h3>Book an Assessment-Led RMT Session</h3><p>Choose a time, then discuss pressure and treatment goals with Ricky Arora, RMT, before treatment begins.</p></div><div class="article-cta-btns"><a href="https://kimuramassage.noterro.com/service-category/59418/Appointments" class="btn-white">Book Online</a><a href="tel:9052266336" class="btn-white-outline">Call (905) 226-6336</a></div></div>
 
@@ -2842,3 +2843,6 @@ writeFileSync('blog/index.html', indexPage());
 writeFileSync('sitemap.xml', sitemap());
 
 console.log(`Generated ${topics.length + clinicalTopics.length + postureTopics.length + jobTitleRows.length + occupationRows.length + trafficTopics.length + 1} blog pages (${occupationRows.length} canonical occupation guides and ${jobTitleRows.length} job-title reference pages), updated blog/index.html, and updated sitemap.xml.`);
+
+// Reapply the shared production shell after generating content.
+refreshSite();

@@ -1,110 +1,58 @@
 (function () {
+  'use strict';
   var measurementId = 'G-MTQK49YP14';
   var adsId = 'AW-18223992858';
-  var adsConversionSendTo = 'AW-18223992858/dum6CLTV-8YcEJqg8PFD';
-  var genericBookingUrl = 'https://kimuramassage.noterro.com/';
-  var appointmentCategoryUrl = 'https://kimuramassage.noterro.com/service-category/59418/Appointments';
-
+  // Existing Ads action measures clicks, NOT confirmed appointments. Retain it
+  // until the account can use a verified booking/offline conversion integration.
+  var legacyClickAction = 'AW-18223992858/dum6CLTV-8YcEJqg8PFD';
+  var productionHosts = ['kimuramassage.com', 'www.kimuramassage.com', 'rickarora.github.io'];
+  var isProduction = productionHosts.indexOf(window.location.hostname) !== -1;
   window.dataLayer = window.dataLayer || [];
-  window.gtag = window.gtag || function () {
-    window.dataLayer.push(arguments);
-  };
-
-  var hasGoogleTag = document.querySelector('script[src*="googletagmanager.com/gtag/js"]');
-  if (!hasGoogleTag) {
-    var tag = document.createElement('script');
-    tag.async = true;
-    tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
-    document.head.appendChild(tag);
-    window.gtag('js', new Date());
-  }
-
-  function hasConfig(id) {
-    return window.dataLayer.some(function (item) {
-      return item && item[0] === 'config' && item[1] === id;
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  if (isProduction) {
+    if (!document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
+      var tag = document.createElement('script');
+      tag.async = true;
+      tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+      document.head.appendChild(tag);
+      window.gtag('js', new Date());
+    }
+    [measurementId, adsId].forEach(function (id) {
+      if (!window.dataLayer.some(function (item) { return item && item[0] === 'config' && item[1] === id; })) window.gtag('config', id);
     });
   }
-
-  if (!hasConfig(measurementId)) {
-    window.gtag('config', measurementId);
-  }
-  if (!hasConfig(adsId)) {
-    window.gtag('config', adsId);
-  }
-
   function sendEvent(name, params) {
-    if (typeof window.gtag !== 'function') return;
-    window.gtag('event', name, Object.assign({
-      event_category: 'conversion',
-      transport_type: 'beacon',
-      page_path: window.location.pathname
-    }, params || {}));
+    if (!isProduction) return;
+    window.gtag('event', name, Object.assign({event_category: 'booking_intent', transport_type: 'beacon', page_path: window.location.pathname}, params || {}));
   }
-
-  function sendAdsConversion(label, linkUrl) {
-    if (typeof window.gtag !== 'function') return;
-    window.gtag('event', 'conversion', {
-      send_to: adsConversionSendTo,
-      event_label: label || 'contact',
-      link_url: linkUrl || '',
-      transport_type: 'beacon',
-      page_path: window.location.pathname
-    });
+  function legacyAdsClick(label, href) {
+    sendEvent('conversion', {send_to: legacyClickAction, event_label: label, link_url: href, conversion_stage: 'link_click'});
   }
-
-  function trackBookOnline(label, linkUrl) {
-    sendEvent('book_online', {
-      event_label: label || 'book_online',
-      link_url: linkUrl || '',
-      booking_provider: 'noterro'
-    });
-    sendEvent('book_online_click', {
-      event_label: label || 'book_online',
-      link_url: linkUrl || '',
-      booking_provider: 'noterro'
-    });
-    sendEvent('generate_lead', {
-      event_label: label || 'book_online',
-      link_url: linkUrl || '',
-      method: 'noterro'
-    });
-    sendAdsConversion(label || 'book_online', linkUrl || '');
+  function trackBooking(label, href, placement) {
+    var visit = href.indexOf('/314303/') !== -1 ? 'first_visit' : href.indexOf('/314304/') !== -1 ? 'returning_visit' : 'unspecified';
+    sendEvent('book_online_click', {event_label: label, cta_location: placement || label, link_url: href, booking_provider: 'noterro', visit_type: visit, conversion_stage: 'link_click'});
+    legacyAdsClick('booking_link_click', href);
   }
-
-  window.trackCTA = function (label) {
-    sendEvent('cta_click', { event_label: label || 'cta' });
-  };
-
-  window.trackBookOnline = trackBookOnline;
-
+  // Compatibility for older campaign pages; a click is not a lead or booking.
+  window.trackCTA = function (label) { sendEvent('cta_click', {event_label: label || 'cta'}); };
+  window.trackBookOnline = function (label, href) { trackBooking(label || 'booking_link', href || '', label); };
   document.addEventListener('DOMContentLoaded', function () {
-    var year = String(new Date().getFullYear());
-    document.querySelectorAll('.js-year').forEach(function (node) {
-      node.textContent = year;
-    });
-    document.querySelectorAll('a[href="' + genericBookingUrl + '"]').forEach(function (link) {
-      link.setAttribute('href', appointmentCategoryUrl);
-    });
+    document.querySelectorAll('.js-year').forEach(function (node) { node.textContent = String(new Date().getFullYear()); });
   });
-
   document.addEventListener('click', function (event) {
     var link = event.target.closest && event.target.closest('a[href]');
     if (!link) return;
-
-    var href = link.getAttribute('href') || '';
-    var label = (link.getAttribute('aria-label') || link.textContent || '').trim().replace(/\s+/g, ' ');
-
-    if (href.indexOf('tel:9052266336') === 0) {
-      sendEvent('call_click', {
-        event_label: label || 'phone',
-        link_url: href
-      });
-      sendAdsConversion(label || 'phone', href);
+    var href = link.href || link.getAttribute('href') || '';
+    var container = link.closest('header, footer, aside, section, .booking-dock');
+    var placement = link.getAttribute('data-cta') || (container && (container.id || container.className || container.tagName.toLowerCase())) || 'page_link';
+    var label = link.getAttribute('data-cta') || (link.getAttribute('aria-label') || link.textContent || '').trim().replace(/\s+/g, ' ');
+    if (/^tel:/.test(href)) {
+      sendEvent('call_click', {event_label: label, cta_location: placement, conversion_stage: 'link_click'});
+      legacyAdsClick('phone_link_click', href);
       return;
     }
-
-    if (href.indexOf('https://kimuramassage.noterro.com') === 0) {
-      trackBookOnline(label || 'book_online', href);
-    }
+    try {
+      if (new URL(href, window.location.href).hostname === 'kimuramassage.noterro.com') trackBooking(label, href, placement);
+    } catch (_) { /* Non-URL links do not represent booking intent. */ }
   });
 })();

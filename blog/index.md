@@ -4,16 +4,16 @@ The Kimura Massage Therapy & Rehab blog provides plain-language, non-sexual educ
 
 ## Start here
 
-- [Deep tissue massage: pressure, benefits, risks, and what to expect](https://kimuramassage.ca/blog/deep-tissue-massage-guide.md)
-- [What to expect at a first RMT appointment](https://kimuramassage.ca/blog/what-to-expect-rmt-massage-brampton.md)
-- [Does insurance cover RMT massage in Ontario?](https://kimuramassage.ca/blog/does-insurance-cover-rmt-massage-ontario.md)
-- [Deep tissue versus Swedish massage](https://kimuramassage.ca/blog/deep-tissue-vs-swedish-massage.md)
+- [Deep tissue massage: pressure, benefits, risks, and what to expect](https://kimuramassage.com/blog/deep-tissue-massage-guide.md)
+- [What to expect at a first RMT appointment](https://kimuramassage.com/blog/what-to-expect-rmt-massage-brampton.md)
+- [Does insurance cover RMT massage in Ontario?](https://kimuramassage.com/blog/does-insurance-cover-rmt-massage-ontario.md)
+- [Deep tissue versus Swedish massage](https://kimuramassage.com/blog/deep-tissue-vs-swedish-massage.md)
 
 ## Larger libraries
 
 The HTML blog index links to the site's broader set of recovery, symptom, posture, sports, seasonal, and occupation guides. Occupation pages are grouped by actual work demands and use cautious language: a job title alone does not determine which muscles will be sore or whether massage is appropriate.
 
-Browse the complete index: https://kimuramassage.ca/blog/
+Browse the complete index: https://kimuramassage.com/blog/
 
 ## Editorial standard
 

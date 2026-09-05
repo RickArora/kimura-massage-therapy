@@ -19,19 +19,19 @@ for (const [index, line] of lines.entries()) {
   }
 }
 
-const localLinks = [...source.matchAll(/https:\/\/kimuramassage\.ca\/([^\s)]+)/g)]
+const localLinks = [...source.matchAll(/https:\/\/kimuramassage\.com\/([^\s)]+)/g)]
   .map((match) => decodeURIComponent(match[1]))
   .map((path) => path || 'index.html');
 for (const path of localLinks) {
   const localPath = path.endsWith('/') ? `${path}index.html` : path;
-  if (!existsSync(localPath)) errors.push(`Missing local target for https://kimuramassage.ca/${path}`);
+  if (!existsSync(localPath)) errors.push(`Missing local target for https://kimuramassage.com/${path}`);
 }
 
 for (const forbidden of ['relaxation massage from $40', 'WhatsApp', '200+ verified reviews', 'full session fee']) {
   if (source.includes(forbidden)) errors.push(`Outdated or unsupported text remains: ${forbidden}`);
 }
 
-for (const required of ['$70 + HST', '$120 + HST', '$150 + HST', '$175 + HST', '$109 + HST', '50%']) {
+for (const required of ['$80 + HST', '$120 + HST', '$150 + HST', '$175 + HST', '$109 + HST', '50%']) {
   if (!source.includes(required)) errors.push(`Required verified fact is missing: ${required}`);
 }
 

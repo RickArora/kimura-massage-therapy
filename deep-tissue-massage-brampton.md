@@ -6,6 +6,6 @@ Ricky Arora, RMT, begins with an assessment and consent discussion. Pressure, po
 
 Some clients choose focused work for recurring muscle tension, stiffness after work or training, or a preference for firmer pressure. Massage may provide short-term relief or make movement feel easier for some people, but results vary. Soreness is not proof of effectiveness, and massage does not physically “break down” adhesions or permanently correct posture.
 
-Prices: 30 minutes $70 + HST; 60 minutes $120 + HST; 75 minutes $150 + HST; 90 minutes $175 + HST. New clients may book a 60-minute visit for $109 + HST.
+Prices: 30 minutes $80 + HST; 60 minutes $120 + HST; 75 minutes $150 + HST; 90 minutes $175 + HST. New clients may book a 60-minute visit for $109 + HST.
 
-Read the [complete deep tissue guide](https://kimuramassage.ca/blog/deep-tissue-massage-guide.md) or [book online](https://kimuramassage.noterro.com/service-category/59418/Appointments).
+Read the [complete deep tissue guide](https://kimuramassage.com/blog/deep-tissue-massage-guide.md) or [book online](https://kimuramassage.noterro.com/service-category/59418/Appointments).

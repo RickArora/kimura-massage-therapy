@@ -2,7 +2,7 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { basename, join } from 'node:path';
 
 const blogDir = 'blog';
-const site = 'https://kimuramassage.ca';
+const site = 'https://kimuramassage.com';
 const errors = [];
 const warnings = [];
 

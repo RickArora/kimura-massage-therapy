@@ -20,4 +20,4 @@ Accepted payment methods are cash, debit, credit card, e-transfer, Apple Pay, an
 
 Health information and treatment records are handled according to applicable Ontario privacy and professional requirements. Linens are changed between clients and treatment surfaces are cleaned between appointments.
 
-Full page: https://kimuramassage.ca/policies.html
+Full page: https://kimuramassage.com/policies.html

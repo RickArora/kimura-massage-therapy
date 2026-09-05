@@ -62,7 +62,7 @@ A client does not need to diagnose the right service. Describing the goal, healt
 
 ## Brampton clinic pricing
 
-- 30 minutes: $70 + HST
+- 30 minutes: $80 + HST
 - 60 minutes: $120 + HST
 - 75 minutes: $150 + HST
 - 90 minutes: $175 + HST
@@ -72,7 +72,7 @@ RMT receipts are provided. Direct billing may be available when the client's pla
 
 Book: https://kimuramassage.noterro.com/service-category/59418/Appointments
 
-Full HTML article: https://kimuramassage.ca/blog/deep-tissue-massage-guide.html
+Full HTML article: https://kimuramassage.com/blog/deep-tissue-massage-guide.html
 
 CMTO standards: https://www.cmto.com/rmts/standards-and-rules/
 

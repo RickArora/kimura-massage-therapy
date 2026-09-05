@@ -8,4 +8,4 @@ The appointment is performed by Ricky Arora, Registered Massage Therapist. An RM
 
 Book: https://kimuramassage.noterro.com/book-online/service/314303/Initial-Appointment-first-time-clients-only
 
-Offer page: https://kimuramassage.ca/intro-offer.html
+Offer page: https://kimuramassage.com/intro-offer.html

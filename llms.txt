@@ -2,32 +2,32 @@
 
 > Registered massage therapy clinic in Brampton, Ontario, operated by Ricky Arora, RMT. The clinic offers assessment-led Swedish, deep tissue, and sports massage, with same-day availability on many days.
 
-Kimura Massage Therapy & Rehab is located at 14 Block Road, Brampton, Ontario L7A 5B2. Phone: (905) 226-6336. Hours: Monday through Sunday, 9:00 AM to 9:00 PM. RMT prices are $70 + HST for 30 minutes, $120 + HST for 60 minutes, $150 + HST for 75 minutes, and $175 + HST for 90 minutes. The new-client 60-minute RMT visit is $109 + HST. Direct billing is available for many insurers when the client's plan, remaining balance, and insurer approval permit it; an RMT receipt is provided. Late cancellations and no-shows may be charged 50% of the appointment fee. Content is educational and is not a diagnosis or a substitute for medical care.
+Kimura Massage Therapy & Rehab is located at 14 Block Road, Brampton, Ontario L7A 5B2. Phone: (905) 226-6336. Hours: Monday through Sunday, 9:00 AM to 9:00 PM. RMT prices are $80 + HST for 30 minutes, $120 + HST for 60 minutes, $150 + HST for 75 minutes, and $175 + HST for 90 minutes. The new-client 60-minute RMT visit is $109 + HST. Direct billing is available for many insurers when the client's plan, remaining balance, and insurer approval permit it; an RMT receipt is provided. Late cancellations and no-shows may be charged 50% of the appointment fee. Content is educational and is not a diagnosis or a substitute for medical care.
 
 ## Primary
 
-- [Clinic overview](https://kimuramassage.ca/index.md): Verified clinic details, hours, pricing, payment, credentials, and booking information.
+- [Clinic overview](https://kimuramassage.com/index.md): Verified clinic details, hours, pricing, payment, credentials, and booking information.
 - [Book an appointment](https://kimuramassage.noterro.com/service-category/59418/Appointments): Live appointment availability and service selection.
-- [Clinic policies](https://kimuramassage.ca/policies.md): Consent, draping, cancellation, payment, insurance, privacy, and accessibility information.
-- [New-client offer](https://kimuramassage.ca/intro-offer.md): Eligibility and inclusions for the first 60-minute RMT visit.
+- [Clinic policies](https://kimuramassage.com/policies.md): Consent, draping, cancellation, payment, insurance, privacy, and accessibility information.
+- [New-client offer](https://kimuramassage.com/intro-offer.md): Eligibility and inclusions for the first 60-minute RMT visit.
 
 ## Services
 
-- [Deep tissue massage in Brampton](https://kimuramassage.ca/deep-tissue-massage-brampton.md): Focused, consent-based massage with pressure adapted to the client.
-- [Swedish massage in Brampton](https://kimuramassage.ca/swedish-massage-brampton.md): Relaxation-oriented RMT massage using client-selected pressure.
-- [Sports massage in Brampton](https://kimuramassage.ca/sports-massage-brampton.md): Massage planned around training, recovery, and activity goals.
+- [Deep tissue massage in Brampton](https://kimuramassage.com/deep-tissue-massage-brampton.md): Focused, consent-based massage with pressure adapted to the client.
+- [Swedish massage in Brampton](https://kimuramassage.com/swedish-massage-brampton.md): Relaxation-oriented RMT massage using client-selected pressure.
+- [Sports massage in Brampton](https://kimuramassage.com/sports-massage-brampton.md): Massage planned around training, recovery, and activity goals.
 
 ## Practical Guides
 
-- [Deep tissue massage guide](https://kimuramassage.ca/blog/deep-tissue-massage-guide.md): Pressure, realistic benefits, risks, consent, aftercare, and treatment selection.
-- [First RMT appointment](https://kimuramassage.ca/blog/what-to-expect-rmt-massage-brampton.md): Intake, consent, draping, pressure, and aftercare.
-- [RMT insurance coverage in Ontario](https://kimuramassage.ca/blog/does-insurance-cover-rmt-massage-ontario.md): Questions to check with an extended health plan.
-- [Deep tissue versus Swedish massage](https://kimuramassage.ca/blog/deep-tissue-vs-swedish-massage.md): A practical comparison based on treatment goals and pressure preference.
-- [Massage therapy blog](https://kimuramassage.ca/blog/index.md): Editorial guides and an index to the larger occupation and recovery library.
+- [Deep tissue massage guide](https://kimuramassage.com/blog/deep-tissue-massage-guide.md): Pressure, realistic benefits, risks, consent, aftercare, and treatment selection.
+- [First RMT appointment](https://kimuramassage.com/blog/what-to-expect-rmt-massage-brampton.md): Intake, consent, draping, pressure, and aftercare.
+- [RMT insurance coverage in Ontario](https://kimuramassage.com/blog/does-insurance-cover-rmt-massage-ontario.md): Questions to check with an extended health plan.
+- [Deep tissue versus Swedish massage](https://kimuramassage.com/blog/deep-tissue-vs-swedish-massage.md): A practical comparison based on treatment goals and pressure preference.
+- [Massage therapy blog](https://kimuramassage.com/blog/index.md): Editorial guides and an index to the larger occupation and recovery library.
 
 ## Optional
 
-- [Expanded site reference](https://kimuramassage.ca/llms-full.txt): Consolidated facts, service context, safety boundaries, and source links.
+- [Expanded site reference](https://kimuramassage.com/llms-full.txt): Consolidated facts, service context, safety boundaries, and source links.
 - [CMTO public register](https://cmto.ca.thentiacloud.net/webs/cmto/register/): Independent registration lookup for Ontario massage therapists.
 - [CMTO standards and rules](https://www.cmto.com/rmts/standards-and-rules/): Professional standards governing Ontario RMT practice.
 - [NCCIH massage therapy overview](https://www.nccih.nih.gov/health/massage-therapy-what-you-need-to-know): Evidence and safety overview from the U.S. National Center for Complementary and Integrative Health.

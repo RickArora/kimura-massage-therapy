@@ -1,7 +1,7 @@
 # Kimura Massage Therapy & Rehab: Expanded Reference
 
-Canonical website: https://kimuramassage.ca/
-Concise LLM index: https://kimuramassage.ca/llms.txt
+Canonical website: https://kimuramassage.com/
+Concise LLM index: https://kimuramassage.com/llms.txt
 Last reviewed: 2026-08-28
 
 ## Clinic identity
@@ -20,7 +20,7 @@ Same-day appointments: available on many days; the booking calendar is authorita
 
 All displayed clinic prices are base prices plus HST:
 
-- 30-minute RMT appointment: $70 + HST
+- 30-minute RMT appointment: $80 + HST
 - 60-minute RMT appointment: $120 + HST
 - 75-minute RMT appointment: $150 + HST
 - 90-minute RMT appointment: $175 + HST
@@ -40,9 +40,9 @@ Sports massage is planned around activity, training load, recovery goals, and th
 
 Service pages:
 
-- https://kimuramassage.ca/swedish-massage-brampton.md
-- https://kimuramassage.ca/deep-tissue-massage-brampton.md
-- https://kimuramassage.ca/sports-massage-brampton.md
+- https://kimuramassage.com/swedish-massage-brampton.md
+- https://kimuramassage.com/deep-tissue-massage-brampton.md
+- https://kimuramassage.com/sports-massage-brampton.md
 
 ## Appointment process
 
@@ -78,7 +78,7 @@ At least 24 hours' notice is requested for cancellation or rescheduling. Late ca
 
 Tipping is not expected or required. Treatment records and personal health information are handled according to applicable Ontario professional and privacy requirements. Linens are changed and treatment surfaces are cleaned between clients.
 
-Full policy summary: https://kimuramassage.ca/policies.md
+Full policy summary: https://kimuramassage.com/policies.md
 
 ## Content library
 
@@ -86,10 +86,10 @@ The blog contains editorial guides about massage selection, first appointments, 
 
 The site avoids sexual content. Massage services described by Kimura Massage Therapy & Rehab are professional health services provided within informed-consent, privacy, and draping standards.
 
-Editorial index: https://kimuramassage.ca/blog/index.md
-Deep tissue guide: https://kimuramassage.ca/blog/deep-tissue-massage-guide.md
-First appointment guide: https://kimuramassage.ca/blog/what-to-expect-rmt-massage-brampton.md
-Insurance guide: https://kimuramassage.ca/blog/does-insurance-cover-rmt-massage-ontario.md
+Editorial index: https://kimuramassage.com/blog/index.md
+Deep tissue guide: https://kimuramassage.com/blog/deep-tissue-massage-guide.md
+First appointment guide: https://kimuramassage.com/blog/what-to-expect-rmt-massage-brampton.md
+Insurance guide: https://kimuramassage.com/blog/does-insurance-cover-rmt-massage-ontario.md
 
 ## Authoritative external references
 
