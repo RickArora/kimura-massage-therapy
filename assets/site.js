@@ -16,10 +16,31 @@
   const dock = document.querySelector('.booking-dock');
   document.addEventListener('focusin', event => { if (dock && event.target.matches('input, textarea, select')) dock.classList.add('dock-keyboard'); });
   document.addEventListener('focusout', () => dock?.classList.remove('dock-keyboard'));
-  const primary = document.querySelector('#home-book-link, [data-booking-choice="service"], .page-hero-actions a[href*="Initial-Appointment"], .hero-cta-group a[href*="Initial-Appointment"]');
-  if (dock && primary && 'IntersectionObserver' in window) {
-    new IntersectionObserver(entries => dock.classList.toggle('dock-hidden', entries[0].isIntersecting), {threshold: .15}).observe(primary);
+  // Track all prominent in-page booking controls, excluding navigation and the dock itself.
+  const prominent = [...document.querySelectorAll('main a[href*="kimuramassage.noterro.com"]')].filter(link => link.matches('.km-action, .btn-primary, .btn-white, .site-button'));
+  if (dock && prominent.length && 'IntersectionObserver' in window) {
+    const visible = new Set();
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio >= .5) visible.add(entry.target);
+        else visible.delete(entry.target);
+      });
+      dock.classList.toggle('dock-hidden', visible.size > 0);
+    }, {threshold: [0, .5, 1], rootMargin: '-85px 0px -82px 0px'});
+    prominent.forEach(link => observer.observe(link));
   }
+  function revealAnswer(hash, focus = false) {
+    if (!hash) return;
+    let id; try { id = decodeURIComponent(hash.slice(1)); } catch (_) { return; }
+    const answer = document.getElementById(id);
+    if (answer?.matches('details')) {
+      answer.open = true;
+      if (focus) answer.querySelector('summary')?.focus({preventScroll: true});
+    }
+  }
+  document.querySelectorAll('a[data-open-details]').forEach(link => link.addEventListener('click', () => revealAnswer(link.hash, true)));
+  window.addEventListener('hashchange', () => revealAnswer(window.location.hash, true));
+  revealAnswer(window.location.hash);
   window.toggleFaq = button => {
     const item = button.closest('.faq-item');
     if (!item) return;

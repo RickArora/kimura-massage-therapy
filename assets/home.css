@@ -18,3 +18,18 @@
 #kimura-homepage .km-photo-person{display:flex}
 @media(max-width:760px){#kimura-homepage .km-photo{height:auto;min-height:0;aspect-ratio:4/3}#kimura-homepage .km-photo-person{left:12px;right:12px;bottom:12px;gap:10px;padding:12px}#kimura-homepage .km-photo-person strong{font-size:15px}#kimura-homepage .km-photo-person span{font-size:13px}#kimura-homepage .km-avatar{width:48px;height:48px}}
 @media(max-width:570px){#kimura-homepage .km-photo{aspect-ratio:4/5}}
+/* Clearer decision order and larger treatment targets. */
+#kimura-homepage .km-therapist-line{font-size:14px;color:#d5dee7;margin:0 0 16px;line-height:1.5}
+#kimura-homepage .km-about-grid{grid-template-columns:1fr 280px}
+#kimura-homepage .km-about .km-consent{grid-column:auto}
+#kimura-homepage .km-micro a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:3px;font-size:14px}
+#kimura-homepage .km-micro>span{display:block;font-size:12px}
+#kimura-homepage .km-micro{margin-top:4px}
+#kimura-homepage .km-need{display:block;position:relative;padding:20px;border:1px solid var(--km-line);border-radius:10px;background:#fff;transition:background .15s,border-color .15s}
+#kimura-homepage .km-need:hover{background:#edf1f5;border-color:#a9b5c1}
+#kimura-homepage .km-need:active{background:#e2e8ee}
+#kimura-homepage .km-need:focus-visible{outline:3px solid var(--km-orange);outline-offset:4px}
+#kimura-homepage .km-need .km-number{position:static;margin-bottom:8px}
+#kimura-homepage .km-card-link{display:flex;align-items:center;min-height:44px;margin-top:8px;font-size:14px;text-decoration:underline;text-underline-offset:4px}
+#insurance-answer{scroll-margin-top:90px}
+@media(max-width:760px){#kimura-homepage .km-needs{gap:12px}#kimura-homepage .km-need{padding:18px}#kimura-homepage .km-about-grid{grid-template-columns:1fr}#kimura-homepage .km-about .km-consent{grid-column:1}#kimura-homepage .km-therapist-line{margin-bottom:14px}}

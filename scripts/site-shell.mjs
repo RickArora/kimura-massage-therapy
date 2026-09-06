@@ -1,6 +1,6 @@
 export const initialBooking = 'https://kimuramassage.noterro.com/book-online/service/314303/Initial-Appointment-first-time-clients-only';
 export const returningBooking = 'https://kimuramassage.noterro.com/book-online/service/314304/Follow-up-Appointment';
-export const release = '20260905-mobile2';
+export const release = '20260906-flow';
 
 export function siteHeader(prefix = './') {
   return `<header class="site-header">

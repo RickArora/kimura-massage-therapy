@@ -54,3 +54,31 @@ for(const link of ui.links)assert.match(link.href,/314303/);
 assert.match(booking('return',true).links[2].href,/314303/);
 assert.doesNotThrow(()=>booking(null,false,true));
 console.log('PASS: synchronized first/return booking links, base prices plus HST, cross-page visit preference, first-visit landing context, disabled storage, and analytics intent events.');
+// The dock stays hidden while any prominent booking control is visible.
+const classes = new Set();
+const dock = {classList:{add:name=>classes.add(name),remove:name=>classes.delete(name),toggle(name,on){if(on)classes.add(name);else classes.delete(name);}}};
+const controls = [{matches:()=>true},{matches:()=>true}];
+const listeners = {};
+const summary = {focus(){this.focused=true;}};
+const answer = {open:false,matches:()=>true,querySelector:()=>summary};
+let onIntersection;
+const observerWindow = {location:{hash:''},addEventListener:(type,fn)=>listeners[type]=fn,IntersectionObserver:true};
+const observerDocument = {
+ querySelector:s=>s==='.booking-dock'?dock:null,
+ querySelectorAll:s=>s.startsWith('main a[')?controls:[],
+ getElementById:id=>id==='insurance-answer'?answer:null,
+ addEventListener:(type,fn)=>listeners[type]=fn
+};
+class Observer { constructor(fn){onIntersection=fn;} observe(){} }
+vm.runInNewContext(readFileSync('assets/site.js','utf8'),{document:observerDocument,window:observerWindow,IntersectionObserver:Observer});
+onIntersection([{target:controls[0],isIntersecting:true,intersectionRatio:1}]);
+assert.equal(classes.has('dock-hidden'),true);
+onIntersection([{target:controls[0],isIntersecting:false,intersectionRatio:0},{target:controls[1],isIntersecting:true,intersectionRatio:1}]);
+assert.equal(classes.has('dock-hidden'),true);
+onIntersection([{target:controls[1],isIntersecting:false,intersectionRatio:0}]);
+assert.equal(classes.has('dock-hidden'),false);
+observerWindow.location.hash='#insurance-answer';listeners.hashchange();
+assert.equal(answer.open,true);
+listeners.focusin({target:{matches:()=>true}});assert.equal(classes.has('dock-keyboard'),true);
+listeners.focusout();assert.equal(classes.has('dock-keyboard'),false);
+console.log('PASS: dock responds to multiple visible booking buttons, insurance deep links open the answer, and focused inputs hide the dock.');

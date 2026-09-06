@@ -19,12 +19,12 @@
       link.href = destinations[selected];
       link.dataset.cta = `${placement}_${first ? 'first_visit' : 'returning'}`;
       const label = link.querySelector('[data-booking-label], #km-main-label');
-      const text = 'See available times';
+      const text = first ? 'First-visit times' : 'Returning-visit times';
       if (label) label.textContent = text;
       else link.textContent = text + ' ↗';
       link.setAttribute('aria-label', `${text} — ${first ? 'first visit' : 'returning visit'}`);
     });
-    document.querySelectorAll('[data-visit-summary]').forEach(field => field.textContent = first ? 'First visit · $109 + HST' : 'Returning · $120 + HST');
+    document.querySelectorAll('[data-visit-summary]').forEach(field => field.textContent = first ? 'First 60 min · $109 + HST' : 'Returning 60 min · $120 + HST');
   }
   document.querySelectorAll('.km-segments').forEach(options => options.hidden = false);
   document.querySelectorAll('[data-visit]').forEach(button => button.addEventListener('click', () => render(button.dataset.visit)));
