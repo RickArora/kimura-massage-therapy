@@ -11,3 +11,10 @@
 @media(max-width:760px){#kimura-homepage .km-hero .km-eyebrow{display:none}#kimura-homepage h1{font-size:clamp(2rem,7.5vw,2.5rem)}#kimura-homepage .km-hero-desc{max-width:30em}#kimura-homepage .km-price-line{display:flex;flex-wrap:nowrap;align-items:start}#kimura-homepage .km-price{margin-top:0}#kimura-homepage .km-price-compare article>p{margin-top:8px}}
 @media(max-width:359px){#kimura-homepage .km-session small{max-width:160px}#kimura-homepage .km-price small{display:block;font-size:12px;line-height:1.2;text-align:right}#kimura-homepage .km-price{font-size:26px}#kimura-homepage .km-segment{font-size:13px}}
 @media(max-width:760px){#kimura-homepage .km-need{position:relative}}
+
+/* Restore the room portrait with its therapist card and a less cropped view. */
+#kimura-homepage .km-photo{align-self:center;min-height:0;height:auto;aspect-ratio:4/5;width:100%}
+#kimura-homepage .km-room{object-position:center center}
+#kimura-homepage .km-photo-person{display:flex}
+@media(max-width:760px){#kimura-homepage .km-photo{height:auto;min-height:0;aspect-ratio:4/3}#kimura-homepage .km-photo-person{left:12px;right:12px;bottom:12px;gap:10px;padding:12px}#kimura-homepage .km-photo-person strong{font-size:15px}#kimura-homepage .km-photo-person span{font-size:13px}#kimura-homepage .km-avatar{width:48px;height:48px}}
+@media(max-width:570px){#kimura-homepage .km-photo{aspect-ratio:4/5}}
