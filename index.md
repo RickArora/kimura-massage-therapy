@@ -16,9 +16,9 @@ Kimura Massage Therapy & Rehab is a registered massage therapy clinic at 14 Bloc
 - 30 minutes: $80 + HST
 - 45 minutes: $105 + HST
 - 60 minutes: $120 + HST
-- 75 minutes: $150 + HST
-- 90 minutes: $175 + HST
-- 120 minutes: $230 + HST
+- 75 minutes: $170 + HST
+- 90 minutes: $205 + HST
+- 120 minutes: $270 + HST
 - New-client 60-minute visit: $109 + HST
 
 Payment is accepted by cash, debit, credit card, e-transfer, Apple Pay, and Google Pay. Direct billing is available for many insurers when the plan and insurer permit it. Clients receive an RMT receipt.

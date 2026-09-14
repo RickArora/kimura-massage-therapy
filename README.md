@@ -10,6 +10,8 @@ Static RMT clinic website. Cloudflare Workers Builds publishes the `main` branch
 
 ## Validation
 
+- `node scripts/audit-pricing.mjs` checks visible and structured prices against the current clinic rates.
+
 - `node scripts/audit-site.mjs` checks all public HTML, local links and anchors, JSON-LD, scripts, navigation, and retired booking copy.
 - `node scripts/audit-seo-blog-pages.mjs` checks the occupation guide library and sitemap.
 - `node scripts/audit-llms.mjs` checks machine-readable clinic information.
@@ -21,6 +23,6 @@ Static RMT clinic website. Cloudflare Workers Builds publishes the `main` branch
 
 ## Booking and analytics
 
-Prices were checked against the public Noterro booking pages on September 4, 2026. The clinic website links directly to initial or returning appointments; duration selection remains in Noterro. Never invent duration URL parameters.
+Website prices were updated to the clinic owner’s supplied rates on September 13, 2026. Noterro account prices are managed separately. The clinic website links directly to initial or returning appointments; duration selection remains in Noterro. Never invent duration URL parameters.
 
 GA4 booking-link and phone-link events measure intent, not completed appointments. The existing Google Ads click action is retained for continuity and is explicitly labeled as a legacy intent signal. Confirmed and attended appointment reporting requires a supported Noterro integration or verified offline conversion process; do not count site clicks as booked revenue.
