@@ -23,8 +23,8 @@ All displayed clinic prices are base prices plus HST:
 - 30-minute RMT appointment: $80 + HST
 - 45-minute RMT appointment: $105 + HST
 - 60-minute RMT appointment: $120 + HST
-- 75-minute RMT appointment: $170 + HST
-- 90-minute RMT appointment: $205 + HST
+- 75-minute RMT appointment: $155 + HST
+- 90-minute RMT appointment: $190 + HST
 - 120-minute RMT appointment: $270 + HST
 - Eligible new-client 60-minute RMT visit: $109 + HST
 

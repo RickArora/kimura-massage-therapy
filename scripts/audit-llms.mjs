@@ -31,7 +31,7 @@ for (const forbidden of ['relaxation massage from $40', 'WhatsApp', '200+ verifi
   if (source.includes(forbidden)) errors.push(`Outdated or unsupported text remains: ${forbidden}`);
 }
 
-for (const required of ['$80 + HST', '$105 + HST', '$120 + HST', '$170 + HST', '$205 + HST', '$270 + HST', '$109 + HST', '50%']) {
+for (const required of ['$80 + HST', '$105 + HST', '$120 + HST', '$155 + HST', '$190 + HST', '$270 + HST', '$109 + HST', '50%']) {
   if (!source.includes(required)) errors.push(`Required verified fact is missing: ${required}`);
 }
 

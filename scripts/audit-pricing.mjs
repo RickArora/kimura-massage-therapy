@@ -1,6 +1,6 @@
 import {readFileSync, readdirSync} from 'node:fs';
 import assert from 'node:assert/strict';
-const rates = new Map([[30,80],[45,105],[60,120],[75,170],[90,205],[120,270]]);
+const rates = new Map([[30,80],[45,105],[60,120],[75,155],[90,190],[120,270]]);
 const files = [...readdirSync('.').filter(f=>/\.(html|md|txt)$/.test(f)),...readdirSync('blog').filter(f=>/\.(html|md)$/.test(f)).map(f=>'blog/'+f), 'scripts/generate-seo-blog-pages.mjs'];
 let offers=0;
 function checkSchema(value,file) {
@@ -16,7 +16,7 @@ function checkSchema(value,file) {
 }
 for(const file of files){
  const source=readFileSync(file,'utf8');
- assert(!/\$(?:70|150|174|175|230)(?![\d.])|<sup>\$<\/sup>(?:70|150|174|175|230)\b|"price"\s*:\s*"?(?:70|150|174|175|230)\b/.test(source),`${file}: retired price`);
+ assert(!/\$(?:70|150|170|174|175|205|230)(?![\d.])|<sup>\$<\/sup>(?:70|150|170|174|175|205|230)\b|"price"\s*:\s*"?(?:70|150|170|174|175|205|230)\b/.test(source),`${file}: retired price`);
  if (file.endsWith('.html')) for(const match of source.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g))checkSchema(JSON.parse(match[1]),file);
 }
 const home=readFileSync('index.html','utf8');

@@ -65,8 +65,8 @@ A client does not need to diagnose the right service. Describing the goal, healt
 - 30 minutes: $80 + HST
 - 45 minutes: $105 + HST
 - 60 minutes: $120 + HST
-- 75 minutes: $170 + HST
-- 90 minutes: $205 + HST
+- 75 minutes: $155 + HST
+- 90 minutes: $190 + HST
 - 120 minutes: $270 + HST
 - Eligible new-client 60-minute visit: $109 + HST
 
