@@ -8,7 +8,7 @@ Kimura Massage Therapy & Rehab is a registered massage therapy clinic at 14 Bloc
 - Hours: Monday to Sunday, 9:00 AM to 9:00 PM
 - First-visit booking: https://kimuramassage.noterro.com/book-online/service/314303/Initial-Appointment-first-time-clients-only
 - Returning-visit booking: https://kimuramassage.noterro.com/book-online/service/314304/Follow-up-Appointment
-- Same-day appointments: available on many days; check the booking calendar
+- Same-day appointments: check the booking calendar for openings; availability varies by day and appointment length
 - Parking: free on-site parking
 
 ## Returning RMT appointment prices

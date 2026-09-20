@@ -33,3 +33,12 @@
 #kimura-homepage .km-card-link{display:flex;align-items:center;min-height:44px;margin-top:8px;font-size:14px;text-decoration:underline;text-underline-offset:4px}
 #insurance-answer{scroll-margin-top:90px}
 @media(max-width:760px){#kimura-homepage .km-needs{gap:12px}#kimura-homepage .km-need{padding:18px}#kimura-homepage .km-about-grid{grid-template-columns:1fr}#kimura-homepage .km-about .km-consent{grid-column:1}#kimura-homepage .km-therapist-line{margin-bottom:14px}}
+/* Compact booking reassurance and responsive next steps. */
+#kimura-homepage .km-today{font-size:13px;line-height:1.5;padding:10px 12px;margin:0 0 12px;background:#eef2f6;border-radius:6px;color:#34465a}
+#kimura-homepage .km-today strong{display:block;color:var(--km-ink)}
+#kimura-homepage .km-next-steps{padding-top:28px;padding-bottom:28px;border-bottom:1px solid var(--km-line)}
+#kimura-homepage .km-next-steps h2{font-size:25px;margin-bottom:18px}
+#kimura-homepage .km-next-steps ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;list-style:none;margin:0;padding:0}
+#kimura-homepage .km-next-steps strong{display:block;font-size:15px;margin-bottom:6px}
+#kimura-homepage .km-next-steps li span{font-size:14px;line-height:1.6;color:var(--km-sub)}
+@media(max-width:760px){#kimura-homepage .km-next-steps ol{grid-template-columns:1fr;gap:16px}#kimura-homepage .km-next-steps{padding-block:24px}#kimura-homepage .km-next-steps h2{font-size:25px}#kimura-homepage .km-next-steps li span{font-size:15px}}
