@@ -30,7 +30,10 @@
   }
   function trackBooking(label, href, placement) {
     var visit = href.indexOf('/314303/') !== -1 ? 'first_visit' : href.indexOf('/314304/') !== -1 ? 'returning_visit' : 'unspecified';
-    sendEvent('book_online_click', {event_label: label, cta_location: placement || label, link_url: href, booking_provider: 'noterro', visit_type: visit, conversion_stage: 'link_click'});
+    var params = {event_label: label, cta_location: placement || label, link_url: href, booking_provider: 'noterro', visit_type: visit, conversion_stage: 'link_click'};
+    sendEvent('book_online_click', params);
+    // Explicit fallback event for GA4/Ads audiences when Noterro's /booked event is unavailable.
+    sendEvent('booking_started', params);
     legacyAdsClick('booking_link_click', href);
   }
   // Compatibility for older campaign pages; a click is not a lead or booking.
