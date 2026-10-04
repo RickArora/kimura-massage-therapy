@@ -19,7 +19,7 @@
       link.href = destinations[selected];
       link.dataset.cta = `${placement}_${first ? 'first_visit' : 'returning'}`;
       const label = link.querySelector('[data-booking-label], #km-main-label');
-      const text = first ? 'Check available times' : 'Check returning times';
+      const text = 'Book Now';
       if (label) label.textContent = text;
       else link.textContent = text + ' ↗';
       link.setAttribute('aria-label', `${text} — ${first ? 'first visit' : 'returning visit'}`);

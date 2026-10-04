@@ -24,7 +24,8 @@ for (const file of files) {
   if (file !== '404.html' && !/rel="canonical" href="https:\/\/kimuramassage\.com\//.test(html)) issue(file, 'missing correct-domain canonical');
   if (/kimuramassage\.ca\b/.test(html)) issue(file, 'old domain remains');
   if (/\$70(?!\d)|<sup>\$<\/sup>70\b/.test(html)) issue(file, 'outdated $70 rate remains');
-  if (/intro-popup\.js|No thanks, I.ll pay full price|Save 10%|getElementById\(['"]hamburger['"]\)/.test(html)) issue(file, 'retired popup, misleading discount, or old navigation remains');
+  if (/No thanks, I.ll pay full price|Save 10%|getElementById\(['"]hamburger['"]\)/.test(html)) issue(file, 'misleading discount or old navigation remains');
+  if (!html.includes('assets/intro-popup.js')) issue(file, 'booking popup missing');
   for (const match of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)) {
     const a = attrs(match[1]);
     if (a.type === 'application/ld+json') {
@@ -58,7 +59,7 @@ for (const [file, {html}] of docs) {
   }
 }
 
-for (const file of ['assets/site.js', 'assets/booking.js', 'assets/home.js', 'assets/analytics.js']) {
+for (const file of ['assets/site.js', 'assets/booking.js', 'assets/intro-popup.js', 'assets/home.js', 'assets/analytics.js']) {
   try { new vm.Script(readFileSync(file, 'utf8')); } catch(error) { issue(file, error.message); }
 }
 console.log(`Checked ${files.length} HTML pages, ${links} internal references, ${schemas} structured-data blocks, and shared JavaScript.`);

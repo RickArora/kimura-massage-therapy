@@ -43,6 +43,7 @@ assert.equal(ui.fields['#km-rate'].textContent,'$120');
 assert.match(ui.fields['#km-rate-context'].textContent,/Returning client/);
 assert.equal(ui.buttons[1]['aria-pressed'],'true');
 for(const link of ui.links){assert.match(link.href,/314304/);assert.match(link['aria-label'],/returning visit/);}
+for(const link of ui.links)assert.equal(link.label.textContent,'Book Now');
 assert.match(ui.summary.textContent,/Returning.*120/);
 assert.equal(ui.storage.value,'return');
 const nextPage=booking(ui.storage.value);
@@ -51,6 +52,7 @@ ui.buttons[0].click();
 assert.match(ui.fields['#km-rate-context'].textContent,/Regular \$120 \+ HST/);
 assert.equal(ui.buttons[1]['aria-pressed'],'false');
 for(const link of ui.links)assert.match(link.href,/314303/);
+for(const link of ui.links)assert.equal(link.label.textContent,'Book Now');
 assert.match(booking('return',true).links[2].href,/314303/);
 assert.doesNotThrow(()=>booking(null,false,true));
 console.log('PASS: synchronized first/return booking links, base prices plus HST, cross-page visit preference, first-visit landing context, disabled storage, and analytics intent events.');
