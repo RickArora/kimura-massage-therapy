@@ -42,3 +42,33 @@
 #kimura-homepage .km-next-steps strong{display:block;font-size:15px;margin-bottom:6px}
 #kimura-homepage .km-next-steps li span{font-size:14px;line-height:1.6;color:var(--km-sub)}
 @media(max-width:760px){#kimura-homepage .km-next-steps ol{grid-template-columns:1fr;gap:16px}#kimura-homepage .km-next-steps{padding-block:24px}#kimura-homepage .km-next-steps h2{font-size:25px}#kimura-homepage .km-next-steps li span{font-size:15px}}
+
+/* Mobile-first conversion hierarchy: practitioner proof, concise booking, and readable comparisons. */
+#kimura-homepage .km-therapist-mobile{display:none}
+#kimura-homepage .km-differentiators{margin:0 0 16px;color:#e6edf3;font-size:13px;line-height:1.6}
+#kimura-homepage .km-differentiators span{color:var(--km-hot);padding-inline:3px}
+#kimura-homepage .km-hero-proof{display:grid;grid-template-rows:minmax(0,1fr) 150px;gap:14px;align-self:stretch;min-height:520px}
+#kimura-homepage .km-practitioner,#kimura-homepage .km-room-proof{margin:0;border-radius:14px;overflow:hidden}
+#kimura-homepage .km-practitioner{display:grid;place-items:center;background:#eef2f5;color:var(--km-ink);padding:26px 22px 20px}
+#kimura-homepage .km-practitioner img{display:block;width:min(100%,330px);height:auto}
+#kimura-homepage .km-practitioner figcaption{text-align:center;margin-top:10px}
+#kimura-homepage .km-practitioner strong,#kimura-homepage .km-practitioner span{display:block}
+#kimura-homepage .km-practitioner strong{font-size:19px}.km-practitioner span{font-size:14px;color:var(--km-sub);margin-top:4px}
+#kimura-homepage .km-room-proof{position:relative;background:#233b36}
+#kimura-homepage .km-room-proof img{width:100%;height:100%;object-fit:cover;object-position:center 52%;display:block}
+#kimura-homepage .km-room-proof figcaption{position:absolute;left:12px;bottom:12px;padding:7px 9px;border-radius:5px;background:#14283fe8;color:#fff;font-size:12px}
+#kimura-homepage .km-first-visit{border-left:1px solid var(--km-line);padding-left:25px}
+#kimura-homepage .km-first-visit h3{margin:8px 0 7px;font-size:17px}
+#kimura-homepage .km-includes{font-size:13px;margin:11px 0 13px}
+#kimura-homepage .km-booking-policy{margin-top:10px}
+@media(max-width:760px){
+  #kimura-homepage .km-therapist-mobile{display:flex;margin-bottom:14px}
+  #kimura-homepage .km-differentiators{font-size:13px;margin-bottom:13px}
+  #kimura-homepage .km-hero-proof{display:block;min-height:0}
+  #kimura-homepage .km-practitioner{display:none}
+  #kimura-homepage .km-room-proof{height:150px;border-radius:10px}
+  #kimura-homepage .km-about-grid{grid-template-columns:1fr}
+  #kimura-homepage .km-first-visit{border-left:0;border-top:1px solid var(--km-line);padding:18px 0 0}
+  #kimura-homepage .km-includes{font-size:13px;line-height:1.55}
+}
+@media(max-width:560px){#kimura-homepage .km-price-compare{grid-template-columns:1fr;gap:12px}#kimura-homepage .km-price-compare article{padding:18px}}

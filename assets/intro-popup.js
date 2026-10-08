@@ -35,16 +35,16 @@
       <div class="ip-modal" tabindex="-1">
         <button class="ip-close" type="button" aria-label="Close booking offer">×</button>
         <span class="ip-kicker">New client offer · Brampton RMT</span>
-        <h2 class="ip-title" id="ipTitle">Book your massage now.</h2>
+        <h2 class="ip-title" id="ipTitle">Start with your first visit.</h2>
         <p class="ip-copy" id="ipDescription">Start with a 60-minute RMT visit tailored to what feels tight, sore, or overworked.</p>
         <div class="ip-offer"><strong>$109 <small>+ HST</small></strong><span>First 60-minute visit<br><s>$120 + HST regular</s></span></div>
         <ul class="ip-proof">
-          <li>Assessment and personalized treatment</li>
+          <li>Assessment and treatment within the booked 60 minutes</li>
           <li>Direct billing available for many plans</li>
-          <li>Private room and on-site parking</li>
+          <li>Private room and free street parking</li>
         </ul>
-        <a href="${bookingUrl}" class="ip-cta" data-cta="popup_book_now"><span>Book Now</span><span aria-hidden="true">→</span></a>
-        <p class="ip-reassure">Secure online booking · Choose your time before confirming</p>
+        <a href="${bookingUrl}" class="ip-cta" data-cta="popup_book_first_visit"><span>Book first visit</span><span aria-hidden="true">→</span></a>
+        <p class="ip-reassure">Choose your appointment length, then see available times</p>
         <button class="ip-dismiss" type="button">Not now</button>
       </div>
     </div>`;

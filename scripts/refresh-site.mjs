@@ -33,7 +33,8 @@ export function refreshHtml(source, file) {
   html = html.replace(/Same-day appointments most days/gi, 'See current availability online');
   html = html.replace(/Same-day available\.?/gi, 'View available times.');
   html = html.replace(/no account (?:needed|required)/gi, 'secure booking via Noterro');
-  html = html.replace(/(?:See available appointments|See available times|Check available times|Check first-visit times|Check returning times|Returning appointments|Book a first visit|Book your first visit|Book a returning visit|Returning client booking|Book your next visit)(\s*[↗→])?/gi, (_, arrow = '') => `Book Now${arrow}`);
+  html = html.replace(/(?:See available appointments|Check first-visit times|Book a first visit|Book your first visit)(\s*[↗→])?/gi, (_, arrow = '') => `Book first visit${arrow}`);
+  html = html.replace(/(?:Check returning times|Returning appointments|Book a returning visit|Returning client booking|Book your next visit)(\s*[↗→])?/gi, (_, arrow = '') => `Book returning visit${arrow}`);
   html = html.replace(/href="https:\/\/kimuramassage\.noterro\.com\/(?:service-category\/59418\/Appointments)?"/g, `href="${initialBooking}"`);
   html = html.replace(/<script\b[^>]*src="[^"]*(?:intro-popup|mobile-ux)\.js[^"\n]*"[^>]*>\s*<\/script>/gi, '');
   html = html.replace(/<script\b(?![^>]*src=)[^>]*>([\s\S]*?)<\/script>/gi, (full, code) => /getElementById\(['"](?:hamburger|stickyBar)['"]\)/.test(code) ? '' : full);
