@@ -1,0 +1,10 @@
+.git/
+.github/
+.claude/
+.codex/
+.agents/
+.DS_Store
+node_modules/
+scripts/
+wrangler.jsonc
+wrangler.toml
