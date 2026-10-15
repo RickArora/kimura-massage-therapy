@@ -86,6 +86,7 @@
   }
 
   function show() {
+    if (document.querySelector('dialog[open]')) return;
     if (shown || document.getElementById('introPopupOverlay')) return;
     try { if (sessionStorage.getItem(dismissedKey)) return; } catch (_) {}
     shown = true;
