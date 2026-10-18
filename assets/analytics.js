@@ -39,6 +39,15 @@
   // Compatibility for older campaign pages; a click is not a lead or booking.
   window.trackCTA = function (label) { sendEvent('cta_click', {event_label: label || 'cta'}); };
   window.trackBookOnline = function (label, href) { trackBooking(label || 'booking_link', href || '', label); };
+  // HTML5 video needs explicit instrumentation; GA4's enhanced measurement only
+  // auto-detects supported embedded video providers.
+  window.trackVideoEngagement = function (eventName, params) {
+    sendEvent(eventName, Object.assign({
+      event_category: 'engagement',
+      video_title: 'Homepage room introduction',
+      video_provider: 'html5'
+    }, params || {}));
+  };
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.js-year').forEach(function (node) { node.textContent = String(new Date().getFullYear()); });
   });

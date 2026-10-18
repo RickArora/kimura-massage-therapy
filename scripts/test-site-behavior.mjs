@@ -10,7 +10,7 @@ function analytics(host) {
   const link={href,textContent:'Book',getAttribute:()=>null,closest:()=>null};
   listeners.click({target:{closest:()=>link}});
  }
- return {events,click};
+ return {events,click,trackVideo:window.trackVideoEngagement};
 }
 const production=analytics('kimuramassage.com');
 production.click('https://kimuramassage.noterro.com/book-online/service/314303/Initial-Appointment-first-time-clients-only');
@@ -22,8 +22,13 @@ assert.equal(production.events.filter(e=>e[1]==='book_online_click')[1][2].visit
 const count=production.events.length;
 production.click('https://kimuramassage.noterro.com.evil.example/');
 assert.equal(production.events.length,count);
+production.trackVideo('video_start',{video_duration:15});
+assert.equal(production.events.filter(e=>e[1]==='video_start').length,1);
+assert.equal(production.events.find(e=>e[1]==='video_start')[2].video_title,'Homepage room introduction');
 const preview=analytics('127.0.0.1');
 preview.click('https://kimuramassage.noterro.com/book-online/service/314303/initial');
+assert.equal(preview.events.length,0);
+preview.trackVideo('video_start',{video_duration:15});
 assert.equal(preview.events.length,0);
 function booking(saved = null, fixedFirst = false, blockedStorage = false) {
  const fields = Object.fromEntries(['#km-rate','#km-rate-context','#km-inclusions'].map(id=>[id,{}]));
